@@ -65,3 +65,7 @@ placeholders `<AWS_ACCOUNT_ID>`, `<REPO_ROOT>`, and `<HOME>`.
 Each run writes a manifest with a corpus fingerprint (`content_sha256`), the git
 commit, and the workload configuration. The manifest is how a run proves that all
 three systems searched the same corpus bytes.
+
+## License
+
+MIT. See `LICENSE`.
