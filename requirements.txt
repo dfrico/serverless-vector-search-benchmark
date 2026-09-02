@@ -1,0 +1,55 @@
+# Locked dependency set for the benchmark harness venv (harness/.venv).
+#
+# Python: 3.10.19 (CPython). Built with uv.
+# Generated with: uv pip freeze --python harness/.venv/bin/python
+#
+# Rebuild on another computer:
+#   uv venv --python 3.10 harness/.venv
+#   uv pip install -r requirements.txt
+#
+# Notes:
+# - lancedb / pyarrow are absent on purpose. The LanceDB adapter runs inside its
+#   AWS Lambda container image (lancedb 0.33.0 there); the local harness only
+#   uses boto3 to invoke that Lambda.
+# - The Blocks adapter also needs references/blocks-db-wip on sys.path
+#   (re-clone git@github.com:Oct-HI/blocks-db-wip.git @ 4916370e). That repo is
+#   not a pip dependency, so it is not listed here.
+# - Runtime config that is NOT in git and must be copied by hand: ~/.lithops/config
+#   and ~/.aws (thesis profile).
+
+bcrypt==5.0.0
+boto3==1.43.79
+botocore==1.43.79
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.5.1
+click==8.4.2
+cloudpickle==3.1.2
+cryptography==50.0.0
+faiss-cpu==1.15.0
+idna==3.19
+invoke==3.0.3
+jmespath==1.1.0
+lithops==3.6.3
+numpy==2.2.6
+orjson==3.12.0
+packaging==26.3
+pandas==2.3.3
+paramiko==5.0.0
+pika==1.4.4
+ps-mem==3.14
+psutil==7.2.2
+pycparser==3.0
+pynacl==1.6.2
+python-dateutil==2.9.0.post0
+pytz==2026.3.post1
+pyyaml==6.0.3
+requests==2.34.2
+s3transfer==0.19.2
+six==1.17.0
+tabulate==0.10.0
+tblib==3.2.2
+tqdm==4.70.0
+typing-extensions==4.16.0
+tzdata==2026.3
+urllib3==2.7.0

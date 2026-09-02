@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+harness/.venv/
+
+# Credentials and cloud config — never commit
+.aws/
+**/.lithops/config
+*.pem
+*.key
+.env
+
+# Datasets (bytes are not shared; only the README under datasets/ is tracked)
+datasets/**/*.csv
+datasets/**/*.fvecs
+datasets/**/*.bin
+datasets/**/*.npy
+datasets/**/*.parquet
+
+# External reference repo (not included in this repo)
+references/
+
+# OS / editor
+.DS_Store
+_minted/

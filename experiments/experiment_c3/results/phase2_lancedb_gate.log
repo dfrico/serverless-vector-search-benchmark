@@ -1,0 +1,58 @@
+[c3/p2/lancedb] start=2026-08-23T23:00:39Z account=<AWS_ACCOUNT_ID> recall_n=50 chunk=1
+[c3/p2/lancedb] ingest estimate: ~$0.8 (arm64 insert invokes)
+[c3/p2/lancedb] setup OK sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/lancedb] probe query: 10 hits in 55.78s server_ms=55396.485567092896 cold=False
+[c3/p2/lancedb] gate chunk 1 (1/50) in 50.5s
+[c3/p2/lancedb] gate chunk 2 (2/50) in 51.3s
+[c3/p2/lancedb] gate chunk 3 (3/50) in 52.0s
+[c3/p2/lancedb] gate chunk 4 (4/50) in 51.2s
+[c3/p2/lancedb] gate chunk 5 (5/50) in 51.5s
+[c3/p2/lancedb] gate chunk 6 (6/50) in 50.7s
+[c3/p2/lancedb] gate chunk 7 (7/50) in 51.5s
+[c3/p2/lancedb] gate chunk 8 (8/50) in 51.4s
+[c3/p2/lancedb] gate chunk 9 (9/50) in 51.3s
+[c3/p2/lancedb] gate chunk 10 (10/50) in 52.2s
+[c3/p2/lancedb] gate chunk 11 (11/50) in 51.1s
+[c3/p2/lancedb] gate chunk 12 (12/50) in 51.7s
+[c3/p2/lancedb] gate chunk 13 (13/50) in 51.0s
+[c3/p2/lancedb] gate chunk 14 (14/50) in 51.5s
+[c3/p2/lancedb] gate chunk 15 (15/50) in 51.1s
+[c3/p2/lancedb] gate chunk 16 (16/50) in 51.4s
+[c3/p2/lancedb] gate chunk 17 (17/50) in 51.7s
+[c3/p2/lancedb] gate chunk 18 (18/50) in 51.0s
+[c3/p2/lancedb] gate chunk 19 (19/50) in 51.5s
+[c3/p2/lancedb] gate chunk 20 (20/50) in 51.4s
+[c3/p2/lancedb] gate chunk 21 (21/50) in 51.5s
+[c3/p2/lancedb] gate chunk 22 (22/50) in 50.9s
+[c3/p2/lancedb] gate chunk 23 (23/50) in 51.4s
+[c3/p2/lancedb] gate chunk 24 (24/50) in 51.0s
+[c3/p2/lancedb] gate chunk 25 (25/50) in 51.1s
+[c3/p2/lancedb] gate chunk 26 (26/50) in 51.2s
+[c3/p2/lancedb] gate chunk 27 (27/50) in 51.2s
+[c3/p2/lancedb] gate chunk 28 (28/50) in 51.7s
+[c3/p2/lancedb] gate chunk 29 (29/50) in 50.8s
+[c3/p2/lancedb] gate chunk 30 (30/50) in 51.6s
+[c3/p2/lancedb] gate chunk 31 (31/50) in 51.4s
+[c3/p2/lancedb] gate chunk 32 (32/50) in 51.1s
+[c3/p2/lancedb] gate chunk 33 (33/50) in 51.9s
+[c3/p2/lancedb] gate chunk 34 (34/50) in 51.0s
+[c3/p2/lancedb] gate chunk 35 (35/50) in 51.2s
+[c3/p2/lancedb] gate chunk 36 (36/50) in 51.1s
+[c3/p2/lancedb] gate chunk 37 (37/50) in 52.2s
+[c3/p2/lancedb] gate chunk 38 (38/50) in 50.6s
+[c3/p2/lancedb] gate chunk 39 (39/50) in 51.3s
+[c3/p2/lancedb] gate chunk 40 (40/50) in 51.6s
+[c3/p2/lancedb] gate chunk 41 (41/50) in 51.0s
+[c3/p2/lancedb] gate chunk 42 (42/50) in 51.7s
+[c3/p2/lancedb] gate chunk 43 (43/50) in 51.7s
+[c3/p2/lancedb] gate chunk 44 (44/50) in 51.4s
+[c3/p2/lancedb] gate chunk 45 (45/50) in 50.8s
+[c3/p2/lancedb] gate chunk 46 (46/50) in 51.1s
+[c3/p2/lancedb] gate chunk 47 (47/50) in 53.7s
+[c3/p2/lancedb] gate chunk 48 (48/50) in 52.0s
+[c3/p2/lancedb] gate chunk 49 (49/50) in 50.9s
+[c3/p2/lancedb] gate chunk 50 (50/50) in 51.1s
+[c3/p2/lancedb] recall@10=100.00% (bar 99.0%) perfect=50/50 non_empty=50/50 query_s=2568.3 chunks=50
+[c3/p2/lancedb] wrote <REPO_ROOT>/harness-experiment-c3/results/phase2_lancedb.json
+
+=== C3 PHASE 2 LANCEDB PASS ===

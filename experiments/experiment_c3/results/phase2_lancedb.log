@@ -1,0 +1,76 @@
+[c3/p2/lancedb] start=2026-08-23T21:27:51Z account=<AWS_ACCOUNT_ID> recall_n=50 chunk=20
+[c3/p2/lancedb] ingest estimate: ~$0.8 (arm64 insert invokes)
+[c3/p2/lancedb] setup OK sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/lancedb] ingest done in 4512.6s cost=$0.05635
+[c3/p2/lancedb] post-ingest sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/lancedb] probe query: 10 hits in 53.83s server_ms=53369.970083236694 cold=False
+Traceback (most recent call last):
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "<HOME>/.local/share/uv/python/cpython-3.10.19-macos-aarch64-none/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "<HOME>/.local/share/uv/python/cpython-3.10.19-macos-aarch64-none/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "<HOME>/.local/share/uv/python/cpython-3.10.19-macos-aarch64-none/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "<HOME>/.local/share/uv/python/cpython-3.10.19-macos-aarch64-none/lib/python3.10/socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+  File "<HOME>/.local/share/uv/python/cpython-3.10.19-macos-aarch64-none/lib/python3.10/ssl.py", line 1307, in recv_into
+    return self.read(nbytes, buffer)
+  File "<HOME>/.local/share/uv/python/cpython-3.10.19-macos-aarch64-none/lib/python3.10/ssl.py", line 1163, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/httpsession.py", line 477, in send
+    urllib_response = conn.urlopen(
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 473, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: AWSHTTPSConnectionPool(host='lambda.us-east-1.amazonaws.com', port=443): Read timed out. (read timeout=900)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<REPO_ROOT>/harness-experiment-c3/c3_phase2.py", line 264, in <module>
+    raise SystemExit(main())
+  File "<REPO_ROOT>/harness-experiment-c3/c3_phase2.py", line 207, in main
+    results, query_s, n_chunks = run_gate(adapter, client, gate_q, chunk)
+  File "<REPO_ROOT>/harness-experiment-c3/c3_phase2.py", line 112, in run_gate
+    res, _tim = client.query_batch(sub, top_k=C.TOP_K)
+  File "<REPO_ROOT>/harness-day8/lancedb_lambda_client.py", line 562, in query_batch
+    out = self._invoke(event)
+  File "<REPO_ROOT>/harness-day8/lancedb_lambda_client.py", line 311, in _invoke
+    resp = self._client.invoke(
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/client.py", line 606, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/client.py", line 1076, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/client.py", line 1100, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 229, in _send_request
+    raise exception
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 279, in _do_get_response
+    http_response = self._send(request)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 383, in _send
+    return self.http_session.send(request)
+  File "<REPO_ROOT>/spike-localhost/.venv/lib/python3.10/site-packages/botocore/httpsession.py", line 514, in send
+    raise ReadTimeoutError(endpoint_url=request.url, error=e)
+botocore.exceptions.ReadTimeoutError: Read timeout on endpoint URL: "https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/thesis-lancedb-lambda/invocations"

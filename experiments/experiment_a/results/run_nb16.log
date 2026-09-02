@@ -1,0 +1,695 @@
+2026-08-22 18:14:29,837 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:14:29,839 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:14:29,842 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:14:29,925 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:14:29,928 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:14:29,930 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:14:29,993 [INFO] invokers.py:119 -- ExecutorID 12142e-0 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:14:30,029 [INFO] invokers.py:186 -- ExecutorID 12142e-0 | JobID M000 - Starting function invocation: generate_index_blocks() - Total: 16 activations
+2026-08-22 18:14:30,030 [INFO] invokers.py:225 -- ExecutorID 12142e-0 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-0-M000.log
+2026-08-22 18:14:30,031 [INFO] executors.py:494 -- ExecutorID 12142e-0 - Getting results from 16 function activations
+2026-08-22 18:14:30,031 [INFO] wait.py:101 -- ExecutorID 12142e-0 - Waiting for 16 function activations to complete
+2026-08-22 18:15:09,205 [ERROR] localhost.py:329 -- Task process 12142e-0-M000-00012 failed with return code -9
+2026-08-22 18:15:09,205 [ERROR] localhost.py:329 -- Task process 12142e-0-M000-00014 failed with return code -9
+2026-08-22 18:15:09,206 [ERROR] localhost.py:329 -- Task process 12142e-0-M000-00013 failed with return code -9
+2026-08-22 18:15:09,206 [ERROR] localhost.py:329 -- Task process 12142e-0-M000-00015 failed with return code -9
+2026-08-22 18:15:09,206 [INFO] executors.py:618 -- ExecutorID 12142e-0 - Cleaning temporary data
+2026-08-22 18:15:09,230 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:09,234 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:09,238 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:09,312 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:09,314 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:09,318 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:09,408 [INFO] invokers.py:119 -- ExecutorID 12142e-3 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:09,430 [INFO] invokers.py:186 -- ExecutorID 12142e-3 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:09,430 [INFO] invokers.py:225 -- ExecutorID 12142e-3 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-3-M000.log
+2026-08-22 18:15:09,431 [INFO] executors.py:494 -- ExecutorID 12142e-3 - Getting results from 1 function activations
+2026-08-22 18:15:09,431 [INFO] wait.py:101 -- ExecutorID 12142e-3 - Waiting for 1 function activations to complete
+2026-08-22 18:15:14,473 [ERROR] localhost.py:329 -- Task process 12142e-3-M000-00000 failed with return code -9
+2026-08-22 18:15:14,473 [INFO] executors.py:618 -- ExecutorID 12142e-3 - Cleaning temporary data
+2026-08-22 18:15:14,479 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:14,513 [INFO] invokers.py:119 -- ExecutorID 12142e-3 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:14,540 [INFO] invokers.py:186 -- ExecutorID 12142e-3 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:14,540 [INFO] invokers.py:225 -- ExecutorID 12142e-3 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-3-M001.log
+2026-08-22 18:15:14,540 [INFO] executors.py:494 -- ExecutorID 12142e-3 - Getting results from 1 function activations
+2026-08-22 18:15:14,540 [INFO] wait.py:101 -- ExecutorID 12142e-3 - Waiting for 1 function activations to complete
+2026-08-22 18:15:16,568 [ERROR] localhost.py:329 -- Task process 12142e-3-M001-00000 failed with return code -9
+2026-08-22 18:15:16,568 [INFO] executors.py:618 -- ExecutorID 12142e-3 - Cleaning temporary data
+2026-08-22 18:15:17,412 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:17,415 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:17,419 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:17,480 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:17,483 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:17,486 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:17,556 [INFO] invokers.py:119 -- ExecutorID 12142e-5 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:17,580 [INFO] invokers.py:186 -- ExecutorID 12142e-5 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:17,581 [INFO] invokers.py:225 -- ExecutorID 12142e-5 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-5-M000.log
+2026-08-22 18:15:17,581 [INFO] executors.py:494 -- ExecutorID 12142e-5 - Getting results from 1 function activations
+2026-08-22 18:15:17,581 [INFO] wait.py:101 -- ExecutorID 12142e-5 - Waiting for 1 function activations to complete
+2026-08-22 18:15:21,615 [ERROR] localhost.py:329 -- Task process 12142e-5-M000-00000 failed with return code -9
+2026-08-22 18:15:21,616 [INFO] executors.py:618 -- ExecutorID 12142e-5 - Cleaning temporary data
+2026-08-22 18:15:21,621 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:21,631 [INFO] invokers.py:119 -- ExecutorID 12142e-5 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:21,683 [INFO] invokers.py:186 -- ExecutorID 12142e-5 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:21,683 [INFO] invokers.py:225 -- ExecutorID 12142e-5 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-5-M001.log
+2026-08-22 18:15:21,683 [INFO] executors.py:494 -- ExecutorID 12142e-5 - Getting results from 1 function activations
+2026-08-22 18:15:21,683 [INFO] wait.py:101 -- ExecutorID 12142e-5 - Waiting for 1 function activations to complete
+2026-08-22 18:15:22,696 [ERROR] localhost.py:329 -- Task process 12142e-5-M001-00000 failed with return code -9
+2026-08-22 18:15:22,696 [INFO] executors.py:618 -- ExecutorID 12142e-5 - Cleaning temporary data
+2026-08-22 18:15:22,705 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:22,709 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:22,714 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:22,786 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:22,789 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:22,792 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:22,867 [INFO] invokers.py:119 -- ExecutorID 12142e-7 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:22,893 [INFO] invokers.py:186 -- ExecutorID 12142e-7 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:22,893 [INFO] invokers.py:225 -- ExecutorID 12142e-7 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-7-M000.log
+2026-08-22 18:15:22,894 [INFO] executors.py:494 -- ExecutorID 12142e-7 - Getting results from 1 function activations
+2026-08-22 18:15:22,894 [INFO] wait.py:101 -- ExecutorID 12142e-7 - Waiting for 1 function activations to complete
+2026-08-22 18:15:27,931 [ERROR] localhost.py:329 -- Task process 12142e-7-M000-00000 failed with return code -9
+2026-08-22 18:15:27,931 [INFO] executors.py:618 -- ExecutorID 12142e-7 - Cleaning temporary data
+2026-08-22 18:15:27,936 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:27,947 [INFO] invokers.py:119 -- ExecutorID 12142e-7 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:27,977 [INFO] invokers.py:186 -- ExecutorID 12142e-7 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:27,978 [INFO] invokers.py:225 -- ExecutorID 12142e-7 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-7-M001.log
+2026-08-22 18:15:27,978 [INFO] executors.py:494 -- ExecutorID 12142e-7 - Getting results from 1 function activations
+2026-08-22 18:15:27,978 [INFO] wait.py:101 -- ExecutorID 12142e-7 - Waiting for 1 function activations to complete
+2026-08-22 18:15:30,001 [ERROR] localhost.py:329 -- Task process 12142e-7-M001-00000 failed with return code -9
+2026-08-22 18:15:30,001 [INFO] executors.py:618 -- ExecutorID 12142e-7 - Cleaning temporary data
+2026-08-22 18:15:30,008 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:30,012 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:30,016 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:30,088 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:30,091 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:30,094 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:30,161 [INFO] invokers.py:119 -- ExecutorID 12142e-9 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:30,203 [INFO] invokers.py:186 -- ExecutorID 12142e-9 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:30,204 [INFO] invokers.py:225 -- ExecutorID 12142e-9 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-9-M000.log
+2026-08-22 18:15:30,204 [INFO] executors.py:494 -- ExecutorID 12142e-9 - Getting results from 1 function activations
+2026-08-22 18:15:30,205 [INFO] wait.py:101 -- ExecutorID 12142e-9 - Waiting for 1 function activations to complete
+2026-08-22 18:15:35,243 [ERROR] localhost.py:329 -- Task process 12142e-9-M000-00000 failed with return code -9
+2026-08-22 18:15:35,243 [INFO] executors.py:618 -- ExecutorID 12142e-9 - Cleaning temporary data
+2026-08-22 18:15:35,247 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:35,258 [INFO] invokers.py:119 -- ExecutorID 12142e-9 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:35,288 [INFO] invokers.py:186 -- ExecutorID 12142e-9 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:35,289 [INFO] invokers.py:225 -- ExecutorID 12142e-9 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-9-M001.log
+2026-08-22 18:15:35,289 [INFO] executors.py:494 -- ExecutorID 12142e-9 - Getting results from 1 function activations
+2026-08-22 18:15:35,289 [INFO] wait.py:101 -- ExecutorID 12142e-9 - Waiting for 1 function activations to complete
+2026-08-22 18:15:37,312 [ERROR] localhost.py:329 -- Task process 12142e-9-M001-00000 failed with return code -9
+2026-08-22 18:15:37,312 [INFO] executors.py:618 -- ExecutorID 12142e-9 - Cleaning temporary data
+2026-08-22 18:15:37,323 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:37,327 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:37,331 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:37,400 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:37,403 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:37,407 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:37,476 [INFO] invokers.py:119 -- ExecutorID 12142e-11 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:37,501 [INFO] invokers.py:186 -- ExecutorID 12142e-11 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:37,501 [INFO] invokers.py:225 -- ExecutorID 12142e-11 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-11-M000.log
+2026-08-22 18:15:37,502 [INFO] executors.py:494 -- ExecutorID 12142e-11 - Getting results from 1 function activations
+2026-08-22 18:15:37,502 [INFO] wait.py:101 -- ExecutorID 12142e-11 - Waiting for 1 function activations to complete
+2026-08-22 18:15:42,540 [ERROR] localhost.py:329 -- Task process 12142e-11-M000-00000 failed with return code -9
+2026-08-22 18:15:42,540 [INFO] executors.py:618 -- ExecutorID 12142e-11 - Cleaning temporary data
+2026-08-22 18:15:42,544 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:42,556 [INFO] invokers.py:119 -- ExecutorID 12142e-11 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:42,585 [INFO] invokers.py:186 -- ExecutorID 12142e-11 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:42,586 [INFO] invokers.py:225 -- ExecutorID 12142e-11 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-11-M001.log
+2026-08-22 18:15:42,586 [INFO] executors.py:494 -- ExecutorID 12142e-11 - Getting results from 1 function activations
+2026-08-22 18:15:42,586 [INFO] wait.py:101 -- ExecutorID 12142e-11 - Waiting for 1 function activations to complete
+2026-08-22 18:15:44,603 [ERROR] localhost.py:329 -- Task process 12142e-11-M001-00000 failed with return code -9
+2026-08-22 18:15:44,603 [INFO] executors.py:618 -- ExecutorID 12142e-11 - Cleaning temporary data
+2026-08-22 18:15:44,612 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:44,617 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:44,621 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:44,691 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:44,694 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:44,697 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:44,768 [INFO] invokers.py:119 -- ExecutorID 12142e-13 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:44,809 [INFO] invokers.py:186 -- ExecutorID 12142e-13 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:44,810 [INFO] invokers.py:225 -- ExecutorID 12142e-13 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-13-M000.log
+2026-08-22 18:15:44,810 [INFO] executors.py:494 -- ExecutorID 12142e-13 - Getting results from 1 function activations
+2026-08-22 18:15:44,810 [INFO] wait.py:101 -- ExecutorID 12142e-13 - Waiting for 1 function activations to complete
+2026-08-22 18:15:49,840 [ERROR] localhost.py:329 -- Task process 12142e-13-M000-00000 failed with return code -9
+2026-08-22 18:15:49,840 [INFO] executors.py:618 -- ExecutorID 12142e-13 - Cleaning temporary data
+2026-08-22 18:15:49,846 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:49,859 [INFO] invokers.py:119 -- ExecutorID 12142e-13 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:49,891 [INFO] invokers.py:186 -- ExecutorID 12142e-13 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:49,892 [INFO] invokers.py:225 -- ExecutorID 12142e-13 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-13-M001.log
+2026-08-22 18:15:49,892 [INFO] executors.py:494 -- ExecutorID 12142e-13 - Getting results from 1 function activations
+2026-08-22 18:15:49,892 [INFO] wait.py:101 -- ExecutorID 12142e-13 - Waiting for 1 function activations to complete
+2026-08-22 18:15:51,910 [ERROR] localhost.py:329 -- Task process 12142e-13-M001-00000 failed with return code -9
+2026-08-22 18:15:51,910 [INFO] executors.py:618 -- ExecutorID 12142e-13 - Cleaning temporary data
+2026-08-22 18:15:51,920 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:51,925 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:51,931 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:52,002 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:52,005 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:52,008 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:52,076 [INFO] invokers.py:119 -- ExecutorID 12142e-15 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:52,099 [INFO] invokers.py:186 -- ExecutorID 12142e-15 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:52,100 [INFO] invokers.py:225 -- ExecutorID 12142e-15 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-15-M000.log
+2026-08-22 18:15:52,101 [INFO] executors.py:494 -- ExecutorID 12142e-15 - Getting results from 1 function activations
+2026-08-22 18:15:52,101 [INFO] wait.py:101 -- ExecutorID 12142e-15 - Waiting for 1 function activations to complete
+2026-08-22 18:15:56,142 [ERROR] localhost.py:329 -- Task process 12142e-15-M000-00000 failed with return code -9
+2026-08-22 18:15:56,143 [INFO] executors.py:618 -- ExecutorID 12142e-15 - Cleaning temporary data
+2026-08-22 18:15:56,147 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:56,159 [INFO] invokers.py:119 -- ExecutorID 12142e-15 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:15:56,217 [INFO] invokers.py:186 -- ExecutorID 12142e-15 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:15:56,218 [INFO] invokers.py:225 -- ExecutorID 12142e-15 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-15-M001.log
+2026-08-22 18:15:56,218 [INFO] executors.py:494 -- ExecutorID 12142e-15 - Getting results from 1 function activations
+2026-08-22 18:15:56,218 [INFO] wait.py:101 -- ExecutorID 12142e-15 - Waiting for 1 function activations to complete
+2026-08-22 18:15:57,231 [ERROR] localhost.py:329 -- Task process 12142e-15-M001-00000 failed with return code -9
+2026-08-22 18:15:57,231 [INFO] executors.py:618 -- ExecutorID 12142e-15 - Cleaning temporary data
+2026-08-22 18:15:57,241 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:57,245 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:57,250 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:57,317 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:15:57,320 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:15:57,326 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:15:57,394 [INFO] invokers.py:119 -- ExecutorID 12142e-17 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:15:57,420 [INFO] invokers.py:186 -- ExecutorID 12142e-17 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:15:57,420 [INFO] invokers.py:225 -- ExecutorID 12142e-17 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-17-M000.log
+2026-08-22 18:15:57,421 [INFO] executors.py:494 -- ExecutorID 12142e-17 - Getting results from 1 function activations
+2026-08-22 18:15:57,421 [INFO] wait.py:101 -- ExecutorID 12142e-17 - Waiting for 1 function activations to complete
+2026-08-22 18:16:02,447 [ERROR] localhost.py:329 -- Task process 12142e-17-M000-00000 failed with return code -9
+2026-08-22 18:16:02,448 [INFO] executors.py:618 -- ExecutorID 12142e-17 - Cleaning temporary data
+2026-08-22 18:16:02,452 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:02,463 [INFO] invokers.py:119 -- ExecutorID 12142e-17 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:02,494 [INFO] invokers.py:186 -- ExecutorID 12142e-17 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:02,495 [INFO] invokers.py:225 -- ExecutorID 12142e-17 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-17-M001.log
+2026-08-22 18:16:02,495 [INFO] executors.py:494 -- ExecutorID 12142e-17 - Getting results from 1 function activations
+2026-08-22 18:16:02,495 [INFO] wait.py:101 -- ExecutorID 12142e-17 - Waiting for 1 function activations to complete
+2026-08-22 18:16:04,518 [ERROR] localhost.py:329 -- Task process 12142e-17-M001-00000 failed with return code -9
+2026-08-22 18:16:04,518 [INFO] executors.py:618 -- ExecutorID 12142e-17 - Cleaning temporary data
+2026-08-22 18:16:04,526 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:04,530 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:04,535 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:04,604 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:04,607 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:04,610 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:04,679 [INFO] invokers.py:119 -- ExecutorID 12142e-19 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:04,723 [INFO] invokers.py:186 -- ExecutorID 12142e-19 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:04,723 [INFO] invokers.py:225 -- ExecutorID 12142e-19 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-19-M000.log
+2026-08-22 18:16:04,723 [INFO] executors.py:494 -- ExecutorID 12142e-19 - Getting results from 1 function activations
+2026-08-22 18:16:04,723 [INFO] wait.py:101 -- ExecutorID 12142e-19 - Waiting for 1 function activations to complete
+2026-08-22 18:16:09,753 [ERROR] localhost.py:329 -- Task process 12142e-19-M000-00000 failed with return code -9
+2026-08-22 18:16:09,753 [INFO] executors.py:618 -- ExecutorID 12142e-19 - Cleaning temporary data
+2026-08-22 18:16:09,758 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:09,769 [INFO] invokers.py:119 -- ExecutorID 12142e-19 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:09,800 [INFO] invokers.py:186 -- ExecutorID 12142e-19 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:09,800 [INFO] invokers.py:225 -- ExecutorID 12142e-19 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-19-M001.log
+2026-08-22 18:16:09,800 [INFO] executors.py:494 -- ExecutorID 12142e-19 - Getting results from 1 function activations
+2026-08-22 18:16:09,800 [INFO] wait.py:101 -- ExecutorID 12142e-19 - Waiting for 1 function activations to complete
+2026-08-22 18:16:11,824 [ERROR] localhost.py:329 -- Task process 12142e-19-M001-00000 failed with return code -9
+2026-08-22 18:16:11,824 [INFO] executors.py:618 -- ExecutorID 12142e-19 - Cleaning temporary data
+2026-08-22 18:16:11,833 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:11,838 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:11,842 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:11,912 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:11,914 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:11,919 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:11,986 [INFO] invokers.py:119 -- ExecutorID 12142e-21 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:12,011 [INFO] invokers.py:186 -- ExecutorID 12142e-21 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:12,011 [INFO] invokers.py:225 -- ExecutorID 12142e-21 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-21-M000.log
+2026-08-22 18:16:12,012 [INFO] executors.py:494 -- ExecutorID 12142e-21 - Getting results from 1 function activations
+2026-08-22 18:16:12,012 [INFO] wait.py:101 -- ExecutorID 12142e-21 - Waiting for 1 function activations to complete
+2026-08-22 18:16:17,030 [ERROR] localhost.py:329 -- Task process 12142e-21-M000-00000 failed with return code -9
+2026-08-22 18:16:17,031 [INFO] executors.py:618 -- ExecutorID 12142e-21 - Cleaning temporary data
+2026-08-22 18:16:17,036 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:17,048 [INFO] invokers.py:119 -- ExecutorID 12142e-21 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:17,081 [INFO] invokers.py:186 -- ExecutorID 12142e-21 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:17,082 [INFO] invokers.py:225 -- ExecutorID 12142e-21 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-21-M001.log
+2026-08-22 18:16:17,082 [INFO] executors.py:494 -- ExecutorID 12142e-21 - Getting results from 1 function activations
+2026-08-22 18:16:17,082 [INFO] wait.py:101 -- ExecutorID 12142e-21 - Waiting for 1 function activations to complete
+2026-08-22 18:16:19,095 [ERROR] localhost.py:329 -- Task process 12142e-21-M001-00000 failed with return code -9
+2026-08-22 18:16:19,095 [INFO] executors.py:618 -- ExecutorID 12142e-21 - Cleaning temporary data
+2026-08-22 18:16:19,104 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:19,109 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:19,113 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:19,184 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:19,186 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:19,190 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:19,260 [INFO] invokers.py:119 -- ExecutorID 12142e-23 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:19,305 [INFO] invokers.py:186 -- ExecutorID 12142e-23 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:19,306 [INFO] invokers.py:225 -- ExecutorID 12142e-23 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-23-M000.log
+2026-08-22 18:16:19,307 [INFO] executors.py:494 -- ExecutorID 12142e-23 - Getting results from 1 function activations
+2026-08-22 18:16:19,307 [INFO] wait.py:101 -- ExecutorID 12142e-23 - Waiting for 1 function activations to complete
+2026-08-22 18:16:24,327 [ERROR] localhost.py:329 -- Task process 12142e-23-M000-00000 failed with return code -9
+2026-08-22 18:16:24,328 [INFO] executors.py:618 -- ExecutorID 12142e-23 - Cleaning temporary data
+2026-08-22 18:16:24,332 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:24,346 [INFO] invokers.py:119 -- ExecutorID 12142e-23 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:24,377 [INFO] invokers.py:186 -- ExecutorID 12142e-23 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:24,378 [INFO] invokers.py:225 -- ExecutorID 12142e-23 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-23-M001.log
+2026-08-22 18:16:24,378 [INFO] executors.py:494 -- ExecutorID 12142e-23 - Getting results from 1 function activations
+2026-08-22 18:16:24,378 [INFO] wait.py:101 -- ExecutorID 12142e-23 - Waiting for 1 function activations to complete
+2026-08-22 18:16:26,389 [ERROR] localhost.py:329 -- Task process 12142e-23-M001-00000 failed with return code -9
+2026-08-22 18:16:26,389 [INFO] executors.py:618 -- ExecutorID 12142e-23 - Cleaning temporary data
+2026-08-22 18:16:26,404 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:26,409 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:26,412 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:26,483 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:26,486 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:26,491 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:26,562 [INFO] invokers.py:119 -- ExecutorID 12142e-25 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:26,585 [INFO] invokers.py:186 -- ExecutorID 12142e-25 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:26,586 [INFO] invokers.py:225 -- ExecutorID 12142e-25 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-25-M000.log
+2026-08-22 18:16:26,587 [INFO] executors.py:494 -- ExecutorID 12142e-25 - Getting results from 1 function activations
+2026-08-22 18:16:26,587 [INFO] wait.py:101 -- ExecutorID 12142e-25 - Waiting for 1 function activations to complete
+2026-08-22 18:16:31,616 [ERROR] localhost.py:329 -- Task process 12142e-25-M000-00000 failed with return code -9
+2026-08-22 18:16:31,616 [INFO] executors.py:618 -- ExecutorID 12142e-25 - Cleaning temporary data
+2026-08-22 18:16:31,621 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:31,636 [INFO] invokers.py:119 -- ExecutorID 12142e-25 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:31,665 [INFO] invokers.py:186 -- ExecutorID 12142e-25 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:31,666 [INFO] invokers.py:225 -- ExecutorID 12142e-25 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-25-M001.log
+2026-08-22 18:16:31,666 [INFO] executors.py:494 -- ExecutorID 12142e-25 - Getting results from 1 function activations
+2026-08-22 18:16:31,666 [INFO] wait.py:101 -- ExecutorID 12142e-25 - Waiting for 1 function activations to complete
+2026-08-22 18:16:33,677 [ERROR] localhost.py:329 -- Task process 12142e-25-M001-00000 failed with return code -9
+2026-08-22 18:16:33,679 [INFO] executors.py:618 -- ExecutorID 12142e-25 - Cleaning temporary data
+2026-08-22 18:16:33,688 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:33,692 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:33,698 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:33,765 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:33,768 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:33,773 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:33,843 [INFO] invokers.py:119 -- ExecutorID 12142e-27 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:33,892 [INFO] invokers.py:186 -- ExecutorID 12142e-27 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:33,892 [INFO] invokers.py:225 -- ExecutorID 12142e-27 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-27-M000.log
+2026-08-22 18:16:33,893 [INFO] executors.py:494 -- ExecutorID 12142e-27 - Getting results from 1 function activations
+2026-08-22 18:16:33,893 [INFO] wait.py:101 -- ExecutorID 12142e-27 - Waiting for 1 function activations to complete
+2026-08-22 18:16:38,918 [ERROR] localhost.py:329 -- Task process 12142e-27-M000-00000 failed with return code -9
+2026-08-22 18:16:38,919 [INFO] executors.py:618 -- ExecutorID 12142e-27 - Cleaning temporary data
+2026-08-22 18:16:38,924 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:38,937 [INFO] invokers.py:119 -- ExecutorID 12142e-27 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:38,971 [INFO] invokers.py:186 -- ExecutorID 12142e-27 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:38,971 [INFO] invokers.py:225 -- ExecutorID 12142e-27 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-27-M001.log
+2026-08-22 18:16:38,971 [INFO] executors.py:494 -- ExecutorID 12142e-27 - Getting results from 1 function activations
+2026-08-22 18:16:38,971 [INFO] wait.py:101 -- ExecutorID 12142e-27 - Waiting for 1 function activations to complete
+2026-08-22 18:16:40,980 [ERROR] localhost.py:329 -- Task process 12142e-27-M001-00000 failed with return code -9
+2026-08-22 18:16:40,981 [INFO] executors.py:618 -- ExecutorID 12142e-27 - Cleaning temporary data
+2026-08-22 18:16:40,988 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:40,991 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:40,996 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:41,063 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:41,065 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:41,068 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:41,141 [INFO] invokers.py:119 -- ExecutorID 12142e-29 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:41,163 [INFO] invokers.py:186 -- ExecutorID 12142e-29 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:41,164 [INFO] invokers.py:225 -- ExecutorID 12142e-29 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-29-M000.log
+2026-08-22 18:16:41,165 [INFO] executors.py:494 -- ExecutorID 12142e-29 - Getting results from 1 function activations
+2026-08-22 18:16:41,168 [INFO] wait.py:101 -- ExecutorID 12142e-29 - Waiting for 1 function activations to complete
+2026-08-22 18:16:46,188 [ERROR] localhost.py:329 -- Task process 12142e-29-M000-00000 failed with return code -9
+2026-08-22 18:16:46,188 [INFO] executors.py:618 -- ExecutorID 12142e-29 - Cleaning temporary data
+2026-08-22 18:16:46,193 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:46,204 [INFO] invokers.py:119 -- ExecutorID 12142e-29 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:46,234 [INFO] invokers.py:186 -- ExecutorID 12142e-29 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:46,235 [INFO] invokers.py:225 -- ExecutorID 12142e-29 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-29-M001.log
+2026-08-22 18:16:46,235 [INFO] executors.py:494 -- ExecutorID 12142e-29 - Getting results from 1 function activations
+2026-08-22 18:16:46,235 [INFO] wait.py:101 -- ExecutorID 12142e-29 - Waiting for 1 function activations to complete
+2026-08-22 18:16:48,241 [ERROR] localhost.py:329 -- Task process 12142e-29-M001-00000 failed with return code -9
+2026-08-22 18:16:48,242 [INFO] executors.py:618 -- ExecutorID 12142e-29 - Cleaning temporary data
+2026-08-22 18:16:48,254 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:48,260 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:48,265 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:48,337 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:48,340 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:48,345 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:48,417 [INFO] invokers.py:119 -- ExecutorID 12142e-31 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:48,441 [INFO] invokers.py:186 -- ExecutorID 12142e-31 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:48,442 [INFO] invokers.py:225 -- ExecutorID 12142e-31 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-31-M000.log
+2026-08-22 18:16:48,442 [INFO] executors.py:494 -- ExecutorID 12142e-31 - Getting results from 1 function activations
+2026-08-22 18:16:48,442 [INFO] wait.py:101 -- ExecutorID 12142e-31 - Waiting for 1 function activations to complete
+2026-08-22 18:16:53,461 [ERROR] localhost.py:329 -- Task process 12142e-31-M000-00000 failed with return code -9
+2026-08-22 18:16:53,462 [INFO] executors.py:618 -- ExecutorID 12142e-31 - Cleaning temporary data
+2026-08-22 18:16:53,466 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:53,477 [INFO] invokers.py:119 -- ExecutorID 12142e-31 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:16:53,510 [INFO] invokers.py:186 -- ExecutorID 12142e-31 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:16:53,511 [INFO] invokers.py:225 -- ExecutorID 12142e-31 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-31-M001.log
+2026-08-22 18:16:53,511 [INFO] executors.py:494 -- ExecutorID 12142e-31 - Getting results from 1 function activations
+2026-08-22 18:16:53,511 [INFO] wait.py:101 -- ExecutorID 12142e-31 - Waiting for 1 function activations to complete
+2026-08-22 18:16:55,524 [ERROR] localhost.py:329 -- Task process 12142e-31-M001-00000 failed with return code -9
+2026-08-22 18:16:55,524 [INFO] executors.py:618 -- ExecutorID 12142e-31 - Cleaning temporary data
+2026-08-22 18:16:55,534 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:55,539 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:55,544 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:55,613 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:16:55,616 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:16:55,622 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:16:55,695 [INFO] invokers.py:119 -- ExecutorID 12142e-33 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:16:55,719 [INFO] invokers.py:186 -- ExecutorID 12142e-33 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:16:55,719 [INFO] invokers.py:225 -- ExecutorID 12142e-33 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-33-M000.log
+2026-08-22 18:16:55,720 [INFO] executors.py:494 -- ExecutorID 12142e-33 - Getting results from 1 function activations
+2026-08-22 18:16:55,720 [INFO] wait.py:101 -- ExecutorID 12142e-33 - Waiting for 1 function activations to complete
+2026-08-22 18:17:00,735 [ERROR] localhost.py:329 -- Task process 12142e-33-M000-00000 failed with return code -9
+2026-08-22 18:17:00,736 [INFO] executors.py:618 -- ExecutorID 12142e-33 - Cleaning temporary data
+2026-08-22 18:17:00,741 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:00,752 [INFO] invokers.py:119 -- ExecutorID 12142e-33 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:00,786 [INFO] invokers.py:186 -- ExecutorID 12142e-33 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:00,786 [INFO] invokers.py:225 -- ExecutorID 12142e-33 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-33-M001.log
+2026-08-22 18:17:00,786 [INFO] executors.py:494 -- ExecutorID 12142e-33 - Getting results from 1 function activations
+2026-08-22 18:17:00,786 [INFO] wait.py:101 -- ExecutorID 12142e-33 - Waiting for 1 function activations to complete
+2026-08-22 18:17:02,804 [ERROR] localhost.py:329 -- Task process 12142e-33-M001-00000 failed with return code -9
+2026-08-22 18:17:02,804 [INFO] executors.py:618 -- ExecutorID 12142e-33 - Cleaning temporary data
+2026-08-22 18:17:02,814 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:02,820 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:02,825 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:02,899 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:02,902 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:02,907 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:02,978 [INFO] invokers.py:119 -- ExecutorID 12142e-35 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:03,000 [INFO] invokers.py:186 -- ExecutorID 12142e-35 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:03,000 [INFO] invokers.py:225 -- ExecutorID 12142e-35 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-35-M000.log
+2026-08-22 18:17:03,001 [INFO] executors.py:494 -- ExecutorID 12142e-35 - Getting results from 1 function activations
+2026-08-22 18:17:03,004 [INFO] wait.py:101 -- ExecutorID 12142e-35 - Waiting for 1 function activations to complete
+2026-08-22 18:17:08,048 [ERROR] localhost.py:329 -- Task process 12142e-35-M000-00000 failed with return code -9
+2026-08-22 18:17:08,048 [INFO] executors.py:618 -- ExecutorID 12142e-35 - Cleaning temporary data
+2026-08-22 18:17:08,054 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:08,065 [INFO] invokers.py:119 -- ExecutorID 12142e-35 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:08,127 [INFO] invokers.py:186 -- ExecutorID 12142e-35 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:08,127 [INFO] invokers.py:225 -- ExecutorID 12142e-35 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-35-M001.log
+2026-08-22 18:17:08,127 [INFO] executors.py:494 -- ExecutorID 12142e-35 - Getting results from 1 function activations
+2026-08-22 18:17:08,127 [INFO] wait.py:101 -- ExecutorID 12142e-35 - Waiting for 1 function activations to complete
+2026-08-22 18:17:10,141 [ERROR] localhost.py:329 -- Task process 12142e-35-M001-00000 failed with return code -9
+2026-08-22 18:17:10,141 [INFO] executors.py:618 -- ExecutorID 12142e-35 - Cleaning temporary data
+2026-08-22 18:17:10,149 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:10,153 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:10,158 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:10,230 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:10,232 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:10,235 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:10,303 [INFO] invokers.py:119 -- ExecutorID 12142e-37 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:10,327 [INFO] invokers.py:186 -- ExecutorID 12142e-37 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:10,327 [INFO] invokers.py:225 -- ExecutorID 12142e-37 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-37-M000.log
+2026-08-22 18:17:10,328 [INFO] executors.py:494 -- ExecutorID 12142e-37 - Getting results from 1 function activations
+2026-08-22 18:17:10,328 [INFO] wait.py:101 -- ExecutorID 12142e-37 - Waiting for 1 function activations to complete
+2026-08-22 18:17:15,361 [ERROR] localhost.py:329 -- Task process 12142e-37-M000-00000 failed with return code -9
+2026-08-22 18:17:15,361 [INFO] executors.py:618 -- ExecutorID 12142e-37 - Cleaning temporary data
+2026-08-22 18:17:15,367 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:15,379 [INFO] invokers.py:119 -- ExecutorID 12142e-37 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:15,414 [INFO] invokers.py:186 -- ExecutorID 12142e-37 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:15,414 [INFO] invokers.py:225 -- ExecutorID 12142e-37 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-37-M001.log
+2026-08-22 18:17:15,414 [INFO] executors.py:494 -- ExecutorID 12142e-37 - Getting results from 1 function activations
+2026-08-22 18:17:15,414 [INFO] wait.py:101 -- ExecutorID 12142e-37 - Waiting for 1 function activations to complete
+2026-08-22 18:17:17,430 [ERROR] localhost.py:329 -- Task process 12142e-37-M001-00000 failed with return code -9
+2026-08-22 18:17:17,431 [INFO] executors.py:618 -- ExecutorID 12142e-37 - Cleaning temporary data
+2026-08-22 18:17:17,443 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:17,451 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:17,457 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:17,537 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:17,539 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:17,542 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:17,613 [INFO] invokers.py:119 -- ExecutorID 12142e-39 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:17,637 [INFO] invokers.py:186 -- ExecutorID 12142e-39 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:17,638 [INFO] invokers.py:225 -- ExecutorID 12142e-39 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-39-M000.log
+2026-08-22 18:17:17,638 [INFO] executors.py:494 -- ExecutorID 12142e-39 - Getting results from 1 function activations
+2026-08-22 18:17:17,639 [INFO] wait.py:101 -- ExecutorID 12142e-39 - Waiting for 1 function activations to complete
+2026-08-22 18:17:22,667 [ERROR] localhost.py:329 -- Task process 12142e-39-M000-00000 failed with return code -9
+2026-08-22 18:17:22,667 [INFO] executors.py:618 -- ExecutorID 12142e-39 - Cleaning temporary data
+2026-08-22 18:17:22,671 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:22,683 [INFO] invokers.py:119 -- ExecutorID 12142e-39 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:22,714 [INFO] invokers.py:186 -- ExecutorID 12142e-39 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:22,714 [INFO] invokers.py:225 -- ExecutorID 12142e-39 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-39-M001.log
+2026-08-22 18:17:22,714 [INFO] executors.py:494 -- ExecutorID 12142e-39 - Getting results from 1 function activations
+2026-08-22 18:17:22,714 [INFO] wait.py:101 -- ExecutorID 12142e-39 - Waiting for 1 function activations to complete
+2026-08-22 18:17:24,725 [ERROR] localhost.py:329 -- Task process 12142e-39-M001-00000 failed with return code -9
+2026-08-22 18:17:24,726 [INFO] executors.py:618 -- ExecutorID 12142e-39 - Cleaning temporary data
+2026-08-22 18:17:24,735 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:24,739 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:24,744 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:24,813 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:24,816 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:24,819 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:24,887 [INFO] invokers.py:119 -- ExecutorID 12142e-41 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:24,933 [INFO] invokers.py:186 -- ExecutorID 12142e-41 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:24,933 [INFO] invokers.py:225 -- ExecutorID 12142e-41 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-41-M000.log
+2026-08-22 18:17:24,934 [INFO] executors.py:494 -- ExecutorID 12142e-41 - Getting results from 1 function activations
+2026-08-22 18:17:24,934 [INFO] wait.py:101 -- ExecutorID 12142e-41 - Waiting for 1 function activations to complete
+2026-08-22 18:17:29,956 [ERROR] localhost.py:329 -- Task process 12142e-41-M000-00000 failed with return code -9
+2026-08-22 18:17:29,956 [INFO] executors.py:618 -- ExecutorID 12142e-41 - Cleaning temporary data
+2026-08-22 18:17:29,963 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:29,975 [INFO] invokers.py:119 -- ExecutorID 12142e-41 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:30,013 [INFO] invokers.py:186 -- ExecutorID 12142e-41 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:30,013 [INFO] invokers.py:225 -- ExecutorID 12142e-41 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-41-M001.log
+2026-08-22 18:17:30,014 [INFO] executors.py:494 -- ExecutorID 12142e-41 - Getting results from 1 function activations
+2026-08-22 18:17:30,014 [INFO] wait.py:101 -- ExecutorID 12142e-41 - Waiting for 1 function activations to complete
+2026-08-22 18:17:32,035 [ERROR] localhost.py:329 -- Task process 12142e-41-M001-00000 failed with return code -9
+2026-08-22 18:17:32,035 [INFO] executors.py:618 -- ExecutorID 12142e-41 - Cleaning temporary data
+2026-08-22 18:17:32,045 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:32,049 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:32,053 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:32,125 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:32,128 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:32,131 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:32,204 [INFO] invokers.py:119 -- ExecutorID 12142e-43 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:32,228 [INFO] invokers.py:186 -- ExecutorID 12142e-43 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:32,229 [INFO] invokers.py:225 -- ExecutorID 12142e-43 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-43-M000.log
+2026-08-22 18:17:32,229 [INFO] executors.py:494 -- ExecutorID 12142e-43 - Getting results from 1 function activations
+2026-08-22 18:17:32,229 [INFO] wait.py:101 -- ExecutorID 12142e-43 - Waiting for 1 function activations to complete
+2026-08-22 18:17:37,264 [ERROR] localhost.py:329 -- Task process 12142e-43-M000-00000 failed with return code -9
+2026-08-22 18:17:37,265 [INFO] executors.py:618 -- ExecutorID 12142e-43 - Cleaning temporary data
+2026-08-22 18:17:37,272 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:37,282 [INFO] invokers.py:119 -- ExecutorID 12142e-43 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:37,319 [INFO] invokers.py:186 -- ExecutorID 12142e-43 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:37,320 [INFO] invokers.py:225 -- ExecutorID 12142e-43 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-43-M001.log
+2026-08-22 18:17:37,320 [INFO] executors.py:494 -- ExecutorID 12142e-43 - Getting results from 1 function activations
+2026-08-22 18:17:37,320 [INFO] wait.py:101 -- ExecutorID 12142e-43 - Waiting for 1 function activations to complete
+2026-08-22 18:17:39,343 [ERROR] localhost.py:329 -- Task process 12142e-43-M001-00000 failed with return code -9
+2026-08-22 18:17:39,344 [INFO] executors.py:618 -- ExecutorID 12142e-43 - Cleaning temporary data
+2026-08-22 18:17:39,355 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:39,361 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:39,368 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:39,444 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:39,446 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:39,450 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:39,516 [INFO] invokers.py:119 -- ExecutorID 12142e-45 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:39,541 [INFO] invokers.py:186 -- ExecutorID 12142e-45 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:39,541 [INFO] invokers.py:225 -- ExecutorID 12142e-45 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-45-M000.log
+2026-08-22 18:17:39,542 [INFO] executors.py:494 -- ExecutorID 12142e-45 - Getting results from 1 function activations
+2026-08-22 18:17:39,542 [INFO] wait.py:101 -- ExecutorID 12142e-45 - Waiting for 1 function activations to complete
+2026-08-22 18:17:44,573 [ERROR] localhost.py:329 -- Task process 12142e-45-M000-00000 failed with return code -9
+2026-08-22 18:17:44,573 [INFO] executors.py:618 -- ExecutorID 12142e-45 - Cleaning temporary data
+2026-08-22 18:17:44,581 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:44,593 [INFO] invokers.py:119 -- ExecutorID 12142e-45 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:17:44,662 [INFO] invokers.py:186 -- ExecutorID 12142e-45 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:17:44,663 [INFO] invokers.py:225 -- ExecutorID 12142e-45 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-45-M001.log
+2026-08-22 18:17:44,663 [INFO] executors.py:494 -- ExecutorID 12142e-45 - Getting results from 1 function activations
+2026-08-22 18:17:44,663 [INFO] wait.py:101 -- ExecutorID 12142e-45 - Waiting for 1 function activations to complete
+2026-08-22 18:17:46,688 [ERROR] localhost.py:329 -- Task process 12142e-45-M001-00000 failed with return code -9
+2026-08-22 18:17:46,688 [INFO] executors.py:618 -- ExecutorID 12142e-45 - Cleaning temporary data
+2026-08-22 18:17:46,700 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:46,706 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:46,712 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:46,784 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:17:46,786 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:17:46,792 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:17:46,865 [INFO] invokers.py:119 -- ExecutorID 12142e-47 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:17:46,887 [INFO] invokers.py:186 -- ExecutorID 12142e-47 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:17:46,888 [INFO] invokers.py:225 -- ExecutorID 12142e-47 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-47-M000.log
+2026-08-22 18:17:46,889 [INFO] executors.py:494 -- ExecutorID 12142e-47 - Getting results from 1 function activations
+2026-08-22 18:17:46,889 [INFO] wait.py:101 -- ExecutorID 12142e-47 - Waiting for 1 function activations to complete
+2026-08-22 18:30:44,977 [ERROR] localhost.py:329 -- Task process 12142e-47-M000-00000 failed with return code -9
+2026-08-22 18:30:44,977 [INFO] executors.py:618 -- ExecutorID 12142e-47 - Cleaning temporary data
+2026-08-22 18:30:44,984 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:30:44,999 [INFO] invokers.py:119 -- ExecutorID 12142e-47 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:30:45,040 [INFO] invokers.py:186 -- ExecutorID 12142e-47 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:30:45,041 [INFO] invokers.py:225 -- ExecutorID 12142e-47 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-47-M001.log
+2026-08-22 18:30:45,041 [INFO] executors.py:494 -- ExecutorID 12142e-47 - Getting results from 1 function activations
+2026-08-22 18:30:45,041 [INFO] wait.py:101 -- ExecutorID 12142e-47 - Waiting for 1 function activations to complete
+2026-08-22 18:30:49,057 [ERROR] localhost.py:329 -- Task process 12142e-47-M001-00000 failed with return code -9
+2026-08-22 18:30:49,058 [INFO] executors.py:618 -- ExecutorID 12142e-47 - Cleaning temporary data
+2026-08-22 18:30:49,070 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:30:49,077 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:30:49,086 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:30:49,165 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:30:49,168 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:30:49,172 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:30:49,240 [INFO] invokers.py:119 -- ExecutorID 12142e-49 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:30:49,268 [INFO] invokers.py:186 -- ExecutorID 12142e-49 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:30:49,268 [INFO] invokers.py:225 -- ExecutorID 12142e-49 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-49-M000.log
+2026-08-22 18:30:49,269 [INFO] executors.py:494 -- ExecutorID 12142e-49 - Getting results from 1 function activations
+2026-08-22 18:30:49,269 [INFO] wait.py:101 -- ExecutorID 12142e-49 - Waiting for 1 function activations to complete
+2026-08-22 18:30:58,347 [ERROR] localhost.py:329 -- Task process 12142e-49-M000-00000 failed with return code -9
+2026-08-22 18:30:58,348 [INFO] executors.py:618 -- ExecutorID 12142e-49 - Cleaning temporary data
+2026-08-22 18:30:58,358 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:30:58,380 [INFO] invokers.py:119 -- ExecutorID 12142e-49 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:30:58,435 [INFO] invokers.py:186 -- ExecutorID 12142e-49 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:30:58,437 [INFO] invokers.py:225 -- ExecutorID 12142e-49 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-49-M001.log
+2026-08-22 18:30:58,437 [INFO] executors.py:494 -- ExecutorID 12142e-49 - Getting results from 1 function activations
+2026-08-22 18:30:58,438 [INFO] wait.py:101 -- ExecutorID 12142e-49 - Waiting for 1 function activations to complete
+2026-08-22 18:31:00,462 [ERROR] localhost.py:329 -- Task process 12142e-49-M001-00000 failed with return code -9
+2026-08-22 18:31:00,463 [INFO] executors.py:618 -- ExecutorID 12142e-49 - Cleaning temporary data
+2026-08-22 18:31:00,475 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:31:00,482 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:31:00,489 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:31:00,641 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:31:00,647 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:31:00,652 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:31:00,810 [INFO] invokers.py:119 -- ExecutorID 12142e-51 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:31:00,939 [INFO] invokers.py:186 -- ExecutorID 12142e-51 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:31:00,940 [INFO] invokers.py:225 -- ExecutorID 12142e-51 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-51-M000.log
+2026-08-22 18:31:00,942 [INFO] executors.py:494 -- ExecutorID 12142e-51 - Getting results from 1 function activations
+2026-08-22 18:31:00,942 [INFO] wait.py:101 -- ExecutorID 12142e-51 - Waiting for 1 function activations to complete
+2026-08-22 18:31:09,998 [ERROR] localhost.py:329 -- Task process 12142e-51-M000-00000 failed with return code -9
+2026-08-22 18:31:09,999 [INFO] executors.py:618 -- ExecutorID 12142e-51 - Cleaning temporary data
+2026-08-22 18:31:10,006 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:31:10,020 [INFO] invokers.py:119 -- ExecutorID 12142e-51 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:31:10,066 [INFO] invokers.py:186 -- ExecutorID 12142e-51 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:31:10,068 [INFO] invokers.py:225 -- ExecutorID 12142e-51 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-51-M001.log
+2026-08-22 18:31:10,068 [INFO] executors.py:494 -- ExecutorID 12142e-51 - Getting results from 1 function activations
+2026-08-22 18:31:10,068 [INFO] wait.py:101 -- ExecutorID 12142e-51 - Waiting for 1 function activations to complete
+2026-08-22 18:31:12,085 [ERROR] localhost.py:329 -- Task process 12142e-51-M001-00000 failed with return code -9
+2026-08-22 18:31:12,085 [INFO] executors.py:618 -- ExecutorID 12142e-51 - Cleaning temporary data
+2026-08-22 18:31:12,098 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:31:12,106 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:31:12,112 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:31:12,189 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 18:31:12,192 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:31:12,196 [INFO] localhost.py:78 -- Localhost compute v2 client created
+2026-08-22 18:31:12,273 [INFO] invokers.py:119 -- ExecutorID 12142e-53 | JobID M000 - Selected Runtime: python 
+2026-08-22 18:31:12,305 [INFO] invokers.py:186 -- ExecutorID 12142e-53 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 18:31:12,306 [INFO] invokers.py:225 -- ExecutorID 12142e-53 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-53-M000.log
+2026-08-22 18:31:12,307 [INFO] executors.py:494 -- ExecutorID 12142e-53 - Getting results from 1 function activations
+2026-08-22 18:31:12,307 [INFO] wait.py:101 -- ExecutorID 12142e-53 - Waiting for 1 function activations to complete
+2026-08-22 18:31:17,350 [ERROR] localhost.py:329 -- Task process 12142e-53-M000-00000 failed with return code -9
+2026-08-22 18:31:17,350 [INFO] executors.py:618 -- ExecutorID 12142e-53 - Cleaning temporary data
+2026-08-22 18:31:17,358 [INFO] minio.py:62 -- MinIO client created - Endpoint: http://localhost:9000
+2026-08-22 18:31:17,372 [INFO] invokers.py:119 -- ExecutorID 12142e-53 | JobID M001 - Selected Runtime: python 
+2026-08-22 18:31:17,422 [INFO] invokers.py:186 -- ExecutorID 12142e-53 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 18:31:17,423 [INFO] invokers.py:225 -- ExecutorID 12142e-53 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/12142e-53-M001.log
+2026-08-22 18:31:17,423 [INFO] executors.py:494 -- ExecutorID 12142e-53 - Getting results from 1 function activations
+2026-08-22 18:31:17,423 [INFO] wait.py:101 -- ExecutorID 12142e-53 - Waiting for 1 function activations to complete
+2026-08-22 18:31:19,444 [ERROR] localhost.py:329 -- Task process 12142e-53-M001-00000 failed with return code -9
+2026-08-22 18:31:19,444 [INFO] executors.py:618 -- ExecutorID 12142e-53 - Cleaning temporary data
+[recall1m] dataset=deep1m_nb16 num_blocks=16 nlist=None n_probe=None start=2026-08-22T16:14:26Z
+[recall1m] loaded 1000 queries, 1000 truth rows
+[recall1m] setup OK — num_blocks=16 nlist=10 n_probe=10 blocks_per_task=16 num_workers=16
+Uploaded vectors_deep1m_nb16.csv and cleared old indexes.
+
+[recall1m] ingest+index build: 42.5s (upload 3.1s, index 39.2s)
+
+
+[recall1m] recall@10 = 100.00%  (batched 1000 queries in 7.3s; perfect=1000/1000, zero-hit=0/1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[recall1m] indicative per-query wall-clock (n=25): median 7.30s
+[recall1m] summary -> harness-experiment-a/results/recall1m_1787415266_nb16_summary.json
+[recall1m] VERDICT = PASS (recall 100.00%)
+[recall1m] kept data in MinIO (--keep-data)
+
+{
+  "corpus_fingerprint": {
+    "byte_size": 1150131354,
+    "content_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+    "line_count": 1000000,
+    "source_path": "<REPO_ROOT>/datasets/deep_1m/vectors_deep_1m.csv"
+  },
+  "dataset": "deep1m_nb16",
+  "experiment": "A_blocks_recall_1m_local",
+  "indicative_query_wall_clock_s": {
+    "max": 11.6153,
+    "median": 7.3015,
+    "min": 5.2922,
+    "n_sample": 25
+  },
+  "ingest_seconds": 42.45281195640564,
+  "ingest_timings_keys": [
+    "blocks_index_timers",
+    "bulk_insert_index_s",
+    "bulk_insert_upload_s",
+    "op",
+    "wall_clock_s"
+  ],
+  "params": {
+    "blocks_per_task": 16,
+    "n_probe": 10,
+    "num_blocks": 16,
+    "num_workers": 16,
+    "partitions_per_block": 10
+  },
+  "per_query_hits": {
+    "max_hits": 10,
+    "mean_hits": 10.0,
+    "min_hits": 10,
+    "perfect_10of10": 1000,
+    "zero_hits": 0
+  },
+  "query0_top10_returned": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "query0_top10_truth": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "recall_at_10_pct": 100.0,
+  "recall_batch_seconds": 7.35,
+  "started_utc": "2026-08-22T16:14:26Z",
+  "timestamp": 1787415266,
+  "timing_jsonl": "harness-experiment-a/results/recall1m_1787415266_timing.jsonl",
+  "timing_manifest": "harness-experiment-a/results/recall1m_1787415266_timing.manifest.json",
+  "verdict": "PASS"
+}

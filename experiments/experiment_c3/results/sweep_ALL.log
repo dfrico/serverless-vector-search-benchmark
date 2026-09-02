@@ -1,0 +1,37 @@
+=== CELL blocks c=1 dur=800s warmup=1 @ 08:44:31Z ===
+    rc=0 (08:58:39Z) -> <REPO_ROOT>/harness-experiment-c3/results/sweep_blocks_c1.run.log
+[c3/sweep/blocks c=1] DONE records=62 wall=817.3s realised=0.08 ops/s
+
+=== C3 SWEEP BLOCKS c=1 DONE ===
+=== CELL s3vectors c=1 dur=330s warmup=5 @ 08:58:39Z ===
+    rc=0 (09:04:27Z) -> <REPO_ROOT>/harness-experiment-c3/results/sweep_s3vectors_c1.run.log
+[c3/sweep/s3vectors c=1] DONE records=736 wall=337.6s realised=2.18 ops/s
+
+=== C3 SWEEP S3VECTORS c=1 DONE ===
+=== CELL s3vectors c=4 dur=85s warmup=5 @ 09:04:27Z ===
+    rc=0 (09:06:08Z) -> <REPO_ROOT>/harness-experiment-c3/results/sweep_s3vectors_c4.run.log
+[c3/sweep/s3vectors c=4] DONE records=1044 wall=92.0s realised=11.35 ops/s
+
+=== C3 SWEEP S3VECTORS c=4 DONE ===
+=== CELL lancedb c=10 dur=280s warmup=1 @ 09:06:08Z ===
+    rc=0 (09:12:32Z) -> <REPO_ROOT>/harness-experiment-c3/results/sweep_lancedb_c10.run.log
+[c3/sweep/lancedb c=10] DONE records=60 wall=319.8s realised=0.19 ops/s
+
+=== C3 SWEEP LANCEDB c=10 DONE ===
+=== CELL lancedb c=4 dur=690s warmup=1 @ 09:12:32Z ===
+    rc=0 (09:25:36Z) -> <REPO_ROOT>/harness-experiment-c3/results/sweep_lancedb_c4.run.log
+[c3/sweep/lancedb c=4] DONE records=56 wall=726.6s realised=0.08 ops/s
+
+=== C3 SWEEP LANCEDB c=4 DONE ===
+=== CELL lancedb c=1 dur=2760s warmup=1 @ 09:25:36Z ===
+    rc=0 (10:12:57Z) -> <REPO_ROOT>/harness-experiment-c3/results/sweep_lancedb_c1.run.log
+[c3/sweep/lancedb c=1] DONE records=54 wall=2782.9s realised=0.02 ops/s
+
+=== C3 SWEEP LANCEDB c=1 DONE ===
+=== ALL SWEEP CELLS DONE @ 10:12:57Z ===
+-rw-r--r--  1 dfrico  staff  806927 Aug 24 10:58 <REPO_ROOT>/harness-experiment-c3/results/sweep_blocks_c1.jsonl
+-rw-r--r--  1 dfrico  staff   16836 Aug 24 12:12 <REPO_ROOT>/harness-experiment-c3/results/sweep_lancedb_c1.jsonl
+-rw-r--r--  1 dfrico  staff   18725 Aug 24 11:12 <REPO_ROOT>/harness-experiment-c3/results/sweep_lancedb_c10.jsonl
+-rw-r--r--  1 dfrico  staff   17490 Aug 24 11:25 <REPO_ROOT>/harness-experiment-c3/results/sweep_lancedb_c4.jsonl
+-rw-r--r--  1 dfrico  staff  192763 Aug 24 11:04 <REPO_ROOT>/harness-experiment-c3/results/sweep_s3vectors_c1.jsonl
+-rw-r--r--  1 dfrico  staff  273858 Aug 24 11:06 <REPO_ROOT>/harness-experiment-c3/results/sweep_s3vectors_c4.jsonl

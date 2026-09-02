@@ -1,0 +1,262 @@
+[sweep/blocks c=4] account=<AWS_ACCOUNT_ID> duration=150.0s ops=100.0 seed=42 warmup=5
+[blocks-aws] boto3 -> account <AWS_ACCOUNT_ID> (arn:aws:iam::<AWS_ACCOUNT_ID>:user/Claude)
+[sweep/blocks c=4] setup OK metric=l2 max_safe_concurrency=1 sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df anchor_ok=True
+2026-08-22 23:07:37,350 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:07:37,413 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:07:38,553 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:07:38,554 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:07:38,620 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:07:39,757 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:07:40,278 [INFO] invokers.py:119 -- ExecutorID c44388-1 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:07:40,929 [INFO] invokers.py:186 -- ExecutorID c44388-1 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:07:40,929 [INFO] invokers.py:225 -- ExecutorID c44388-1 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-1-M000.log
+2026-08-22 23:07:40,929 [INFO] executors.py:494 -- ExecutorID c44388-1 - Getting results from 1 function activations
+2026-08-22 23:07:40,929 [INFO] wait.py:101 -- ExecutorID c44388-1 - Waiting for 1 function activations to complete
+2026-08-22 23:07:45,958 [INFO] executors.py:618 -- ExecutorID c44388-1 - Cleaning temporary data
+2026-08-22 23:07:46,052 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:07:46,892 [INFO] invokers.py:119 -- ExecutorID c44388-1 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:07:47,330 [INFO] invokers.py:186 -- ExecutorID c44388-1 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:07:47,330 [INFO] invokers.py:225 -- ExecutorID c44388-1 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-1-M001.log
+2026-08-22 23:07:47,331 [INFO] executors.py:494 -- ExecutorID c44388-1 - Getting results from 1 function activations
+2026-08-22 23:07:47,331 [INFO] wait.py:101 -- ExecutorID c44388-1 - Waiting for 1 function activations to complete
+2026-08-22 23:07:49,338 [INFO] executors.py:618 -- ExecutorID c44388-1 - Cleaning temporary data
+
+
+[sweep/blocks c=4] warmup 5 queries discarded in 12.3s
+[workload] concurrency capped: max_in_flight=4 -> effective=1 (backend max_safe_concurrency=1); pattern=constant
+[sweep/blocks c=4] configured_concurrency=4 effective_concurrency=1
+2026-08-22 23:07:50,731 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:07:50,779 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:07:51,945 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:07:51,946 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:07:51,991 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:07:53,145 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:07:53,662 [INFO] invokers.py:119 -- ExecutorID c44388-3 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:07:55,432 [INFO] invokers.py:186 -- ExecutorID c44388-3 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:07:55,433 [INFO] invokers.py:225 -- ExecutorID c44388-3 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-3-M000.log
+2026-08-22 23:07:55,433 [INFO] executors.py:494 -- ExecutorID c44388-3 - Getting results from 1 function activations
+2026-08-22 23:07:55,433 [INFO] wait.py:101 -- ExecutorID c44388-3 - Waiting for 1 function activations to complete
+2026-08-22 23:08:00,457 [INFO] executors.py:618 -- ExecutorID c44388-3 - Cleaning temporary data
+2026-08-22 23:08:00,513 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:01,358 [INFO] invokers.py:119 -- ExecutorID c44388-3 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:08:02,123 [INFO] invokers.py:186 -- ExecutorID c44388-3 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:08:02,124 [INFO] invokers.py:225 -- ExecutorID c44388-3 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-3-M001.log
+2026-08-22 23:08:02,124 [INFO] executors.py:494 -- ExecutorID c44388-3 - Getting results from 1 function activations
+2026-08-22 23:08:02,124 [INFO] wait.py:101 -- ExecutorID c44388-3 - Waiting for 1 function activations to complete
+2026-08-22 23:08:05,137 [INFO] executors.py:618 -- ExecutorID c44388-3 - Cleaning temporary data
+2026-08-22 23:08:05,660 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:05,712 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:06,904 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:06,905 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:06,952 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:08,064 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:08,577 [INFO] invokers.py:119 -- ExecutorID c44388-5 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:08:09,305 [INFO] invokers.py:186 -- ExecutorID c44388-5 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:08:09,306 [INFO] invokers.py:225 -- ExecutorID c44388-5 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-5-M000.log
+2026-08-22 23:08:09,306 [INFO] executors.py:494 -- ExecutorID c44388-5 - Getting results from 1 function activations
+2026-08-22 23:08:09,306 [INFO] wait.py:101 -- ExecutorID c44388-5 - Waiting for 1 function activations to complete
+2026-08-22 23:08:14,329 [INFO] executors.py:618 -- ExecutorID c44388-5 - Cleaning temporary data
+2026-08-22 23:08:14,379 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:15,195 [INFO] invokers.py:119 -- ExecutorID c44388-5 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:08:15,608 [INFO] invokers.py:186 -- ExecutorID c44388-5 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:08:15,608 [INFO] invokers.py:225 -- ExecutorID c44388-5 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-5-M001.log
+2026-08-22 23:08:15,609 [INFO] executors.py:494 -- ExecutorID c44388-5 - Getting results from 1 function activations
+2026-08-22 23:08:15,609 [INFO] wait.py:101 -- ExecutorID c44388-5 - Waiting for 1 function activations to complete
+2026-08-22 23:08:17,620 [INFO] executors.py:618 -- ExecutorID c44388-5 - Cleaning temporary data
+2026-08-22 23:08:18,143 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:18,200 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:19,303 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:19,303 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:19,464 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:20,579 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:21,052 [INFO] invokers.py:119 -- ExecutorID c44388-7 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:08:21,722 [INFO] invokers.py:186 -- ExecutorID c44388-7 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:08:21,723 [INFO] invokers.py:225 -- ExecutorID c44388-7 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-7-M000.log
+2026-08-22 23:08:21,723 [INFO] executors.py:494 -- ExecutorID c44388-7 - Getting results from 1 function activations
+2026-08-22 23:08:21,723 [INFO] wait.py:101 -- ExecutorID c44388-7 - Waiting for 1 function activations to complete
+2026-08-22 23:08:26,742 [INFO] executors.py:618 -- ExecutorID c44388-7 - Cleaning temporary data
+2026-08-22 23:08:26,795 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:27,654 [INFO] invokers.py:119 -- ExecutorID c44388-7 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:08:28,077 [INFO] invokers.py:186 -- ExecutorID c44388-7 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:08:28,077 [INFO] invokers.py:225 -- ExecutorID c44388-7 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-7-M001.log
+2026-08-22 23:08:28,077 [INFO] executors.py:494 -- ExecutorID c44388-7 - Getting results from 1 function activations
+2026-08-22 23:08:28,077 [INFO] wait.py:101 -- ExecutorID c44388-7 - Waiting for 1 function activations to complete
+2026-08-22 23:08:30,083 [INFO] executors.py:618 -- ExecutorID c44388-7 - Cleaning temporary data
+2026-08-22 23:08:30,569 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:30,611 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:31,840 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:31,841 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:31,888 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:33,002 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:33,512 [INFO] invokers.py:119 -- ExecutorID c44388-9 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:08:35,275 [INFO] invokers.py:186 -- ExecutorID c44388-9 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:08:35,276 [INFO] invokers.py:225 -- ExecutorID c44388-9 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-9-M000.log
+2026-08-22 23:08:35,276 [INFO] executors.py:494 -- ExecutorID c44388-9 - Getting results from 1 function activations
+2026-08-22 23:08:35,276 [INFO] wait.py:101 -- ExecutorID c44388-9 - Waiting for 1 function activations to complete
+2026-08-22 23:08:42,308 [INFO] executors.py:618 -- ExecutorID c44388-9 - Cleaning temporary data
+2026-08-22 23:08:42,362 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:43,236 [INFO] invokers.py:119 -- ExecutorID c44388-9 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:08:43,996 [INFO] invokers.py:186 -- ExecutorID c44388-9 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:08:43,996 [INFO] invokers.py:225 -- ExecutorID c44388-9 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-9-M001.log
+2026-08-22 23:08:43,998 [INFO] executors.py:494 -- ExecutorID c44388-9 - Getting results from 1 function activations
+2026-08-22 23:08:43,998 [INFO] wait.py:101 -- ExecutorID c44388-9 - Waiting for 1 function activations to complete
+2026-08-22 23:08:46,009 [INFO] executors.py:618 -- ExecutorID c44388-9 - Cleaning temporary data
+2026-08-22 23:08:46,518 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:46,566 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:47,816 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:47,817 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:47,866 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:48,969 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:08:49,468 [INFO] invokers.py:119 -- ExecutorID c44388-11 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:08:50,182 [INFO] invokers.py:186 -- ExecutorID c44388-11 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:08:50,183 [INFO] invokers.py:225 -- ExecutorID c44388-11 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-11-M000.log
+2026-08-22 23:08:50,184 [INFO] executors.py:494 -- ExecutorID c44388-11 - Getting results from 1 function activations
+2026-08-22 23:08:50,184 [INFO] wait.py:101 -- ExecutorID c44388-11 - Waiting for 1 function activations to complete
+2026-08-22 23:08:55,204 [INFO] executors.py:618 -- ExecutorID c44388-11 - Cleaning temporary data
+2026-08-22 23:08:55,260 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:08:56,097 [INFO] invokers.py:119 -- ExecutorID c44388-11 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:08:56,731 [INFO] invokers.py:186 -- ExecutorID c44388-11 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:08:56,732 [INFO] invokers.py:225 -- ExecutorID c44388-11 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-11-M001.log
+2026-08-22 23:08:56,732 [INFO] executors.py:494 -- ExecutorID c44388-11 - Getting results from 1 function activations
+2026-08-22 23:08:56,732 [INFO] wait.py:101 -- ExecutorID c44388-11 - Waiting for 1 function activations to complete
+2026-08-22 23:08:58,742 [INFO] executors.py:618 -- ExecutorID c44388-11 - Cleaning temporary data
+2026-08-22 23:08:59,244 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:08:59,295 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:00,586 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:00,587 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:00,641 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:01,865 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:02,368 [INFO] invokers.py:119 -- ExecutorID c44388-13 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:09:03,034 [INFO] invokers.py:186 -- ExecutorID c44388-13 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:09:03,035 [INFO] invokers.py:225 -- ExecutorID c44388-13 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-13-M000.log
+2026-08-22 23:09:03,035 [INFO] executors.py:494 -- ExecutorID c44388-13 - Getting results from 1 function activations
+2026-08-22 23:09:03,035 [INFO] wait.py:101 -- ExecutorID c44388-13 - Waiting for 1 function activations to complete
+2026-08-22 23:09:11,072 [INFO] executors.py:618 -- ExecutorID c44388-13 - Cleaning temporary data
+2026-08-22 23:09:11,127 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:11,984 [INFO] invokers.py:119 -- ExecutorID c44388-13 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:09:12,400 [INFO] invokers.py:186 -- ExecutorID c44388-13 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:09:12,400 [INFO] invokers.py:225 -- ExecutorID c44388-13 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-13-M001.log
+2026-08-22 23:09:12,401 [INFO] executors.py:494 -- ExecutorID c44388-13 - Getting results from 1 function activations
+2026-08-22 23:09:12,401 [INFO] wait.py:101 -- ExecutorID c44388-13 - Waiting for 1 function activations to complete
+2026-08-22 23:09:15,413 [INFO] executors.py:618 -- ExecutorID c44388-13 - Cleaning temporary data
+2026-08-22 23:09:15,896 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:15,949 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:17,054 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:17,055 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:17,340 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:18,417 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:18,934 [INFO] invokers.py:119 -- ExecutorID c44388-15 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:09:19,733 [INFO] invokers.py:186 -- ExecutorID c44388-15 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:09:19,734 [INFO] invokers.py:225 -- ExecutorID c44388-15 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-15-M000.log
+2026-08-22 23:09:19,734 [INFO] executors.py:494 -- ExecutorID c44388-15 - Getting results from 1 function activations
+2026-08-22 23:09:19,734 [INFO] wait.py:101 -- ExecutorID c44388-15 - Waiting for 1 function activations to complete
+2026-08-22 23:09:24,760 [INFO] executors.py:618 -- ExecutorID c44388-15 - Cleaning temporary data
+2026-08-22 23:09:24,812 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:25,716 [INFO] invokers.py:119 -- ExecutorID c44388-15 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:09:26,375 [INFO] invokers.py:186 -- ExecutorID c44388-15 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:09:26,376 [INFO] invokers.py:225 -- ExecutorID c44388-15 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-15-M001.log
+2026-08-22 23:09:26,376 [INFO] executors.py:494 -- ExecutorID c44388-15 - Getting results from 1 function activations
+2026-08-22 23:09:26,376 [INFO] wait.py:101 -- ExecutorID c44388-15 - Waiting for 1 function activations to complete
+2026-08-22 23:09:29,390 [INFO] executors.py:618 -- ExecutorID c44388-15 - Cleaning temporary data
+2026-08-22 23:09:29,879 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:29,928 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:31,016 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:31,016 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:31,065 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:32,152 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:32,636 [INFO] invokers.py:119 -- ExecutorID c44388-17 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:09:33,336 [INFO] invokers.py:186 -- ExecutorID c44388-17 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:09:33,336 [INFO] invokers.py:225 -- ExecutorID c44388-17 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-17-M000.log
+2026-08-22 23:09:33,337 [INFO] executors.py:494 -- ExecutorID c44388-17 - Getting results from 1 function activations
+2026-08-22 23:09:33,337 [INFO] wait.py:101 -- ExecutorID c44388-17 - Waiting for 1 function activations to complete
+2026-08-22 23:09:38,358 [INFO] executors.py:618 -- ExecutorID c44388-17 - Cleaning temporary data
+2026-08-22 23:09:38,407 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:39,326 [INFO] invokers.py:119 -- ExecutorID c44388-17 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:09:39,706 [INFO] invokers.py:186 -- ExecutorID c44388-17 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:09:39,706 [INFO] invokers.py:225 -- ExecutorID c44388-17 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-17-M001.log
+2026-08-22 23:09:39,706 [INFO] executors.py:494 -- ExecutorID c44388-17 - Getting results from 1 function activations
+2026-08-22 23:09:39,706 [INFO] wait.py:101 -- ExecutorID c44388-17 - Waiting for 1 function activations to complete
+2026-08-22 23:09:42,714 [INFO] executors.py:618 -- ExecutorID c44388-17 - Cleaning temporary data
+2026-08-22 23:09:43,224 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:43,542 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:44,727 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:44,728 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:44,775 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:45,889 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:46,392 [INFO] invokers.py:119 -- ExecutorID c44388-19 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:09:47,100 [INFO] invokers.py:186 -- ExecutorID c44388-19 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:09:47,101 [INFO] invokers.py:225 -- ExecutorID c44388-19 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-19-M000.log
+2026-08-22 23:09:47,101 [INFO] executors.py:494 -- ExecutorID c44388-19 - Getting results from 1 function activations
+2026-08-22 23:09:47,101 [INFO] wait.py:101 -- ExecutorID c44388-19 - Waiting for 1 function activations to complete
+2026-08-22 23:09:52,127 [INFO] executors.py:618 -- ExecutorID c44388-19 - Cleaning temporary data
+2026-08-22 23:09:52,175 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:52,995 [INFO] invokers.py:119 -- ExecutorID c44388-19 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:09:53,412 [INFO] invokers.py:186 -- ExecutorID c44388-19 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:09:53,412 [INFO] invokers.py:225 -- ExecutorID c44388-19 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-19-M001.log
+2026-08-22 23:09:53,412 [INFO] executors.py:494 -- ExecutorID c44388-19 - Getting results from 1 function activations
+2026-08-22 23:09:53,412 [INFO] wait.py:101 -- ExecutorID c44388-19 - Waiting for 1 function activations to complete
+2026-08-22 23:09:55,419 [INFO] executors.py:618 -- ExecutorID c44388-19 - Cleaning temporary data
+2026-08-22 23:09:55,927 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:55,978 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:57,096 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:57,096 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:09:57,144 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:09:58,263 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:09:58,748 [INFO] invokers.py:119 -- ExecutorID c44388-21 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:09:59,480 [INFO] invokers.py:186 -- ExecutorID c44388-21 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:09:59,481 [INFO] invokers.py:225 -- ExecutorID c44388-21 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-21-M000.log
+2026-08-22 23:09:59,481 [INFO] executors.py:494 -- ExecutorID c44388-21 - Getting results from 1 function activations
+2026-08-22 23:09:59,481 [INFO] wait.py:101 -- ExecutorID c44388-21 - Waiting for 1 function activations to complete
+2026-08-22 23:10:04,503 [INFO] executors.py:618 -- ExecutorID c44388-21 - Cleaning temporary data
+2026-08-22 23:10:04,876 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:10:05,726 [INFO] invokers.py:119 -- ExecutorID c44388-21 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:10:06,342 [INFO] invokers.py:186 -- ExecutorID c44388-21 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:10:06,342 [INFO] invokers.py:225 -- ExecutorID c44388-21 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-21-M001.log
+2026-08-22 23:10:06,343 [INFO] executors.py:494 -- ExecutorID c44388-21 - Getting results from 1 function activations
+2026-08-22 23:10:06,343 [INFO] wait.py:101 -- ExecutorID c44388-21 - Waiting for 1 function activations to complete
+2026-08-22 23:10:09,352 [INFO] executors.py:618 -- ExecutorID c44388-21 - Cleaning temporary data
+2026-08-22 23:10:09,879 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:10:09,920 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:10:11,009 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:10:11,009 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-08-22 23:10:11,059 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:10:12,147 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-08-22 23:10:12,627 [INFO] invokers.py:119 -- ExecutorID c44388-23 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-08-22 23:10:13,340 [INFO] invokers.py:186 -- ExecutorID c44388-23 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-08-22 23:10:13,341 [INFO] invokers.py:225 -- ExecutorID c44388-23 | JobID M000 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-23-M000.log
+2026-08-22 23:10:13,341 [INFO] executors.py:494 -- ExecutorID c44388-23 - Getting results from 1 function activations
+2026-08-22 23:10:13,341 [INFO] wait.py:101 -- ExecutorID c44388-23 - Waiting for 1 function activations to complete
+2026-08-22 23:10:20,372 [INFO] executors.py:618 -- ExecutorID c44388-23 - Cleaning temporary data
+2026-08-22 23:10:20,420 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-08-22 23:10:21,271 [INFO] invokers.py:119 -- ExecutorID c44388-23 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-08-22 23:10:21,657 [INFO] invokers.py:186 -- ExecutorID c44388-23 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-08-22 23:10:21,657 [INFO] invokers.py:225 -- ExecutorID c44388-23 | JobID M001 - View execution logs at /private/var/folders/wt/k3tlj57j4k53pnb4rwkbyty80000gp/T/lithops-dfrico/logs/c44388-23-M001.log
+2026-08-22 23:10:21,658 [INFO] executors.py:494 -- ExecutorID c44388-23 - Getting results from 1 function activations
+2026-08-22 23:10:21,658 [INFO] wait.py:101 -- ExecutorID c44388-23 - Waiting for 1 function activations to complete
+2026-08-22 23:10:23,665 [INFO] executors.py:618 -- ExecutorID c44388-23 - Cleaning temporary data
+[workload] concurrency capped: max_in_flight=4 -> effective=1 (backend max_safe_concurrency=1); pattern=constant
+[workload] concurrency capped: max_in_flight=4 -> effective=1 (backend max_safe_concurrency=1); pattern=constant
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[sweep/blocks c=4] DONE records=11 wall=154.3s realised_rate=0.07 ops/s
+[sweep/blocks c=4] wrote harness-experiment-b/results/sweep_blocks_c4.jsonl

@@ -1,0 +1,12 @@
+[c3/p2/s3vectors] start=2026-08-23T15:50:38Z account=<AWS_ACCOUNT_ID> recall_n=50 chunk=100
+[c3/p2/s3vectors] ingest estimate: 20000 PutVectors requests, ~$0.7680 (min 128KB/req model)
+[s3vectors] dataset 'deep_10m' -> index name 'deep-10m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[c3/p2/s3vectors] setup OK sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/s3vectors] ingest done in 20111.2s cost=$0.76800
+[c3/p2/s3vectors] post-ingest sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/s3vectors] probe query: 10 hits in 0.65s server_ms=None cold=None
+[c3/p2/s3vectors] gate chunk 1 (50/50) in 25.1s
+[c3/p2/s3vectors] recall@10=97.00% (bar 70.0%) perfect=36/50 non_empty=50/50 query_s=25.1 chunks=1
+[c3/p2/s3vectors] wrote <REPO_ROOT>/harness-experiment-c3/results/phase2_s3vectors.json
+
+=== C3 PHASE 2 S3VECTORS PASS ===

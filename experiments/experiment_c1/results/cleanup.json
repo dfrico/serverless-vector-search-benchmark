@@ -1,0 +1,20 @@
+{
+  "after": {
+    "indexes": 0,
+    "queries_staging": 0,
+    "reduce_prefix": 0,
+    "true_neighbours_csv": 0,
+    "vectors_csv": 0
+  },
+  "before": {
+    "indexes": 33,
+    "queries_staging": 1,
+    "reduce_prefix": 1,
+    "true_neighbours_csv": 0,
+    "vectors_csv": 1
+  },
+  "bucket": "thesis-blocks-<AWS_ACCOUNT_ID>",
+  "clean": true,
+  "dataset": "deep_1m",
+  "deploy_kept": true
+}

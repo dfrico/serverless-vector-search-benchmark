@@ -1,0 +1,9 @@
+[sweep/s3vectors c=10] account=<AWS_ACCOUNT_ID> duration=45.0s ops=100.0 seed=42 warmup=0
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[sweep/s3vectors c=10] setup OK metric=l2 max_safe_concurrency=4 sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df anchor_ok=True
+[workload] concurrency capped: max_in_flight=10 -> effective=4 (backend max_safe_concurrency=4); pattern=constant
+[sweep/s3vectors c=10] configured_concurrency=10 effective_concurrency=4
+[workload] concurrency capped: max_in_flight=10 -> effective=4 (backend max_safe_concurrency=4); pattern=constant
+[workload] concurrency capped: max_in_flight=10 -> effective=4 (backend max_safe_concurrency=4); pattern=constant
+[sweep/s3vectors c=10] DONE records=999 wall=45.9s realised_rate=21.74 ops/s
+[sweep/s3vectors c=10] wrote harness-experiment-b/results/sweep_s3vectors_c10.jsonl

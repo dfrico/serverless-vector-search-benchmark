@@ -1,0 +1,8 @@
+[c2/phase1/lancedb] start=2026-08-23T08:12:47Z account=<AWS_ACCOUNT_ID>
+[c2/phase1/lancedb] pre-phase spend estimate: reingest 1M (Blocks ~$0.01, S3V ~$0.08 PUT, LanceDB ~$0.06) + 100q recall (<$0.001). Phase 1 total across 3 adapters ~$0.30. No single op > $3.
+[c2/phase1/lancedb] setup OK sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df anchor_ok=True
+[c2/phase1/lancedb] ingest done in 377.9s ingest_cost=$0.00376
+[c2/phase1/lancedb] recall@10=100.00% (bar 99.0%) perfect=100/100 non_empty=100/100 recall_query_s=512.4
+[c2/phase1/lancedb] wrote results/phase1_lancedb.json
+
+=== C2 PHASE 1 LANCEDB PASS ===

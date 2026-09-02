@@ -1,0 +1,104 @@
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "all_ok": true,
+  "blocks_params": {
+    "blocks_per_task": 8,
+    "n_probe": 7,
+    "num_blocks": 160,
+    "num_workers": 160,
+    "partitions_per_block": 10
+  },
+  "blocks_sizing": {
+    "blocks_per_task": 8,
+    "est_task_rss_mb": 672.4,
+    "fits_in_lambda": true,
+    "lambda_mem_mb": 3008,
+    "map_tasks_per_query": 20,
+    "n_probe": 7,
+    "num_blocks": 160,
+    "num_workers": 160,
+    "num_workers_equals_num_blocks": true,
+    "partitions_per_block_nlist": 10,
+    "raw_vectors_mb_per_task": 192.0,
+    "vectors_loaded_per_map_task": 500000,
+    "vectors_per_partition": 62500,
+    "vectors_per_partition_1m_equiv": 62500
+  },
+  "budget": {
+    "budgets": [
+      {
+        "actual_spend_usd": "0.0",
+        "health": "HEALTHY",
+        "limit_usd": "100.0",
+        "name": "thesis-s3vectors-monthly"
+      }
+    ],
+    "ok": true
+  },
+  "concurrency_cap": {
+    "blocks": 1,
+    "lancedb": 10,
+    "s3vectors": 4
+  },
+  "corpus_sha256_anchor": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+  "dataset": "deep_10m",
+  "infra": {
+    "blocks_bucket": {
+      "present": true
+    },
+    "blocks_dynamodb_BlocksDB_default": {
+      "present": true,
+      "status": "ACTIVE"
+    },
+    "blocks_ecr_runtime": {
+      "n_images": 3,
+      "present": true,
+      "tags": [
+        "latest"
+      ],
+      "uri": "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/lithops_v363_rb26/blocks-db-runtime"
+    },
+    "blocks_lithops_workers": {
+      "attempts": 1,
+      "names": [
+        "lithops-worker-rb26-363-11170a3116",
+        "lithops-worker-rb26-363-600f82b870"
+      ],
+      "present": true
+    },
+    "lancedb_bucket": {
+      "present": true
+    },
+    "lancedb_ecr": {
+      "n_images": 1,
+      "present": true,
+      "tags": [
+        "latest"
+      ],
+      "uri": "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/thesis-lancedb-lambda"
+    },
+    "lancedb_lambda": {
+      "arch": "arm64",
+      "mem_mb": 2048,
+      "present": true,
+      "state": "Active",
+      "timeout_s": 900
+    },
+    "s3vectors_bucket": {
+      "bucket": "thesis-s3v-<AWS_ACCOUNT_ID>",
+      "present": true
+    }
+  },
+  "infra_ok": {
+    "blocks": true,
+    "lancedb": true,
+    "s3vectors": true
+  },
+  "phase": "c3_phase1",
+  "recall_stop": {
+    "blocks": 95.0,
+    "lancedb": 99.0,
+    "s3vectors": 70.0
+  },
+  "region": "us-east-1"
+}

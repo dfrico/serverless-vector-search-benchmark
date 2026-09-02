@@ -1,0 +1,6 @@
+[c3/sweep/lancedb c=10] attempt=1 setup OK metric=l2 max_safe_conc=10 sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/sweep/lancedb c=10] warmup 1 discarded in 53.7s
+[c3/sweep/lancedb c=10] configured=10 effective=10 duration=280.0s ops=100.0
+[c3/sweep/lancedb c=10] DONE records=60 wall=319.8s realised=0.19 ops/s
+
+=== C3 SWEEP LANCEDB c=10 DONE ===
