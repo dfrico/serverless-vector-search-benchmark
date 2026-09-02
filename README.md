@@ -1,6 +1,6 @@
 # Serverless vector-search benchmark
 
-This repository holds the benchmark harness and experiment code from a master's
+This repository holds the benchmark harness and experiment code from my master's
 thesis. The thesis compares three serverless vector-search systems on the same
 corpus, through one client interface, and with the same fairness checks:
 
@@ -26,8 +26,12 @@ quickstart.
 ## What is NOT here
 
 - The Blocks reference implementation. The Blocks adapters expect it at
-  `references/blocks-db-wip/`. That code is a separate work-in-progress repository
-  and is not included here. Without it, the Blocks adapters will not import.
+  `references/blocks-db-wip/`. It is a separate public repository, not included
+  here. Clone it there before you use the Blocks adapters:
+  https://github.com/Oct-HI/blocks-db-wip
+  ```sh
+  git clone https://github.com/Oct-HI/blocks-db-wip references/blocks-db-wip
+  ```
 - Dataset bytes. Only `datasets/**/README.md` is tracked. The prep scripts under
   `scripts/` build the samples and the ground truth.
 - AWS credentials and Lithops config. Provide your own (see below).
