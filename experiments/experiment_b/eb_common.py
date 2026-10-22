@@ -20,7 +20,10 @@ DATA_DIR = os.path.join(WORKSPACE, "datasets", "deep_1m")
 VECTORS_CSV = os.path.join(DATA_DIR, "vectors_deep_1m.csv")
 QUERIES_CSV = os.path.join(DATA_DIR, "queries_deep_1m_1000q.csv")
 TRUTH_CSV = os.path.join(DATA_DIR, "true_neighbours_deep_1m_1000q.csv")
-RESULTS_DIR = os.path.join(_HERE, "results")
+# RESULTS_TAG selects the output folder: unset or "orig" -> results/ (the August
+# evidence the 2 Sep thesis cites); any other tag -> results_<tag>/ (2026-10-16).
+_TAG = os.environ.get("RESULTS_TAG", "orig")
+RESULTS_DIR = os.path.join(_HERE, "results" if _TAG in ("", "orig") else f"results_{_TAG}")
 
 # Fairness anchor (finding 17). Every adapter's manifest must report this hash,
 # because all three ingest the same source_csv_path bytes.
@@ -66,6 +69,9 @@ def build_client(adapter, acct, *, put_batch=500, insert_batch=2000):
             data_bucket=f"thesis-lancedb-{acct}", source_csv_path=VECTORS_CSV,
             image_uri=f"{acct}.dkr.ecr.us-east-1.amazonaws.com/thesis-lancedb-lambda:latest",
             insert_batch_size=insert_batch)
+    if adapter == "lancedb_microvm":  # F39: table baked into the MicroVM image, no ingest
+        from harness.adapters.lancedb_microvm import build_for_dataset
+        return build_for_dataset("deep_1m", VECTORS_CSV, acct)
     raise SystemExit(f"unknown adapter {adapter}")
 
 

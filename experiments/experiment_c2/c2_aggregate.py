@@ -27,7 +27,10 @@ import sys
 _HERE = os.path.dirname(os.path.abspath(__file__))
 if _HERE not in sys.path:
     sys.path.insert(0, _HERE)
-RESULTS_DIR = os.path.join(_HERE, "results")
+# RESULTS_TAG selects the output folder: unset or "orig" -> results/ (the August
+# evidence the 2 Sep thesis cites); any other tag -> results_<tag>/ (2026-10-16).
+_TAG = os.environ.get("RESULTS_TAG", "orig")
+RESULTS_DIR = os.path.join(_HERE, "results" if _TAG in ("", "orig") else f"results_{_TAG}")
 
 ADAPTERS = ["blocks", "s3vectors", "lancedb"]
 CONFIGS = ["abs_cold", "idle_cold", "warm"]

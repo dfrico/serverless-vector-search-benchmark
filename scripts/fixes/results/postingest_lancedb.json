@@ -1,0 +1,26 @@
+{
+ "system": "lancedb",
+ "csv_lines": 10000000,
+ "count": {
+  "count_rows": 10000000
+ },
+ "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+ "values": {
+  "n": 200,
+  "found": 200,
+  "missing": [],
+  "max_sq_diff": 6.004211821527738e-16,
+  "all_equal": true
+ },
+ "self_query": {
+  "n": 50,
+  "n_ok": 50,
+  "top1_exact": 50,
+  "top1_zero_dist_other_id": 0,
+  "in_top10": 50,
+  "failures": [],
+  "mismatches": []
+ },
+ "elapsed_s": 988.1,
+ "timestamp_utc": "2026-09-25T17:16:43Z"
+}

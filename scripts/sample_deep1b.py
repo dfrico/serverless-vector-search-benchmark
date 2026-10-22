@@ -75,8 +75,9 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = os.path.dirname(_HERE)
 # harness-day6 holds the dataset fingerprint contract (finding 13). Reuse it so
 # the hash this script records is computed the SAME way the run manifest will be.
-sys.path.insert(0, os.path.join(WORKSPACE, "harness-day6"))
-from dataset_hash import fingerprint_csv  # noqa: E402
+# The fingerprint contract (finding 13) now lives in harness/dataset_hash.py.
+sys.path.insert(0, WORKSPACE)
+from harness.dataset_hash import fingerprint_csv  # noqa: E402
 
 SOURCE_URL = ("https://storage.yandexcloud.net/yandex-research/"
               "ann-datasets/DEEP/base.10M.fbin")

@@ -1,0 +1,314 @@
+{
+ "day": "2026-10-20",
+ "rows": [
+  {
+   "service": "AWS Cost Explorer",
+   "usage_type": "USE1-APIRequest",
+   "quantity": 2.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Data Transfer",
+   "usage_type": "DataTransfer-Regional-Bytes",
+   "quantity": 0.0,
+   "unit": "GB",
+   "cost": -0.0125393799,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Glue",
+   "usage_type": "EUN1-Catalog-Request",
+   "quantity": 2.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Glue",
+   "usage_type": "USE1-Catalog-Request",
+   "quantity": 2.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "DataTransfer-In-Bytes",
+   "quantity": 1.34e-06,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "DataTransfer-Out-Bytes",
+   "quantity": 1.34e-06,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-GB-Second",
+   "quantity": 19094.0090625,
+   "unit": "Lambda-GB-Second",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-GB-Second-ARM",
+   "quantity": 14285.622,
+   "unit": "Lambda-GB-Second",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-MicroVM-Memory-GB-Second-ARM",
+   "quantity": 2426.477,
+   "unit": "GB-Seconds",
+   "cost": 0.0,
+   "microvm_like": true
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-MicroVM-Snapshot-Read-GB",
+   "quantity": 10.6811904895,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": true
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-MicroVM-Snapshot-Storage-GB-Hour",
+   "quantity": 272.3921479886,
+   "unit": "GB-Hours",
+   "cost": -6e-10,
+   "microvm_like": true
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-MicroVM-Snapshot-Write-GB",
+   "quantity": 7.8760147095,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": true
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Lambda-MicroVM-vCPU-Second-ARM",
+   "quantity": 2082.727,
+   "unit": "vCPU-Seconds",
+   "cost": 0.0,
+   "microvm_like": true
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Request",
+   "quantity": 3119.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AWS Lambda",
+   "usage_type": "Request-ARM",
+   "quantity": 876.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon EC2 Container Registry (ECR)",
+   "usage_type": "TimedStorage-ByteHrs",
+   "quantity": 0.0206673122,
+   "unit": "GB-Month",
+   "cost": -5.2e-09,
+   "microvm_like": false
+  },
+  {
+   "service": "EC2 - Other",
+   "usage_type": "DataTransfer-Regional-Bytes",
+   "quantity": 1.253937976,
+   "unit": "GB",
+   "cost": 0.0125393799,
+   "microvm_like": false
+  },
+  {
+   "service": "EC2 - Other",
+   "usage_type": "EBS:VolumeUsage.gp3",
+   "quantity": 2.7419354403,
+   "unit": "GB-Month",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Elastic Compute Cloud - Compute",
+   "usage_type": "BoxUsage:m7i-flex.large",
+   "quantity": 2.300278,
+   "unit": "Hrs",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "DataTransfer-In-Bytes",
+   "quantity": 0.28675429,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "DataTransfer-Out-Bytes",
+   "quantity": 0.0152304086,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Requests-Tier1",
+   "quantity": 17525.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Requests-Tier2",
+   "quantity": 817673.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "TimedStorage-ByteHrs",
+   "quantity": 0.9247940697,
+   "unit": "GB-Month",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-Put-Bytes",
+   "quantity": 0.36311232,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-Query-ProcessedBytes-Tier1",
+   "quantity": 295.2971495687,
+   "unit": "GB",
+   "cost": -1e-10,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-Query-ProcessedBytes-Tier2",
+   "quantity": 10254.6961046756,
+   "unit": "GB",
+   "cost": -1e-10,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-Request-Tier1",
+   "quantity": 2.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-Request-Tier2",
+   "quantity": 16.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-Request-Tier3",
+   "quantity": 8145.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Simple Storage Service",
+   "usage_type": "Vectors-TimedStorage-ByteHrs",
+   "quantity": 0.0587167172,
+   "unit": "GB-Month",
+   "cost": -2e-10,
+   "microvm_like": false
+  },
+  {
+   "service": "Amazon Virtual Private Cloud",
+   "usage_type": "USE1-PublicIPv4:InUseAddress",
+   "quantity": 2.311667,
+   "unit": "Hrs",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AmazonCloudWatch",
+   "usage_type": "CW:Requests",
+   "quantity": 26.0,
+   "unit": "Requests",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AmazonCloudWatch",
+   "usage_type": "USE1-DataProcessing-Bytes",
+   "quantity": 0.00139191,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AmazonCloudWatch",
+   "usage_type": "USE1-TimedStorage-ByteHrs",
+   "quantity": 0.0010663401,
+   "unit": "GB-Month",
+   "cost": 0.0,
+   "microvm_like": false
+  },
+  {
+   "service": "AmazonCloudWatch",
+   "usage_type": "USE1-VendedLog-Bytes",
+   "quantity": 0.0075375158,
+   "unit": "GB",
+   "cost": 0.0,
+   "microvm_like": false
+  }
+ ],
+ "estimated": true,
+ "test2_prediction": {
+  "launches": 1,
+  "suspends": 5,
+  "resumes": 5,
+  "running_s_approx": 1213.934775352478,
+  "baseline_vcpu": 1,
+  "baseline_gb": 2,
+  "burst_vcpu_s_predicted": 325.24347021102903
+ },
+ "test2_query_window": {
+  "wall_s": 600.276529788971,
+  "n": 3886,
+  "busy_cpu_s": 925.52,
+  "avg_busy_vcpu": 1.5418227334748027,
+  "burst_vcpu_s_predicted": 325.24347021102903,
+  "server_ms_median": 93.57978399998501,
+  "cpu_part": [
+   "0xd40"
+  ]
+ }
+}

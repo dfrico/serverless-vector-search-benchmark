@@ -1,0 +1,13 @@
+{
+ "dataset": "deep_10m",
+ "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_10m.lance",
+ "source": "s3://thesis-lancedb-<AWS_ACCOUNT_ID>/lancedb/deep_10m.lance/",
+ "method": "server-side copy of the table LanceDB-on-Lambda queries in C3",
+ "content_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+ "content_sha256_note": "hash of the CSV the source table was ingested from (C3 anchor), not of the copy",
+ "objects": 15000,
+ "bytes": 4923093472,
+ "data_files": 5000,
+ "copy_matches_source": true,
+ "seconds": 107.36521005630493
+}

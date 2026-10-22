@@ -63,7 +63,10 @@ DATA_DIR = os.path.join(WORKSPACE, "datasets", "deep_1m")
 VECTORS_CSV = os.path.join(DATA_DIR, "vectors_deep_1m.csv")
 QUERIES_CSV = os.path.join(DATA_DIR, "queries_deep_1m_1000q.csv")
 TRUTH_CSV = os.path.join(DATA_DIR, "true_neighbours_deep_1m_1000q.csv")
-RESULTS_DIR = os.path.join(_HERE, "results")
+# RESULTS_TAG selects the output folder: unset or "orig" -> results/ (the August
+# evidence the 2 Sep thesis cites); any other tag -> results_<tag>/ (2026-10-16).
+_TAG = os.environ.get("RESULTS_TAG", "orig")
+RESULTS_DIR = os.path.join(_HERE, "results" if _TAG in ("", "orig") else f"results_{_TAG}")
 
 DIMENSIONS = 96
 TOP_K = 10

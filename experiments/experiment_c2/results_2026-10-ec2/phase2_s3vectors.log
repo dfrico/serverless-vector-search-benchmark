@@ -1,0 +1,57 @@
+[c2/p2/s3vectors] start=2026-10-18T09:31:11Z reps=5 idle_s=600 warm_n=5
+[c2/p2/s3vectors] spend estimate: ~5 cold cycles x a few queries; per-query billed is Blocks ~$0.0001, LanceDB ~$0.00014, S3V $0.0000025. Whole Phase 2 across 3 adapters ~$0.01. No op > $3.
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[c2/p2/s3vectors] cold targets: none (managed service)
+
+[c2/p2/s3vectors] === rep 1/5 ===
+[c2/p2] sleep 300s (abs_cold (s3v, no container)) ...
+[c2/p2/s3vectors] abs_cold rep=1 s=0 wall=0.446s billed=$0.0000025
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/s3vectors] idle_cold rep=1 s=0 wall=0.396s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=1 s=1 wall=0.352s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=1 s=2 wall=0.315s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=1 s=3 wall=0.408s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=1 s=4 wall=0.362s billed=$0.0000025
+
+[c2/p2/s3vectors] === rep 2/5 ===
+[c2/p2] sleep 300s (abs_cold (s3v, no container)) ...
+[c2/p2/s3vectors] abs_cold rep=2 s=0 wall=0.370s billed=$0.0000025
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/s3vectors] idle_cold rep=2 s=0 wall=0.451s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=2 s=1 wall=0.384s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=2 s=2 wall=0.385s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=2 s=3 wall=0.320s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=2 s=4 wall=0.338s billed=$0.0000025
+
+[c2/p2/s3vectors] === rep 3/5 ===
+[c2/p2] sleep 300s (abs_cold (s3v, no container)) ...
+[c2/p2/s3vectors] abs_cold rep=3 s=0 wall=0.400s billed=$0.0000025
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/s3vectors] idle_cold rep=3 s=0 wall=0.341s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=3 s=1 wall=0.349s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=3 s=2 wall=0.312s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=3 s=3 wall=0.336s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=3 s=4 wall=0.354s billed=$0.0000025
+
+[c2/p2/s3vectors] === rep 4/5 ===
+[c2/p2] sleep 300s (abs_cold (s3v, no container)) ...
+[c2/p2/s3vectors] abs_cold rep=4 s=0 wall=0.382s billed=$0.0000025
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/s3vectors] idle_cold rep=4 s=0 wall=0.425s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=4 s=1 wall=0.372s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=4 s=2 wall=0.337s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=4 s=3 wall=0.324s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=4 s=4 wall=0.382s billed=$0.0000025
+
+[c2/p2/s3vectors] === rep 5/5 ===
+[c2/p2] sleep 300s (abs_cold (s3v, no container)) ...
+[c2/p2/s3vectors] abs_cold rep=5 s=0 wall=0.567s billed=$0.0000025
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/s3vectors] idle_cold rep=5 s=0 wall=0.430s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=5 s=1 wall=0.330s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=5 s=2 wall=0.329s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=5 s=3 wall=0.336s billed=$0.0000025
+[c2/p2/s3vectors] warm rep=5 s=4 wall=0.335s billed=$0.0000025
+[c2/p2/s3vectors] total wall 4515s (75.3 min)
+
+=== C2 PHASE 2 S3VECTORS DONE ===

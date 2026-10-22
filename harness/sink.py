@@ -36,6 +36,8 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 
 from harness.client import BenchmarkVectorClient, ClientCapabilities  # noqa: E402
 from harness.workload import OpResult, WorkloadConfig                 # noqa: E402
+from harness.provenance import code_provenance, write_patch           # noqa: E402
+from harness.records import client_network_probe                      # noqa: E402
 
 DEFAULT_RESULTS_DIR = os.path.join(_HERE, "results")
 
@@ -156,8 +158,9 @@ class JSONLSink:
     def build_manifest(self) -> dict:
         """Assemble the run manifest dict (also written to disk by `consume`)."""
         return {
-            "schema": "harness.run_manifest.v2",
+            "schema": "harness.run_manifest.v3",
             "git_sha": _git_sha(_HERE),
+            "code": code_provenance(),
             "timestamp": self.timestamp,
             "timestamp_iso": time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime(self.timestamp)) + "Z",
             "adapter": self.client.name,
@@ -168,9 +171,12 @@ class JSONLSink:
             "seed": self.config.seed,
             "effective_concurrency": self.effective_concurrency,
             "capabilities": _capabilities_to_dict(self.client.capabilities()),
+            # Optional adapter-specific provenance (LanceDB-on-MicroVM: ingest and lifecycle records).
+            "adapter_extra": self.client.manifest_extra() if hasattr(self.client, "manifest_extra") else None,
             "env": _env_fingerprint(),
             "hostname": socket.gethostname(),
             "python_version": platform.python_version(),
+            "client_tcp_connect_s": client_network_probe(),
         }
 
     async def consume(self, results: AsyncIterable[OpResult]) -> SinkPaths:
@@ -181,8 +187,13 @@ class JSONLSink:
         """
         os.makedirs(self.output_dir, exist_ok=True)
 
+        manifest = self.build_manifest()
+        if manifest["code"]["dirty"]:
+            patch = self.manifest_path.replace(".manifest.json", ".code.patch")
+            manifest["code"]["patch_file"] = os.path.basename(write_patch(patch))
+        manifest["run_started_utc"] = time.time()
         with open(self.manifest_path, "w") as mf:
-            json.dump(self.build_manifest(), mf, indent=2, sort_keys=True)
+            json.dump(manifest, mf, indent=2, sort_keys=True)
 
         n = 0
         with open(self.jsonl_path, "w") as jf:
@@ -192,5 +203,11 @@ class JSONLSink:
                 jf.write(json.dumps(dataclasses.asdict(r), default=str) + "\n")
                 jf.flush()
                 n += 1
+
+        # Close the run window in the manifest (CloudWatch queries need start and end).
+        manifest["run_ended_utc"] = time.time()
+        manifest["n_records"] = n
+        with open(self.manifest_path, "w") as mf:
+            json.dump(manifest, mf, indent=2, sort_keys=True)
 
         return SinkPaths(jsonl=self.jsonl_path, manifest=self.manifest_path, n_records=n)

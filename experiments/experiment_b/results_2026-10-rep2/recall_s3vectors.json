@@ -1,0 +1,57 @@
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "adapter": "s3vectors",
+  "adapter_key": "s3vectors",
+  "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+  "corpus_sha256_anchor_ok": true,
+  "dataset": "deep_1m",
+  "ingest_seconds": 613.168,
+  "ingest_timings": {
+    "n_put_requests": 2000,
+    "n_put_retries": 0,
+    "n_vectors": 1000000,
+    "op": "bulk_insert",
+    "put_batch_size": 500,
+    "wall_clock_s": 613.1678056716919
+  },
+  "max_safe_concurrency": 4,
+  "metric": "l2",
+  "non_empty": 1000,
+  "passed": true,
+  "per_query_hits": {
+    "max": 10,
+    "mean": 9.696,
+    "min": 6,
+    "perfect_10of10": 733,
+    "zero_hits": 0
+  },
+  "query0_top10_returned": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    788868,
+    775837,
+    917284,
+    560792,
+    871931
+  ],
+  "query0_top10_truth": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "recall_at_10_pct": 96.96,
+  "recall_query_seconds": 147.076,
+  "recall_threshold_pct": 70.0,
+  "started_utc": "2026-10-21T07:38:34Z",
+  "wall_clock_seconds": 762.244
+}

@@ -14,7 +14,15 @@ set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 
-run() { echo "=== CELL $* ==="; ./ec_blocks.sh c1_run.py "$@" || { echo "STOP: cell $* failed"; exit 1; }; }
+# C1_START_AT=<label>: skip the cells before it (resume after a failure, 2026-10-18).
+# Each cell first gets fresh Lithops worker containers (c1_fresh_workers.py: /tmp fills up in
+# long-lived warm containers).
+START="${C1_START_AT:-}"
+run() {
+  local label="${*: -1}"
+  if [ -n "$START" ]; then [ "$label" = "$START" ] && START="" || { echo "=== SKIP $label (C1_START_AT) ==="; return 0; }; fi
+  ./ec_blocks.sh c1_fresh_workers.py || { echo "STOP: fresh workers before $label failed"; exit 1; }
+  echo "=== CELL $* ==="; ./ec_blocks.sh c1_run.py "$@" || { echo "STOP: cell $* failed"; exit 1; }; }
 
 # Axis C — config rewrite on the baseline index (no rebuild)
 run --axis C --value 8 --label c_bpt8

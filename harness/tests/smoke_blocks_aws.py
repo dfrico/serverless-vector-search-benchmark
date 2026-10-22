@@ -24,13 +24,14 @@ if WORKSPACE not in sys.path:
     sys.path.insert(0, WORKSPACE)
 
 from harness.adapters.blocks_aws import BlocksClientAWS  # noqa: E402
+import boto3
 
 DATA_DIR = os.path.join(WORKSPACE, "spike-localhost")
 QUERIES_CSV = os.path.join(DATA_DIR, "queries_deep_100k.csv")
 GROUND_TRUTH_CSV = os.path.join(DATA_DIR, "true_neighbours_deep_100k.csv")
 VECTORS_CSV = os.path.join(DATA_DIR, "vectors_deep_100k.csv")
 
-BUCKET = f"thesis-blocks-{os.environ['AWS_ACCOUNT_ID']}"
+BUCKET = f"thesis-blocks-{boto3.client('sts').get_caller_identity()['Account']}"
 DATASET = "deep_100k"  # index blocks live under indexes/deep_100k/ — deleted at cleanup
 N_QUERIES = 10
 TOP_K = 10

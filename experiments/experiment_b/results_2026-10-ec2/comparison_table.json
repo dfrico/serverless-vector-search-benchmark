@@ -1,0 +1,234 @@
+{
+  "cells": [
+    {
+      "adapter": "blocks",
+      "adapter_name": "blocks",
+      "configured_concurrency": 1,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.46171,
+      "cost_per_query_usd": 0.00046171,
+      "cost_total_usd": 0.007387,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 10.1341,
+        "mean": 9.9898,
+        "min": 9.8905,
+        "p50": 10.0026,
+        "p95": 10.102,
+        "p99": 10.1277
+      },
+      "max_safe_concurrency": 1,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 16,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 0.1001
+    },
+    {
+      "adapter": "blocks",
+      "adapter_name": "blocks",
+      "configured_concurrency": 4,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.44992,
+      "cost_per_query_usd": 0.00044992,
+      "cost_total_usd": 0.007199,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 10.1346,
+        "mean": 9.7339,
+        "min": 7.9097,
+        "p50": 9.9707,
+        "p95": 10.1092,
+        "p99": 10.1295
+      },
+      "max_safe_concurrency": 1,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 16,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 0.1027
+    },
+    {
+      "adapter": "blocks",
+      "adapter_name": "blocks",
+      "configured_concurrency": 10,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.46335,
+      "cost_per_query_usd": 0.00046335,
+      "cost_total_usd": 0.007414,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 10.1544,
+        "mean": 10.0028,
+        "min": 9.8616,
+        "p50": 9.9828,
+        "p95": 10.1512,
+        "p99": 10.1538
+      },
+      "max_safe_concurrency": 1,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 16,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 0.1
+    },
+    {
+      "adapter": "s3vectors",
+      "adapter_name": "s3vectors",
+      "configured_concurrency": 1,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.0025,
+      "cost_per_query_usd": 2.5e-06,
+      "cost_total_usd": 0.000668,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 0.4289,
+        "mean": 0.1688,
+        "min": 0.0563,
+        "p50": 0.1571,
+        "p95": 0.3164,
+        "p99": 0.3567
+      },
+      "max_safe_concurrency": 4,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 267,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 5.922
+    },
+    {
+      "adapter": "s3vectors",
+      "adapter_name": "s3vectors",
+      "configured_concurrency": 4,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.0025,
+      "cost_per_query_usd": 2.5e-06,
+      "cost_total_usd": 0.004985,
+      "effective_concurrency": 4,
+      "latency_s": {
+        "max": 0.3924,
+        "mean": 0.0903,
+        "min": 0.0551,
+        "p50": 0.0639,
+        "p95": 0.2177,
+        "p99": 0.3126
+      },
+      "max_safe_concurrency": 4,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 1994,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 44.1916
+    },
+    {
+      "adapter": "s3vectors",
+      "adapter_name": "s3vectors",
+      "configured_concurrency": 10,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.0025,
+      "cost_per_query_usd": 2.5e-06,
+      "cost_total_usd": 0.006995,
+      "effective_concurrency": 4,
+      "latency_s": {
+        "max": 0.3521,
+        "mean": 0.0643,
+        "min": 0.0547,
+        "p50": 0.0617,
+        "p95": 0.0705,
+        "p99": 0.149
+      },
+      "max_safe_concurrency": 4,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 2798,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 62.1176
+    },
+    {
+      "adapter": "lancedb",
+      "adapter_name": "lancedb-lambda",
+      "configured_concurrency": 1,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.1383,
+      "cost_per_query_usd": 0.0001383,
+      "cost_total_usd": 0.003319,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 6.2169,
+        "mean": 5.0746,
+        "min": 3.5875,
+        "p50": 5.1073,
+        "p95": 5.9182,
+        "p99": 6.1664
+      },
+      "max_safe_concurrency": 10,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 24,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 0.1971
+    },
+    {
+      "adapter": "lancedb",
+      "adapter_name": "lancedb-lambda",
+      "configured_concurrency": 4,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.13935,
+      "cost_per_query_usd": 0.00013935,
+      "cost_total_usd": 0.013239,
+      "effective_concurrency": 4,
+      "latency_s": {
+        "max": 10.8714,
+        "mean": 5.1137,
+        "min": 3.1924,
+        "p50": 5.132,
+        "p95": 5.6477,
+        "p99": 6.1626
+      },
+      "max_safe_concurrency": 10,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 95,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 0.7802
+    },
+    {
+      "adapter": "lancedb",
+      "adapter_name": "lancedb-lambda",
+      "configured_concurrency": 10,
+      "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+      "cost_per_1000q_usd": 0.13764,
+      "cost_per_query_usd": 0.00013764,
+      "cost_total_usd": 0.033035,
+      "effective_concurrency": 10,
+      "latency_s": {
+        "max": 7.2689,
+        "mean": 5.1284,
+        "min": 3.4364,
+        "p50": 5.1279,
+        "p95": 5.6884,
+        "p99": 5.8707
+      },
+      "max_safe_concurrency": 10,
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 240,
+      "nominal_ops_s": 100.0,
+      "realised_throughput_ops_s": 1.9287
+    }
+  ],
+  "dataset": "deep_1m",
+  "fairness": {
+    "corpus_sha256_across_cells": [
+      "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df"
+    ],
+    "corpus_sha256_expected": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+    "corpus_sha256_identical": true,
+    "metric_across_cells": [
+      "l2"
+    ],
+    "metric_identical_l2": true
+  },
+  "n_cells": 9,
+  "top_k": 10
+}

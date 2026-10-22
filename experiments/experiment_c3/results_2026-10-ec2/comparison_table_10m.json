@@ -1,0 +1,151 @@
+{
+  "cells": [
+    {
+      "adapter": "s3vectors",
+      "configured_concurrency": 1,
+      "corpus_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "cost_model": "billed",
+      "cost_per_1000q_usd": 0.0025,
+      "cost_per_query_usd": 2.5e-06,
+      "cost_total_usd": 0.002642,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 0.8496,
+        "mean": 0.3122,
+        "min": 0.0551,
+        "p50": 0.3247,
+        "p95": 0.4633,
+        "p99": 0.5488
+      },
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 1057,
+      "realised_throughput_ops_s": 3.2024
+    },
+    {
+      "adapter": "s3vectors",
+      "configured_concurrency": 4,
+      "corpus_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "cost_model": "billed",
+      "cost_per_1000q_usd": 0.0025,
+      "cost_per_query_usd": 2.5e-06,
+      "cost_total_usd": 0.004462,
+      "effective_concurrency": 4,
+      "latency_s": {
+        "max": 0.4427,
+        "mean": 0.1906,
+        "min": 0.0554,
+        "p50": 0.2083,
+        "p95": 0.3407,
+        "p99": 0.3816
+      },
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 1785,
+      "realised_throughput_ops_s": 20.9593
+    },
+    {
+      "adapter": "lancedb",
+      "configured_concurrency": 1,
+      "corpus_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "cost_model": "billed",
+      "cost_per_1000q_usd": 1.40198,
+      "cost_per_query_usd": 0.00140198,
+      "cost_total_usd": 0.075707,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 52.9634,
+        "mean": 51.3567,
+        "min": 50.2106,
+        "p50": 51.3646,
+        "p95": 51.9592,
+        "p99": 52.5475
+      },
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 54,
+      "realised_throughput_ops_s": 0.0195
+    },
+    {
+      "adapter": "lancedb",
+      "configured_concurrency": 4,
+      "corpus_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "cost_model": "billed",
+      "cost_per_1000q_usd": 1.40133,
+      "cost_per_query_usd": 0.00140133,
+      "cost_total_usd": 0.078475,
+      "effective_concurrency": 4,
+      "latency_s": {
+        "max": 53.2383,
+        "mean": 51.3309,
+        "min": 49.5699,
+        "p50": 51.3936,
+        "p95": 51.8516,
+        "p99": 52.5585
+      },
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 56,
+      "realised_throughput_ops_s": 0.0776
+    },
+    {
+      "adapter": "lancedb",
+      "configured_concurrency": 10,
+      "corpus_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "cost_model": "billed",
+      "cost_per_1000q_usd": 1.4108,
+      "cost_per_query_usd": 0.0014108,
+      "cost_total_usd": 0.084648,
+      "effective_concurrency": 10,
+      "latency_s": {
+        "max": 57.1033,
+        "mean": 52.0591,
+        "min": 49.7756,
+        "p50": 51.4622,
+        "p95": 55.9602,
+        "p99": 56.6549
+      },
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 60,
+      "realised_throughput_ops_s": 0.1898
+    },
+    {
+      "adapter": "blocks",
+      "configured_concurrency": 1,
+      "corpus_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "cost_model": "billed",
+      "cost_per_1000q_usd": 1.30335,
+      "cost_per_query_usd": 0.00130335,
+      "cost_total_usd": 0.162919,
+      "effective_concurrency": 1,
+      "latency_s": {
+        "max": 9.408,
+        "mean": 6.4432,
+        "min": 6.0357,
+        "p50": 6.2205,
+        "p95": 8.1322,
+        "p99": 9.2542
+      },
+      "metric": "l2",
+      "n_fail": 0,
+      "n_ok": 125,
+      "realised_throughput_ops_s": 0.1552
+    }
+  ],
+  "cost_model_note": "Blocks=billed (finding 22); LanceDB/S3V billed==wall.",
+  "dataset": "deep_10m",
+  "fairness": {
+    "corpus_sha256_across_cells": [
+      "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849"
+    ],
+    "corpus_sha256_expected": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+    "corpus_sha256_identical": true,
+    "metric_across_cells": [
+      "l2"
+    ],
+    "metric_identical_l2": true
+  },
+  "n_cells": 6,
+  "top_k": 10
+}

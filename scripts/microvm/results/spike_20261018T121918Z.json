@@ -1,0 +1,37 @@
+{
+ "started_utc": "2026-10-18T12:19:13.782176Z",
+ "image": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-spike",
+ "events": [
+  {
+   "msg": "run_microvm",
+   "state": "PENDING",
+   "api_s": 0.49002504348754883,
+   "t": 1792325954.272353
+  },
+  {
+   "msg": "RUNNING",
+   "since_run_s": 2.6345019340515137,
+   "t": 1792325956.41683
+  },
+  {
+   "msg": "ERROR",
+   "error": "ValidationException: An error occurred (ValidationException) when calling the CreateMicrovmAuthToken operation: ExpirationMinutes 120 exceeded max allowed of 60.",
+   "t": 1792325956.562263
+  },
+  {
+   "msg": "terminated",
+   "state": "TERMINATED",
+   "s": 1.775026798248291,
+   "t": 1792325958.337335
+  }
+ ],
+ "microvm_id": "microvm-18f27879-58e6-37e6-ba6c-61ea37c7386f",
+ "run_api_s": 0.49002504348754883,
+ "to_running_s": 2.6345019340515137,
+ "error": "ValidationException: An error occurred (ValidationException) when calling the CreateMicrovmAuthToken operation: ExpirationMinutes 120 exceeded max allowed of 60.",
+ "terminate_s": 1.4557008743286133,
+ "final_state": "TERMINATED",
+ "started_at": "2026-10-18 14:19:14.199000+02:00",
+ "terminated_at": "2026-10-18 14:19:17.234000+02:00",
+ "ended_utc": "2026-10-18T12:19:18.337366Z"
+}

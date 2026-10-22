@@ -13,7 +13,13 @@ set -uo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 TS="$(date +%s)"
-R="$HERE/results"
+# Output folder (2026-10-16): RESULTS_TAG must be set so a re-run can't overwrite
+# the August evidence in results/. RESULTS_TAG=orig targets results/ explicitly.
+: "${RESULTS_TAG:?set RESULTS_TAG (e.g. RESULTS_TAG=2026-10) or RESULTS_TAG=orig for results/}"
+export RESULTS_TAG
+if [ "$RESULTS_TAG" = "orig" ]; then RESULTS_DIR="$HERE/results"; else RESULTS_DIR="$HERE/results_$RESULTS_TAG"; fi
+mkdir -p "$RESULTS_DIR"
+R="$RESULTS_DIR"
 
 cell() {  # launcher script adapter conc duration warmup
   local launcher="$1" adapter="$2" conc="$3" dur="$4" warm="$5"

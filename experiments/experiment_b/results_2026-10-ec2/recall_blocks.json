@@ -1,0 +1,55 @@
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "adapter": "blocks",
+  "adapter_key": "blocks",
+  "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+  "corpus_sha256_anchor_ok": true,
+  "dataset": "deep_1m",
+  "ingest_seconds": 14.254,
+  "ingest_timings": {
+    "bulk_insert_index_s": 9.254388570785522,
+    "bulk_insert_upload_s": 4.615779638290405,
+    "op": "bulk_insert_from_path",
+    "wall_clock_s": 14.253963947296143
+  },
+  "max_safe_concurrency": 1,
+  "metric": "l2",
+  "non_empty": 1000,
+  "passed": true,
+  "per_query_hits": {
+    "max": 10,
+    "mean": 10.0,
+    "min": 10,
+    "perfect_10of10": 1000,
+    "zero_hits": 0
+  },
+  "query0_top10_returned": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "query0_top10_truth": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "recall_at_10_pct": 100.0,
+  "recall_query_seconds": 28.199,
+  "recall_threshold_pct": 95.0,
+  "started_utc": "2026-10-18T12:15:05Z",
+  "wall_clock_seconds": 51.613
+}

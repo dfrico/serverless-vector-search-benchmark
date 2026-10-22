@@ -56,6 +56,11 @@ from harness.client import (
     Vector,
 )
 
+# PutVectors error codes worth retrying during ingest (server-side, transient).
+_TRANSIENT_PUT_ERRORS = {"RequestTimeoutException", "RequestTimeout", "ServiceUnavailableException",
+                         "ServiceUnavailable", "InternalServerException", "ThrottlingException",
+                         "TooManyRequestsException", "SlowDown"}
+
 # S3 Vectors service limits (from the boto3 service model, API 2025-07-15).
 _MAX_PUT_BATCH = 500      # PutVectors: 1..500 vectors/request
 _MAX_DELETE_BATCH = 500   # DeleteVectors: 1..500 keys/request
@@ -405,16 +410,40 @@ class S3VectorsClient(BenchmarkVectorClient):
         n_batches = 0
         batch: List[dict] = []
 
+        # Optional progress hook (2026-10-16): progress_callback(t_end, n_done,
+        # request_s) after every PutVectors call, to measure the ingest rate over
+        # time. None (the default) leaves ingest behaviour unchanged.
+        progress = getattr(self, "progress_callback", None)
+
+        n_retries = 0
+
         def _flush(records: List[dict]) -> None:
-            nonlocal n_batches
+            # Transient server-side errors are retried (2026-10-16, after a
+            # RequestTimeoutException killed a 1M ingest). PutVectors with the
+            # same keys overwrites, so a retry is idempotent. Retries are counted
+            # in the timings; queries are not retried.
+            nonlocal n_batches, n_retries
             if not records:
                 return
-            self._client.put_vectors(
-                vectorBucketName=self.vector_bucket_name,
-                indexName=self.index_name,
-                vectors=records,
-            )
+            t_req = time.time()
+            for attempt in range(6):
+                try:
+                    self._client.put_vectors(
+                        vectorBucketName=self.vector_bucket_name,
+                        indexName=self.index_name,
+                        vectors=records,
+                    )
+                    break
+                except ClientError as e:
+                    code = e.response.get("Error", {}).get("Code", "")
+                    if attempt == 5 or code not in _TRANSIENT_PUT_ERRORS:
+                        raise
+                    n_retries += 1
+                    time.sleep(2 ** attempt)
             n_batches += 1
+            if progress is not None:
+                t_end = time.time()
+                progress(t_end, n_vectors, t_end - t_req)
 
         for vid, vec in vectors:
             batch.append({"key": str(vid), "data": {"float32": [float(x) for x in vec]}})
@@ -429,6 +458,7 @@ class S3VectorsClient(BenchmarkVectorClient):
             "wall_clock_s": time.time() - t0,
             "n_vectors": n_vectors,
             "n_put_requests": n_batches,
+            "n_put_retries": n_retries,
             "put_batch_size": self.put_batch_size,
         }
         return None, timings

@@ -1,0 +1,104 @@
+[c3/p2/blocks] start=2026-10-18T07:49:54Z account=<AWS_ACCOUNT_ID> recall_n=50 chunk=100
+[c3/p2/blocks] ingest estimate: ~$0.05 (160 index workers)
+[c3-lithops-patch] AWS Lambda invoker now retries on 429/5xx (async invokes drain within the concurrency cap).
+[blocks-aws] boto3 -> account <AWS_ACCOUNT_ID> (arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-bench-client/i-0d04048a0217c5277)
+[c3/p2/blocks] setup OK sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+2026-10-18 07:52:53,129 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-18 07:52:53,257 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:52:53,343 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-18 07:52:53,343 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-18 07:52:53,402 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:52:53,558 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-18 07:52:53,564 [INFO] invokers.py:119 -- ExecutorID 58ad4e-0 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-18 07:52:53,859 [INFO] invokers.py:186 -- ExecutorID 58ad4e-0 | JobID M000 - Starting function invocation: generate_index_blocks() - Total: 160 activations
+2026-10-18 07:52:54,122 [INFO] invokers.py:225 -- ExecutorID 58ad4e-0 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/58ad4e-0-M000.log
+2026-10-18 07:52:54,141 [INFO] executors.py:494 -- ExecutorID 58ad4e-0 - Getting results from 160 function activations
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+2026-10-18 07:52:54,142 [INFO] wait.py:101 -- ExecutorID 58ad4e-0 - Waiting for 160 function activations to complete
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+2026-10-18 07:53:03,218 [INFO] executors.py:618 -- ExecutorID 58ad4e-0 - Cleaning temporary data
+Uploaded vectors_deep_10m.csv and cleared old indexes.
+
+[c3/p2/blocks] ingest done in 99.8s cost=$0.03897
+[c3/p2/blocks] post-ingest sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+2026-10-18 07:54:30,158 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-18 07:54:30,217 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:54:30,297 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-18 07:54:30,297 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-18 07:54:30,486 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:54:30,563 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-18 07:54:30,619 [INFO] invokers.py:119 -- ExecutorID 58ad4e-3 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-18 07:54:30,759 [INFO] invokers.py:186 -- ExecutorID 58ad4e-3 | JobID M000 - Starting function invocation: map_function() - Total: 20 activations
+2026-10-18 07:54:30,848 [INFO] invokers.py:225 -- ExecutorID 58ad4e-3 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/58ad4e-3-M000.log
+2026-10-18 07:54:30,854 [INFO] executors.py:494 -- ExecutorID 58ad4e-3 - Getting results from 20 function activations
+2026-10-18 07:54:30,854 [INFO] wait.py:101 -- ExecutorID 58ad4e-3 - Waiting for 20 function activations to complete
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+2026-10-18 07:54:35,867 [INFO] executors.py:618 -- ExecutorID 58ad4e-3 - Cleaning temporary data
+2026-10-18 07:54:36,133 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:54:36,183 [INFO] invokers.py:119 -- ExecutorID 58ad4e-3 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-10-18 07:54:36,243 [INFO] invokers.py:186 -- ExecutorID 58ad4e-3 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-10-18 07:54:36,243 [INFO] invokers.py:225 -- ExecutorID 58ad4e-3 | JobID M001 - View execution logs at /tmp/lithops-ec2-user/logs/58ad4e-3-M001.log
+2026-10-18 07:54:36,245 [INFO] executors.py:494 -- ExecutorID 58ad4e-3 - Getting results from 1 function activations
+2026-10-18 07:54:36,245 [INFO] wait.py:101 -- ExecutorID 58ad4e-3 - Waiting for 1 function activations to complete
+2026-10-18 07:54:40,251 [INFO] executors.py:618 -- ExecutorID 58ad4e-3 - Cleaning temporary data
+
+
+[c3/p2/blocks] probe query: 10 hits in 10.19s server_ms=None cold=None
+2026-10-18 07:54:40,347 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-18 07:54:40,404 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:54:40,711 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-18 07:54:40,712 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-18 07:54:40,767 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:54:40,842 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-18 07:54:40,897 [INFO] invokers.py:119 -- ExecutorID 58ad4e-5 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-18 07:54:41,009 [INFO] invokers.py:186 -- ExecutorID 58ad4e-5 | JobID M000 - Starting function invocation: map_function() - Total: 20 activations
+2026-10-18 07:54:41,074 [INFO] invokers.py:225 -- ExecutorID 58ad4e-5 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/58ad4e-5-M000.log
+2026-10-18 07:54:41,085 [INFO] executors.py:494 -- ExecutorID 58ad4e-5 - Getting results from 20 function activations
+2026-10-18 07:54:41,085 [INFO] wait.py:101 -- ExecutorID 58ad4e-5 - Waiting for 20 function activations to complete
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+2026-10-18 07:54:46,154 [INFO] executors.py:618 -- ExecutorID 58ad4e-5 - Cleaning temporary data
+2026-10-18 07:54:46,401 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-18 07:54:46,460 [INFO] invokers.py:119 -- ExecutorID 58ad4e-5 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-10-18 07:54:46,515 [INFO] invokers.py:186 -- ExecutorID 58ad4e-5 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-10-18 07:54:46,516 [INFO] invokers.py:225 -- ExecutorID 58ad4e-5 | JobID M001 - View execution logs at /tmp/lithops-ec2-user/logs/58ad4e-5-M001.log
+2026-10-18 07:54:46,516 [INFO] executors.py:494 -- ExecutorID 58ad4e-5 - Getting results from 1 function activations
+2026-10-18 07:54:46,516 [INFO] wait.py:101 -- ExecutorID 58ad4e-5 - Waiting for 1 function activations to complete
+2026-10-18 07:54:50,552 [INFO] executors.py:618 -- ExecutorID 58ad4e-5 - Cleaning temporary data
+
+
+[c3/p2/blocks] gate chunk 1 (50/50) in 10.3s
+[c3/p2/blocks] recall@10=100.00% (bar 95.0%) perfect=50/50 non_empty=50/50 query_s=10.3 chunks=1
+[c3/p2/blocks] wrote /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/phase2_blocks.json
+
+=== C3 PHASE 2 BLOCKS PASS ===

@@ -1,0 +1,29 @@
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "adapter": "lancedb",
+  "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+  "corpus_sha256_anchor_ok": true,
+  "dataset": "deep_1m",
+  "ingest_cost_usd": 0.003614,
+  "ingest_seconds": 209.92,
+  "ingest_timings": {
+    "insert_batch_size": 2000,
+    "n_cold_starts": 0,
+    "n_invocations": 500,
+    "n_vectors": 1000000,
+    "op": "bulk_insert",
+    "server_ms_total": 128683.01677703857,
+    "wall_clock_s": 209.91964983940125
+  },
+  "non_empty": 100,
+  "params": null,
+  "passed": true,
+  "perfect_10of10": 100,
+  "phase": "c2_phase1",
+  "recall_at_10_pct": 100.0,
+  "recall_n": 100,
+  "recall_query_seconds": 511.574,
+  "recall_threshold_pct": 99.0,
+  "started_utc": "2026-10-18T09:19:03Z",
+  "wall_clock_seconds": 726.141
+}

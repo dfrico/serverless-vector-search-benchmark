@@ -1,0 +1,5 @@
+[c2/cleanup/blocks] account=<AWS_ACCOUNT_ID>
+[c2/cleanup/blocks] deleted 18 objects from thesis-blocks-<AWS_ACCOUNT_ID>
+[c2/cleanup/blocks] restored env on ['lithops-worker-rb26-363-11170a3116', 'lithops-worker-rb26-363-600f82b870']
+
+=== C2 CLEANUP BLOCKS DONE ===

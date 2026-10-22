@@ -1,0 +1,42 @@
+# Experiment C1 — Blocks tuning at 1M (deep_1m, top_k=10)
+
+Baseline anchor: n_probe=10, num_workers=16, blocks_per_task=16 -> recall 100.0%, p50 10.0027s, billed $0.00019022/query, wall $0.00045108/query.
+
+## Axis A — n_probe (rebuild per value; recall + latency)
+
+| n_probe | recall % | p50 s | p95 s | mean s | billed $/q | wall $/q | ops/s |
+|---|---|---|---|---|---|---|---|
+| 1 | 83.2 | 10.006 | 10.2386 | 9.9064 | 0.00018783 | 0.00045462 | 0.1009 |
+| 3 | 97.8 | 9.9957 | 10.1613 | 9.7678 | 0.00018646 | 0.0004481 | 0.1024 |
+| 5 | 99.4 | 9.9826 | 10.1831 | 9.9228 | 0.00018951 | 0.00045609 | 0.1008 |
+| 7 | 100.0 | 10.0071 | 10.2012 | 9.9396 | 0.00019055 | 0.00045661 | 0.1006 |
+| 10 | 100.0 | 10.0027 | 10.1168 | 9.8096 | 0.00019022 | 0.00045108 | 0.1019 |
+
+## Axis B — num_workers (ingest-only; cost signal + query flatness)
+
+| num_workers | ingest $ | ingest index_s | recall % | p50 s | billed $/q |
+|---|---|---|---|---|---|
+| 4 | 0.00423 | 25.169 | 100.0 | 9.9903 | 0.000189 |
+| 8 | 0.004105 | 14.199 | 100.0 | 9.9912 | 0.00018633 |
+| 16 | None | None | 100.0 | 10.0027 | 0.00019022 |
+| 32 | 0.004178 | 7.264 | 51.2 | 7.9939 | 0.00010271 |
+
+## Axis C — blocks_per_task (config rewrite; latency/cost trade)
+
+| blocks_per_task | map tasks | recall % | p50 s | p95 s | billed $/q | wall $/q | ops/s |
+|---|---|---|---|---|---|---|---|
+| 1 | 16.0 | 100.0 | 6.0867 | 6.2519 | 0.00019501 | 0.00026949 | 0.164 |
+| 2 | 8.0 | 100.0 | 6.0562 | 6.2286 | 0.00015538 | 0.00026693 | 0.1648 |
+| 4 | 4.0 | 100.0 | 6.0109 | 6.1129 | 0.00013399 | 0.00026274 | 0.1664 |
+| 8 | 2.0 | 100.0 | 5.9937 | 6.1124 | 0.00012932 | 0.00026277 | 0.1665 |
+| 16 | 1.0 | 100.0 | 10.0027 | 10.1168 | 0.00019022 | 0.00045108 | 0.1019 |
+
+## Headline
+
+- Best Blocks cost/query at full recall (>=99.99%): $0.00012932 billed ($0.00026277 wall) at n_probe=10, num_workers=16, blocks_per_task=8.
+- Absolute cheapest cell: $0.00010271 billed at recall 51.2% (n_probe=10, bpt=16).
+- Experiment B Blocks baseline: $0.000477/query (100% recall).
+- S3 Vectors: $2.5e-06/query (97.3% recall). Gap = 190.8x.
+- Gap after tuning (best full-recall billed vs S3V): 51.7x.
+
+wrote results/axis_tables.json and results/axis_tables.md

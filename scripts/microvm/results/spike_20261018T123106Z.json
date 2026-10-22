@@ -1,0 +1,257 @@
+{
+ "started_utc": "2026-10-18T12:26:15.062391Z",
+ "image": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-spike",
+ "events": [
+  {
+   "msg": "run_microvm",
+   "state": "PENDING",
+   "api_s": 0.1492938995361328,
+   "t": 1792326375.2117047
+  },
+  {
+   "msg": "RUNNING",
+   "since_run_s": 1.8646769523620605,
+   "t": 1792326376.9270873
+  },
+  {
+   "msg": "first ping",
+   "s": 0.03660424999998213,
+   "code": 200,
+   "body": {
+    "now": 1792326377.0072699,
+    "boot_wall": 1792325891.0213015,
+    "pid": 1,
+    "requests": 1,
+    "run_hooks": [
+     1792326376.551582
+    ],
+    "resume_hooks": [],
+    "suspend_hooks": [],
+    "ready_hooks": 1
+   },
+   "t": 1792326377.011663
+  },
+  {
+   "msg": "20 warm pings",
+   "n": 20,
+   "median": 0.06873903700001449,
+   "min": 0.05848099799999318,
+   "max": 0.08021420399998647,
+   "t": 1792326378.3411028
+  },
+  {
+   "msg": "creds",
+   "s": 4.688291617000004,
+   "code": 200,
+   "body": {
+    "method": "iam-role",
+    "region": null,
+    "aws_env_vars": [
+     "AWS_LAMBDA_MICROVM_IMAGE_ARN",
+     "AWS_LAMBDA_MICROVM_IMAGE_NAME",
+     "AWS_LAMBDA_MICROVM_IMAGE_VERSION",
+     "AWS_REGION"
+    ]
+   },
+   "t": 1792326383.0301676
+  },
+  {
+   "msg": "s3_10mb",
+   "s": 1.652406329999991,
+   "code": 200,
+   "body": {
+    "bytes": 774680,
+    "seconds": 1.629723964,
+    "mb_per_s": 0.45332365219708687
+   },
+   "t": 1792326384.7602348
+  },
+  {
+   "msg": "lance_10m",
+   "s": 35.439598605999976,
+   "code": 200,
+   "body": {
+    "lancedb": "0.33.0",
+    "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+    "rows": 10000000,
+    "open_s": 6.39264239500001,
+    "count_s": 0.0847380999999956
+   },
+   "t": 1792326420.2009954
+  },
+  {
+   "msg": "auto-resume cycle 1",
+   "state_before": "SUSPENDED",
+   "extra_wait_s": 0.09945771408342807,
+   "first_s": 0.5843243850000022,
+   "code": 200,
+   "next5_median_s": 0.06889734200001385,
+   "resume_hooks": 1,
+   "pid": 1,
+   "t": 1792326501.3099477
+  },
+  {
+   "msg": "auto-resume cycle 2",
+   "state_before": "SUSPENDED",
+   "extra_wait_s": 0.09233029328612474,
+   "first_s": 0.5854207670000164,
+   "code": 200,
+   "next5_median_s": 0.06906411500000331,
+   "resume_hooks": 2,
+   "pid": 1,
+   "t": 1792326582.4103868
+  },
+  {
+   "msg": "auto-resume cycle 3",
+   "state_before": "SUSPENDED",
+   "extra_wait_s": 0.09926222145526253,
+   "first_s": 0.5874337100000275,
+   "code": 200,
+   "next5_median_s": 0.06900428700004113,
+   "resume_hooks": 3,
+   "pid": 1,
+   "t": 1792326663.5302453
+  },
+  {
+   "msg": "explicit suspend/resume",
+   "suspend_s": 0.6456828117370605,
+   "resume_s": 0.6557431221008301,
+   "first_ping": 0.029501985000024433,
+   "t": 1792326664.8623705
+  },
+  {
+   "msg": "terminated",
+   "state": "TERMINATED",
+   "s": 1.2420306205749512,
+   "t": 1792326666.104704
+  }
+ ],
+ "microvm_id": "microvm-f42040e8-3faa-353d-9e1e-8ad124c1e244",
+ "run_api_s": 0.1492938995361328,
+ "to_running_s": 1.8646769523620605,
+ "token_api_s": 0.047309160232543945,
+ "token_header_keys": [
+  "X-aws-proxy-auth"
+ ],
+ "first_ping": {
+  "s": 0.03660424999998213,
+  "code": 200,
+  "body": {
+   "now": 1792326377.0072699,
+   "boot_wall": 1792325891.0213015,
+   "pid": 1,
+   "requests": 1,
+   "run_hooks": [
+    1792326376.551582
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "ready_hooks": 1
+  }
+ },
+ "first_request_since_run_s": 1.9492528438568115,
+ "warm_ping_s": {
+  "n": 20,
+  "median": 0.06873903700001449,
+  "min": 0.05848099799999318,
+  "max": 0.08021420399998647
+ },
+ "creds": {
+  "s": 4.688291617000004,
+  "code": 200,
+  "body": {
+   "method": "iam-role",
+   "region": null,
+   "aws_env_vars": [
+    "AWS_LAMBDA_MICROVM_IMAGE_ARN",
+    "AWS_LAMBDA_MICROVM_IMAGE_NAME",
+    "AWS_LAMBDA_MICROVM_IMAGE_VERSION",
+    "AWS_REGION"
+   ]
+  }
+ },
+ "s3_key": "lancedb/deep_10m.lance/data/0000000000110100100110108843334f378de637932eaabce9.lance",
+ "s3_10mb": {
+  "s": 1.652406329999991,
+  "code": 200,
+  "body": {
+   "bytes": 774680,
+   "seconds": 1.629723964,
+   "mb_per_s": 0.45332365219708687
+  }
+ },
+ "lance_10m": {
+  "s": 35.439598605999976,
+  "code": 200,
+  "body": {
+   "lancedb": "0.33.0",
+   "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+   "rows": 10000000,
+   "open_s": 6.39264239500001,
+   "count_s": 0.0847380999999956
+  }
+ },
+ "auto_resume_cycles": [
+  {
+   "state_before": "SUSPENDED",
+   "extra_wait_s": 0.09945771408342807,
+   "first_s": 0.5843243850000022,
+   "code": 200,
+   "next5_median_s": 0.06889734200001385,
+   "resume_hooks": 1,
+   "pid": 1
+  },
+  {
+   "state_before": "SUSPENDED",
+   "extra_wait_s": 0.09233029328612474,
+   "first_s": 0.5854207670000164,
+   "code": 200,
+   "next5_median_s": 0.06906411500000331,
+   "resume_hooks": 2,
+   "pid": 1
+  },
+  {
+   "state_before": "SUSPENDED",
+   "extra_wait_s": 0.09926222145526253,
+   "first_s": 0.5874337100000275,
+   "code": 200,
+   "next5_median_s": 0.06900428700004113,
+   "resume_hooks": 3,
+   "pid": 1
+  }
+ ],
+ "explicit_suspend_s": 0.6456828117370605,
+ "explicit_resume_to_running_s": 0.6557431221008301,
+ "explicit_resume_first_ping": {
+  "s": 0.029501985000024433,
+  "code": 200,
+  "since_resume_api_s": 0.6861777305603027
+ },
+ "final_ping": {
+  "now": 1792326664.859192,
+  "boot_wall": 1792325891.0213015,
+  "pid": 1,
+  "requests": 43,
+  "run_hooks": [
+   1792326376.551582
+  ],
+  "resume_hooks": [
+   1792326500.8601398,
+   1792326581.7565343,
+   1792326662.8876932,
+   1792326664.444964
+  ],
+  "suspend_hooks": [
+   1792326480.4327025,
+   1792326562.9440355,
+   1792326652.2193575,
+   1792326663.6230767
+  ],
+  "ready_hooks": 1
+ },
+ "terminate_s": 1.1252384185791016,
+ "final_state": "TERMINATED",
+ "started_at": "2026-10-18 12:26:15.172000+00:00",
+ "terminated_at": "2026-10-18 12:31:05.458000+00:00",
+ "ended_utc": "2026-10-18T12:31:06.104771Z"
+}

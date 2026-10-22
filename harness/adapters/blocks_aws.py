@@ -28,7 +28,7 @@ allows. Blocks' FunctionExecutor() reads runtime_memory from ~/.lithops/config
 (also set to 3008), so both surfaces agree.
 
 Usage (harness/.venv + AWS_PROFILE=thesis, NO MinIO env):
-    c = BlocksClientAWS(bucket="thesis-blocks-<AWS_ACCOUNT_ID>",
+    c = BlocksClientAWS(bucket="thesis-blocks-<account id>",
                         vectors_csv_path="datasets/.../vectors_deep_100k.csv")
     c.setup("deep_100k", dimensions=96, top_k_default=10)
     c.bulk_insert_from_path(path, build_index=True)

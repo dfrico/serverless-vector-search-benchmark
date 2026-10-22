@@ -73,6 +73,8 @@ def main():
     ap.add_argument("--put-batch", type=int, default=500, dest="put_batch")
     ap.add_argument("--insert-batch", type=int, default=2000, dest="insert_batch")
     ap.add_argument("--num-blocks", type=int, default=16, dest="num_blocks")
+    ap.add_argument("--ingest-only", action="store_true", dest="ingest_only",
+                    help="stop after ingest (LanceDB: recall runs in recall_query_lancedb.py)")
     args = ap.parse_args()
     adapter = args.adapter
 
@@ -107,6 +109,15 @@ def main():
     ingest_s = time.time() - t_ing
     print(f"[recall/{adapter}] ingest done in {ingest_s:.1f}s "
           f"timings_keys={sorted(k for k in ing_timings)}")
+    # Ingest record (2026-10-16): written before the recall step, so the ingest
+    # time survives even if the recall step fails or runs in another script.
+    from harness.records import write_sidecar
+    write_sidecar(out_path, "ingest", {"ingest_seconds": ingest_s,
+                                       "ingest_timings": ing_timings,
+                                       "started_utc": started})
+    if args.ingest_only:
+        print(f"[recall/{adapter}] --ingest-only: stopping before recall")
+        return 0
 
     # --- recall: all 1000 queries ---
     t_q = time.time()
@@ -154,6 +165,15 @@ def main():
         json.dump(summary, f, indent=2, sort_keys=True)
     os.replace(tmp, out_path)
     print(f"[recall/{adapter}] wrote {os.path.relpath(out_path, WORKSPACE)}")
+    # Raw evidence (2026-10-16): per-query ids/dists, full timings, provenance.
+    from harness.records import per_query_records, run_provenance, write_sidecar
+    side = write_sidecar(out_path, "per_query", {
+        "per_query": per_query_records(results, truth, C.TOP_K),
+        "ingest_timings": ing_timings, "query_timings": q_timings,
+        "provenance": run_provenance(client, C.DATASET,
+                                     patch_path=out_path[:-5] + ".code.patch"),
+    })
+    print(f"[recall/{adapter}] wrote {os.path.relpath(side, WORKSPACE)}")
 
     print("\n=== RECALL", adapter.upper(), "PASS" if passed else "FAIL/STOP", "===")
     print(json.dumps(summary, indent=2, sort_keys=True))

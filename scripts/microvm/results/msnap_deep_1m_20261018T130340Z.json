@@ -1,0 +1,97 @@
+{
+ "started_utc": "2026-10-18T13:00:15.376135Z",
+ "image": "thesis-lancedb-msnap-deep1m",
+ "dataset": "deep_1m",
+ "memory_MiB": 2048,
+ "build_state": "CREATED",
+ "build_s": 165.89102721214294,
+ "build_log_load": [
+  "load {\"status\": \"loaded\", \"uri\": \"s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance\", \"t_start\": 1792328533.1517532, \"identity\": \"arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-04bdc8dc-17d3-4dec-8b35-64c042058b2f-864\", \"objects\": 1500, \"bytes\": 397384774, \"list_s\": 0.29410497699999993, \"copy_s\": 5.547656445999998, \"copy_MB_s\": 68.31274726248654, \"warm_query_s\": 0.111246297000001, \"rows\": 1000000, \"t_done\": 1792328539.7359324, \"proc_after_load\": {\"MemTotal_MB\": 8016, \"MemAvailable_MB\": 7487, \"Cached_MB\": 744, \"rss_MB\": 275, \"minflt\": 64489, \"majflt\": 1513, \"cpu_part\": [\"0xd4f\"], \"ncpu\": 4}}\n",
+  "load {\"status\": \"loaded\", \"uri\": \"s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance\", \"t_start\": 1792328533.3007002, \"identity\": \"arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-2a9dfc31-3de8-4cc8-8978-c8af4a9530d1-864\", \"objects\": 1500, \"bytes\": 397384774, \"list_s\": 0.2752285289999996, \"copy_s\": 7.136676807000001, \"copy_MB_s\": 53.10253819018179, \"warm_query_s\": 0.14559014900000022, \"rows\": 1000000, \"t_done\": 1792328541.3897505, \"proc_after_load\": {\"MemTotal_MB\": 8016, \"MemAvailable_MB\": 7500, \"Cached_MB\": 745, \"rss_MB\": 268, \"minflt\": 62433, \"majflt\": 1511, \"cpu_part\": [\"0xd40\"], \"ncpu\": 4}}\n"
+ ],
+ "microvm_id": "microvm-5a15c301-9e65-3d56-a165-fa69bbcb2dbe",
+ "to_running_s": 2.351412773132324,
+ "stats_at_start": {
+  "load": {
+   "status": "loaded",
+   "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+   "t_start": 1792328533.1517532,
+   "identity": "arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-04bdc8dc-17d3-4dec-8b35-64c042058b2f-864",
+   "objects": 1500,
+   "bytes": 397384774,
+   "list_s": 0.29410497699999993,
+   "copy_s": 5.547656445999998,
+   "copy_MB_s": 68.31274726248654,
+   "warm_query_s": 0.111246297000001,
+   "rows": 1000000,
+   "t_done": 1792328539.7359324,
+   "proc_after_load": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7487,
+    "Cached_MB": 744,
+    "rss_MB": 275,
+    "minflt": 64489,
+    "majflt": 1513,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   }
+  },
+  "proc": {
+   "MemTotal_MB": 8016,
+   "MemAvailable_MB": 7488,
+   "Cached_MB": 451,
+   "rss_MB": 275,
+   "minflt": 64493,
+   "majflt": 1513,
+   "cpu_part": [
+    "0xd4f"
+   ],
+   "ncpu": 4
+  },
+  "requests": 1,
+  "queries": 0,
+  "run_hooks": [
+   1792328583.6435812
+  ],
+  "resume_hooks": [],
+  "suspend_hooks": [],
+  "ready_hooks": 2
+ },
+ "stats_after_first_query": {
+  "MemTotal_MB": 8016,
+  "MemAvailable_MB": 7481,
+  "Cached_MB": 580,
+  "rss_MB": 289,
+  "minflt": 68514,
+  "majflt": 1514,
+  "cpu_part": [
+   "0xd4f"
+  ],
+  "ncpu": 4
+ },
+ "first_query": {
+  "wall_s": 22.548877634999997,
+  "server_ms": 22388.147958000005
+ },
+ "next_queries": {
+  "n": 99,
+  "wall_median_s": 0.12012584899997591,
+  "server_median_ms": 67.1329130000089
+ },
+ "recall_at_10_pct": 100.0,
+ "stats_at_end": {
+  "MemTotal_MB": 8016,
+  "MemAvailable_MB": 7428,
+  "Cached_MB": 581,
+  "rss_MB": 344,
+  "minflt": 82448,
+  "majflt": 1514,
+  "cpu_part": [
+   "0xd4f"
+  ],
+  "ncpu": 4
+ },
+ "final_state": "TERMINATED"
+}

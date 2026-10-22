@@ -51,7 +51,10 @@ import time
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = os.path.dirname(os.path.dirname(_HERE))   # experiments/experiment_c1 -> repo root
-RESULTS_DIR = os.path.join(_HERE, "results")
+# RESULTS_TAG selects the output folder: unset or "orig" -> results/ (the August
+# evidence the 2 Sep thesis cites); any other tag -> results_<tag>/ (2026-10-16).
+_TAG = os.environ.get("RESULTS_TAG", "orig")
+RESULTS_DIR = os.path.join(_HERE, "results" if _TAG in ("", "orig") else f"results_{_TAG}")
 
 # Reuse Experiment B's shared helpers (loaders, recall, pricing, corpus anchor)
 # and the AWS Blocks adapter. Put the repo root (for the `harness` package), the
@@ -226,7 +229,7 @@ def percentiles(values):
     }
 
 
-def measure(client, queries, truth, *, n=50, warmup=3, top_k=None):
+def measure(client, queries, truth, *, n=50, warmup=3, top_k=None, raw_path=None):
     """Run warmup (discarded) + n serial single-vector queries, max_in_flight=1.
 
     Returns a dict with recall@10, latency percentiles, throughput, and both
@@ -236,15 +239,28 @@ def measure(client, queries, truth, *, n=50, warmup=3, top_k=None):
     total = warmup + n
     assert len(queries) >= total, f"need >= {total} queries, have {len(queries)}"
 
-    # warmup (discarded) — steady-state runtime, not cold start.
+    # warmup (excluded from the stats) — steady-state runtime, not cold start.
+    # Since 2026-10-16 every query, warm-up included, is kept in raw_path.
+    raw = []
+
+    def _keep(i, phase, hits, timings, t0, t1):
+        from harness.records import hits_to_lists
+        ids, dists = hits_to_lists(hits)
+        raw.append({"query_index": i, "phase": phase, "ids": ids, "dists": dists,
+                    "wall_submit_utc": t0, "wall_ack_utc": t1, "timings": timings})
+
     for i in range(warmup):
-        client.query(queries[i], top_k=top_k)
+        t0 = time.time()
+        hits, timings = client.query(queries[i], top_k=top_k)
+        _keep(i, "warmup", hits, timings, t0, time.time())
 
     lats, wall_costs, billed_costs = [], [], []
     n_maps, n_reduces, billed_map_ss, map_exec_ss = [], [], [], []
     hits_ids = []
     for i in range(warmup, total):
+        t0 = time.time()
         hits, timings = client.query(queries[i], top_k=top_k)
+        _keep(i, "measured", hits, timings, t0, time.time())
         lats.append(float(timings.get("wall_clock_s", 0.0)))
         (wc, bc, nm, nr, bms, brs, mex, rex) = query_costs(timings)
         wall_costs.append(wc)
@@ -256,6 +272,15 @@ def measure(client, queries, truth, *, n=50, warmup=3, top_k=None):
         hits_ids.append(hits)
 
     measured_truth = truth[warmup:total]
+    if raw_path:
+        from harness.records import run_provenance
+        import json as _json
+        with open(raw_path, "w") as f:
+            _json.dump({"records": raw,
+                        "provenance": run_provenance(
+                            client, C.DATASET,
+                            patch_path=raw_path.replace(".raw.json", ".code.patch"))},
+                       f, default=str)
     recall, per_query = C.recall_at_k(hits_ids, measured_truth, top_k)
     n_perfect = sum(1 for h in per_query if h == top_k)
     total_time = sum(lats)

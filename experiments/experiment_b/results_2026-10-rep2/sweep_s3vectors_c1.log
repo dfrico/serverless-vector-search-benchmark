@@ -1,0 +1,6 @@
+[sweep/s3vectors c=1] account=<AWS_ACCOUNT_ID> duration=45.0s ops=100.0 seed=42 warmup=0
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[sweep/s3vectors c=1] setup OK metric=l2 max_safe_concurrency=4 sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df anchor_ok=True
+[sweep/s3vectors c=1] configured_concurrency=1 effective_concurrency=1
+[sweep/s3vectors c=1] DONE records=219 wall=46.8s realised_rate=4.68 ops/s
+[sweep/s3vectors c=1] wrote experiments/experiment_b/results_2026-10-rep2/sweep_s3vectors_c1.jsonl

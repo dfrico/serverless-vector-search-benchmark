@@ -165,6 +165,14 @@ def main():
         json.dump(summary, f, indent=2, sort_keys=True)
     os.replace(tmp, out_path)
     print(f"[c2/phase1/{adapter}] wrote results/phase1_{adapter}.json")
+    # Raw evidence (2026-10-16): per-query ids/dists, full timings, provenance.
+    from harness.records import per_query_records, run_provenance, write_sidecar
+    write_sidecar(out_path, "per_query", {
+        "per_query": per_query_records(results, gate_t, C.TOP_K),
+        "ingest": ing, "query_timings": q_timings,
+        "provenance": run_provenance(client, C.DATASET,
+                                     patch_path=out_path[:-5] + ".code.patch"),
+    })
 
     if not passed:
         reason = []

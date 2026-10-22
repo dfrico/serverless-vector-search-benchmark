@@ -1,0 +1,6 @@
+[recall/lancedb] start=2026-10-22T08:51:31Z account=<AWS_ACCOUNT_ID>
+[recall/lancedb] loaded 1000 queries + truth rows
+[recall/lancedb] setup OK name=lancedb-lambda metric=l2 max_conc=10
+[recall/lancedb] fingerprint sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df
+[recall/lancedb] ingest done in 203.8s timings_keys=['insert_batch_size', 'n_cold_starts', 'n_invocations', 'n_vectors', 'op', 'server_ms_total', 'wall_clock_s']
+[recall/lancedb] --ingest-only: stopping before recall

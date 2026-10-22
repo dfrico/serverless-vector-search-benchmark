@@ -3,11 +3,10 @@
 Does NOT trust setup's "Setup complete". Prints a table of resource -> state.
 Run through run_deploy.sh's env (AWS_PROFILE=thesis, no MinIO endpoint).
 """
-import os
 import boto3
 
 REGION = "us-east-1"
-ACCOUNT = os.environ["AWS_ACCOUNT_ID"]  # set to your 12-digit AWS account id
+ACCOUNT = boto3.client("sts").get_caller_identity()["Account"]
 BUCKET = f"thesis-blocks-{ACCOUNT}"
 
 s = boto3.Session(region_name=REGION)

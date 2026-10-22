@@ -24,8 +24,6 @@ BLOCKS_REPO = os.path.join(WORKSPACE, "references", "blocks-db-wip")
 if BLOCKS_REPO not in sys.path:
     sys.path.insert(0, BLOCKS_REPO)
 
-ACCOUNT = os.environ["AWS_ACCOUNT_ID"]  # set to your 12-digit AWS account id
-BUCKET = f"thesis-blocks-{ACCOUNT}"
 
 
 def main():
@@ -40,8 +38,10 @@ def main():
     ident = boto3.client("sts").get_caller_identity()
     region = boto3.Session().region_name or "us-east-1"
     print(f"[deploy] account={ident['Account']} arn={ident['Arn']} region={region}")
-    if ident["Account"] != ACCOUNT:
-        raise SystemExit(f"Unexpected account {ident['Account']}; expected {ACCOUNT}.")
+    expected = os.environ.get("AWS_ACCOUNT_ID", ident["Account"])
+    if ident["Account"] != expected:
+        raise SystemExit(f"Unexpected account {ident['Account']}; expected {expected} (AWS_ACCOUNT_ID).")
+    BUCKET = f"thesis-blocks-{ident['Account']}"
 
     from vectordb.infra import run_setup
 

@@ -1,0 +1,124 @@
+{
+  "dataset": "deep_10m_rate",
+  "index": "deep-10m-rate",
+  "corpus_sha256_expected": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+  "started_utc": 1792254953.9130144,
+  "ingest_seconds": 5946.3,
+  "n_vectors": 10000000,
+  "n_put_requests": 20000,
+  "put_batch_size": 500,
+  "avg_rate_vec_s": 1681.7,
+  "first_4_5h_avg_rate_vec_s": null,
+  "rate_per_30min": [
+    {
+      "from_h": 0.0,
+      "to_h": 0.5,
+      "vectors": 3029500,
+      "rate_vec_s": 1683.1
+    },
+    {
+      "from_h": 0.5,
+      "to_h": 1.0,
+      "vectors": 3016500,
+      "rate_vec_s": 1675.8
+    },
+    {
+      "from_h": 1.0,
+      "to_h": 1.5,
+      "vectors": 3033000,
+      "rate_vec_s": 1685.0
+    },
+    {
+      "from_h": 1.5,
+      "to_h": 1.65,
+      "vectors": 921000,
+      "rate_vec_s": 1685.7
+    }
+  ],
+  "est_put_cost_usd": 0.768,
+  "provenance": {
+    "recorded_utc": 1792254867.2796679,
+    "code": {
+      "git_sha": "3962ece9744899672f44169344c86838cb2a0b9c",
+      "dirty": true,
+      "diff_sha256": "8f732307ed35c62e4b390cccd6a2086a36459370df3894d8d28448f6f1ef92f4",
+      "changed_files": [
+        "experiments/experiment_a/recall_1m.py",
+        "experiments/experiment_a/run_recall_1m.sh",
+        "experiments/experiment_b/eb_aws.sh",
+        "experiments/experiment_b/eb_blocks.sh",
+        "experiments/experiment_b/eb_common.py",
+        "experiments/experiment_b/recall_query_lancedb.py",
+        "experiments/experiment_b/run_recall.py",
+        "experiments/experiment_b/run_sweep.py",
+        "experiments/experiment_c1/c1_aggregate.py",
+        "experiments/experiment_c1/c1_common.py",
+        "experiments/experiment_c1/c1_phase1.py",
+        "experiments/experiment_c1/c1_run.py",
+        "experiments/experiment_c1/ec_blocks.sh",
+        "experiments/experiment_c2/c2_aggregate.py",
+        "experiments/experiment_c2/c2_aws.sh",
+        "experiments/experiment_c2/c2_blocks.sh",
+        "experiments/experiment_c2/c2_common.py",
+        "experiments/experiment_c2/c2_driver.py",
+        "experiments/experiment_c2/c2_phase1.py",
+        "experiments/experiment_c3/c3_aws.sh",
+        "experiments/experiment_c3/c3_blocks.sh",
+        "experiments/experiment_c3/c3_common.py",
+        "experiments/experiment_c3/c3_phase2.py",
+        "experiments/experiment_c3/c3_run_sweep.sh",
+        "experiments/experiment_c3/c3_s3v_ingest_rate.py",
+        "experiments/experiment_c3/c3_sweep.py",
+        "experiments/rerun_baseline.sh",
+        "harness/adapters/blocks.py",
+        "harness/adapters/s3vectors.py",
+        "harness/provenance.py",
+        "harness/records.py",
+        "harness/sink.py",
+        "harness/workload.py",
+        "scripts/build_ground_truth.py",
+        "scripts/ec2/blocks_mem_probe.py",
+        "scripts/ec2/bootstrap.sh",
+        "scripts/ec2/make_bundle.sh",
+        "scripts/ec2/smoke10m.py",
+        "scripts/ec2/ssm_run.py",
+        "scripts/ec2/start_chain.sh",
+        "scripts/ec2/sync_results.sh",
+        "scripts/fixes/analyze_cloudwatch.py",
+        "scripts/fixes/cloudwatch_billed.py",
+        "scripts/fixes/cloudwatch_concurrency.py",
+        "scripts/fixes/fix_numbers.json",
+        "scripts/fixes/fix_numbers.py",
+        "scripts/fixes/postingest_checks.py",
+        "scripts/fixes/run_checks.sh",
+        "scripts/sample_deep1b.py"
+      ],
+      "blocks_commit": "4916370e13473833c8f237277aeca4c3e1f10974",
+      "blocks_dirty": false,
+      "bundled_utc": "2026-10-17T14:49:45Z",
+      "patch_file": "s3v_ingest_rate.code.patch",
+      "source": "bundle"
+    },
+    "hostname": "<EC2_HOST>",
+    "python_version": "3.10.22",
+    "client_tcp_connect_s": {
+      "s3vectors.us-east-1.api.aws": 0.002,
+      "lambda.us-east-1.amazonaws.com": 0.0019,
+      "s3.us-east-1.amazonaws.com": 0.0008
+    },
+    "adapter": "s3vectors",
+    "backend_version": {
+      "service": "s3vectors",
+      "region": "us-east-1",
+      "boto3": "1.43.79",
+      "botocore": "1.43.79",
+      "api_version": "2025-07-15"
+    },
+    "dataset_fingerprint": {
+      "content_sha256": "72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849",
+      "line_count": 10000000,
+      "byte_size": 11511217806,
+      "source_path": "/home/ec2-user/thesis/datasets/deep_10m/vectors_deep_10m.csv"
+    }
+  }
+}

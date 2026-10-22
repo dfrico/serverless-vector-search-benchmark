@@ -1,0 +1,243 @@
+{
+ "dataset": "deep_1m",
+ "started_utc": "2026-10-18T14:08:14Z",
+ "checks": [
+  {
+   "check": "name",
+   "ok": true,
+   "detail": "lancedb-microvm"
+  },
+  {
+   "check": "capabilities before setup",
+   "ok": true,
+   "detail": "ClientCapabilities(supports_pending=False, metric='l2', id_stability='preserved', ingest_modes=set(), max_safe_concurrency=8)"
+  },
+  {
+   "check": "bulk_insert raises NotImplementedError",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "check": "delete raises NotImplementedError",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "check": "fingerprint = shared corpus hash",
+   "ok": true,
+   "detail": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df"
+  },
+  {
+   "check": "backend_version fields",
+   "ok": true,
+   "detail": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-6960827a-3f2b-339e-8da4-6e35d1f5f5f5",
+    "microvm_owned": true,
+    "settle_s": 30.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   }
+  },
+  {
+   "check": "max_safe_concurrency from size",
+   "ok": true,
+   "detail": 8
+  },
+  {
+   "check": "ingest_record (no pretend ingest)",
+   "ok": true,
+   "detail": {
+    "kind": "table baked into the MicroVM image (make_table.py + image build), not ingested by the adapter",
+    "table": {
+     "dataset": "deep_1m",
+     "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+     "content_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+     "rows": 1000000,
+     "data_files": 500,
+     "objects": 1500,
+     "bytes": 397384774,
+     "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+     "batch": 2000,
+     "seconds": null,
+     "lancedb": "0.33.0"
+    },
+    "image_version_created": "2026-10-18 14:04:43.198000+00:00",
+    "image_version_updated": "2026-10-18 14:07:07.116000+00:00",
+    "image_env_table_uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+    "validate_hook": "ENABLED"
+   }
+  },
+  {
+   "check": "timings envelope",
+   "ok": true,
+   "detail": {
+    "op": "query",
+    "wall_clock_s": 0.11457514762878418,
+    "server_ms": 105.02745799999502,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "first_after_launch": false,
+    "resumed": false
+   }
+  },
+  {
+   "check": "hits ascending, k=10",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "check": "recall@10 >= 99% (gate)",
+   "ok": true,
+   "detail": "100.00% on 1000 queries"
+  },
+  {
+   "check": "same top-10 sets as LanceDB-on-Lambda",
+   "ok": true,
+   "detail": {
+    "n": 1000,
+    "identical_ranked": 1000,
+    "identical_sets": 1000
+   }
+  },
+  {
+   "check": "query_batch = query",
+   "ok": true,
+   "detail": {
+    "op": "query_batch",
+    "wall_clock_s": 0.964148998260498,
+    "n_queries": 10,
+    "server_ms": 913.2407949999788,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "first_after_launch": false,
+    "resumed": false
+   }
+  },
+  {
+   "check": "attach: query ok and teardown leaves it running",
+   "ok": true,
+   "detail": {
+    "op": "query",
+    "wall_clock_s": 0.15058493614196777,
+    "server_ms": 92.11768599999459,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "first_after_launch": false,
+    "resumed": false
+   }
+  },
+  {
+   "check": "resumed flag on first query after resume only",
+   "ok": true,
+   "detail": [
+    {
+     "op": "query",
+     "wall_clock_s": 0.8876557350158691,
+     "server_ms": 333.2977889999995,
+     "cpu_part": [
+      "0xd40"
+     ],
+     "first_after_launch": false,
+     "resumed": true
+    },
+    {
+     "op": "query",
+     "wall_clock_s": 0.15575885772705078,
+     "server_ms": 94.20956499999988,
+     "cpu_part": [
+      "0xd40"
+     ],
+     "first_after_launch": false,
+     "resumed": false
+    }
+   ]
+  },
+  {
+   "check": "teardown terminated the owned MicroVM (and is idempotent)",
+   "ok": true,
+   "detail": "TERMINATED"
+  }
+ ],
+ "setup_s": 32.836652755737305,
+ "backend_version": {
+  "service": "lambda-microvms",
+  "region": "us-east-1",
+  "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+  "image_version": "1.0",
+  "baseline_memory_mib": 2048,
+  "lancedb": "0.33.0",
+  "cpu_part": [
+   "0xd40"
+  ],
+  "microvm_id": "microvm-6960827a-3f2b-339e-8da4-6e35d1f5f5f5",
+  "microvm_owned": true,
+  "settle_s": 30.0,
+  "boto3": "1.43.79",
+  "botocore": "1.43.79",
+  "requests": "2.34.2"
+ },
+ "ingest_record": {
+  "kind": "table baked into the MicroVM image (make_table.py + image build), not ingested by the adapter",
+  "table": {
+   "dataset": "deep_1m",
+   "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+   "content_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+   "rows": 1000000,
+   "data_files": 500,
+   "objects": 1500,
+   "bytes": 397384774,
+   "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+   "batch": 2000,
+   "seconds": null,
+   "lancedb": "0.33.0"
+  },
+  "image_version_created": "2026-10-18 14:04:43.198000+00:00",
+  "image_version_updated": "2026-10-18 14:07:07.116000+00:00",
+  "image_env_table_uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+  "validate_hook": "ENABLED"
+ },
+ "lifecycle": {
+  "mode": "launch",
+  "run_to_running_s": 2.3993449211120605,
+  "polled_running_s": 2.2189600467681885,
+  "rows": 1000000,
+  "setup_s": 32.5047881603241
+ },
+ "recall": {
+  "n": 1000,
+  "recall_at_10_pct": 100.0,
+  "wall_median_s": 0.14013218879699707,
+  "server_median_ms": 91.59398450000111
+ },
+ "vs_lambda": {
+  "n": 1000,
+  "identical_ranked": 1000,
+  "identical_sets": 1000
+ },
+ "suspend_s": 1.2025890350341797,
+ "first_after_resume": {
+  "client_s": 0.887669563293457,
+  "op": "query",
+  "wall_clock_s": 0.8876557350158691,
+  "server_ms": 333.2977889999995,
+  "cpu_part": [
+   "0xd40"
+  ],
+  "first_after_launch": false,
+  "resumed": true
+ },
+ "passed": true
+}

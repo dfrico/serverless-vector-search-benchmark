@@ -15,6 +15,7 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 
 run() {
+  ./ec_blocks.sh c1_fresh_workers.py || echo "WARN: fresh workers failed before $*"
   echo "=== CELL $* ==="
   if ./ec_blocks.sh c1_run.py "$@"; then
     echo "OK: cell $*"

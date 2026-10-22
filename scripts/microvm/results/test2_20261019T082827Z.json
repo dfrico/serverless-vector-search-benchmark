@@ -1,0 +1,76 @@
+{
+ "started_utc": "2026-10-19T08:18:19Z",
+ "protocol": {
+  "idle_s": 600,
+  "query_s": 600,
+  "cycles": 5,
+  "suspended_s": 30
+ },
+ "events": [
+  {
+   "t": 1792397899.3427174,
+   "event": "launch_requested"
+  },
+  {
+   "t": 1792397902.153717,
+   "event": "running",
+   "mode": "launch",
+   "run_to_running_s": 2.3609445095062256,
+   "polled_running_s": 2.229586362838745,
+   "rows": 1000000,
+   "setup_s": 2.448456287384033
+  },
+  {
+   "t": 1792397902.2047706,
+   "event": "idle_start",
+   "busy_cpu_s": 12.24
+  },
+  {
+   "t": 1792398502.2406383,
+   "event": "ERROR",
+   "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+  },
+  {
+   "t": 1792398507.1065853,
+   "event": "terminated",
+   "microvm_id": "microvm-a5887993-ff5f-33ea-871b-0759ae06c996"
+  }
+ ],
+ "backend_version": {
+  "service": "lambda-microvms",
+  "region": "us-east-1",
+  "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+  "image_version": "1.0",
+  "baseline_memory_mib": 2048,
+  "lancedb": "0.33.0",
+  "cpu_part": [
+   "0xd4f"
+  ],
+  "microvm_id": "microvm-a5887993-ff5f-33ea-871b-0759ae06c996",
+  "microvm_owned": true,
+  "settle_s": 0,
+  "boto3": "1.43.79",
+  "botocore": "1.43.79",
+  "requests": "2.34.2"
+ },
+ "lifecycle": {
+  "mode": "launch",
+  "run_to_running_s": 2.3609445095062256,
+  "polled_running_s": 2.229586362838745,
+  "rows": 1000000,
+  "setup_s": 2.448456287384033
+ },
+ "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+ "started_at": "2026-10-19 08:18:19.799000+00:00",
+ "terminated_at": "2026-10-19 08:28:26.087000+00:00",
+ "final_state": "TERMINATED",
+ "prediction": {
+  "launches": 1,
+  "suspends": 0,
+  "resumes": 0,
+  "running_s_approx": 604.9528682231903,
+  "baseline_vcpu": 1,
+  "baseline_gb": 2,
+  "burst_vcpu_s_predicted": null
+ }
+}

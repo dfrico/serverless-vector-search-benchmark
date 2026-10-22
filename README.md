@@ -1,22 +1,30 @@
 # Serverless vector-search benchmark
 
 This repository holds the benchmark harness and experiment code from my master's
-thesis. The thesis compares three serverless vector-search systems on the same
-corpus, through one client interface, and with the same fairness checks:
+thesis. The thesis compares serverless vector-search systems on the same corpus,
+through one client interface, and with the same fairness checks:
 
 - Blocks DB with Lithops (fan-out map/reduce over AWS Lambda and S3)
 - AWS S3 Vectors (managed vector index)
 - LanceDB on AWS Lambda (exact flat scan inside one container-image Lambda)
+- LanceDB on AWS Lambda MicroVMs (the same scan in a long-lived MicroVM; added later)
 
-The datasets are Deep1B samples at 1M and 10M vectors. All runs used real AWS.
+The datasets are Deep1B samples at 1M and 10M vectors. All runs used real AWS, driven
+from an EC2 client in the same region (us-east-1).
 
 ## What is here
 
 ```
-harness/       reusable benchmark code: client interface, adapters, deploy, tests
-experiments/   the run scripts and recorded results for each experiment (a, b, c1..c3)
-scripts/       data preparation (ground-truth build, Deep1B sampling)
-datasets/      README only — how to get the data (no data bytes are shared)
+harness/            reusable benchmark code: client interface, adapters, deploy, tests
+experiments/        run scripts and recorded results for each experiment (a, b, c1..c3)
+                    and rerun_baseline.sh, which runs a whole stage
+scripts/            data preparation (ground-truth build, Deep1B sampling)
+scripts/analysis/   cost from the platform records (Lambda billed duration, S3 access
+                    logs, DynamoDB, S3 Vectors fees) and latency summaries
+scripts/ec2/        the EC2 benchmark client: bootstrap, code bundle, remote runs, sync
+scripts/fixes/      post-ingest checks and CloudWatch helpers
+scripts/microvm/    LanceDB-on-MicroVM image build, spikes and billing readouts
+datasets/           README only — how to get the data (no data bytes are shared)
 requirements.txt   pinned dependencies for the harness environment
 ```
 
@@ -50,19 +58,27 @@ The package is not pip-installed. Put the repo root on `sys.path`, then import
 The AWS adapters need real AWS credentials and no local MinIO endpoint. Set:
 
 ```sh
-export AWS_ACCOUNT_ID=<your 12-digit AWS account id>
 export AWS_PROFILE=<your profile>
 ```
 
-The deploy and smoke scripts read `AWS_ACCOUNT_ID` to build the bucket name
-(`thesis-blocks-<AWS_ACCOUNT_ID>`). These operations create real AWS resources and
-cost real money. Read each script before you run it.
+The scripts look up the account ID with STS at run time and build the bucket names
+from it (`thesis-blocks-<account id>`). If you also set `AWS_ACCOUNT_ID`, the deploy
+and setup scripts refuse to run against any other account. These operations create
+real AWS resources and cost real money. Read each script before you run it.
 
 ## Notes on the recorded results
 
-The files under `experiments/**/results/` are the recorded outputs from the thesis
-runs. Account ids and local file paths in those records were replaced with the
-placeholders `<AWS_ACCOUNT_ID>`, `<REPO_ROOT>`, and `<HOME>`.
+Each experiment writes to `results_<tag>/`. The tags are:
+
+- `2026-10-ec2`: the run the thesis reports (17–18 October 2026).
+- `2026-10-rep1`, `2026-10-rep2`, ...: replicates of experiments B and C3 on later
+  days, with the same code, to show the between-day spread.
+- `2026-10-20-poll`: a check of the Lithops status-polling interval on Blocks latency.
+
+An earlier run (August 2026, from a laptop client) was superseded and is not part of
+the thesis; its results were removed from this repository. Account ids, local paths
+and the client hostname in the records were replaced with the placeholders
+`<AWS_ACCOUNT_ID>`, `<REPO_ROOT>`, `<HOME>` and `<EC2_HOST>`.
 
 ## Reproducibility
 

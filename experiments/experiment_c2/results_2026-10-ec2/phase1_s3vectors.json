@@ -1,0 +1,28 @@
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "adapter": "s3vectors",
+  "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+  "corpus_sha256_anchor_ok": true,
+  "dataset": "deep_1m",
+  "ingest_cost_usd": 0.0768,
+  "ingest_seconds": 608.547,
+  "ingest_timings": {
+    "n_put_requests": 2000,
+    "n_put_retries": 0,
+    "n_vectors": 1000000,
+    "op": "bulk_insert",
+    "put_batch_size": 500,
+    "wall_clock_s": 608.5468909740448
+  },
+  "non_empty": 100,
+  "params": null,
+  "passed": true,
+  "perfect_10of10": 80,
+  "phase": "c2_phase1",
+  "recall_at_10_pct": 97.9,
+  "recall_n": 100,
+  "recall_query_seconds": 23.265,
+  "recall_threshold_pct": 90.0,
+  "started_utc": "2026-10-18T09:08:21Z",
+  "wall_clock_seconds": 640.001
+}

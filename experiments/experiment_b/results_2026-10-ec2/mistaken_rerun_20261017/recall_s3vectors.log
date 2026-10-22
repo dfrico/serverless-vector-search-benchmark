@@ -1,0 +1,5 @@
+[recall/s3vectors] start=2026-10-17T09:25:01Z account=<AWS_ACCOUNT_ID>
+[recall/s3vectors] loaded 1000 queries + truth rows
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[recall/s3vectors] setup OK name=s3vectors metric=l2 max_conc=4
+[recall/s3vectors] fingerprint sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df

@@ -1,0 +1,5 @@
+[c2/cleanup/s3vectors] account=<AWS_ACCOUNT_ID>
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[c2/cleanup/s3vectors] index dropped via teardown(drop_data=True)
+
+=== C2 CLEANUP S3VECTORS DONE ===

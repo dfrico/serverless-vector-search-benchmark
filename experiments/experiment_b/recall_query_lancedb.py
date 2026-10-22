@@ -46,6 +46,17 @@ READ_TIMEOUT_S = 890        # < Lambda's raised 900s ceiling, so a slow call is 
 PRIOR_INGEST_SECONDS = 1360.4   # from results/recall_lancedb.log (the successful ingest)
 
 
+
+def _ingest_seconds():
+    """Ingest time from run_recall.py --ingest-only's sidecar (2026-10-16); the
+    hard-coded August value applies only to the original results/ folder."""
+    side = os.path.join(C.RESULTS_DIR, "recall_lancedb.ingest.json")
+    if os.path.exists(side):
+        with open(side) as f:
+            return round(json.load(f)["ingest_seconds"], 3)
+    return PRIOR_INGEST_SECONDS
+
+
 def main():
     started = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     t_start = time.time()
@@ -125,7 +136,7 @@ def main():
             "min": min(per_query), "max": max(per_query),
         },
         "non_empty": non_empty,
-        "ingest_seconds": PRIOR_INGEST_SECONDS,
+        "ingest_seconds": _ingest_seconds(),
         "ingest_note": "ingest done in the first run (see recall_lancedb.log); "
                        "this run only re-ran the recall queries after the boto3 "
                        "read-timeout fix — the table was NOT re-ingested.",
@@ -142,6 +153,13 @@ def main():
         json.dump(summary, f, indent=2, sort_keys=True)
     os.replace(tmp, out_path)
     print(f"[recall-q/lancedb] wrote {os.path.relpath(out_path, WORKSPACE)}")
+    # Raw evidence (2026-10-16): per-query ids/dists and provenance.
+    from harness.records import per_query_records, run_provenance, write_sidecar
+    write_sidecar(out_path, "per_query", {
+        "per_query": per_query_records(results, truth, C.TOP_K),
+        "provenance": run_provenance(client, C.DATASET,
+                                     patch_path=out_path[:-5] + ".code.patch"),
+    })
 
     print("\n=== RECALL LANCEDB", "PASS" if passed else "FAIL/STOP", "===")
     print(json.dumps(summary, indent=2, sort_keys=True))

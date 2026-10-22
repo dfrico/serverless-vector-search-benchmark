@@ -1,0 +1,15 @@
+[c3/p2/lancedb] start=2026-10-18T08:12:17Z account=<AWS_ACCOUNT_ID> recall_n=5 chunk=1
+[c3/p2/lancedb] ingest estimate: ~$0.8 (arm64 insert invokes)
+[c3/p2/lancedb] setup OK sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/lancedb] ingest done in 2827.0s cost=$0.05581
+[c3/p2/lancedb] post-ingest sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/p2/lancedb] probe query: 10 hits in 54.88s server_ms=54843.475341796875 cold=False
+[c3/p2/lancedb] gate chunk 1 (1/5) in 51.9s
+[c3/p2/lancedb] gate chunk 2 (2/5) in 50.6s
+[c3/p2/lancedb] gate chunk 3 (3/5) in 51.6s
+[c3/p2/lancedb] gate chunk 4 (4/5) in 51.3s
+[c3/p2/lancedb] gate chunk 5 (5/5) in 51.4s
+[c3/p2/lancedb] recall@10=100.00% (bar 99.0%) perfect=5/5 non_empty=5/5 query_s=256.7 chunks=5
+[c3/p2/lancedb] wrote /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/reingest_lancedb_10m.json
+
+=== C3 PHASE 2 LANCEDB PASS ===

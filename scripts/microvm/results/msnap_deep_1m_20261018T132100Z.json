@@ -1,0 +1,231 @@
+{
+ "started_utc": "2026-10-18T13:17:07.634503Z",
+ "image": "thesis-lancedb-msnap-deep1m-full",
+ "dataset": "deep_1m",
+ "memory_MiB": 2048,
+ "extra_env": {
+  "VALIDATE_MODE": "full"
+ },
+ "build_state": "CREATED",
+ "build_s": 165.96733283996582,
+ "build_log_load": [
+  "load {\"status\": \"loaded\", \"uri\": \"s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance\", \"t_start\": 1792329534.1449866, \"identity\": \"arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-a564d884-b4f4-4a35-ada1-ff7594aa9b47-864\", \"objects\": 1500, \"bytes\": 397384774, \"list_s\": 0.29405517500000045, \"copy_s\": 5.529226470000001, \"copy_MB_s\": 68.54044679683777, \"warm_query_s\": 0.11287165599999582, \"rows\": 1000000, \"t_done\": 1792329540.708987, \"proc_after_load\": {\"MemTotal_MB\": 8016, \"MemAvailable_MB\": 7486, \"Cached_MB\": 744, \"rss_MB\": 275, \"minflt\": 64381, \"majflt\": 1511, \"proc_cpu_s\": 8.95, \"host_busy_cpu_s\": 12.1, \"uptime_s\": 34.6, \"t\": 1792329540.7092435, \"cpu_part\": [\"0xd4f\"], \"ncpu\": 4}}\n",
+  "load {\"status\": \"loaded\", \"uri\": \"s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance\", \"t_start\": 1792329534.2465942, \"identity\": \"arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-fc6642d3-fb06-4fcd-9bb9-8ea4512c6de0-864\", \"objects\": 1500, \"bytes\": 397384774, \"list_s\": 0.3032837089999987, \"copy_s\": 7.024578708, \"copy_MB_s\": 53.94994752683212, \"warm_query_s\": 0.14357383099999765, \"rows\": 1000000, \"t_done\": 1792329542.2572017, \"proc_after_load\": {\"MemTotal_MB\": 8016, \"MemAvailable_MB\": 7496, \"Cached_MB\": 745, \"rss_MB\": 273, \"minflt\": 62857, \"majflt\": 1501, \"proc_cpu_s\": 10.74, \"host_busy_cpu_s\": 14.63, \"uptime_s\": 36.03, \"t\": 1792329542.2575328, \"cpu_part\": [\"0xd40\"], \"ncpu\": 4}}\n",
+  "hook validate load=loaded\n",
+  "hook validate load=loaded\n",
+  "validate 8.97s read=397385788\n",
+  "validate 14.04s read=397385789\n",
+  "hook validate load=loaded\n",
+  "validate 0.32s read=397385789\n"
+ ],
+ "launches": [
+  {
+   "first_query_delay_s": 0.0,
+   "microvm_id": "microvm-1082afad-25fb-3bb5-be3c-42643fcf4cb9",
+   "to_running_s": 1.8165621757507324,
+   "stats_at_start": {
+    "load": {
+     "status": "loaded",
+     "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+     "t_start": 1792329534.1449866,
+     "identity": "arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-a564d884-b4f4-4a35-ada1-ff7594aa9b47-864",
+     "objects": 1500,
+     "bytes": 397384774,
+     "list_s": 0.29405517500000045,
+     "copy_s": 5.529226470000001,
+     "copy_MB_s": 68.54044679683777,
+     "warm_query_s": 0.11287165599999582,
+     "rows": 1000000,
+     "t_done": 1792329540.708987,
+     "proc_after_load": {
+      "MemTotal_MB": 8016,
+      "MemAvailable_MB": 7486,
+      "Cached_MB": 744,
+      "rss_MB": 275,
+      "minflt": 64381,
+      "majflt": 1511,
+      "proc_cpu_s": 8.95,
+      "host_busy_cpu_s": 12.1,
+      "uptime_s": 34.6,
+      "t": 1792329540.7092435,
+      "cpu_part": [
+       "0xd4f"
+      ],
+      "ncpu": 4
+     }
+    },
+    "proc": {
+     "MemTotal_MB": 8016,
+     "MemAvailable_MB": 7500,
+     "Cached_MB": 345,
+     "rss_MB": 275,
+     "minflt": 64384,
+     "majflt": 1511,
+     "proc_cpu_s": 8.97,
+     "host_busy_cpu_s": 12.72,
+     "uptime_s": 41.87,
+     "t": 1792329596.1061041,
+     "cpu_part": [
+      "0xd4f"
+     ],
+     "ncpu": 4
+    },
+    "requests": 1,
+    "queries": 0,
+    "run_hooks": [
+     1792329595.836218
+    ],
+    "resume_hooks": [],
+    "suspend_hooks": [],
+    "ready_hooks": 2
+   },
+   "stats_after_first_query": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7494,
+    "Cached_MB": 580,
+    "rss_MB": 286,
+    "minflt": 66984,
+    "majflt": 1512,
+    "proc_cpu_s": 9.19,
+    "host_busy_cpu_s": 12.88,
+    "uptime_s": 43.13,
+    "t": 1792329597.3671842,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   },
+   "first_query": {
+    "wall_s": 1.2556011909999825,
+    "server_ms": 1201.974761999999
+   },
+   "next_queries": {
+    "n": 99,
+    "wall_median_s": 0.12017782899999929,
+    "server_median_ms": 66.96477900000275
+   },
+   "recall_at_10_pct": 100.0,
+   "stats_at_end": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7432,
+    "Cached_MB": 581,
+    "rss_MB": 349,
+    "minflt": 83334,
+    "majflt": 1512,
+    "proc_cpu_s": 25.37,
+    "host_busy_cpu_s": 29.84,
+    "uptime_s": 55.36,
+    "t": 1792329609.5971012,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   },
+   "final_state": "TERMINATED"
+  },
+  {
+   "first_query_delay_s": 30.0,
+   "microvm_id": "microvm-257803d0-8f82-3254-82eb-65eed99c313b",
+   "to_running_s": 2.333585023880005,
+   "stats_at_start": {
+    "load": {
+     "status": "loaded",
+     "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+     "t_start": 1792329534.2465942,
+     "identity": "arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-microvm-build/Lambda-microvmsExecutor-fc6642d3-fb06-4fcd-9bb9-8ea4512c6de0-864",
+     "objects": 1500,
+     "bytes": 397384774,
+     "list_s": 0.3032837089999987,
+     "copy_s": 7.024578708,
+     "copy_MB_s": 53.94994752683212,
+     "warm_query_s": 0.14357383099999765,
+     "rows": 1000000,
+     "t_done": 1792329542.2572017,
+     "proc_after_load": {
+      "MemTotal_MB": 8016,
+      "MemAvailable_MB": 7496,
+      "Cached_MB": 745,
+      "rss_MB": 273,
+      "minflt": 62857,
+      "majflt": 1501,
+      "proc_cpu_s": 10.74,
+      "host_busy_cpu_s": 14.63,
+      "uptime_s": 36.03,
+      "t": 1792329542.2575328,
+      "cpu_part": [
+       "0xd40"
+      ],
+      "ncpu": 4
+     }
+    },
+    "proc": {
+     "MemTotal_MB": 8016,
+     "MemAvailable_MB": 7485,
+     "Cached_MB": 477,
+     "rss_MB": 274,
+     "minflt": 62860,
+     "majflt": 1501,
+     "proc_cpu_s": 10.75,
+     "host_busy_cpu_s": 15.2,
+     "uptime_s": 42.52,
+     "t": 1792329613.2678945,
+     "cpu_part": [
+      "0xd40"
+     ],
+     "ncpu": 4
+    },
+    "requests": 1,
+    "queries": 0,
+    "run_hooks": [
+     1792329612.59535
+    ],
+    "resume_hooks": [],
+    "suspend_hooks": [],
+    "ready_hooks": 2
+   },
+   "stats_after_first_query": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7490,
+    "Cached_MB": 580,
+    "rss_MB": 287,
+    "minflt": 66251,
+    "majflt": 1502,
+    "proc_cpu_s": 11.0,
+    "host_busy_cpu_s": 15.96,
+    "uptime_s": 72.75,
+    "t": 1792329643.5021117,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "first_query": {
+    "wall_s": 0.1991096000000141,
+    "server_ms": 189.46452200000863
+   },
+   "next_queries": {
+    "n": 99,
+    "wall_median_s": 0.1401571899999965,
+    "server_median_ms": 90.65842600000451
+   },
+   "recall_at_10_pct": 100.0,
+   "stats_at_end": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7437,
+    "Cached_MB": 581,
+    "rss_MB": 341,
+    "minflt": 80135,
+    "majflt": 1502,
+    "proc_cpu_s": 32.2,
+    "host_busy_cpu_s": 38.07,
+    "uptime_s": 87.1,
+    "t": 1792329657.8519344,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "final_state": "TERMINATED"
+  }
+ ]
+}

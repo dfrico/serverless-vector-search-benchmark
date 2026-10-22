@@ -1,0 +1,27 @@
+[c1/cleanup] BEFORE deep_1m: {'vectors_csv': 1, 'true_neighbours_csv': 0, 'indexes': 33, 'queries_staging': 1, 'reduce_prefix': 1}
+[blocks-aws] boto3 -> account <AWS_ACCOUNT_ID> (arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-bench-client/i-0d04048a0217c5277)
+[blocks-aws] teardown deleted 36 S3 objects for dataset 'deep_1m' (bucket thesis-blocks-<AWS_ACCOUNT_ID>)
+[c1/cleanup] AFTER  deep_1m: {'vectors_csv': 0, 'true_neighbours_csv': 0, 'indexes': 0, 'queries_staging': 0, 'reduce_prefix': 0}
+[c1/cleanup] bucket thesis-blocks-<AWS_ACCOUNT_ID> still present (deploy kept).
+
+=== C1 CLEANUP CLEAN ===
+{
+  "after": {
+    "indexes": 0,
+    "queries_staging": 0,
+    "reduce_prefix": 0,
+    "true_neighbours_csv": 0,
+    "vectors_csv": 0
+  },
+  "before": {
+    "indexes": 33,
+    "queries_staging": 1,
+    "reduce_prefix": 1,
+    "true_neighbours_csv": 0,
+    "vectors_csv": 1
+  },
+  "bucket": "thesis-blocks-<AWS_ACCOUNT_ID>",
+  "clean": true,
+  "dataset": "deep_1m",
+  "deploy_kept": true
+}

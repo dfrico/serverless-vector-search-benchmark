@@ -1,0 +1,107 @@
+[recall/blocks] start=2026-10-20T12:46:30Z account=<AWS_ACCOUNT_ID>
+[recall/blocks] loaded 1000 queries + truth rows
+[blocks-aws] boto3 -> account <AWS_ACCOUNT_ID> (arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-bench-client/i-0d04048a0217c5277)
+[recall/blocks] setup OK name=blocks metric=l2 max_conc=1
+[recall/blocks] fingerprint sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df
+2026-10-20 12:46:45,973 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-20 12:46:46,030 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-20 12:46:46,115 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-20 12:46:46,115 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-20 12:46:46,235 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-20 12:46:46,313 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-20 12:46:46,318 [INFO] invokers.py:119 -- ExecutorID 7460b2-0 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-20 12:46:46,449 [INFO] invokers.py:186 -- ExecutorID 7460b2-0 | JobID M000 - Starting function invocation: generate_index_blocks() - Total: 16 activations
+2026-10-20 12:46:46,514 [INFO] invokers.py:225 -- ExecutorID 7460b2-0 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/7460b2-0-M000.log
+2026-10-20 12:46:46,520 [INFO] executors.py:494 -- ExecutorID 7460b2-0 - Getting results from 16 function activations
+2026-10-20 12:46:46,520 [INFO] wait.py:101 -- ExecutorID 7460b2-0 - Waiting for 16 function activations to complete
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: lambda.us-east-1.amazonaws.com. Connection pool size: 10
+2026-10-20 12:46:54,574 [INFO] executors.py:618 -- ExecutorID 7460b2-0 - Cleaning temporary data
+Uploaded vectors_deep_1m.csv and cleared old indexes.
+
+[recall/blocks] ingest done in 13.9s timings_keys=['blocks_index_timers', 'bulk_insert_index_s', 'bulk_insert_upload_s', 'op', 'wall_clock_s']
+2026-10-20 12:46:54,697 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-20 12:46:54,904 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-20 12:46:54,983 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-20 12:46:54,983 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-20 12:46:55,162 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-20 12:46:55,239 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-20 12:46:55,332 [INFO] invokers.py:119 -- ExecutorID 7460b2-3 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-20 12:46:55,452 [INFO] invokers.py:186 -- ExecutorID 7460b2-3 | JobID M000 - Starting function invocation: map_function() - Total: 1 activations
+2026-10-20 12:46:55,454 [INFO] invokers.py:225 -- ExecutorID 7460b2-3 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/7460b2-3-M000.log
+2026-10-20 12:46:55,454 [INFO] executors.py:494 -- ExecutorID 7460b2-3 - Getting results from 1 function activations
+2026-10-20 12:46:55,454 [INFO] wait.py:101 -- ExecutorID 7460b2-3 - Waiting for 1 function activations to complete
+2026-10-20 12:47:18,509 [INFO] executors.py:618 -- ExecutorID 7460b2-3 - Cleaning temporary data
+2026-10-20 12:47:18,799 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-20 12:47:18,878 [INFO] invokers.py:119 -- ExecutorID 7460b2-3 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-10-20 12:47:18,940 [INFO] invokers.py:186 -- ExecutorID 7460b2-3 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-10-20 12:47:18,941 [INFO] invokers.py:225 -- ExecutorID 7460b2-3 | JobID M001 - View execution logs at /tmp/lithops-ec2-user/logs/7460b2-3-M001.log
+2026-10-20 12:47:18,941 [INFO] executors.py:494 -- ExecutorID 7460b2-3 - Getting results from 1 function activations
+2026-10-20 12:47:18,941 [INFO] wait.py:101 -- ExecutorID 7460b2-3 - Waiting for 1 function activations to complete
+2026-10-20 12:47:22,974 [INFO] executors.py:618 -- ExecutorID 7460b2-3 - Cleaning temporary data
+
+
+[recall/blocks] recall@10=100.00% perfect=1000/1000 zero=0/1000 non_empty=1000/1000 query_s=28.3
+[recall/blocks] wrote experiments/experiment_b/results_2026-10-rep1/recall_blocks.json
+[recall/blocks] wrote experiments/experiment_b/results_2026-10-rep1/recall_blocks.per_query.json
+
+=== RECALL BLOCKS PASS ===
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "adapter": "blocks",
+  "adapter_key": "blocks",
+  "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+  "corpus_sha256_anchor_ok": true,
+  "dataset": "deep_1m",
+  "ingest_seconds": 13.884,
+  "ingest_timings": {
+    "bulk_insert_index_s": 8.259137392044067,
+    "bulk_insert_upload_s": 5.219398021697998,
+    "op": "bulk_insert_from_path",
+    "wall_clock_s": 13.883933067321777
+  },
+  "max_safe_concurrency": 1,
+  "metric": "l2",
+  "non_empty": 1000,
+  "passed": true,
+  "per_query_hits": {
+    "max": 10,
+    "mean": 10.0,
+    "min": 10,
+    "perfect_10of10": 1000,
+    "zero_hits": 0
+  },
+  "query0_top10_returned": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "query0_top10_truth": [
+    330479,
+    67072,
+    836967,
+    948617,
+    644637,
+    339871,
+    775837,
+    788868,
+    917284,
+    560792
+  ],
+  "recall_at_10_pct": 100.0,
+  "recall_query_seconds": 28.34,
+  "recall_threshold_pct": 95.0,
+  "started_utc": "2026-10-20T12:46:30Z",
+  "wall_clock_seconds": 52.3
+}

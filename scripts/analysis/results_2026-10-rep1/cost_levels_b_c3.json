@@ -1,0 +1,498 @@
+{
+ "meta": {
+  "tag": "2026-10-rep1",
+  "generated_utc": "2026-10-21T07:47:11.795553+00:00",
+  "prices": {
+   "x86_gbs": 1.66667e-05,
+   "arm_gbs": 1.33334e-05,
+   "lambda_req": 2e-07,
+   "s3_get": 4e-07,
+   "s3_put": 5e-06,
+   "ddb_rru": 1.25e-07,
+   "s3v_req": 2.5e-06,
+   "s3v_tiers": [
+    [
+     100000,
+     0.004
+    ],
+    [
+     10000000,
+     0.002
+    ],
+    [
+     null,
+     0.0004
+    ]
+   ],
+   "s3v_vec_bytes": 384
+  },
+  "pad_s": [
+   0.5,
+   0.5
+  ],
+  "s3_pad_after_s": 0.5,
+  "windows": "exclusive",
+  "s3_log_files": 49460
+ },
+ "cells": [
+  {
+   "exp": "b",
+   "cell": "blocks_c1",
+   "adapter": "blocks",
+   "size": "1m",
+   "n": 15,
+   "p50_s": 9.9819,
+   "window_utc": [
+    "2026-10-20T13:13:16.357211+00:00",
+    "2026-10-20T13:15:46.538517+00:00"
+   ],
+   "l1_usd_q": 0.00026204112772565337,
+   "gb_s_q": 15.698436266666668,
+   "inv_q": 2.0,
+   "n_init": 0,
+   "per_group": {
+    "lithops-worker-rb26-363-11170a3116": {
+     "n": 15,
+     "billed_ms": 71927.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 216.35641600000002
+    },
+    "lithops-worker-rb26-363-600f82b870": {
+     "n": 15,
+     "billed_ms": 9336.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 19.120128
+    }
+   },
+   "s3_get_q": 80.0,
+   "s3_put_list_q": 22.6,
+   "s3_usd_q": 0.000145,
+   "s3_by_bucket": {
+    "thesis-blocks-ACCT": {
+     "get": 1005,
+     "put_list": 45
+    },
+    "lithops-us-east-1-rb26": {
+     "get": 195,
+     "put_list": 294
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.00040704112772565337
+  },
+  {
+   "exp": "b",
+   "cell": "blocks_c10",
+   "adapter": "blocks",
+   "size": "1m",
+   "n": 15,
+   "p50_s": 10.0161,
+   "window_utc": [
+    "2026-10-20T13:24:34.798532+00:00",
+    "2026-10-20T13:27:07.045984+00:00"
+   ],
+   "l1_usd_q": 0.00026060766708096,
+   "gb_s_q": 15.612428799999998,
+   "inv_q": 2.0,
+   "n_init": 0,
+   "per_group": {
+    "lithops-worker-rb26-363-11170a3116": {
+     "n": 15,
+     "billed_ms": 71317.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 214.52153599999997
+    },
+    "lithops-worker-rb26-363-600f82b870": {
+     "n": 15,
+     "billed_ms": 9602.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 19.664896000000002
+    }
+   },
+   "s3_get_q": 80.06666666666666,
+   "s3_put_list_q": 22.733333333333334,
+   "s3_usd_q": 0.00014569333333333334,
+   "s3_by_bucket": {
+    "thesis-blocks-ACCT": {
+     "get": 1005,
+     "put_list": 45
+    },
+    "lithops-us-east-1-rb26": {
+     "get": 196,
+     "put_list": 296
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.00040630100041429335
+  },
+  {
+   "exp": "b",
+   "cell": "blocks_c4",
+   "adapter": "blocks",
+   "size": "1m",
+   "n": 15,
+   "p50_s": 9.9962,
+   "window_utc": [
+    "2026-10-20T13:18:56.280685+00:00",
+    "2026-10-20T13:21:26.738654+00:00"
+   ],
+   "l1_usd_q": 0.0002508782253998933,
+   "gb_s_q": 15.028663466666666,
+   "inv_q": 2.0,
+   "n_init": 0,
+   "per_group": {
+    "lithops-worker-rb26-363-11170a3116": {
+     "n": 15,
+     "billed_ms": 68169.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 205.05235199999998
+    },
+    "lithops-worker-rb26-363-600f82b870": {
+     "n": 15,
+     "billed_ms": 9950.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 20.377599999999997
+    }
+   },
+   "s3_get_q": 80.0,
+   "s3_put_list_q": 22.666666666666668,
+   "s3_usd_q": 0.00014533333333333333,
+   "s3_by_bucket": {
+    "thesis-blocks-ACCT": {
+     "get": 1005,
+     "put_list": 45
+    },
+    "lithops-us-east-1-rb26": {
+     "get": 195,
+     "put_list": 295
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.0003962115587332266
+  },
+  {
+   "exp": "b",
+   "cell": "lancedb_c1",
+   "adapter": "lancedb",
+   "size": "1m",
+   "n": 24,
+   "p50_s": 5.0459,
+   "window_utc": [
+    "2026-10-20T13:16:38.657998+00:00",
+    "2026-10-20T13:18:40.675959+00:00"
+   ],
+   "l1_usd_q": 0.00013858974083413335,
+   "gb_s_q": 10.379178666666666,
+   "inv_q": 1.0,
+   "n_init": 0,
+   "per_group": {
+    "thesis-lancedb-lambda": {
+     "n": 24,
+     "billed_ms": 121631.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 249.100288
+    }
+   },
+   "s3_get_q": 511.7916666666667,
+   "s3_put_list_q": 1.0,
+   "s3_usd_q": 0.00020971666666666665,
+   "s3_by_bucket": {
+    "thesis-lancedb-ACCT": {
+     "get": 12283,
+     "put_list": 24
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.00034830640750079997
+  },
+  {
+   "exp": "b",
+   "cell": "lancedb_c10",
+   "adapter": "lancedb",
+   "size": "1m",
+   "n": 239,
+   "p50_s": 5.1416,
+   "window_utc": [
+    "2026-10-20T13:27:59.232631+00:00",
+    "2026-10-20T13:30:03.535677+00:00"
+   ],
+   "l1_usd_q": 0.0001398311102022695,
+   "gb_s_q": 10.472280903765691,
+   "inv_q": 1.0,
+   "n_init": 6,
+   "per_group": {
+    "thesis-lancedb-lambda": {
+     "n": 239,
+     "billed_ms": 1222107.0,
+     "n_init": 6,
+     "init_ms": 14449.39,
+     "gb_s": 2502.875136
+    }
+   },
+   "s3_get_q": 528.3305439330544,
+   "s3_put_list_q": 1.0251046025104602,
+   "s3_usd_q": 0.00021645774058577403,
+   "s3_by_bucket": {
+    "thesis-lancedb-ACCT": {
+     "get": 126271,
+     "put_list": 245
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.0003562888507880435
+  },
+  {
+   "exp": "b",
+   "cell": "lancedb_c4",
+   "adapter": "lancedb",
+   "size": "1m",
+   "n": 96,
+   "p50_s": 5.134,
+   "window_utc": [
+    "2026-10-20T13:22:18.853614+00:00",
+    "2026-10-20T13:24:21.174183+00:00"
+   ],
+   "l1_usd_q": 0.000138432157824,
+   "gb_s_q": 10.36736,
+   "inv_q": 1.0,
+   "n_init": 0,
+   "per_group": {
+    "thesis-lancedb-lambda": {
+     "n": 96,
+     "billed_ms": 485970.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 995.26656
+    }
+   },
+   "s3_get_q": 511.7083333333333,
+   "s3_put_list_q": 1.0,
+   "s3_usd_q": 0.00020968333333333335,
+   "s3_by_bucket": {
+    "thesis-lancedb-ACCT": {
+     "get": 49124,
+     "put_list": 96
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.00034811549115733336
+  },
+  {
+   "exp": "b",
+   "cell": "s3vectors_c1",
+   "adapter": "s3vectors",
+   "size": "1m",
+   "n": 240,
+   "p50_s": 0.1705,
+   "window_utc": [
+    "2026-10-20T13:15:50.134417+00:00",
+    "2026-10-20T13:16:35.142222+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.801241354172816e-07,
+   "l2_usd_q": 3.2801241354172816e-06
+  },
+  {
+   "exp": "b",
+   "cell": "s3vectors_c10",
+   "adapter": "s3vectors",
+   "size": "1m",
+   "n": 2739,
+   "p50_s": 0.0622,
+   "window_utc": [
+    "2026-10-20T13:27:10.701007+00:00",
+    "2026-10-20T13:27:55.754911+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.801241354172816e-07,
+   "l2_usd_q": 3.2801241354172816e-06
+  },
+  {
+   "exp": "b",
+   "cell": "s3vectors_c4",
+   "adapter": "s3vectors",
+   "size": "1m",
+   "n": 1842,
+   "p50_s": 0.0651,
+   "window_utc": [
+    "2026-10-20T13:21:30.355247+00:00",
+    "2026-10-20T13:22:15.411400+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.801241354172816e-07,
+   "l2_usd_q": 3.2801241354172816e-06
+  },
+  {
+   "exp": "c3",
+   "cell": "blocks_c1",
+   "adapter": "blocks",
+   "size": "10m",
+   "n": 114,
+   "p50_s": 7.0545,
+   "window_utc": [
+    "2026-10-20T13:39:50.750421+00:00",
+    "2026-10-20T13:53:11.370584+00:00"
+   ],
+   "l1_usd_q": 0.002131220534734316,
+   "gb_s_q": 127.62097684210525,
+   "inv_q": 21.0,
+   "n_init": 4,
+   "per_group": {
+    "lithops-worker-rb26-363-11170a3116": {
+     "n": 2280,
+     "billed_ms": 4786351.0,
+     "n_init": 4,
+     "init_ms": 2695.88,
+     "gb_s": 14397.343808
+    },
+    "lithops-worker-rb26-363-600f82b870": {
+     "n": 114,
+     "billed_ms": 73949.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 151.447552
+    }
+   },
+   "s3_get_q": 749.9035087719299,
+   "s3_put_list_q": 59.63157894736842,
+   "s3_usd_q": 0.000598119298245614,
+   "s3_by_bucket": {
+    "thesis-blocks-ACCT": {
+     "get": 75468,
+     "put_list": 342
+    },
+    "lithops-us-east-1-rb26": {
+     "get": 10021,
+     "put_list": 6456
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.0027293398329799297
+  },
+  {
+   "exp": "c3",
+   "cell": "s3vectors_c1",
+   "adapter": "s3vectors",
+   "size": "10m",
+   "n": 971,
+   "p50_s": 0.362,
+   "window_utc": [
+    "2026-10-20T13:56:07.153654+00:00",
+    "2026-10-20T14:01:37.384768+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.181329745253606e-06,
+   "l2_usd_q": 9.681329745253606e-06
+  },
+  {
+   "exp": "c3",
+   "cell": "s3vectors_c4",
+   "adapter": "s3vectors",
+   "size": "10m",
+   "n": 1292,
+   "p50_s": 0.3139,
+   "window_utc": [
+    "2026-10-20T14:04:31.976072+00:00",
+    "2026-10-20T14:05:57.075997+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": false,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.181329745253606e-06,
+   "l2_usd_q": 9.681329745253606e-06
+  }
+ ]
+}

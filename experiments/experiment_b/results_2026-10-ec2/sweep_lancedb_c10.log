@@ -1,0 +1,5 @@
+[sweep/lancedb c=10] account=<AWS_ACCOUNT_ID> duration=120.0s ops=100.0 seed=42 warmup=0
+[sweep/lancedb c=10] setup OK metric=l2 max_safe_concurrency=10 sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df anchor_ok=True
+[sweep/lancedb c=10] configured_concurrency=10 effective_concurrency=10
+[sweep/lancedb c=10] DONE records=240 wall=125.9s realised_rate=1.91 ops/s
+[sweep/lancedb c=10] wrote experiments/experiment_b/results_2026-10-ec2/sweep_lancedb_c10.jsonl

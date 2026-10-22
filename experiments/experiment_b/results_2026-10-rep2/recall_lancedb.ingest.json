@@ -1,0 +1,1 @@
+{"ingest_seconds": 216.7459316253662, "ingest_timings": {"op": "bulk_insert", "wall_clock_s": 216.7459101676941, "n_vectors": 1000000, "n_invocations": 500, "n_cold_starts": 0, "server_ms_total": 133021.7900276184, "insert_batch_size": 2000}, "started_utc": "2026-10-21T07:51:18Z"}

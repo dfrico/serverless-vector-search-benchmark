@@ -1,0 +1,23 @@
+open-files limit: 10240
+python: /home/ec2-user/thesis/experiments/../scripts/fixes/.venv/bin/python
+<AWS_ACCOUNT_ID>
+[sample] read 1,000,000 lines in 1s, kept 1000
+{
+ "system": "lancedb",
+ "csv_lines": 1000000,
+ "count": {
+  "count_rows": 1000000
+ },
+ "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+ "values": {
+  "n": 200,
+  "found": 200,
+  "missing": [],
+  "max_sq_diff": 5.844492529987131e-16,
+  "all_equal": true
+ },
+ "elapsed_s": 35.2,
+ "timestamp_utc": "2026-10-16T16:42:59Z"
+}
+self_query: {'n': 50, 'n_ok': 50, 'top1_exact': 50, 'top1_zero_dist_other_id': 0, 'in_top10': 50}
+-> /home/ec2-user/thesis/scripts/fixes/results/deep_1m_2026-10-ec2/postingest_lancedb.json

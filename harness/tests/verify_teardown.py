@@ -30,9 +30,10 @@ _ROOT = os.path.dirname(os.path.dirname(_HERE))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
+import boto3  # noqa: E402
 from harness.adapters.blocks_aws import BlocksClientAWS  # noqa: E402
 
-BUCKET = f"thesis-blocks-{os.environ['AWS_ACCOUNT_ID']}"
+BUCKET = f"thesis-blocks-{boto3.client('sts').get_caller_identity()['Account']}"
 REGION = "us-east-1"
 DATASET = "zz_teardown_selftest"   # clearly throwaway; never deep_1m / deep_100k
 PROTECTED = {"deep_1m", "deep_100k"}

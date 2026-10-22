@@ -23,7 +23,6 @@ BLOCKS_REPO = os.path.join(WORKSPACE, "references", "blocks-db-wip")
 if BLOCKS_REPO not in sys.path:
     sys.path.insert(0, BLOCKS_REPO)
 
-BUCKET = "thesis-blocks-<AWS_ACCOUNT_ID>"
 
 
 def main():
@@ -31,8 +30,9 @@ def main():
         raise SystemExit("AWS_ENDPOINT_URL_S3 set — refusing (would target MinIO).")
     import boto3
     acct = boto3.client("sts").get_caller_identity()["Account"]
-    if acct != "<AWS_ACCOUNT_ID>":
-        raise SystemExit(f"unexpected account {acct}")
+    if acct != os.environ.get("AWS_ACCOUNT_ID", acct):
+        raise SystemExit(f"unexpected account {acct} (AWS_ACCOUNT_ID)")
+    BUCKET = f"thesis-blocks-{acct}"
 
     from vectordb.infra.setup import generate_lithops_config
     generate_lithops_config("us-east-1", BUCKET, "blocks-db-runtime")

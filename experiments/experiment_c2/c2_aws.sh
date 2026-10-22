@@ -1,18 +1,28 @@
 #!/usr/bin/env bash
 # Experiment C2 launcher — S3 Vectors and LanceDB-on-Lambda on real AWS.
-# spike-localhost/.venv + thesis profile. Real AWS: pop every endpoint override
+# harness/.venv + thesis profile. Real AWS: pop every endpoint override
 # and any static keys, so the thesis profile is the single credential source.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-WORKSPACE="$(dirname "$HERE")"
-VENV_BIN="$WORKSPACE/spike-localhost/.venv/bin"
+WORKSPACE="$(dirname "$(dirname "$HERE")")"
+VENV_BIN="$WORKSPACE/harness/.venv/bin"
 
 unset AWS_ENDPOINT_URL_S3 AWS_ENDPOINT_URL AWS_ENDPOINT_URL_S3VECTORS \
       AWS_ENDPOINT_URL_LAMBDA AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY \
       AWS_SESSION_TOKEN || true
-export AWS_PROFILE="thesis"
+# Use the laptop profile when it exists; on the EC2 client the instance role applies.
+if grep -qsE '^\[(profile )?thesis\]' ~/.aws/config ~/.aws/credentials; then
+  export AWS_PROFILE="thesis"
+else
+  unset AWS_PROFILE
+fi
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_REGION="us-east-1"
 
-mkdir -p "$HERE/results"
+# Output folder (2026-10-16): RESULTS_TAG must be set so a re-run can't overwrite
+# the August evidence in results/. RESULTS_TAG=orig targets results/ explicitly.
+: "${RESULTS_TAG:?set RESULTS_TAG (e.g. RESULTS_TAG=2026-10) or RESULTS_TAG=orig for results/}"
+export RESULTS_TAG
+if [ "$RESULTS_TAG" = "orig" ]; then RESULTS_DIR="$HERE/results"; else RESULTS_DIR="$HERE/results_$RESULTS_TAG"; fi
+mkdir -p "$RESULTS_DIR"
 exec "$VENV_BIN/python" "$@"

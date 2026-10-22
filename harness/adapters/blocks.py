@@ -61,6 +61,32 @@ from vectordb.utils.index_ops import (
 from vectordb.utils.dataset_ops import upload_dataset, delete_dataset, delete_vectors_from_dataset
 
 
+def _release_blocks_db(sv) -> None:
+    """Free a per-query ServerlessVectorDB once its query has returned.
+
+    Without this, every query leaked ~110 MB and ~18 threads (C3 10M sweep on the
+    8 GB EC2 client ran out of memory after ~120 queries, 2026-10-17): Lithops'
+    FunctionExecutor registers atexit(self.clean), which pins it and its boto3
+    sessions for the life of the process, and its async invoker threads and the
+    orchestrator's pool stay parked. This does what FunctionExecutor.__exit__ does
+    (stop the job monitor and invokers) plus dropping the atexit hook and shutting
+    the pool. No network calls; per-job data is already cleaned by get_result.
+    """
+    import atexit
+    orch = getattr(sv, "orchestrator", None)
+    for fexec in (getattr(sv, "indexing_executor", None), getattr(orch, "function_executor", None)):
+        if fexec is None:
+            continue
+        atexit.unregister(fexec.clean)
+        for part in ("job_monitor", "invoker"):
+            try:
+                getattr(fexec, part).stop()
+            except Exception:
+                pass
+    if orch is not None and getattr(orch, "pool", None) is not None:
+        orch.pool.shutdown(wait=False)
+
+
 class BlocksClient(BenchmarkVectorClient):
     """BenchmarkVectorClient backed by blocks-db-wip on Lithops localhost + MinIO."""
 
@@ -404,18 +430,31 @@ class BlocksClient(BenchmarkVectorClient):
     ) -> Tuple[QueryResults, Timings]:
         self._require_ready()
         k = top_k if top_k is not None else self.top_k_default
+        # Blocks builds a fresh ServerlessVectorDB per query call (two Lithops
+        # FunctionExecutors + a 20-thread pool) and never closes it; Lithops keeps
+        # each executor alive via atexit. Capture the instance so it can be
+        # released after the call (see _release_blocks_db).
+        live = []
+        load = self._client._load_default_index
+        self._client._load_default_index = lambda name: live.append(load(name)) or live[-1]
         t0 = time.time()
-        # hybrid=False -> indexed-only path: boto3->MinIO discovery, Lithops->MinIO search.
-        results, times = self._client.query_batch(
-            self.dataset_name, [list(v) for v in vectors], k=k, hybrid=False
-        )
+        try:
+            # hybrid=False -> indexed-only path: boto3->MinIO discovery, Lithops->MinIO search.
+            results, times = self._client.query_batch(
+                self.dataset_name, [list(v) for v in vectors], k=k, hybrid=False
+            )
+        finally:
+            del self._client._load_default_index  # back to the class method
+            t_end = time.time()
+            for sv in live:
+                _release_blocks_db(sv)
         # Wrap the raw Blocks orchestrator dict (the 0_*_blocks phase breakdown) in
         # the common minimal envelope required by the interface: {op, wall_clock_s}.
         # We do NOT replace the phase keys — the metrics layer still parses them;
         # the envelope just lets the aggregator group ops without special-casing.
         timings: Timings = dict(times)
         timings["op"] = "query_batch"
-        timings["wall_clock_s"] = time.time() - t0
+        timings["wall_clock_s"] = t_end - t0
         return results, timings
 
     # ----- mutate ------------------------------------------------------------

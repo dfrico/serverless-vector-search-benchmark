@@ -59,9 +59,9 @@ def _sleep(label, seconds):
     time.sleep(seconds)
 
 
-def sample(adapter, client, vector, config, rep, sidx, out_path):
-    """Run one measured query and append its flat record."""
-    rec = K.query_once(adapter, client, vector)
+def sample(adapter, client, qv, config, rep, sidx, out_path):
+    """Run one measured query and append its flat record. qv = (query_index, vector)."""
+    rec = K.query_once(adapter, client, qv[1], query_index=qv[0])
     rec.update(adapter=adapter, config=config, rep=rep, sample=sidx,
                ts=_now())
     K.jsonl_append(out_path, rec)
@@ -106,6 +106,14 @@ def main():
 
     queries = C.load_queries()
     client = K.build_and_setup(adapter, create_if_missing=False)
+    # Manifest (2026-10-16): C2 had none. Provenance + run arguments.
+    from harness.records import run_provenance
+    with open(out_path.replace(".jsonl", ".manifest.json"), "w") as _mf:
+        json.dump({"args": vars(args), "run_started_utc": time.time(),
+                   "provenance": run_provenance(
+                       client, C.DATASET,
+                       patch_path=out_path.replace(".jsonl", ".code.patch"))},
+                  _mf, indent=2, sort_keys=True, default=str)
     # Phase 2 queries are sparse, so throttling is unlikely; but the three drivers
     # run concurrently and a Blocks 16-worker burst could briefly collide with a
     # LanceDB query. The client's default adaptive retries (set in
@@ -122,9 +130,9 @@ def main():
 
     def next_q():
         nonlocal qi
-        v = queries[qi % len(queries)]
+        i = qi % len(queries)
         qi += 1
-        return v
+        return i, queries[i]
 
     try:
         for rep in range(1, args.reps + 1):
@@ -153,9 +161,15 @@ def main():
 
                 # 3) warm — warm_n queries right after idle_cold; discard the first.
                 for j in range(args.warm_n):
-                    rec = K.query_once(adapter, client, next_q())
+                    qv = next_q()
+                    rec = K.query_once(adapter, client, qv[1], query_index=qv[0])
                     if j == 0:
-                        continue  # discard the transition query
+                        # The transition query is excluded from "warm" but kept
+                        # under its own label (the aggregator ignores it).
+                        rec.update(adapter=adapter, config="warm_transition",
+                                   rep=rep, sample=j, ts=_now())
+                        K.jsonl_append(out_path, rec)
+                        continue
                     rec.update(adapter=adapter, config="warm", rep=rep,
                                sample=j, ts=_now())
                     K.jsonl_append(out_path, rec)

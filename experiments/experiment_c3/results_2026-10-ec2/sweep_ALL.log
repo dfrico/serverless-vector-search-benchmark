@@ -1,0 +1,37 @@
+=== CELL blocks c=1 dur=800s warmup=1 @ 14:50:22Z ===
+    rc=0 (15:06:49Z) -> /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_blocks_c1.run.log
+[c3/sweep/blocks c=1] DONE records=131 wall=890.0s realised=0.15 ops/s
+
+=== C3 SWEEP BLOCKS c=1 DONE ===
+=== CELL s3vectors c=1 dur=330s warmup=5 @ 15:06:49Z ===
+    rc=0 (15:15:16Z) -> /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_s3vectors_c1.run.log
+[c3/sweep/s3vectors c=1] DONE records=1057 wall=416.9s realised=2.54 ops/s
+
+=== C3 SWEEP S3VECTORS c=1 DONE ===
+=== CELL s3vectors c=4 dur=85s warmup=5 @ 15:15:16Z ===
+    rc=0 (15:19:36Z) -> /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_s3vectors_c4.run.log
+[c3/sweep/s3vectors c=4] DONE records=1785 wall=172.1s realised=10.37 ops/s
+
+=== C3 SWEEP S3VECTORS c=4 DONE ===
+=== CELL lancedb c=10 dur=280s warmup=1 @ 15:19:36Z ===
+    rc=0 (15:28:41Z) -> /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_lancedb_c10.run.log
+[c3/sweep/lancedb c=10] DONE records=60 wall=402.9s realised=0.15 ops/s
+
+=== C3 SWEEP LANCEDB c=10 DONE ===
+=== CELL lancedb c=4 dur=690s warmup=1 @ 15:28:41Z ===
+    rc=0 (15:44:27Z) -> /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_lancedb_c4.run.log
+[c3/sweep/lancedb c=4] DONE records=56 wall=808.8s realised=0.07 ops/s
+
+=== C3 SWEEP LANCEDB c=4 DONE ===
+=== CELL lancedb c=1 dur=2760s warmup=1 @ 15:44:27Z ===
+    rc=0 (16:34:24Z) -> /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_lancedb_c1.run.log
+[c3/sweep/lancedb c=1] DONE records=54 wall=2860.0s realised=0.02 ops/s
+
+=== C3 SWEEP LANCEDB c=1 DONE ===
+=== ALL SWEEP CELLS DONE @ 16:34:24Z ===
+-rw-r--r--. 1 ec2-user ec2-user 1760950 Oct 17 15:06 /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_blocks_c1.jsonl
+-rw-r--r--. 1 ec2-user ec2-user   39032 Oct 17 16:34 /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_lancedb_c1.jsonl
+-rw-r--r--. 1 ec2-user ec2-user   43381 Oct 17 15:28 /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_lancedb_c10.jsonl
+-rw-r--r--. 1 ec2-user ec2-user   40514 Oct 17 15:44 /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_lancedb_c4.jsonl
+-rw-r--r--. 1 ec2-user ec2-user  719341 Oct 17 15:15 /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_s3vectors_c1.jsonl
+-rw-r--r--. 1 ec2-user ec2-user 1215620 Oct 17 15:19 /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-ec2/sweep_s3vectors_c4.jsonl

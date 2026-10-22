@@ -1,0 +1,12 @@
+[cleanup/blocks] deleted 18 objects (corpus + index)
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[cleanup/s3vectors] index 'deep-1m' deleted
+[cleanup/lancedb] table dropped
+
+=== END-STATE ===
+Blocks bucket thesis-blocks-<AWS_ACCOUNT_ID>: 560 objects, 17213.6 MB (deep_1m corpus=0, deep_1m index=0)
+LanceDB bucket thesis-lancedb-<AWS_ACCOUNT_ID>: 15002 objects, 4923.1 MB
+Lambda thesis-lancedb-lambda: PRESENT (Active, 2048MB)
+Blocks/Lithops Lambda functions present: 3 -> ['lithops-worker-rb26-363-600f82b870', 'blocksdb-autoindexer-default', 'lithops-worker-rb26-363-11170a3116']
+ECR repositories: ['thesis-lancedb-lambda', 'lithops_v363_rb26/blocks-db-runtime']
+S3 Vectors bucket thesis-s3v-<AWS_ACCOUNT_ID>: 1 indexes -> ['deep-10m']

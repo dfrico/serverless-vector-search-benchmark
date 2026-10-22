@@ -39,6 +39,7 @@ existing seed-less runs are unchanged. The seed is recorded in the manifest.
 from __future__ import annotations
 
 import asyncio
+import concurrent.futures
 import csv
 import os
 import random
@@ -65,6 +66,12 @@ class OpResult:
     error: Optional[str]
     adapter_timings: dict                    # opaque timings dict from the client
     payload_meta: dict                       # {"top_k": 10} | {"n_vectors": 100, "build_index": False}
+    # Added 2026-10-16 for traceability (all optional, so older JSONL still parses):
+    wall_submit_utc: Optional[float] = None  # epoch seconds at dispatch (aligns with CloudWatch)
+    wall_ack_utc: Optional[float] = None     # epoch seconds when the op returned
+    query_index: Optional[int] = None        # row of the query pool used (query ops)
+    result_ids: Optional[list] = None        # returned top-k ids, in rank order (query ops)
+    result_dists: Optional[list] = None      # matching distances (adapter-native units)
 
 
 @dataclass
@@ -119,6 +126,7 @@ class WorkloadGenerator:
         self.insert_client = insert_client if insert_client is not None else client
         self.insert_pool = list(insert_pool) if insert_pool else []
         self._qi = 0       # query pool cursor
+        self._last_query_index: Optional[int] = None
         self._ii = 0       # insert pool cursor
         # Seeded RNG for all sampled choices; bound at run() from config.seed.
         # None until then / when no seed is set (deterministic cursor order).
@@ -176,11 +184,15 @@ class WorkloadGenerator:
         # Seeded: sample uniformly from the pool via the run's RNG (reproducible
         # from the seed). Unseeded: deterministic cursor order (historical day-3
         # behaviour). Either way one vector per call.
+        # randrange(n) draws the same sequence as choice(pool) for a given seed
+        # (both call _randbelow(len)), so recording the index keeps old runs comparable.
         if self._rng is not None:
-            return list(self._rng.choice(self.query_pool))
-        vec = self.query_pool[self._qi % len(self.query_pool)]
-        self._qi += 1
-        return list(vec)
+            i = self._rng.randrange(len(self.query_pool))
+        else:
+            i = self._qi % len(self.query_pool)
+            self._qi += 1
+        self._last_query_index = i
+        return list(self.query_pool[i])
 
     def _next_insert_batch(self, n: int) -> List[Tuple[int, List[float]]]:
         batch = []
@@ -216,15 +228,20 @@ class WorkloadGenerator:
 
     async def _run_one(self, op: str, *, top_k: int, batch_size: int, build_index: bool) -> OpResult:
         submit_ts = time.monotonic()
+        wall_submit = time.time()
         ok, error, timings, payload_meta = True, None, {}, {}
+        query_index = result_ids = result_dists = None
         # Stamp the adapter that actually runs this op: queries hit self.client,
         # inserts hit self.insert_client (may be a different backend/dataset).
         adapter = self.insert_client.name if op == "bulk_insert" else self.client.name
         try:
             if op == "query":
                 vec = self._next_query_vec()
+                query_index = self._last_query_index
                 payload_meta = {"top_k": top_k}
-                _hits, timings = await asyncio.to_thread(self._do_query_blocking, vec, top_k)
+                hits, timings = await asyncio.to_thread(self._do_query_blocking, vec, top_k)
+                result_ids = [int(h[0]) for h in hits]
+                result_dists = [float(h[1]) for h in hits]
             elif op == "bulk_insert":
                 batch = self._next_insert_batch(batch_size)
                 payload_meta = {"n_vectors": len(batch), "build_index": build_index}
@@ -238,6 +255,8 @@ class WorkloadGenerator:
             op=op, adapter=adapter, submit_ts=submit_ts, ack_ts=ack_ts,
             latency_s=ack_ts - submit_ts,
             ok=ok, error=error, adapter_timings=timings or {}, payload_meta=payload_meta,
+            wall_submit_utc=wall_submit, wall_ack_utc=time.time(),
+            query_index=query_index, result_ids=result_ids, result_dists=result_dists,
         )
 
     # ----- pattern driver ----------------------------------------------------
@@ -247,6 +266,14 @@ class WorkloadGenerator:
         # Bind the run's RNG from the seed (None -> deterministic cursor order).
         # Fresh instance per run() so repeated runs with the same seed match.
         self._rng = random.Random(config.seed) if config.seed is not None else None
+        # Ops run via asyncio.to_thread, i.e. the loop's default executor, whose
+        # size is min(32, cpu_count + 4). On a 2-vCPU client that is 6, which
+        # silently capped c=10 cells at 6 in flight (EC2 B LanceDB c10, 2026-10-16).
+        # Size it so the semaphore, not the thread pool, sets the concurrency.
+        need = self._effective_concurrency(config, include_insert=(config.pattern == "mixed"))
+        workers = max(need + 2, min(32, (os.cpu_count() or 1) + 4))
+        asyncio.get_running_loop().set_default_executor(
+            concurrent.futures.ThreadPoolExecutor(max_workers=workers))
         if config.pattern == "constant":
             async for r in self._drive_constant(config):
                 yield r

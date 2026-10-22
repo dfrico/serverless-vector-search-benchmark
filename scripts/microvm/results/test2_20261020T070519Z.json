@@ -1,0 +1,279 @@
+{
+ "started_utc": "2026-10-20T06:42:32Z",
+ "protocol": {
+  "idle_s": 600,
+  "query_s": 600,
+  "cycles": 5,
+  "suspended_s": 30
+ },
+ "events": [
+  {
+   "t": 1792478553.004551,
+   "event": "launch_requested"
+  },
+  {
+   "t": 1792478555.808509,
+   "event": "running",
+   "mode": "launch",
+   "run_to_running_s": 2.3662502765655518,
+   "polled_running_s": 2.227613687515259,
+   "rows": 1000000,
+   "setup_s": 2.447404623031616
+  },
+  {
+   "t": 1792478555.8652606,
+   "event": "idle_start",
+   "busy_cpu_s": 15.32
+  },
+  {
+   "t": 1792479157.2457535,
+   "event": "idle_end",
+   "busy_cpu_s": 22.86
+  },
+  {
+   "t": 1792479757.3347409,
+   "event": "query_end",
+   "n": 3886,
+   "busy_cpu_s": 948.38
+  },
+  {
+   "t": 1792479758.564516,
+   "event": "suspended",
+   "cycle": 1,
+   "suspend_s": 1.2293133735656738
+  },
+  {
+   "t": 1792479789.6902452,
+   "event": "resumed_by_query",
+   "cycle": 1,
+   "first_wall_s": 1.0955491065979004,
+   "resumed": true
+  },
+  {
+   "t": 1792479790.9063394,
+   "event": "suspended",
+   "cycle": 2,
+   "suspend_s": 0.6411659717559814
+  },
+  {
+   "t": 1792479821.6003282,
+   "event": "resumed_by_query",
+   "cycle": 2,
+   "first_wall_s": 0.6906065940856934,
+   "resumed": true
+  },
+  {
+   "t": 1792479822.804898,
+   "event": "suspended",
+   "cycle": 3,
+   "suspend_s": 0.6401114463806152
+  },
+  {
+   "t": 1792479853.7675884,
+   "event": "resumed_by_query",
+   "cycle": 3,
+   "first_wall_s": 0.9325101375579834,
+   "resumed": true
+  },
+  {
+   "t": 1792479855.0080326,
+   "event": "suspended",
+   "cycle": 4,
+   "suspend_s": 0.6430513858795166
+  },
+  {
+   "t": 1792479885.9587243,
+   "event": "resumed_by_query",
+   "cycle": 4,
+   "first_wall_s": 0.9202558994293213,
+   "resumed": true
+  },
+  {
+   "t": 1792479887.205142,
+   "event": "suspended",
+   "cycle": 5,
+   "suspend_s": 0.6500198841094971
+  },
+  {
+   "t": 1792479917.896263,
+   "event": "resumed_by_query",
+   "cycle": 5,
+   "first_wall_s": 0.6864762306213379,
+   "resumed": true
+  },
+  {
+   "t": 1792479919.841985,
+   "event": "terminated",
+   "microvm_id": "microvm-7fbb713c-4086-37ff-b789-e54588f458c6"
+  }
+ ],
+ "backend_version": {
+  "service": "lambda-microvms",
+  "region": "us-east-1",
+  "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+  "image_version": "1.0",
+  "baseline_memory_mib": 2048,
+  "lancedb": "0.33.0",
+  "cpu_part": [
+   "0xd40"
+  ],
+  "microvm_id": "microvm-7fbb713c-4086-37ff-b789-e54588f458c6",
+  "microvm_owned": true,
+  "settle_s": 0,
+  "boto3": "1.43.79",
+  "botocore": "1.43.79",
+  "requests": "2.34.2"
+ },
+ "lifecycle": {
+  "mode": "launch",
+  "run_to_running_s": 2.3662502765655518,
+  "polled_running_s": 2.227613687515259,
+  "rows": 1000000,
+  "setup_s": 2.447404623031616
+ },
+ "idle": {
+  "wall_s": 601.1998400688171,
+  "busy_cpu_s": 7.539999999999999
+ },
+ "query_window": {
+  "wall_s": 600.276529788971,
+  "n": 3886,
+  "busy_cpu_s": 925.52,
+  "avg_busy_vcpu": 1.5418227334748027,
+  "burst_vcpu_s_predicted": 325.24347021102903,
+  "server_ms_median": 93.57978399998501,
+  "cpu_part": [
+   "0xd40"
+  ]
+ },
+ "cycles": [
+  {
+   "suspend_request_t": 1792479757.3351953,
+   "suspend_s": 1.2293133735656738,
+   "query_t": 1792479788.594666,
+   "first": {
+    "op": "query",
+    "wall_clock_s": 1.0955491065979004,
+    "server_ms": 516.4073640000879,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "reconnected": false,
+    "first_after_setup": false,
+    "first_after_launch": false,
+    "resumed": true
+   },
+   "next4_wall_s": [
+    0.14510488510131836,
+    0.14018940925598145,
+    0.13942289352416992,
+    0.15007448196411133
+   ]
+  },
+  {
+   "suspend_request_t": 1792479790.2651665,
+   "suspend_s": 0.6411659717559814,
+   "query_t": 1792479820.9096875,
+   "first": {
+    "op": "query",
+    "wall_clock_s": 0.6906065940856934,
+    "server_ms": 130.01453299989407,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "reconnected": false,
+    "first_after_setup": false,
+    "first_after_launch": false,
+    "resumed": true
+   },
+   "next4_wall_s": [
+    0.14427495002746582,
+    0.1400449275970459,
+    0.13996005058288574,
+    0.14004731178283691
+   ]
+  },
+  {
+   "suspend_request_t": 1792479822.1647806,
+   "suspend_s": 0.6401114463806152,
+   "query_t": 1792479852.8350492,
+   "first": {
+    "op": "query",
+    "wall_clock_s": 0.9325101375579834,
+    "server_ms": 367.2063919998436,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "reconnected": false,
+    "first_after_setup": false,
+    "first_after_launch": false,
+    "resumed": true
+   },
+   "next4_wall_s": [
+    0.15731215476989746,
+    0.13992929458618164,
+    0.15016484260559082,
+    0.1498558521270752
+   ]
+  },
+  {
+   "suspend_request_t": 1792479854.3649752,
+   "suspend_s": 0.6430513858795166,
+   "query_t": 1792479885.0384393,
+   "first": {
+    "op": "query",
+    "wall_clock_s": 0.9202558994293213,
+    "server_ms": 359.8458540000138,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "reconnected": false,
+    "first_after_setup": false,
+    "first_after_launch": false,
+    "resumed": true
+   },
+   "next4_wall_s": [
+    0.15606451034545898,
+    0.15001273155212402,
+    0.15012359619140625,
+    0.1400606632232666
+   ]
+  },
+  {
+   "suspend_request_t": 1792479886.555116,
+   "suspend_s": 0.6500198841094971,
+   "query_t": 1792479917.2097542,
+   "first": {
+    "op": "query",
+    "wall_clock_s": 0.6864762306213379,
+    "server_ms": 117.66067399980784,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "reconnected": false,
+    "first_after_setup": false,
+    "first_after_launch": false,
+    "resumed": true
+   },
+   "next4_wall_s": [
+    0.15898442268371582,
+    0.13979864120483398,
+    0.13998913764953613,
+    0.14007163047790527
+   ]
+  }
+ ],
+ "reconnects": 1,
+ "started_at": "2026-10-20 06:42:33.450000+00:00",
+ "terminated_at": "2026-10-20 07:05:19.181000+00:00",
+ "final_state": "TERMINATED",
+ "prediction": {
+  "launches": 1,
+  "suspends": 5,
+  "resumes": 5,
+  "running_s_approx": 1213.934775352478,
+  "baseline_vcpu": 1,
+  "baseline_gb": 2,
+  "burst_vcpu_s_predicted": 325.24347021102903
+ }
+}

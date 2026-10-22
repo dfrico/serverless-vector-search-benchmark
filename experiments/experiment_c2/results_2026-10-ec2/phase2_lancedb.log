@@ -1,0 +1,61 @@
+[c2/p2/lancedb] start=2026-10-18T10:46:26Z reps=5 idle_s=600 warm_n=5
+[c2/p2/lancedb] spend estimate: ~5 cold cycles x a few queries; per-query billed is Blocks ~$0.0001, LanceDB ~$0.00014, S3V $0.0000025. Whole Phase 2 across 3 adapters ~$0.01. No op > $3.
+[c2/p2/lancedb] cold targets: ['thesis-lancedb-lambda']
+
+[c2/p2/lancedb] === rep 1/5 ===
+[c2/p2/lancedb] force_cold marker=lancedb-r1-1792320386
+[c2/p2] sleep 30s (abs_cold settle) ...
+[c2/p2/lancedb] abs_cold rep=1 s=0 wall=4.117s billed=$0.0000684 cold=True
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/lancedb] idle_cold rep=1 s=0 wall=6.021s billed=$0.0000864 cold=True
+[c2/p2/lancedb] warm rep=1 s=1 wall=4.985s billed=$0.0001357
+[c2/p2/lancedb] warm rep=1 s=2 wall=5.260s billed=$0.0001424
+[c2/p2/lancedb] warm rep=1 s=3 wall=4.997s billed=$0.0001362
+[c2/p2/lancedb] warm rep=1 s=4 wall=5.098s billed=$0.0001390
+
+[c2/p2/lancedb] === rep 2/5 ===
+[c2/p2/lancedb] force_cold marker=lancedb-r2-1792320386
+[c2/p2] sleep 30s (abs_cold settle) ...
+[c2/p2/lancedb] abs_cold rep=2 s=0 wall=5.420s billed=$0.0000754 cold=True
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/lancedb] idle_cold rep=2 s=0 wall=5.965s billed=$0.0000917 cold=True
+[c2/p2/lancedb] warm rep=2 s=1 wall=5.524s billed=$0.0001506
+[c2/p2/lancedb] warm rep=2 s=2 wall=5.178s billed=$0.0001411
+[c2/p2/lancedb] warm rep=2 s=3 wall=5.243s billed=$0.0001427
+[c2/p2/lancedb] warm rep=2 s=4 wall=4.742s billed=$0.0001290
+
+[c2/p2/lancedb] === rep 3/5 ===
+[c2/p2/lancedb] force_cold marker=lancedb-r3-1792320386
+[c2/p2] sleep 30s (abs_cold settle) ...
+[c2/p2/lancedb] abs_cold rep=3 s=0 wall=5.479s billed=$0.0000778 cold=True
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/lancedb] idle_cold rep=3 s=0 wall=5.337s billed=$0.0000919 cold=True
+[c2/p2/lancedb] warm rep=3 s=1 wall=5.114s billed=$0.0001391
+[c2/p2/lancedb] warm rep=3 s=2 wall=5.407s billed=$0.0001470
+[c2/p2/lancedb] warm rep=3 s=3 wall=5.287s billed=$0.0001440
+[c2/p2/lancedb] warm rep=3 s=4 wall=4.869s billed=$0.0001325
+
+[c2/p2/lancedb] === rep 4/5 ===
+[c2/p2/lancedb] force_cold marker=lancedb-r4-1792320386
+[c2/p2] sleep 30s (abs_cold settle) ...
+[c2/p2/lancedb] abs_cold rep=4 s=0 wall=5.593s billed=$0.0000777 cold=True
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/lancedb] idle_cold rep=4 s=0 wall=4.941s billed=$0.0000761 cold=True
+[c2/p2/lancedb] warm rep=4 s=1 wall=5.049s billed=$0.0001374
+[c2/p2/lancedb] warm rep=4 s=2 wall=5.115s billed=$0.0001392
+[c2/p2/lancedb] warm rep=4 s=3 wall=5.190s billed=$0.0001412
+[c2/p2/lancedb] warm rep=4 s=4 wall=5.012s billed=$0.0001366
+
+[c2/p2/lancedb] === rep 5/5 ===
+[c2/p2/lancedb] force_cold marker=lancedb-r5-1792320386
+[c2/p2] sleep 30s (abs_cold settle) ...
+[c2/p2/lancedb] abs_cold rep=5 s=0 wall=5.416s billed=$0.0000757 cold=True
+[c2/p2] sleep 600s (idle_cold) ...
+[c2/p2/lancedb] idle_cold rep=5 s=0 wall=5.586s billed=$0.0000799 cold=True
+[c2/p2/lancedb] warm rep=5 s=1 wall=5.230s billed=$0.0001426
+[c2/p2/lancedb] warm rep=5 s=2 wall=5.342s billed=$0.0001454
+[c2/p2/lancedb] warm rep=5 s=3 wall=5.480s billed=$0.0001495
+[c2/p2/lancedb] warm rep=5 s=4 wall=4.775s billed=$0.0001299
+[c2/p2/lancedb] total wall 3370s (56.2 min)
+
+=== C2 PHASE 2 LANCEDB DONE ===

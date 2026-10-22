@@ -1,0 +1,262 @@
+{
+ "meta": {
+  "tag": "2026-10-ec2",
+  "generated_utc": "2026-10-18T08:10:19.922874+00:00",
+  "prices": {
+   "x86_gbs": 1.66667e-05,
+   "arm_gbs": 1.33334e-05,
+   "lambda_req": 2e-07,
+   "s3_get": 4e-07,
+   "s3_put": 5e-06,
+   "ddb_rru": 1.25e-07,
+   "s3v_req": 2.5e-06,
+   "s3v_tiers": [
+    [
+     100000,
+     0.004
+    ],
+    [
+     10000000,
+     0.002
+    ],
+    [
+     null,
+     0.0004
+    ]
+   ],
+   "s3v_vec_bytes": 384
+  },
+  "pad_s": [
+   0.5,
+   1.5
+  ],
+  "s3_log_files": 260430
+ },
+ "cells": [
+  {
+   "exp": "c3",
+   "cell": "blocks_c1",
+   "adapter": "blocks",
+   "size": "10m",
+   "n": 131,
+   "p50_s": 6.0313,
+   "window_utc": [
+    "2026-10-17T14:53:26.739502+00:00",
+    "2026-10-17T15:06:49.080654+00:00"
+   ],
+   "l1_usd_q": 0.0018421066335667297,
+   "gb_s_q": 110.27417746564885,
+   "inv_q": 21.0,
+   "n_init": 0,
+   "per_group": {
+    "lithops-worker-rb26-363-11170a3116": {
+     "n": 2620,
+     "billed_ms": 4742111.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 14264.269887999999
+    },
+    "lithops-worker-rb26-363-600f82b870": {
+     "n": 131,
+     "billed_ms": 88695.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 181.64736
+    }
+   },
+   "s3_get_q": 749.0229007633587,
+   "s3_put_list_q": 59.01526717557252,
+   "s3_usd_q": 0.000594685496183206,
+   "s3_by_bucket": {
+    "thesis-blocks-ACCT": {
+     "get": 86722,
+     "put_list": 393
+    },
+    "lithops-us-east-1-rb26": {
+     "get": 11400,
+     "put_list": 7338
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.0024367921297499357
+  },
+  {
+   "exp": "c3",
+   "cell": "lancedb_c1",
+   "adapter": "lancedb",
+   "size": "10m",
+   "n": 54,
+   "p50_s": 51.3646,
+   "window_utc": [
+    "2026-10-17T15:48:11.276392+00:00",
+    "2026-10-17T16:34:24.542030+00:00"
+   ],
+   "l1_usd_q": 0.0014020311513429334,
+   "gb_s_q": 105.13681066666666,
+   "inv_q": 1.0,
+   "n_init": 0,
+   "per_group": {
+    "thesis-lancedb-lambda": {
+     "n": 54,
+     "billed_ms": 2772162.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 5677.387776
+    }
+   },
+   "s3_get_q": 5019.111111111111,
+   "s3_put_list_q": 1.0,
+   "s3_usd_q": 0.0020126444444444444,
+   "s3_by_bucket": {
+    "thesis-lancedb-ACCT": {
+     "get": 271032,
+     "put_list": 54
+    }
+   },
+   "s3_logs_complete": false,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.0034146755957873776
+  },
+  {
+   "exp": "c3",
+   "cell": "lancedb_c10",
+   "adapter": "lancedb",
+   "size": "10m",
+   "n": 60,
+   "p50_s": 51.4622,
+   "window_utc": [
+    "2026-10-17T15:23:25.504479+00:00",
+    "2026-10-17T15:28:41.605428+00:00"
+   ],
+   "l1_usd_q": 0.0014202494877508269,
+   "gb_s_q": 106.50292906666667,
+   "inv_q": 1.0166666666666666,
+   "n_init": 9,
+   "per_group": {
+    "thesis-lancedb-lambda": {
+     "n": 61,
+     "billed_ms": 3120203.0,
+     "n_init": 9,
+     "init_ms": 20630.34,
+     "gb_s": 6390.175744
+    }
+   },
+   "s3_get_q": 5773.15,
+   "s3_put_list_q": 1.15,
+   "s3_usd_q": 0.00231501,
+   "s3_by_bucket": {
+    "thesis-lancedb-ACCT": {
+     "get": 346389,
+     "put_list": 69
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.003735259487750827
+  },
+  {
+   "exp": "c3",
+   "cell": "lancedb_c4",
+   "adapter": "lancedb",
+   "size": "10m",
+   "n": 56,
+   "p50_s": 51.3936,
+   "window_utc": [
+    "2026-10-17T15:32:25.614215+00:00",
+    "2026-10-17T15:44:27.600946+00:00"
+   ],
+   "l1_usd_q": 0.0014013936630582857,
+   "gb_s_q": 105.08873142857144,
+   "inv_q": 1.0178571428571428,
+   "n_init": 0,
+   "per_group": {
+    "thesis-lancedb-lambda": {
+     "n": 57,
+     "billed_ms": 2873520.0,
+     "n_init": 0,
+     "init_ms": 0.0,
+     "gb_s": 5884.96896
+    }
+   },
+   "s3_get_q": 5021.303571428572,
+   "s3_put_list_q": 1.0,
+   "s3_usd_q": 0.0020135214285714287,
+   "s3_by_bucket": {
+    "thesis-lancedb-ACCT": {
+     "get": 281193,
+     "put_list": 56
+    }
+   },
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 0.0,
+   "s3v_data_usd_q": 0.0,
+   "l2_usd_q": 0.0034149150916297144
+  },
+  {
+   "exp": "c3",
+   "cell": "s3vectors_c1",
+   "adapter": "s3vectors",
+   "size": "10m",
+   "n": 1057,
+   "p50_s": 0.3247,
+   "window_utc": [
+    "2026-10-17T15:09:46.015998+00:00",
+    "2026-10-17T15:15:16.085835+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.7568e-06,
+   "l2_usd_q": 1.02568e-05
+  },
+  {
+   "exp": "c3",
+   "cell": "s3vectors_c4",
+   "adapter": "s3vectors",
+   "size": "10m",
+   "n": 1785,
+   "p50_s": 0.2083,
+   "window_utc": [
+    "2026-10-17T15:18:10.972356+00:00",
+    "2026-10-17T15:19:36.137535+00:00"
+   ],
+   "l1_usd_q": 0.0,
+   "gb_s_q": 0.0,
+   "inv_q": 0.0,
+   "n_init": 0,
+   "per_group": {},
+   "s3_get_q": 0.0,
+   "s3_put_list_q": 0.0,
+   "s3_usd_q": 0.0,
+   "s3_by_bucket": {},
+   "s3_logs_complete": true,
+   "ddb_rru_q": 0.0,
+   "ddb_usd_q": 0.0,
+   "s3v_request_usd_q": 2.5e-06,
+   "s3v_data_usd_q": 7.7568e-06,
+   "l2_usd_q": 1.02568e-05
+  }
+ ]
+}

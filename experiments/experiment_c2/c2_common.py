@@ -26,7 +26,10 @@ import time
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = os.path.dirname(os.path.dirname(_HERE))   # experiments/experiment_c2 -> repo root
-RESULTS_DIR = os.path.join(_HERE, "results")
+# RESULTS_TAG selects the output folder: unset or "orig" -> results/ (the August
+# evidence the 2 Sep thesis cites); any other tag -> results_<tag>/ (2026-10-16).
+_TAG = os.environ.get("RESULTS_TAG", "orig")
+RESULTS_DIR = os.path.join(_HERE, "results" if _TAG in ("", "orig") else f"results_{_TAG}")
 
 # Reuse Experiment B + C1 helpers and the adapter clients. Put the repo root (for
 # the `harness` package), the sibling experiment_b/experiment_c1 dirs (for
@@ -51,7 +54,7 @@ BLOCKS_PARAMS = dict(n_probe=7, num_blocks=16, partitions_per_block=10,
                      blocks_per_task=8, num_workers=16)
 
 # Recall preconditions for C2 (from the brief; C2 does not relitigate recall).
-RECALL_STOP = {"blocks": 99.0, "s3vectors": 90.0, "lancedb": 99.0}
+RECALL_STOP = {"blocks": 99.0, "s3vectors": 90.0, "lancedb": 99.0, "lancedb_microvm": 99.0}
 
 COLD_MARKER_KEY = "LAST_COLD_MARKER"
 
@@ -127,11 +130,20 @@ def query_record(adapter, timings):
     return rec
 
 
-def query_once(adapter, client, vector, *, top_k=None):
-    """Issue one query and return its flat record."""
+def query_once(adapter, client, vector, *, top_k=None, query_index=None):
+    """Issue one query and return its flat record.
+
+    Since 2026-10-16 the record also keeps the returned ids/dists, the full
+    adapter timings (Blocks per-task durations) and the wall-clock window."""
+    from harness.records import hits_to_lists
+    t0 = time.time()
     hits, timings = client.query(vector, top_k=top_k or C.TOP_K)
+    t1 = time.time()
     rec = query_record(adapter, timings)
     rec["n_hits"] = len(hits) if hits else 0
+    ids, dists = hits_to_lists(hits)
+    rec.update(query_index=query_index, ids=ids, dists=dists,
+               wall_submit_utc=t0, wall_ack_utc=t1, adapter_timings=timings)
     return rec
 
 
@@ -212,5 +224,5 @@ def cold_targets(adapter):
 # --------------------------------------------------------------------------
 def jsonl_append(path, obj):
     with open(path, "a") as f:
-        f.write(json.dumps(obj) + "\n")
+        f.write(json.dumps(obj, default=str) + "\n")
     # flush by closing; keep it simple and durable across the long run

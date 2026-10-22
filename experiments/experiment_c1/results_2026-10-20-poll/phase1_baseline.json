@@ -1,0 +1,24 @@
+{
+  "account": "<AWS_ACCOUNT_ID>",
+  "corpus_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+  "corpus_sha256_anchor_ok": true,
+  "dataset": "deep_1m",
+  "ingest_cost_usd": 0.003517,
+  "ingest_index_s": 7.245,
+  "ingest_seconds": 12.439,
+  "ingest_upload_s": 4.774,
+  "non_empty": 1000,
+  "params": {
+    "blocks_per_task": 16,
+    "n_probe": 10,
+    "num_blocks": 16,
+    "num_workers": 16,
+    "partitions_per_block": 10
+  },
+  "passed": true,
+  "perfect_10of10": 1000,
+  "phase": "c1_phase1_baseline",
+  "recall_at_10_pct": 100.0,
+  "recall_query_seconds": 26.393,
+  "started_utc": "2026-10-20T07:33:14Z"
+}

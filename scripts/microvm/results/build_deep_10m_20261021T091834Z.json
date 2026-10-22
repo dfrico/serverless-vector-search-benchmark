@@ -1,0 +1,11 @@
+{
+ "image": "thesis-lancedb-mvm-deep10m",
+ "dataset": "deep_10m",
+ "artifact": "mvm-v4.zip",
+ "baseline_mib": 8192,
+ "validate_mode": "full",
+ "started_utc": "2026-10-21T09:05:39Z",
+ "state": "CREATED",
+ "build_s": 773.9,
+ "build_log": []
+}

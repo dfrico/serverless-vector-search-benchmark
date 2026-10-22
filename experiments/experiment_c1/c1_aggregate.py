@@ -31,6 +31,8 @@ S3V_RECALL = 97.3
 def load_cells():
     cells = {}
     for p in glob.glob(os.path.join(K.RESULTS_DIR, "measure_*.json")):
+        if p.endswith(".raw.json"):   # per-query sidecars (2026-10-16), not cells
+            continue
         with open(p) as f:
             m = json.load(f)
         cells[m["label"]] = m

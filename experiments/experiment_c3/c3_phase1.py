@@ -166,7 +166,7 @@ def main():
     ident = session.client("sts").get_caller_identity()
     acct = ident["Account"]
     print(f"[c3/p1] account={acct} arn={ident['Arn']}")
-    assert acct == "<AWS_ACCOUNT_ID>", f"wrong account {acct}"
+    assert acct == os.environ.get("AWS_ACCOUNT_ID", acct), f"wrong account {acct} (AWS_ACCOUNT_ID)"
     print("[c3/p1] spend estimate for THIS phase: $0.00 (control-plane reads only)")
 
     lam = session.client("lambda")

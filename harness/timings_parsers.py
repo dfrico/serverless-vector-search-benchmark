@@ -111,3 +111,16 @@ def _parse_blocks_query(t: dict) -> dict:
 
 register("blocks", "query")(_parse_blocks_query)
 register("blocks", "query_batch")(_parse_blocks_query)
+
+
+def _parse_lancedb_microvm(t: dict) -> dict:
+    """LanceDB-on-MicroVM: time inside the server (the LanceDB search) and the rest of the round trip
+    (TLS-terminating managed endpoint, auth proxy, network), which is a property of the MicroVM service
+    (about 50 ms at 1M from the EC2 client; finding 30)."""
+    wall = float(t.get("wall_clock_s", 0.0))
+    server = float(t.get("server_ms", 0.0)) / 1000.0
+    return {"server_s": server, "endpoint_overhead_s": max(0.0, wall - server)}
+
+
+register("lancedb-microvm", "query")(_parse_lancedb_microvm)
+register("lancedb-microvm", "query_batch")(_parse_lancedb_microvm)

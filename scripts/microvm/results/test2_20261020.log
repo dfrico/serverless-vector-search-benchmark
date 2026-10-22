@@ -1,0 +1,17 @@
+06:42:32 launch_requested {}
+06:42:35 running {"mode": "launch", "run_to_running_s": 2.3662502765655518, "polled_running_s": 2.227613687515259, "rows": 1000000, "setup_s": 2.447404623031616}
+06:42:35 idle_start {"busy_cpu_s": 15.32}
+06:52:37 idle_end {"busy_cpu_s": 22.86}
+07:02:37 query_end {"n": 3886, "busy_cpu_s": 948.38}
+07:02:38 suspended {"cycle": 1, "suspend_s": 1.2293133735656738}
+07:03:09 resumed_by_query {"cycle": 1, "first_wall_s": 1.0955491065979004, "resumed": true}
+07:03:10 suspended {"cycle": 2, "suspend_s": 0.6411659717559814}
+07:03:41 resumed_by_query {"cycle": 2, "first_wall_s": 0.6906065940856934, "resumed": true}
+07:03:42 suspended {"cycle": 3, "suspend_s": 0.6401114463806152}
+07:04:13 resumed_by_query {"cycle": 3, "first_wall_s": 0.9325101375579834, "resumed": true}
+07:04:14 suspended {"cycle": 4, "suspend_s": 0.6430513858795166}
+07:04:45 resumed_by_query {"cycle": 4, "first_wall_s": 0.9202558994293213, "resumed": true}
+07:04:47 suspended {"cycle": 5, "suspend_s": 0.6500198841094971}
+07:05:17 resumed_by_query {"cycle": 5, "first_wall_s": 0.6864762306213379, "resumed": true}
+07:05:19 terminated {"microvm_id": "microvm-7fbb713c-4086-37ff-b789-e54588f458c6"}
+wrote /home/ec2-user/thesis/scripts/microvm/results/test2_20261020T070519Z.json

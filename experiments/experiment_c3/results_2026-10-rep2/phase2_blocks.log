@@ -1,0 +1,53 @@
+[c3/p2/blocks] start=2026-10-21T08:20:54Z account=<AWS_ACCOUNT_ID> recall_n=50 chunk=100
+[c3/p2/blocks] ingest estimate: ~$0.05 (160 index workers)
+[c3-lithops-patch] AWS Lambda invoker now retries on 429/5xx (async invokes drain within the concurrency cap).
+[blocks-aws] boto3 -> account <AWS_ACCOUNT_ID> (arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-bench-client/i-0d04048a0217c5277)
+[c3/p2/blocks] setup OK sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+2026-10-21 08:22:22,206 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-21 08:22:22,299 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-21 08:22:22,380 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-21 08:22:22,380 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-21 08:22:22,509 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-21 08:22:22,585 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-21 08:22:22,662 [INFO] invokers.py:119 -- ExecutorID 08709e-1 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-21 08:22:22,877 [INFO] invokers.py:186 -- ExecutorID 08709e-1 | JobID M000 - Starting function invocation: map_function() - Total: 20 activations
+2026-10-21 08:22:22,948 [INFO] invokers.py:225 -- ExecutorID 08709e-1 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/08709e-1-M000.log
+2026-10-21 08:22:22,956 [INFO] executors.py:494 -- ExecutorID 08709e-1 - Getting results from 20 function activations
+2026-10-21 08:22:22,956 [INFO] wait.py:101 -- ExecutorID 08709e-1 - Waiting for 20 function activations to complete
+2026-10-21 08:22:28,994 [INFO] executors.py:618 -- ExecutorID 08709e-1 - Cleaning temporary data
+2026-10-21 08:22:29,203 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-21 08:22:29,273 [INFO] invokers.py:119 -- ExecutorID 08709e-1 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-10-21 08:22:29,341 [INFO] invokers.py:186 -- ExecutorID 08709e-1 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-10-21 08:22:29,342 [INFO] invokers.py:225 -- ExecutorID 08709e-1 | JobID M001 - View execution logs at /tmp/lithops-ec2-user/logs/08709e-1-M001.log
+2026-10-21 08:22:29,343 [INFO] executors.py:494 -- ExecutorID 08709e-1 - Getting results from 1 function activations
+2026-10-21 08:22:29,343 [INFO] wait.py:101 -- ExecutorID 08709e-1 - Waiting for 1 function activations to complete
+2026-10-21 08:22:31,346 [INFO] executors.py:618 -- ExecutorID 08709e-1 - Cleaning temporary data
+
+
+[c3/p2/blocks] probe query: 10 hits in 9.24s server_ms=None cold=None
+2026-10-21 08:22:31,463 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-21 08:22:31,521 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-21 08:22:31,737 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-21 08:22:31,738 [INFO] config.py:139 -- Lithops v3.6.3 - Python3.10
+2026-10-21 08:22:31,794 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-21 08:22:31,977 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-east-1
+2026-10-21 08:22:32,043 [INFO] invokers.py:119 -- ExecutorID 08709e-3 | JobID M000 - Selected Runtime: blocks-db-runtime - 3008MB
+2026-10-21 08:22:32,142 [INFO] invokers.py:186 -- ExecutorID 08709e-3 | JobID M000 - Starting function invocation: map_function() - Total: 20 activations
+2026-10-21 08:22:32,220 [INFO] invokers.py:225 -- ExecutorID 08709e-3 | JobID M000 - View execution logs at /tmp/lithops-ec2-user/logs/08709e-3-M000.log
+2026-10-21 08:22:32,224 [INFO] executors.py:494 -- ExecutorID 08709e-3 - Getting results from 20 function activations
+2026-10-21 08:22:32,224 [INFO] wait.py:101 -- ExecutorID 08709e-3 - Waiting for 20 function activations to complete
+2026-10-21 08:22:37,392 [INFO] executors.py:618 -- ExecutorID 08709e-3 - Cleaning temporary data
+2026-10-21 08:22:37,451 [INFO] aws_s3.py:59 -- S3 client created - Region: us-east-1
+2026-10-21 08:22:37,525 [INFO] invokers.py:119 -- ExecutorID 08709e-3 | JobID M001 - Selected Runtime: blocks-db-runtime - 2048MB
+2026-10-21 08:22:37,922 [INFO] invokers.py:186 -- ExecutorID 08709e-3 | JobID M001 - Starting function invocation: reduce_function() - Total: 1 activations
+2026-10-21 08:22:37,922 [INFO] invokers.py:225 -- ExecutorID 08709e-3 | JobID M001 - View execution logs at /tmp/lithops-ec2-user/logs/08709e-3-M001.log
+2026-10-21 08:22:37,922 [INFO] executors.py:494 -- ExecutorID 08709e-3 - Getting results from 1 function activations
+2026-10-21 08:22:37,922 [INFO] wait.py:101 -- ExecutorID 08709e-3 - Waiting for 1 function activations to complete
+2026-10-21 08:22:41,982 [INFO] executors.py:618 -- ExecutorID 08709e-3 - Cleaning temporary data
+
+
+[c3/p2/blocks] gate chunk 1 (50/50) in 10.6s
+[c3/p2/blocks] recall@10=100.00% (bar 95.0%) perfect=50/50 non_empty=50/50 query_s=10.6 chunks=1
+[c3/p2/blocks] wrote /home/ec2-user/thesis/experiments/experiment_c3/results_2026-10-rep2/phase2_blocks.json
+
+=== C3 PHASE 2 BLOCKS PASS ===

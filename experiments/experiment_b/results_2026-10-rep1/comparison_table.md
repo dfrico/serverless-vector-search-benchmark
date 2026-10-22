@@ -1,0 +1,18 @@
+# Experiment B — three-way comparison at 1M (deep_1m, top_k=10)
+
+Fairness: corpus sha256 identical across all 9 cells: yes (aa56f86460774bca...). metric = l2 across all cells: yes.
+
+Latency is harness-side submit->ack (OpResult.latency_s), seconds. Throughput is realised ok-ops/second (closed-loop; nominal was 100 ops/s). Cost is an AWS estimate: Lambda GB-s + request fees (Blocks/LanceDB) or QueryVectors request fees (S3 Vectors).
+
+| adapter | conc (cfg/eff) | n | throughput ops/s | p50 s | p95 s | p99 s | mean s | cost/query $ | cost/1k q $ |
+|---|---|---|---|---|---|---|---|---|---|---|
+| blocks | 1/1 | 15 | 0.10 | 9.982 | 10.199 | 10.222 | 10.012 | 0.0004632 | 0.4632 |
+| blocks | 4/1 | 15 | 0.10 | 9.996 | 10.200 | 10.205 | 10.030 | 0.0004640 | 0.4640 |
+| blocks | 10/1 | 15 | 0.10 | 10.016 | 10.718 | 11.854 | 10.150 | 0.0004701 | 0.4701 |
+| s3vectors | 1/1 | 240 | 5.33 | 0.171 | 0.350 | 0.415 | 0.187 | 0.0000025 | 0.0025 |
+| s3vectors | 4/4 | 1842 | 40.88 | 0.065 | 0.247 | 0.321 | 0.098 | 0.0000025 | 0.0025 |
+| s3vectors | 10/4 | 2739 | 60.79 | 0.062 | 0.075 | 0.166 | 0.066 | 0.0000025 | 0.0025 |
+| lancedb | 1/1 | 24 | 0.20 | 5.046 | 5.959 | 6.036 | 5.084 | 0.0001385 | 0.1385 |
+| lancedb | 4/4 | 96 | 0.78 | 5.134 | 5.601 | 5.898 | 5.079 | 0.0001384 | 0.1384 |
+| lancedb | 10/10 | 239 | 1.92 | 5.142 | 5.647 | 5.846 | 5.135 | 0.0001381 | 0.1381 |
+

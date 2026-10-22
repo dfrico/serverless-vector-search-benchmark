@@ -1,0 +1,5 @@
+[c2/cleanup/lancedb] account=<AWS_ACCOUNT_ID>
+[c2/cleanup/lancedb] table dropped via teardown(drop_data=True)
+[c2/cleanup/lancedb] restored env on thesis-lancedb-lambda
+
+=== C2 CLEANUP LANCEDB DONE ===

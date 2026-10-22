@@ -57,8 +57,9 @@ import numpy as np
 _HERE = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = os.path.dirname(_HERE)
 # Reuse the dataset fingerprint contract (finding 13) so hashes match the manifest.
-sys.path.insert(0, os.path.join(WORKSPACE, "harness-day6"))
-from dataset_hash import fingerprint_csv  # noqa: E402
+# The fingerprint contract (finding 13) now lives in harness/dataset_hash.py.
+sys.path.insert(0, WORKSPACE)
+from harness.dataset_hash import fingerprint_csv  # noqa: E402
 
 VECTORS_CSV = os.path.join(WORKSPACE, "datasets", "deep_1m", "vectors_deep_1m.csv")
 QUERIES_FBIN = os.path.join(WORKSPACE, "datasets", "deep_1m", "query.public.10K.fbin")

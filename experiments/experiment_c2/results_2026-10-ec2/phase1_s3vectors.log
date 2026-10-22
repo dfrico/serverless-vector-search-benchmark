@@ -1,0 +1,9 @@
+[c2/phase1/s3vectors] start=2026-10-18T09:08:21Z account=<AWS_ACCOUNT_ID>
+[c2/phase1/s3vectors] pre-phase spend estimate: reingest 1M (Blocks ~$0.01, S3V ~$0.08 PUT, LanceDB ~$0.06) + 100q recall (<$0.001). Phase 1 total across 3 adapters ~$0.30. No single op > $3.
+[s3vectors] dataset 'deep_1m' -> index name 'deep-1m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[c2/phase1/s3vectors] setup OK sha256=aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df anchor_ok=True
+[c2/phase1/s3vectors] ingest done in 608.5s ingest_cost=$0.07680
+[c2/phase1/s3vectors] recall@10=97.90% (bar 90.0%) perfect=80/100 non_empty=100/100 recall_query_s=23.3
+[c2/phase1/s3vectors] wrote results/phase1_s3vectors.json
+
+=== C2 PHASE 1 S3VECTORS PASS ===

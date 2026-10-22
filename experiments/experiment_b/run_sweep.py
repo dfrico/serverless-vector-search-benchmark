@@ -32,6 +32,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import functools
+import json
 import os
 import sys
 import time
@@ -52,7 +53,7 @@ from harness.sink import JSONLSink  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("adapter", choices=["blocks", "s3vectors", "lancedb"])
+    ap.add_argument("adapter", choices=["blocks", "s3vectors", "lancedb", "lancedb_microvm"])
     ap.add_argument("concurrency", type=int, help="configured max_in_flight")
     ap.add_argument("--duration", type=float, default=45.0, dest="duration")
     ap.add_argument("--ops", type=float, default=100.0, dest="ops",
@@ -67,7 +68,8 @@ def main():
 
     warmup = args.warmup
     if warmup < 0:
-        warmup = 5 if adapter == "blocks" else 0
+        # lancedb_microvm: discard the first queries after the 60 s settle too (prefetch race, finding 29)
+        warmup = 5 if adapter in ("blocks", "lancedb_microvm") else 0
 
     os.makedirs(C.RESULTS_DIR, exist_ok=True)
     acct = C.account_id()
@@ -97,7 +99,9 @@ def main():
     # --- warmup (Blocks only): discard timings ---
     if warmup > 0:
         t = time.time()
-        client.query_batch(queries[:warmup], top_k=C.TOP_K)
+        from harness.records import record_warmup
+        record_warmup(client, queries, warmup, C.TOP_K,
+                      os.path.join(C.RESULTS_DIR, f"sweep_{adapter}_c{conc}.jsonl"))
         print(f"[sweep/{adapter} c={conc}] warmup {warmup} queries discarded "
               f"in {time.time() - t:.1f}s")
 
@@ -118,7 +122,13 @@ def main():
     sink.manifest_path = os.path.join(C.RESULTS_DIR, f"{stem}.manifest.json")
 
     t0 = time.time()
-    paths = asyncio.run(sink.consume(gen.run(config)))
+    try:
+        paths = asyncio.run(sink.consume(gen.run(config)))
+    finally:
+        if adapter == "lancedb_microvm":
+            client.teardown()  # terminates the MicroVM this cell launched
+            with open(os.path.join(C.RESULTS_DIR, f"{stem}.lifecycle.json"), "w") as lf:
+                json.dump(client.transition_record, lf, indent=1, default=str)  # E3: running/suspended seconds
     wall = time.time() - t0
     print(f"[sweep/{adapter} c={conc}] DONE records={paths.n_records} "
           f"wall={wall:.1f}s realised_rate={paths.n_records / wall:.2f} ops/s")

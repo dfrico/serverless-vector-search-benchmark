@@ -1,0 +1,18 @@
+PASS name  lancedb-microvm
+PASS capabilities before setup  ClientCapabilities(supports_pending=False, metric='l2', id_stability='preserved', ingest_modes=set(), max_safe_concurrency=8)
+PASS bulk_insert raises NotImplementedError
+PASS delete raises NotImplementedError
+PASS fingerprint = shared corpus hash  72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849
+PASS backend_version fields  {'service': 'lambda-microvms', 'region': 'us-east-1', 'image_arn': 'arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep10m', 'image_version': '1.0', 'baseline_memory_mib': 8192, 'lancedb': '0.33.0', 'cpu_part': ['0xd4f'], 'microvm_id': 'microvm-9d3ee48e-9f57-337f-ad3e-16f5e1452735', 'microvm_owned': True, 'settle_s': 60.0, 'boto3': '1.43.79', 'botocore': '1.43.79', 'requests': '2.34.2'}
+PASS max_safe_concurrency from size  32
+FAIL ingest_record (no pretend ingest)  {'kind': 'table baked into the MicroVM image (make_table.py + image build), not ingested by the adapter', 'table': None, 'image_version_created': '2026-10-21 09:05:39.987000+00:00', 'image_version_updated': '2026-10-21 09:18:32.326000+00:00', 'image_env_table_uri': 's3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_10m.lance', 'validate_hook': 'ENABLED'}
+PASS timings envelope  {'op': 'query', 'wall_clock_s': 59.47418141365051, 'server_ms': 59465.133581, 'cpu_part': ['0xd4f'], 'reconnected': False, 'first_after_setup': True, 'first_after_launch': False, 'resumed': False}
+PASS hits ascending, k=10
+PASS recall@10 >= 99% (gate)  100.00% on 50 queries
+PASS same top-10 sets as LanceDB-on-Lambda  {'n': 50, 'identical_ranked': 50, 'identical_sets': 50}
+PASS query_batch = query  {'op': 'query_batch', 'wall_clock_s': 3.5808422565460205, 'n_queries': 10, 'server_ms': 3527.0698479999965, 'cpu_part': ['0xd4f'], 'reconnected': False, 'first_after_setup': False, 'first_after_launch': False, 'resumed': False}
+PASS attach: query ok and teardown leaves it running  {'op': 'query', 'wall_clock_s': 0.4033019542694092, 'server_ms': 353.19236199998727, 'cpu_part': ['0xd4f'], 'reconnected': False, 'first_after_setup': True, 'first_after_launch': False, 'resumed': False}
+PASS resumed flag on first query after resume only  [{'op': 'query', 'wall_clock_s': 1.1156210899353027, 'server_ms': 561.8651620000037, 'cpu_part': ['0xd4f'], 'reconnected': False, 'first_after_setup': False, 'first_after_launch': False, 'resumed': True}, {'op': 'query', 'wall_clock_s': 0.3996717929840088, 'server_ms': 346.95513899998787, 'cpu_part': ['0xd4f'], 'reconnected': False, 'first_after_setup': False, 'first_after_launch': False, 'resumed': False}]
+PASS teardown terminated the owned MicroVM (and is idempotent)  TERMINATED
+GATE FAILED -> /home/ec2-user/thesis/scripts/microvm/results/gate_deep_10m_20261021T092329Z.json
+GATE_EXIT=0

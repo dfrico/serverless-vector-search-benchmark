@@ -1,0 +1,13 @@
+{
+ "dataset": "deep_1m",
+ "uri": "s3://thesis-microvm-<AWS_ACCOUNT_ID>/lancedb/deep_1m.lance",
+ "content_sha256": "aa56f86460774bcaeec4675120c5d07de8000c58a008097abca2e6ccd75d21df",
+ "rows": 1000000,
+ "data_files": 500,
+ "objects": 1500,
+ "bytes": 397384774,
+ "schema": "id: int64\nvector: fixed_size_list<item: float>[96]\n  child 0, item: float",
+ "batch": 2000,
+ "seconds": null,
+ "lancedb": "0.33.0"
+}

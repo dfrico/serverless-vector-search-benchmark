@@ -1,0 +1,6 @@
+08:18:19 launch_requested {}
+08:18:22 running {"mode": "launch", "run_to_running_s": 2.3609445095062256, "polled_running_s": 2.229586362838745, "rows": 1000000, "setup_s": 2.448456287384033}
+08:18:22 idle_start {"busy_cpu_s": 12.24}
+08:28:22 ERROR {"error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"}
+08:28:27 terminated {"microvm_id": "microvm-a5887993-ff5f-33ea-871b-0759ae06c996"}
+wrote /home/ec2-user/thesis/scripts/microvm/results/test2_20261019T082827Z.json

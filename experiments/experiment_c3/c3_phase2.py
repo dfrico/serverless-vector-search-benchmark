@@ -24,7 +24,8 @@ Per-adapter query mechanics:
   - S3 Vec : query_batch issues N boto3 QueryVectors calls internally.
   - LanceDB: query_batch packs a chunk into ONE invoke. At 10M one invoke over
              many queries could exceed the 900s Lambda timeout, so we chunk
-             (default 20/invoke) and set a 900s no-retry client for the gate.
+             (default 1/invoke; 20/invoke took ~1080s and timed out in August
+             and again in October, finding 25) and set a 900s no-retry client.
              We PROBE one query first to measure time and catch an OOM before
              committing to the whole gate.
 
@@ -54,7 +55,7 @@ import c3_common as K  # noqa: E402
 import eb_common as C  # noqa: E402
 
 DEFAULT_RECALL_N = 100
-DEFAULT_CHUNK = {"blocks": 100, "s3vectors": 100, "lancedb": 20}
+DEFAULT_CHUNK = {"blocks": 100, "s3vectors": 100, "lancedb": 1}  # lancedb: the August gate ran chunk=1
 INGEST_STOP_USD = 5.0        # any ingest over this stops and asks
 S3V_INGEST_STOP_USD = 2.0    # S3 Vectors ingest gate (brief)
 
@@ -128,6 +129,8 @@ def main():
     ap.add_argument("--no-upload", action="store_true", dest="no_upload",
                     help="Blocks only: reuse the corpus CSV already in S3, skip the "
                          "11.5 GB re-upload (still rebuilds the index)")
+    ap.add_argument("--out-name", default="", dest="out_name",
+                    help="result file stem (default phase2_<adapter>)")
     ap.add_argument("--probe-only", action="store_true", dest="probe_only",
                     help="ingest (unless --skip-ingest) then run ONE query and stop")
     args = ap.parse_args()
@@ -135,7 +138,7 @@ def main():
     chunk = args.chunk or DEFAULT_CHUNK[adapter]
 
     os.makedirs(K.RESULTS_DIR, exist_ok=True)
-    out_path = os.path.join(K.RESULTS_DIR, f"phase2_{adapter}.json")
+    out_path = os.path.join(K.RESULTS_DIR, f"{args.out_name or 'phase2_' + adapter}.json")
     started = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     t_start = time.time()
     acct = K.acct()
@@ -245,6 +248,14 @@ def main():
         json.dump(summary, f, indent=2, sort_keys=True)
     os.replace(out_path + ".tmp", out_path)
     print(f"[c3/p2/{adapter}] wrote {out_path}")
+    # Raw evidence (2026-10-16): per-query ids/dists, ingest record, provenance.
+    from harness.records import per_query_records, run_provenance, write_sidecar
+    write_sidecar(out_path, "per_query", {
+        "per_query": per_query_records(results, gate_t, C.TOP_K),
+        "ingest": ing,
+        "provenance": run_provenance(client, K.DATASET,
+                                     patch_path=out_path[:-5] + ".code.patch"),
+    })
 
     if not passed:
         reason = []

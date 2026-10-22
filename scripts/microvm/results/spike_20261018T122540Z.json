@@ -1,0 +1,13 @@
+{
+ "started_utc": "2026-10-18T12:25:40.641599Z",
+ "image": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-spike",
+ "events": [
+  {
+   "msg": "ERROR",
+   "error": "AccessDeniedException: An error occurred (AccessDeniedException) when calling the RunMicrovm operation: User: arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-bench-client/i-0698b998d3d9b94e5 is not authorized to perform: lambda:PassNetworkConnector on resource: arn:aws:lambda:us-east-1:aws:network-connector:aws-network-connector:INTERNET_EGRESS because no identity-based policy allows the lambda:PassNetworkConnector action",
+   "t": 1792326340.6899338
+  }
+ ],
+ "error": "AccessDeniedException: An error occurred (AccessDeniedException) when calling the RunMicrovm operation: User: arn:aws:sts::<AWS_ACCOUNT_ID>:assumed-role/thesis-bench-client/i-0698b998d3d9b94e5 is not authorized to perform: lambda:PassNetworkConnector on resource: arn:aws:lambda:us-east-1:aws:network-connector:aws-network-connector:INTERNET_EGRESS because no identity-based policy allows the lambda:PassNetworkConnector action",
+ "ended_utc": "2026-10-18T12:25:40.690005Z"
+}

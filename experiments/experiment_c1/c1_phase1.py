@@ -102,6 +102,15 @@ def main():
     with open(os.path.join(K.RESULTS_DIR, "phase1_baseline.json"), "w") as f:
         json.dump(baseline, f, indent=2, sort_keys=True)
     print("[c1/phase1] wrote results/phase1_baseline.json")
+    # Raw evidence (2026-10-16): per-query ids/dists, full timings, provenance.
+    from harness.records import per_query_records, run_provenance, write_sidecar
+    _out = os.path.join(K.RESULTS_DIR, "phase1_baseline.json")
+    write_sidecar(_out, "per_query", {
+        "per_query": per_query_records(results, truth, C.TOP_K),
+        "ingest": ing, "query_timings": q_timings,
+        "provenance": run_provenance(client, C.DATASET,
+                                     patch_path=_out[:-5] + ".code.patch"),
+    })
 
     if not passed:
         print(f"STOP: baseline recall gate failed (recall={recall:.2f}%, "
@@ -110,7 +119,8 @@ def main():
 
     # --- baseline 50-query serial measure (shared anchor for all 3 axes) ---
     print("[c1/phase1] running baseline 50q serial measure ...")
-    m = K.measure(client, queries, truth, n=50, warmup=3, top_k=C.TOP_K)
+    m = K.measure(client, queries, truth, n=50, warmup=3, top_k=C.TOP_K,
+                  raw_path=os.path.join(K.RESULTS_DIR, "measure_base.raw.json"))
     m.update({"label": "base", "axis": "baseline",
               "params": baseline["params"], "started_utc": started})
     with open(os.path.join(K.RESULTS_DIR, "measure_base.json"), "w") as f:

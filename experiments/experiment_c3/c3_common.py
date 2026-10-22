@@ -32,7 +32,10 @@ import sys
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = os.path.dirname(os.path.dirname(_HERE))   # experiments/experiment_c3 -> repo root
-RESULTS_DIR = os.path.join(_HERE, "results")
+# RESULTS_TAG selects the output folder: unset or "orig" -> results/ (the August
+# evidence the 2 Sep thesis cites); any other tag -> results_<tag>/ (2026-10-16).
+_TAG = os.environ.get("RESULTS_TAG", "orig")
+RESULTS_DIR = os.path.join(_HERE, "results" if _TAG in ("", "orig") else f"results_{_TAG}")
 
 # Put the repo root (for the `harness` package), the sibling experiment_b/
 # experiment_c1 dirs (for eb_common / c1_common), and the external Blocks repo on
@@ -47,7 +50,9 @@ for _p in (WORKSPACE,
 import eb_common as C  # noqa: E402
 
 # --- deep_10m corpus paths (override eb_common's deep_1m paths) ---
-DATASET = "deep_10m"
+# C3_DATASET: re-ingest the same corpus under another name (2026-10-18 LanceDB 10M ingest
+# re-measure into deep_10m_reingest) without touching the measured deep_10m table.
+DATASET = os.environ.get("C3_DATASET", "deep_10m")
 DATA_DIR = os.path.join(WORKSPACE, "datasets", "deep_10m")
 VECTORS_CSV = os.path.join(DATA_DIR, "vectors_deep_10m.csv")
 QUERIES_CSV = os.path.join(DATA_DIR, "queries_deep_10m_1000q.csv")
@@ -72,7 +77,8 @@ LANCEDB_MEM_GB = 2.048
 BLOCKS_MEM_GB = 3.008
 
 # Concurrency caps per adapter (from Experiment B capabilities). Blocks is serial.
-CONCURRENCY_CAP = {"blocks": 1, "s3vectors": 4, "lancedb": 10}
+# lancedb_microvm: concurrent-connection limit of the 8 GB (4 vCPU) MicroVM, a documented quota (F39).
+CONCURRENCY_CAP = {"blocks": 1, "s3vectors": 4, "lancedb": 10, "lancedb_microvm": 32}
 
 
 def acct():
@@ -135,6 +141,9 @@ def build_client(adapter, a=None):
             data_bucket=f"thesis-lancedb-{a}", source_csv_path=VECTORS_CSV,
             image_uri=f"{a}.dkr.ecr.us-east-1.amazonaws.com/thesis-lancedb-lambda:latest",
             insert_batch_size=2000)
+    if adapter == "lancedb_microvm":  # F39: table baked into the MicroVM image, no ingest
+        from harness.adapters.lancedb_microvm import build_for_dataset
+        return build_for_dataset("deep_10m", VECTORS_CSV, a)
     raise SystemExit(f"unknown adapter {adapter}")
 
 
@@ -156,4 +165,4 @@ def build_and_setup(adapter, *, create_if_missing):
 
 def jsonl_append(path, obj):
     with open(path, "a") as f:
-        f.write(json.dumps(obj) + "\n")
+        f.write(json.dumps(obj, default=str) + "\n")

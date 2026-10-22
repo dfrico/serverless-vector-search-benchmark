@@ -1,0 +1,29 @@
+{
+ "system": "s3vectors",
+ "index": "deep-1m",
+ "csv_lines": 1000000,
+ "count": {
+  "max_key": 999999,
+  "implied_count": 1000000,
+  "key_above_exists": false,
+  "note": "assumes dense ids + in-order ingest; spot-checked by VALUES below"
+ },
+ "values": {
+  "n": 1000,
+  "found": 1000,
+  "missing": [],
+  "max_sq_diff": 6.984121099816983e-16,
+  "all_equal": true
+ },
+ "self_query": {
+  "n": 200,
+  "n_ok": 200,
+  "top1_exact": 200,
+  "top1_zero_dist_other_id": 0,
+  "in_top10": 200,
+  "failures": [],
+  "mismatches": []
+ },
+ "elapsed_s": 28.0,
+ "timestamp_utc": "2026-10-16T16:38:09Z"
+}

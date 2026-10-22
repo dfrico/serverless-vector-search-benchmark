@@ -1,0 +1,36 @@
+# Experiment C2 — cold-start table (deep_1m, 1M, top_k=10)
+
+Wall latency is the client-side round trip, in seconds — the primary cold-start metric. Billed cost is the honest per-query Lambda charge (finding 22 model); for a cold query the container init is mostly outside the billed handler time, so billed moves far less than wall.
+
+## Recall gate (Phase 1)
+
+| adapter | recall@10 | bar | pass | ingest cost $ |
+|---|---|---|---|---|
+| blocks | 100.0% | 99.0% | yes | 0.003801 |
+| s3vectors | 97.9% | 90.0% | yes | 0.0768 |
+| lancedb | 100.0% | 99.0% | yes | 0.003614 |
+
+## Cold-start table
+
+| adapter | config | n | wall min s | wall median s | wall p95 s | wall max s | billed median $ | cold signal |
+|---|---|---|---|---|---|---|---|---|
+| blocks | abs_cold | 5 | 9.8982 | 9.9902 | 10.0443 | 10.0526 | 0.00016873 | map spin-up median 1.8414s |
+| blocks | idle_cold | 5 | 9.9248 | 9.9632 | 10.1377 | 10.1546 | 0.00018993 | map spin-up median 1.9s |
+| blocks | warm | 20 | 5.8447 | 6.9596 | 8.0607 | 8.0641 | 0.00015673 | map spin-up median 0.6785s |
+| s3vectors | abs_cold | 5 | 0.3697 | 0.3996 | 0.5432 | 0.5675 | 2.5e-06 | none (managed) |
+| s3vectors | idle_cold | 5 | 0.3413 | 0.4254 | 0.4466 | 0.4508 | 2.5e-06 | none (managed) |
+| s3vectors | warm | 20 | 0.312 | 0.3374 | 0.3866 | 0.4081 | 2.5e-06 | none (managed) |
+| lancedb | abs_cold | 5 | 4.1171 | 5.4201 | 5.57 | 5.5926 | 7.571e-05 | cold True/False = 5/0 |
+| lancedb | idle_cold | 5 | 4.9408 | 5.5861 | 6.01 | 6.0214 | 8.644e-05 | cold True/False = 5/0 |
+| lancedb | warm | 20 | 4.7418 | 5.1465 | 5.4826 | 5.524 | 0.00014018 | cold True/False = 0/20 |
+
+## Headline: idle-cold vs warm median wall latency
+
+| adapter | abs_cold median s | idle_cold median s | warm median s | idle/warm ratio |
+|---|---|---|---|---|
+| blocks | 9.9902 | 9.9632 | 6.9596 | 1.432 |
+| s3vectors | 0.3996 | 0.4254 | 0.3374 | 1.261 |
+| lancedb | 5.4201 | 5.5861 | 5.1465 | 1.085 |
+
+
+wrote results/cold_start_table.md + .json

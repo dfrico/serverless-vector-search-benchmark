@@ -33,6 +33,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import functools
+import json
 import os
 import sys
 import time
@@ -48,6 +49,9 @@ from harness.workload import WorkloadConfig, WorkloadGenerator  # noqa: E402
 from harness.sink import JSONLSink  # noqa: E402
 
 
+_LAST_CLIENT = None  # so a failed MicroVM cell is terminated before the retry launches another
+
+
 def build_setup(adapter):
     """Reconnect to the Phase-2 10M index (create_if_missing hydrates Blocks'
     stored config; for Blocks we re-pin the 10M params to be safe)."""
@@ -60,7 +64,9 @@ def run_cell(adapter, conc, args, attempt):
     queries = K.load_queries()
     assert len(queries) == 1000, "expected 1000 query rows"
 
+    global _LAST_CLIENT
     client = build_setup(adapter)
+    _LAST_CLIENT = client
     fp = client.dataset_fingerprint(K.DATASET)
     caps = client.capabilities()
     anchor_ok = fp.get("content_sha256") == K.CORPUS_SHA256
@@ -78,7 +84,9 @@ def run_cell(adapter, conc, args, attempt):
     # warmup (discarded): pays the container cold start once.
     if args.warmup > 0:
         t = time.time()
-        client.query_batch(queries[:args.warmup], top_k=C.TOP_K)
+        from harness.records import record_warmup
+        record_warmup(client, queries, args.warmup, C.TOP_K,
+                      os.path.join(K.RESULTS_DIR, f"sweep_{adapter}_c{conc}.jsonl"))
         print(f"[c3/sweep/{adapter} c={conc}] warmup {args.warmup} discarded "
               f"in {time.time() - t:.1f}s")
 
@@ -97,7 +105,13 @@ def run_cell(adapter, conc, args, attempt):
     sink.manifest_path = os.path.join(K.RESULTS_DIR, f"{stem}.manifest.json")
 
     t0 = time.time()
-    paths = asyncio.run(sink.consume(gen.run(config)))
+    try:
+        paths = asyncio.run(sink.consume(gen.run(config)))
+    finally:
+        if adapter == "lancedb_microvm":
+            client.teardown()  # one MicroVM per cell; at 8 GB a retry could not launch while it lives
+            with open(os.path.join(K.RESULTS_DIR, f"{stem}.lifecycle.json"), "w") as lf:
+                json.dump(client.transition_record, lf, indent=1, default=str)  # E3: running/suspended seconds
     wall = time.time() - t0
     print(f"[c3/sweep/{adapter} c={conc}] DONE records={paths.n_records} "
           f"wall={wall:.1f}s realised={paths.n_records / wall:.2f} ops/s")
@@ -106,7 +120,7 @@ def run_cell(adapter, conc, args, attempt):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("adapter", choices=["blocks", "s3vectors", "lancedb"])
+    ap.add_argument("adapter", choices=["blocks", "s3vectors", "lancedb", "lancedb_microvm"])
     ap.add_argument("concurrency", type=int)
     ap.add_argument("--duration", type=float, default=45.0)
     ap.add_argument("--ops", type=float, default=100.0)
@@ -132,6 +146,8 @@ def main():
         except Exception as e:  # noqa: BLE001 — keep the sweep alive across a transient fault
             print(f"[c3/sweep/{adapter} c={conc}] attempt {attempt} ABORTED "
                   f"(transient?): {e!r}")
+            if adapter == "lancedb_microvm" and _LAST_CLIENT is not None:
+                _LAST_CLIENT.teardown()  # idempotent
             if attempt == 2:
                 print(f"\n=== C3 SWEEP {adapter.upper()} c={conc} FAILED (2 attempts) ===")
                 return 1

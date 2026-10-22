@@ -1,0 +1,7 @@
+[s3vectors] dataset 'deep_10m' -> index name 'deep-10m' (S3 Vectors index names are lowercase/digits/hyphens only).
+[c3/sweep/s3vectors c=1] attempt=1 setup OK metric=l2 max_safe_conc=4 sha256=72e0840f1f4605ac5d8715422f3d77154b310414e908ce6768b1bcebda0aa849 anchor_ok=True
+[c3/sweep/s3vectors c=1] warmup 5 discarded in 2.1s
+[c3/sweep/s3vectors c=1] configured=1 effective=1 duration=330.0s ops=100.0
+[c3/sweep/s3vectors c=1] DONE records=1027 wall=416.3s realised=2.47 ops/s
+
+=== C3 SWEEP S3VECTORS c=1 DONE ===

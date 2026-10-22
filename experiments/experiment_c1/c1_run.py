@@ -95,7 +95,8 @@ def main():
 
     # --- 50-query serial measure ---
     print(f"[c1/{args.label}] measuring {args.n} queries (warmup {args.warmup}) ...")
-    m = K.measure(client, queries, truth, n=args.n, warmup=args.warmup, top_k=C.TOP_K)
+    m = K.measure(client, queries, truth, n=args.n, warmup=args.warmup, top_k=C.TOP_K,
+                  raw_path=os.path.join(K.RESULTS_DIR, f"measure_{args.label}.raw.json"))
     m.update({
         "label": args.label, "axis": args.axis, "swept_value": args.value,
         "started_utc": started,

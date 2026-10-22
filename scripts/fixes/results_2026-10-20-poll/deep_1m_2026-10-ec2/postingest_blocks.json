@@ -1,0 +1,24 @@
+{
+ "system": "blocks",
+ "csv_lines": 1000000,
+ "count": {
+  "n_block_files": 16,
+  "fourccs": [
+   "IwFl"
+  ],
+  "sum_ntotal": 1000000,
+  "dims": true,
+  "note": "if the fourcc is not a known FAISS index code, the header parse is invalid - inspect one file instead"
+ },
+ "self_query": {
+  "n": 30,
+  "n_ok": 30,
+  "top1_exact": 30,
+  "top1_zero_dist_other_id": 0,
+  "in_top10": 30,
+  "failures": [],
+  "mismatches": []
+ },
+ "elapsed_s": 247.8,
+ "timestamp_utc": "2026-10-16T16:42:17Z"
+}
