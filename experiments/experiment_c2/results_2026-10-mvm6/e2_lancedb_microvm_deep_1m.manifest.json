@@ -1,0 +1,665 @@
+{
+ "started_utc": "2026-10-26T15:45:35Z",
+ "dataset": "deep_1m",
+ "protocol": {
+  "dataset": "deep_1m",
+  "delays": "0,30,60",
+  "per_delay": 3,
+  "cycles": 10,
+  "idle_suspend": 60,
+  "suspended": 30,
+  "parts": "launch,resume",
+  "gap": 30.0,
+  "i_have_approval": false,
+  "resume_settle": 60.0,
+  "image": "thesis-lancedb-mvm-deep1m-v6",
+  "out_suffix": ""
+ },
+ "launches": [
+  {
+   "delay_s": 0.0,
+   "k": 0,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-a82d4e3c-685f-3788-ba3c-05dba716fc40",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.356076240539551,
+    "polled_running_s": 2.236668109893799,
+    "rows": 1000000,
+    "setup_s": 2.4298133850097656
+   }
+  },
+  {
+   "delay_s": 0.0,
+   "k": 1,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "microvm_id": "microvm-516eae67-f552-33e9-9281-4a57d2e2a6ef",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.387671947479248,
+    "polled_running_s": 2.227701187133789,
+    "rows": 1000000,
+    "setup_s": 2.463332176208496
+   }
+  },
+  {
+   "delay_s": 0.0,
+   "k": 2,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "microvm_id": "microvm-6df546fb-e740-3b73-8299-259e0f24d3c3",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 1.8483898639678955,
+    "polled_running_s": 1.694887399673462,
+    "rows": 1000000,
+    "setup_s": 1.9199848175048828
+   }
+  },
+  {
+   "delay_s": 30.0,
+   "k": 0,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-112f4347-ba68-3db4-b0ca-3685c1ebff57",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3645145893096924,
+    "polled_running_s": 2.2335076332092285,
+    "rows": 1000000,
+    "setup_s": 2.4408912658691406
+   }
+  },
+  {
+   "delay_s": 30.0,
+   "k": 1,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-cb8fc833-ef7b-37dd-ad00-f36056869ed6",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.378150463104248,
+    "polled_running_s": 2.236980438232422,
+    "rows": 1000000,
+    "setup_s": 2.459953784942627
+   }
+  },
+  {
+   "delay_s": 30.0,
+   "k": 2,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "microvm_id": "microvm-9b27f641-2a3a-3b1e-bd80-f8d4965e577f",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.356579542160034,
+    "polled_running_s": 2.232652425765991,
+    "rows": 1000000,
+    "setup_s": 2.4329237937927246
+   }
+  },
+  {
+   "delay_s": 60.0,
+   "k": 0,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-f71cee4d-c211-38e8-b646-67700a52c331",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3582892417907715,
+    "polled_running_s": 2.2252357006073,
+    "rows": 1000000,
+    "setup_s": 2.4306764602661133
+   }
+  },
+  {
+   "delay_s": 60.0,
+   "k": 1,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "microvm_id": "microvm-73fa0848-3acd-3b4a-9f19-52c11554cdd8",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.349989414215088,
+    "polled_running_s": 2.227553367614746,
+    "rows": 1000000,
+    "setup_s": 2.420931577682495
+   }
+  },
+  {
+   "delay_s": 60.0,
+   "k": 2,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-1909338f-f086-34a1-abb6-fc3656041c5a",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.381009578704834,
+    "polled_running_s": 2.2505524158477783,
+    "rows": 1000000,
+    "setup_s": 2.4557130336761475
+   }
+  }
+ ],
+ "resume": {
+  "backend_version": {
+   "service": "lambda-microvms",
+   "region": "us-east-1",
+   "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m-v6",
+   "image_version": "1.0",
+   "baseline_memory_mib": 2048,
+   "lancedb": "0.33.0",
+   "cpu_part": [
+    "0xd40"
+   ],
+   "microvm_id": "microvm-6cbb9389-9af7-307e-a3e1-fca7543e5a61",
+   "microvm_owned": true,
+   "settle_s": 60.0,
+   "boto3": "1.43.79",
+   "botocore": "1.43.79",
+   "requests": "2.34.2"
+  },
+  "lifecycle": {
+   "mode": "launch",
+   "run_to_running_s": 2.34167742729187,
+   "polled_running_s": 2.219578981399536,
+   "rows": 1000000,
+   "setup_s": 62.485958099365234
+  }
+ },
+ "failed_launches": [],
+ "failed_cycles": [],
+ "launch_transitions": [
+  {
+   "run_hooks": [
+    1793029567.7332656
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7462,
+    "Cached_MB": 591,
+    "rss_MB": 301,
+    "minflt": 70056,
+    "majflt": 1505,
+    "proc_cpu_s": 12.32,
+    "host_busy_cpu_s": 16.05,
+    "uptime_s": 46.1,
+    "t": 1793029568.7064235,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-a82d4e3c-685f-3788-ba3c-05dba716fc40",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:46:05.700000+00:00",
+   "terminated_at": "2026-10-26 15:46:09.401000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.356076240539551,
+    "polled_running_s": 2.236668109893799,
+    "rows": 1000000,
+    "setup_s": 2.4298133850097656
+   }
+  },
+  {
+   "run_hooks": [
+    1793029602.6543612
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7467,
+    "Cached_MB": 588,
+    "rss_MB": 307,
+    "minflt": 72376,
+    "majflt": 1507,
+    "proc_cpu_s": 9.87,
+    "host_busy_cpu_s": 12.71,
+    "uptime_s": 46.03,
+    "t": 1793029603.7363718,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-516eae67-f552-33e9-9281-4a57d2e2a6ef",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:46:40.901000+00:00",
+   "terminated_at": "2026-10-26 15:46:44.355000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.387671947479248,
+    "polled_running_s": 2.227701187133789,
+    "rows": 1000000,
+    "setup_s": 2.463332176208496
+   }
+  },
+  {
+   "run_hooks": [
+    1793029636.813142
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7478,
+    "Cached_MB": 587,
+    "rss_MB": 296,
+    "minflt": 69405,
+    "majflt": 1507,
+    "proc_cpu_s": 9.88,
+    "host_busy_cpu_s": 12.94,
+    "uptime_s": 45.49,
+    "t": 1793029637.5609019,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-6df546fb-e740-3b73-8299-259e0f24d3c3",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:47:15.274000+00:00",
+   "terminated_at": "2026-10-26 15:47:18.022000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 1.8483898639678955,
+    "polled_running_s": 1.694887399673462,
+    "rows": 1000000,
+    "setup_s": 1.9199848175048828
+   }
+  },
+  {
+   "run_hooks": [
+    1793029670.88673
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7464,
+    "Cached_MB": 591,
+    "rss_MB": 296,
+    "minflt": 69050,
+    "majflt": 1505,
+    "proc_cpu_s": 12.26,
+    "host_busy_cpu_s": 16.53,
+    "uptime_s": 76.18,
+    "t": 1793029702.158742,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-112f4347-ba68-3db4-b0ca-3685c1ebff57",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:47:49.120000+00:00",
+   "terminated_at": "2026-10-26 15:48:22.824000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3645145893096924,
+    "polled_running_s": 2.2335076332092285,
+    "rows": 1000000,
+    "setup_s": 2.4408912658691406
+   }
+  },
+  {
+   "run_hooks": [
+    1793029735.9960012
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7467,
+    "Cached_MB": 590,
+    "rss_MB": 296,
+    "minflt": 68796,
+    "majflt": 1505,
+    "proc_cpu_s": 12.29,
+    "host_busy_cpu_s": 16.55,
+    "uptime_s": 76.12,
+    "t": 1793029767.287062,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-cb8fc833-ef7b-37dd-ad00-f36056869ed6",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:48:54.281000+00:00",
+   "terminated_at": "2026-10-26 15:49:27.954000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.378150463104248,
+    "polled_running_s": 2.236980438232422,
+    "rows": 1000000,
+    "setup_s": 2.459953784942627
+   }
+  },
+  {
+   "run_hooks": [
+    1793029800.5057383
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7475,
+    "Cached_MB": 588,
+    "rss_MB": 300,
+    "minflt": 70278,
+    "majflt": 1507,
+    "proc_cpu_s": 9.82,
+    "host_busy_cpu_s": 13.12,
+    "uptime_s": 76.04,
+    "t": 1793029831.6464322,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-9b27f641-2a3a-3b1e-bd80-f8d4965e577f",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:49:58.801000+00:00",
+   "terminated_at": "2026-10-26 15:50:32.255000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.356579542160034,
+    "polled_running_s": 2.232652425765991,
+    "rows": 1000000,
+    "setup_s": 2.4329237937927246
+   }
+  },
+  {
+   "run_hooks": [
+    1793029864.879003
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7470,
+    "Cached_MB": 591,
+    "rss_MB": 293,
+    "minflt": 67996,
+    "majflt": 1505,
+    "proc_cpu_s": 12.28,
+    "host_busy_cpu_s": 16.86,
+    "uptime_s": 105.94,
+    "t": 1793029926.1366928,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-f71cee4d-c211-38e8-b646-67700a52c331",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:51:03.187000+00:00",
+   "terminated_at": "2026-10-26 15:52:06.781000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3582892417907715,
+    "polled_running_s": 2.2252357006073,
+    "rows": 1000000,
+    "setup_s": 2.4306764602661133
+   }
+  },
+  {
+   "run_hooks": [
+    1793029959.2888994
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7463,
+    "Cached_MB": 588,
+    "rss_MB": 311,
+    "minflt": 73314,
+    "majflt": 1507,
+    "proc_cpu_s": 9.82,
+    "host_busy_cpu_s": 13.64,
+    "uptime_s": 106.12,
+    "t": 1793030020.5659332,
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-73fa0848-3acd-3b4a-9f19-52c11554cdd8",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:52:37.699000+00:00",
+   "terminated_at": "2026-10-26 15:53:41.196000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.349989414215088,
+    "polled_running_s": 2.227553367614746,
+    "rows": 1000000,
+    "setup_s": 2.420931577682495
+   }
+  },
+  {
+   "run_hooks": [
+    1793030053.7002425
+   ],
+   "resume_hooks": [],
+   "suspend_hooks": [],
+   "stats_at_teardown": {
+    "MemTotal_MB": 8016,
+    "MemAvailable_MB": 7464,
+    "Cached_MB": 590,
+    "rss_MB": 298,
+    "minflt": 69197,
+    "majflt": 1505,
+    "proc_cpu_s": 12.29,
+    "host_busy_cpu_s": 17.04,
+    "uptime_s": 106.1,
+    "t": 1793030115.1417954,
+    "cpu_part": [
+     "0xd40"
+    ],
+    "ncpu": 4
+   },
+   "microvm_id": "microvm-1909338f-f086-34a1-abb6-fc3656041c5a",
+   "state": "TERMINATED",
+   "started_at": "2026-10-26 15:54:12.151000+00:00",
+   "terminated_at": "2026-10-26 15:55:15.762000+00:00",
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.381009578704834,
+    "polled_running_s": 2.2505524158477783,
+    "rows": 1000000,
+    "setup_s": 2.4557130336761475
+   }
+  }
+ ],
+ "resume_transitions": {
+  "run_hooks": [
+   1793030148.8087456
+  ],
+  "resume_hooks": [
+   1793030303.5914302,
+   1793030398.522837,
+   1793030492.1410189,
+   1793030588.8641574,
+   1793030684.1720872,
+   1793030787.0341916,
+   1793030888.4477694,
+   1793030983.0511878,
+   1793031081.777011,
+   1793031183.4521585
+  ],
+  "suspend_hooks": [
+   1793030271.654863,
+   1793030366.0758939,
+   1793030460.7726228,
+   1793030556.5037587,
+   1793030651.8365078,
+   1793030755.8877847,
+   1793030857.38093,
+   1793030950.3172336,
+   1793031049.5495088,
+   1793031150.9565012
+  ],
+  "stats_at_teardown": {
+   "MemTotal_MB": 8016,
+   "MemAvailable_MB": 7458,
+   "Cached_MB": 574,
+   "rss_MB": 323,
+   "minflt": 75694,
+   "majflt": 1506,
+   "proc_cpu_s": 23.04,
+   "host_busy_cpu_s": 40.71,
+   "uptime_s": 1080.13,
+   "t": 1793031184.242168,
+   "cpu_part": [
+    "0xd40"
+   ],
+   "ncpu": 4
+  },
+  "microvm_id": "microvm-6cbb9389-9af7-307e-a3e1-fca7543e5a61",
+  "state": "TERMINATED",
+  "started_at": "2026-10-26 15:55:47.223000+00:00",
+  "terminated_at": "2026-10-26 16:13:04.952000+00:00",
+  "lifecycle": {
+   "mode": "launch",
+   "run_to_running_s": 2.34167742729187,
+   "polled_running_s": 2.219578981399536,
+   "rows": 1000000,
+   "setup_s": 62.485958099365234
+  }
+ },
+ "ended_utc": "2026-10-26T16:13:05Z"
+}

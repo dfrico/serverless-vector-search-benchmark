@@ -1,0 +1,5 @@
+startup {"t": 1792881342.9696822, "wall_s": 125.354, "status": 502, "body": ""}
+cycle 0: SUSPENDED after 66.2 s (settled 66.2 s)
+  resume query {"t": 1792881609.5390506, "wall_s": 3.848, "status": 200, "body": {"server_ms": 3282.4780160000273, "runs": 1, "resumes": 2, "cpu_part": ["0xd40"]}}
+cycle 1: TERMINATED after 70.0 s (settled 73.1 s)
+-> /home/ec2-user/thesis/scripts/microvm/results/hook_probe_deep_10m_v4ctl_20261024T224202Z.json

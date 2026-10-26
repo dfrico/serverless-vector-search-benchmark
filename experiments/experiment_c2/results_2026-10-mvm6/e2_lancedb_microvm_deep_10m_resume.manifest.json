@@ -1,0 +1,70 @@
+{
+ "started_utc": "2026-10-26T16:46:38Z",
+ "dataset": "deep_10m",
+ "protocol": {
+  "dataset": "deep_10m",
+  "delays": "0,30,60",
+  "per_delay": 3,
+  "cycles": 10,
+  "idle_suspend": 60,
+  "suspended": 30,
+  "parts": "resume",
+  "gap": 30.0,
+  "i_have_approval": true,
+  "resume_settle": 0.0,
+  "image": "thesis-lancedb-mvm-deep10m-v6",
+  "out_suffix": "_resume"
+ },
+ "launches": [],
+ "resume": {
+  "backend_version": {
+   "service": "lambda-microvms",
+   "region": "us-east-1",
+   "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep10m-v6",
+   "image_version": "1.0",
+   "baseline_memory_mib": 8192,
+   "lancedb": "0.33.0",
+   "cpu_part": [
+    "0xd40"
+   ],
+   "microvm_id": "microvm-af0336e8-601f-3a8e-9a43-429d6b31e3fb",
+   "microvm_owned": true,
+   "settle_s": 0.0,
+   "boto3": "1.43.79",
+   "botocore": "1.43.79",
+   "requests": "2.34.2"
+  },
+  "lifecycle": {
+   "mode": "launch",
+   "run_to_running_s": 6.715103626251221,
+   "polled_running_s": 6.582053899765015,
+   "rows": 10000000,
+   "setup_s": 6.78783917427063
+  }
+ },
+ "failed_launches": [],
+ "failed_cycles": [
+  {
+   "cycle": 7,
+   "error": "MicroVM POST /query returned HTTP 502: Bad Gateway",
+   "state": "TERMINATED",
+   "state_reason": "Internal service error."
+  }
+ ],
+ "launch_transitions": [],
+ "resume_transitions": {
+  "stats_error": "RuntimeError: MicroVM GET /stats returned HTTP 502: ",
+  "microvm_id": "microvm-af0336e8-601f-3a8e-9a43-429d6b31e3fb",
+  "state": "TERMINATED",
+  "started_at": "2026-10-26 16:47:08.711000+00:00",
+  "terminated_at": "2026-10-26 17:05:16.350000+00:00",
+  "lifecycle": {
+   "mode": "launch",
+   "run_to_running_s": 6.715103626251221,
+   "polled_running_s": 6.582053899765015,
+   "rows": 10000000,
+   "setup_s": 6.78783917427063
+  }
+ },
+ "ended_utc": "2026-10-26T17:05:23Z"
+}

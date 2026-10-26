@@ -1,0 +1,295 @@
+{
+ "started_utc": "2026-10-22T13:31:30Z",
+ "dataset": "deep_1m",
+ "protocol": {
+  "dataset": "deep_1m",
+  "delays": "0,30,60",
+  "per_delay": 3,
+  "cycles": 10,
+  "idle_suspend": 60,
+  "suspended": 30,
+  "parts": "launch,resume",
+  "i_have_approval": false
+ },
+ "launches": [
+  {
+   "delay_s": 0.0,
+   "k": 0,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-64fed7d4-5549-32ab-b896-7a9d9799a355",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.323927164077759,
+    "polled_running_s": 2.2189061641693115,
+    "rows": 1000000,
+    "setup_s": 2.402740001678467
+   }
+  },
+  {
+   "delay_s": 0.0,
+   "k": 1,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-63d23b0a-baf7-3f37-898d-9c8e2bf7d65d",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3483755588531494,
+    "polled_running_s": 2.2293314933776855,
+    "rows": 1000000,
+    "setup_s": 2.419402837753296
+   }
+  },
+  {
+   "delay_s": 0.0,
+   "k": 2,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-5715c067-957b-3241-bdac-ded6eaa3c0f9",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.343066930770874,
+    "polled_running_s": 2.2219274044036865,
+    "rows": 1000000,
+    "setup_s": 2.4220221042633057
+   }
+  },
+  {
+   "delay_s": 30.0,
+   "k": 0,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-5d7df65e-3613-33bc-a309-99b56942621b",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 1.8710532188415527,
+    "polled_running_s": 1.6871137619018555,
+    "rows": 1000000,
+    "setup_s": 1.945988655090332
+   }
+  },
+  {
+   "delay_s": 30.0,
+   "k": 1,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-03e7c4a0-b2ef-3e0a-89a4-dbcb4b10c1ce",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.392387628555298,
+    "polled_running_s": 2.221431255340576,
+    "rows": 1000000,
+    "setup_s": 2.475853443145752
+   }
+  },
+  {
+   "delay_s": 30.0,
+   "k": 2,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "microvm_id": "microvm-6f368efd-9a9d-3fdd-8fbc-1f056e092322",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.376314401626587,
+    "polled_running_s": 2.2283775806427,
+    "rows": 1000000,
+    "setup_s": 2.4466350078582764
+   }
+  },
+  {
+   "delay_s": 60.0,
+   "k": 0,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-16dd6a51-1f93-31c9-a5fb-eb6dddf61d79",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3520357608795166,
+    "polled_running_s": 2.221421957015991,
+    "rows": 1000000,
+    "setup_s": 2.4317853450775146
+   }
+  },
+  {
+   "delay_s": 60.0,
+   "k": 1,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd40"
+    ],
+    "microvm_id": "microvm-f02e33da-102a-34f4-865d-f834f42e367c",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.340332269668579,
+    "polled_running_s": 2.2181360721588135,
+    "rows": 1000000,
+    "setup_s": 2.42185115814209
+   }
+  },
+  {
+   "delay_s": 60.0,
+   "k": 2,
+   "backend_version": {
+    "service": "lambda-microvms",
+    "region": "us-east-1",
+    "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+    "image_version": "1.0",
+    "baseline_memory_mib": 2048,
+    "lancedb": "0.33.0",
+    "cpu_part": [
+     "0xd4f"
+    ],
+    "microvm_id": "microvm-35eeb195-0e8f-3753-bcf3-2b725e4d8fab",
+    "microvm_owned": true,
+    "settle_s": 0.0,
+    "boto3": "1.43.79",
+    "botocore": "1.43.79",
+    "requests": "2.34.2"
+   },
+   "lifecycle": {
+    "mode": "launch",
+    "run_to_running_s": 2.3660247325897217,
+    "polled_running_s": 2.235093593597412,
+    "rows": 1000000,
+    "setup_s": 2.439484119415283
+   }
+  }
+ ],
+ "resume": {
+  "backend_version": {
+   "service": "lambda-microvms",
+   "region": "us-east-1",
+   "image_arn": "arn:aws:lambda:us-east-1:<AWS_ACCOUNT_ID>:microvm-image:thesis-lancedb-mvm-deep1m",
+   "image_version": "1.0",
+   "baseline_memory_mib": 2048,
+   "lancedb": "0.33.0",
+   "cpu_part": [
+    "0xd40"
+   ],
+   "microvm_id": "microvm-4be2d506-e4e3-3d3a-970a-e5f3f46de222",
+   "microvm_owned": true,
+   "settle_s": 60.0,
+   "boto3": "1.43.79",
+   "botocore": "1.43.79",
+   "requests": "2.34.2"
+  },
+  "lifecycle": {
+   "mode": "launch",
+   "run_to_running_s": 2.3359200954437256,
+   "polled_running_s": 2.211334705352783,
+   "rows": 1000000,
+   "setup_s": 62.471171855926514
+  }
+ },
+ "ended_utc": "2026-10-22T13:54:55Z"
+}

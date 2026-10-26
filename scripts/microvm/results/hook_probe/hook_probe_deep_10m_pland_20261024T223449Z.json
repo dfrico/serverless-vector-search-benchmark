@@ -1,0 +1,1146 @@
+{
+ "image": "thesis-lancedb-mvm-deep10m-trace",
+ "dataset": "deep_10m",
+ "tag": "pland",
+ "ballast_mb": 0,
+ "dropcaches": false,
+ "idle_s": 60,
+ "cycles": [
+  {
+   "cycle": 0,
+   "queries": [
+    {
+     "t": 1792880648.1442268,
+     "wall_s": 30.836,
+     "status": 200,
+     "body": {
+      "server_ms": 29917.667437000007,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880678.9803894,
+     "wall_s": 0.685,
+     "status": 200,
+     "body": {
+      "server_ms": 519.9627279999959,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880679.6651015,
+     "wall_s": 0.459,
+     "status": 200,
+     "body": {
+      "server_ms": 452.0919009999602,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880680.1242323,
+     "wall_s": 0.508,
+     "status": 200,
+     "body": {
+      "server_ms": 452.86695900000495,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880680.6324532,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 449.5383240000024,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792880681.1428442,
+   "left_running_s": 61.6,
+   "state": "SUSPENDED",
+   "settled_s": 61.6,
+   "resume_query": {
+    "t": 1792880762.725113,
+    "wall_s": 1.305,
+    "status": 200,
+    "body": {
+     "server_ms": 744.52291099999,
+     "runs": 1,
+     "resumes": 2,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 1,
+   "queries": [
+    {
+     "t": 1792880764.0307572,
+     "wall_s": 0.511,
+     "status": 200,
+     "body": {
+      "server_ms": 447.5702230000138,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880764.5416217,
+     "wall_s": 0.5,
+     "status": 200,
+     "body": {
+      "server_ms": 449.8807930000339,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880765.041728,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 446.17877399997496,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880765.5517588,
+     "wall_s": 0.511,
+     "status": 200,
+     "body": {
+      "server_ms": 443.8022470000078,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880766.062466,
+     "wall_s": 0.499,
+     "status": 200,
+     "body": {
+      "server_ms": 451.19451300001856,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792880766.5614645,
+   "left_running_s": 62.6,
+   "state": "SUSPENDED",
+   "settled_s": 63.7,
+   "resume_query": {
+    "t": 1792880850.2552466,
+    "wall_s": 19.886,
+    "status": 200,
+    "body": {
+     "server_ms": 19121.458047000033,
+     "runs": 1,
+     "resumes": 3,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 2,
+   "queries": [
+    {
+     "t": 1792880870.1414218,
+     "wall_s": 0.494,
+     "status": 200,
+     "body": {
+      "server_ms": 441.65618400000994,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880870.6354442,
+     "wall_s": 0.507,
+     "status": 200,
+     "body": {
+      "server_ms": 445.6343919999881,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880871.1427422,
+     "wall_s": 0.508,
+     "status": 200,
+     "body": {
+      "server_ms": 446.85529100001986,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880871.651368,
+     "wall_s": 0.489,
+     "status": 200,
+     "body": {
+      "server_ms": 440.81622100003415,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880872.1409514,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 444.3547790000366,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792880872.6509893,
+   "left_running_s": 71.0,
+   "state": "SUSPENDED",
+   "settled_s": 72.0,
+   "resume_query": {
+    "t": 1792880964.6834548,
+    "wall_s": 1.31,
+    "status": 200,
+    "body": {
+     "server_ms": 747.3995610000657,
+     "runs": 1,
+     "resumes": 4,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 3,
+   "queries": [
+    {
+     "t": 1792880965.9932537,
+     "wall_s": 0.508,
+     "status": 200,
+     "body": {
+      "server_ms": 448.10419499992804,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880966.5009713,
+     "wall_s": 0.509,
+     "status": 200,
+     "body": {
+      "server_ms": 456.3051139999743,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880967.0104177,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 452.0420589999503,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880967.5204957,
+     "wall_s": 0.5,
+     "status": 200,
+     "body": {
+      "server_ms": 451.77470999999514,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792880968.0209336,
+     "wall_s": 0.499,
+     "status": 200,
+     "body": {
+      "server_ms": 451.80096000001413,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792880968.5204055,
+   "left_running_s": 62.7,
+   "state": "SUSPENDED",
+   "settled_s": 63.7,
+   "resume_query": {
+    "t": 1792881052.2734256,
+    "wall_s": 5.496,
+    "status": 200,
+    "body": {
+     "server_ms": 4923.595226999964,
+     "runs": 1,
+     "resumes": 5,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 4,
+   "queries": [
+    {
+     "t": 1792881057.7696383,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 449.76342500001465,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881058.279943,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 455.23880700000063,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881058.8000443,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 448.0086290000145,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881059.3098097,
+     "wall_s": 0.521,
+     "status": 200,
+     "body": {
+      "server_ms": 457.4636410000039,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881059.830718,
+     "wall_s": 0.499,
+     "status": 200,
+     "body": {
+      "server_ms": 452.16689500000484,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792881060.329639,
+   "left_running_s": 70.1,
+   "state": "SUSPENDED",
+   "settled_s": 71.1,
+   "resume_query": {
+    "t": 1792881151.4851258,
+    "wall_s": 14.457,
+    "status": 200,
+    "body": {
+     "server_ms": 13826.446583999996,
+     "runs": 1,
+     "resumes": 6,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 5,
+   "queries": [
+    {
+     "t": 1792881165.9424832,
+     "wall_s": 0.497,
+     "status": 200,
+     "body": {
+      "server_ms": 449.29124899999806,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881166.4394526,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 455.5238589999817,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881166.9494166,
+     "wall_s": 0.5,
+     "status": 200,
+     "body": {
+      "server_ms": 448.4496649999983,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881167.4494603,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 451.5793510000776,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881167.9592998,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 453.6870590000035,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792881168.469104,
+   "left_running_s": 64.7,
+   "state": "SUSPENDED",
+   "settled_s": 64.7,
+   "resume_query": {
+    "t": 1792881253.1774216,
+    "wall_s": 1.246,
+    "status": 200,
+    "body": {
+     "server_ms": 681.25330700002,
+     "runs": 1,
+     "resumes": 7,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  }
+ ],
+ "started_utc": "2026-10-24T22:21:52Z",
+ "microvm_id": "microvm-85beb9bf-4a22-3ab8-947d-a5053d57294b",
+ "running_at": 1792880526.4568822,
+ "startup_query": {
+  "t": 1792880526.5031044,
+  "wall_s": 121.64,
+  "status": 502,
+  "body": ""
+ },
+ "final_get": {
+  "state": "RUNNING",
+  "stateReason": "None",
+  "startedAt": "2026-10-24 22:21:52.792000+00:00",
+  "terminatedAt": "None"
+ },
+ "final_state": "TERMINATED",
+ "log": [
+  [
+   1792880525.803,
+   "trace t=1792880525.803 gap=2021.837 {\"MemFree\": 30462, \"Cached\": 980, \"Dirty\": 770, \"Writeback\": 0, \"AnonPages\": 499, \"pgfault\": 328678, \"pgmajfault\": 2249, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880525.817,
+   "hook run load=loaded t_in=1792880525.818 port=52392 conn_age=0.0 req_on_conn=1 {\"MemFree\": 30463, \"Cached\": 980, \"Dirty\": 770, \"Writeback\": 0, \"AnonPages\": 496, \"pgfault\": 328785, \"pgmajfault\": 2257, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880525.817,
+   "hook-reply run ok t=1792880525.818"
+  ],
+  [
+   1792880526.658,
+   "[2026-10-24T22:22:06Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880535.805,
+   "trace t=1792880535.805 gap=0.500 {\"MemFree\": 30339, \"Cached\": 1023, \"Dirty\": 715, \"Writeback\": 8, \"AnonPages\": 524, \"pgfault\": 336078, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880545.807,
+   "trace t=1792880545.807 gap=0.500 {\"MemFree\": 30356, \"Cached\": 1071, \"Dirty\": 649, \"Writeback\": 17, \"AnonPages\": 525, \"pgfault\": 336432, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880555.809,
+   "trace t=1792880555.809 gap=0.500 {\"MemFree\": 30314, \"Cached\": 1111, \"Dirty\": 592, \"Writeback\": 12, \"AnonPages\": 526, \"pgfault\": 336750, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880565.811,
+   "trace t=1792880565.811 gap=0.500 {\"MemFree\": 30260, \"Cached\": 1165, \"Dirty\": 520, \"Writeback\": 13, \"AnonPages\": 527, \"pgfault\": 336915, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880575.813,
+   "trace t=1792880575.813 gap=0.500 {\"MemFree\": 30202, \"Cached\": 1222, \"Dirty\": 447, \"Writeback\": 10, \"AnonPages\": 528, \"pgfault\": 337188, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880585.815,
+   "trace t=1792880585.815 gap=0.500 {\"MemFree\": 30147, \"Cached\": 1276, \"Dirty\": 370, \"Writeback\": 27, \"AnonPages\": 528, \"pgfault\": 337222, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880594.51,
+   "hook suspend load=loaded t_in=1792880594.510 port=52392 conn_age=68.7 req_on_conn=2 {\"MemFree\": 30084, \"Cached\": 1341, \"Dirty\": 252, \"Writeback\": 27, \"AnonPages\": 528, \"pgfault\": 337252, \"pgmajfault\": 2258, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880594.51,
+   "hook-reply suspend ok t=1792880594.510"
+  ],
+  [
+   1792880648.546,
+   "trace t=1792880648.546 gap=54.229 {\"MemFree\": 30993, \"Cached\": 438, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 532, \"pgfault\": 349268, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880648.547,
+   "hook resume load=loaded t_in=1792880648.547 port=52392 conn_age=122.7 req_on_conn=3 {\"MemFree\": 30992, \"Cached\": 444, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 529, \"pgfault\": 349287, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880648.547,
+   "hook-reply resume ok t=1792880648.548"
+  ],
+  [
+   1792880649.06,
+   "[2026-10-24T22:24:09Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880658.548,
+   "trace t=1792880658.548 gap=0.500 {\"MemFree\": 30443, \"Cached\": 959, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 574, \"pgfault\": 361193, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880668.55,
+   "trace t=1792880668.550 gap=0.500 {\"MemFree\": 29725, \"Cached\": 1655, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 594, \"pgfault\": 366398, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880678.552,
+   "trace t=1792880678.552 gap=0.500 {\"MemFree\": 27836, \"Cached\": 3524, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 607, \"pgfault\": 369656, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880678.977,
+   "----------------------------------------"
+  ],
+  [
+   1792880678.977,
+   "Exception occurred during processing of request from ('127.0.0.1', 60880)"
+  ],
+  [
+   1792880679.065,
+   "[2026-10-24T22:24:39Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880679.662,
+   "Traceback (most recent call last):"
+  ],
+  [
+   1792880679.662,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 691, in process_request_thread"
+  ],
+  [
+   1792880679.662,
+   "    self.finish_request(request, client_address)"
+  ],
+  [
+   1792880679.662,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 361, in finish_request"
+  ],
+  [
+   1792880679.662,
+   "    self.RequestHandlerClass(request, client_address, self)"
+  ],
+  [
+   1792880679.662,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 755, in __init__"
+  ],
+  [
+   1792880679.662,
+   "    self.handle()"
+  ],
+  [
+   1792880679.662,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 442, in handle"
+  ],
+  [
+   1792880679.662,
+   "    self.handle_one_request()"
+  ],
+  [
+   1792880679.662,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 428, in handle_one_request"
+  ],
+  [
+   1792880679.662,
+   "    method()"
+  ],
+  [
+   1792880679.662,
+   "  File \"/app/server.py\", line 255, in do_POST"
+  ],
+  [
+   1792880679.662,
+   "    return self._send(200, {\"ok\": True, \"results\": res, \"server_ms\": server_ms,"
+  ],
+  [
+   1792880679.662,
+   "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+  ],
+  [
+   1792880679.662,
+   "  File \"/app/server.py\", line 181, in _send"
+  ],
+  [
+   1792880679.662,
+   "    self.wfile.write(b)"
+  ],
+  [
+   1792880679.662,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 834, in write"
+  ],
+  [
+   1792880679.662,
+   "    self._sock.sendall(b)"
+  ],
+  [
+   1792880679.662,
+   "BrokenPipeError: [Errno 32] Broken pipe"
+  ],
+  [
+   1792880679.662,
+   "----------------------------------------"
+  ],
+  [
+   1792880679.669,
+   "[2026-10-24T22:24:39Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880680.128,
+   "[2026-10-24T22:24:40Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880680.637,
+   "[2026-10-24T22:24:40Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880688.554,
+   "trace t=1792880688.554 gap=0.500 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 708, \"pgfault\": 395457, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880698.555,
+   "trace t=1792880698.555 gap=0.500 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 707, \"pgfault\": 395459, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880708.557,
+   "trace t=1792880708.557 gap=0.500 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 707, \"pgfault\": 395474, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880718.559,
+   "trace t=1792880718.559 gap=0.500 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 707, \"pgfault\": 395502, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880728.561,
+   "trace t=1792880728.561 gap=0.500 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 707, \"pgfault\": 395524, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880738.563,
+   "trace t=1792880738.563 gap=0.500 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 707, \"pgfault\": 395542, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880741.736,
+   "hook suspend load=loaded t_in=1792880741.736 port=48906 conn_age=0.0 req_on_conn=1 {\"MemFree\": 27371, \"Cached\": 3887, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 707, \"pgfault\": 395548, \"pgmajfault\": 2420, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880741.736,
+   "hook-reply suspend ok t=1792880741.736"
+  ],
+  [
+   1792880763.013,
+   "trace t=1792880763.013 gap=21.449 {\"MemFree\": 31061, \"Cached\": 208, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 712, \"pgfault\": 407598, \"pgmajfault\": 2580, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880763.014,
+   "hook resume load=loaded t_in=1792880763.014 port=48906 conn_age=21.3 req_on_conn=2 {\"MemFree\": 31062, \"Cached\": 208, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 709, \"pgfault\": 407602, \"pgmajfault\": 2580, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.05}"
+  ],
+  [
+   1792880763.014,
+   "hook-reply resume ok t=1792880763.014"
+  ],
+  [
+   1792880763.284,
+   "[2026-10-24T22:26:03Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880764.035,
+   "[2026-10-24T22:26:04Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880764.547,
+   "[2026-10-24T22:26:04Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880765.046,
+   "[2026-10-24T22:26:05Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880765.556,
+   "[2026-10-24T22:26:05Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880766.066,
+   "[2026-10-24T22:26:06Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880773.014,
+   "trace t=1792880773.014 gap=0.500 {\"MemFree\": 27324, \"Cached\": 3885, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423397, \"pgmajfault\": 2580, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880783.016,
+   "trace t=1792880783.016 gap=0.500 {\"MemFree\": 27326, \"Cached\": 3880, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423428, \"pgmajfault\": 2582, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880793.018,
+   "trace t=1792880793.018 gap=0.500 {\"MemFree\": 27342, \"Cached\": 3867, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423435, \"pgmajfault\": 2584, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880803.02,
+   "trace t=1792880803.020 gap=0.500 {\"MemFree\": 27342, \"Cached\": 3867, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423437, \"pgmajfault\": 2584, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880813.021,
+   "trace t=1792880813.021 gap=0.500 {\"MemFree\": 27398, \"Cached\": 3813, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423464, \"pgmajfault\": 2584, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880823.55,
+   "trace t=1792880823.023 gap=0.500 {\"MemFree\": 30110, \"Cached\": 1101, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423493, \"pgmajfault\": 2596, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880824.051,
+   "trace t=1792880824.051 gap=1.027 {\"MemFree\": 30109, \"Cached\": 1102, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423495, \"pgmajfault\": 2597, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880828.541,
+   "hook suspend load=loaded t_in=1792880828.541 port=48906 conn_age=86.8 req_on_conn=3 {\"MemFree\": 30336, \"Cached\": 876, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 423574, \"pgmajfault\": 2626, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880828.802,
+   "hook-reply suspend ok t=1792880828.802"
+  ],
+  [
+   1792880850.765,
+   "trace t=1792880850.765 gap=21.963 {\"MemFree\": 31072, \"Cached\": 144, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 772, \"pgfault\": 436256, \"pgmajfault\": 3019, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880850.766,
+   "hook resume load=loaded t_in=1792880850.766 port=48906 conn_age=109.0 req_on_conn=4 {\"MemFree\": 31072, \"Cached\": 144, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 770, \"pgfault\": 436258, \"pgmajfault\": 3019, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880850.766,
+   "hook-reply resume ok t=1792880850.767"
+  ],
+  [
+   1792880858.158,
+   "[2026-10-24T22:27:38Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880861.082,
+   "trace t=1792880861.082 gap=0.500 {\"MemFree\": 30946, \"Cached\": 283, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 769, \"pgfault\": 437035, \"pgmajfault\": 3221, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880870.146,
+   "[2026-10-24T22:27:50Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880870.641,
+   "[2026-10-24T22:27:50Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880871.134,
+   "trace t=1792880871.134 gap=0.500 {\"MemFree\": 27352, \"Cached\": 3836, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 792, \"pgfault\": 443114, \"pgmajfault\": 3236, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.06}"
+  ],
+  [
+   1792880871.147,
+   "[2026-10-24T22:27:51Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880871.656,
+   "[2026-10-24T22:27:51Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880872.145,
+   "[2026-10-24T22:27:52Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880881.136,
+   "trace t=1792880881.136 gap=0.500 {\"MemFree\": 27358, \"Cached\": 3828, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443508, \"pgmajfault\": 3236, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880891.137,
+   "trace t=1792880891.137 gap=0.500 {\"MemFree\": 27357, \"Cached\": 3829, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443574, \"pgmajfault\": 3255, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880901.139,
+   "trace t=1792880901.139 gap=0.500 {\"MemFree\": 27370, \"Cached\": 3819, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443595, \"pgmajfault\": 3256, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880911.141,
+   "trace t=1792880911.141 gap=0.500 {\"MemFree\": 27375, \"Cached\": 3809, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443610, \"pgmajfault\": 3256, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880921.143,
+   "trace t=1792880921.143 gap=0.500 {\"MemFree\": 27386, \"Cached\": 3801, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443629, \"pgmajfault\": 3256, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880931.144,
+   "trace t=1792880931.145 gap=0.500 {\"MemFree\": 27387, \"Cached\": 3799, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443659, \"pgmajfault\": 3256, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880941.146,
+   "trace t=1792880941.146 gap=0.500 {\"MemFree\": 27387, \"Cached\": 3799, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443660, \"pgmajfault\": 3256, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880943.306,
+   "hook suspend load=loaded t_in=1792880943.306 port=49630 conn_age=0.0 req_on_conn=1 {\"MemFree\": 27387, \"Cached\": 3799, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 794, \"pgfault\": 443670, \"pgmajfault\": 3256, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880943.306,
+   "hook-reply suspend ok t=1792880943.306"
+  ],
+  [
+   1792880964.994,
+   "trace t=1792880964.994 gap=21.847 {\"MemFree\": 31035, \"Cached\": 150, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 798, \"pgfault\": 455729, \"pgmajfault\": 3440, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880964.995,
+   "hook resume load=loaded t_in=1792880964.995 port=49630 conn_age=21.7 req_on_conn=2 {\"MemFree\": 31035, \"Cached\": 150, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 795, \"pgfault\": 455732, \"pgmajfault\": 3440, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.07}"
+  ],
+  [
+   1792880964.995,
+   "hook-reply resume ok t=1792880964.995"
+  ],
+  [
+   1792880965.244,
+   "[2026-10-24T22:29:25Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880965.997,
+   "[2026-10-24T22:29:25Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880966.506,
+   "[2026-10-24T22:29:26Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880967.014,
+   "[2026-10-24T22:29:27Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880967.524,
+   "[2026-10-24T22:29:27Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880968.025,
+   "[2026-10-24T22:29:28Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792880974.995,
+   "trace t=1792880974.996 gap=0.500 {\"MemFree\": 27280, \"Cached\": 3823, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476647, \"pgmajfault\": 3445, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792880984.997,
+   "trace t=1792880984.997 gap=0.500 {\"MemFree\": 27280, \"Cached\": 3821, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476654, \"pgmajfault\": 3446, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792880994.999,
+   "trace t=1792880994.999 gap=0.500 {\"MemFree\": 27280, \"Cached\": 3821, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476689, \"pgmajfault\": 3447, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792881005.001,
+   "trace t=1792881005.001 gap=0.500 {\"MemFree\": 28516, \"Cached\": 2588, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476697, \"pgmajfault\": 3450, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792881015.003,
+   "trace t=1792881015.003 gap=0.500 {\"MemFree\": 28515, \"Cached\": 2588, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476744, \"pgmajfault\": 3463, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792881025.004,
+   "trace t=1792881025.004 gap=0.500 {\"MemFree\": 29913, \"Cached\": 1186, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476773, \"pgmajfault\": 3467, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792881030.79,
+   "hook suspend load=loaded t_in=1792881030.790 port=49630 conn_age=87.5 req_on_conn=3 {\"MemFree\": 29997, \"Cached\": 1101, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 476778, \"pgmajfault\": 3469, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.08}"
+  ],
+  [
+   1792881030.79,
+   "hook-reply suspend ok t=1792881030.791"
+  ],
+  [
+   1792881052.641,
+   "trace t=1792881052.641 gap=22.135 {\"MemFree\": 30968, \"Cached\": 136, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 879, \"pgfault\": 489112, \"pgmajfault\": 3745, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.09}"
+  ],
+  [
+   1792881052.642,
+   "hook resume load=loaded t_in=1792881052.642 port=49630 conn_age=109.3 req_on_conn=4 {\"MemFree\": 30968, \"Cached\": 136, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 876, \"pgfault\": 489114, \"pgmajfault\": 3745, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.09}"
+  ],
+  [
+   1792881052.642,
+   "hook-reply resume ok t=1792881052.642"
+  ],
+  [
+   1792881053.301,
+   "[2026-10-24T22:30:53Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881057.774,
+   "[2026-10-24T22:30:57Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881058.284,
+   "[2026-10-24T22:30:58Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881058.804,
+   "[2026-10-24T22:30:58Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881059.314,
+   "[2026-10-24T22:30:59Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881059.834,
+   "[2026-10-24T22:30:59Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881062.642,
+   "trace t=1792881062.642 gap=0.500 {\"MemFree\": 27230, \"Cached\": 3820, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504369, \"pgmajfault\": 3842, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.09}"
+  ],
+  [
+   1792881072.644,
+   "trace t=1792881072.644 gap=0.500 {\"MemFree\": 27238, \"Cached\": 3810, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504378, \"pgmajfault\": 3842, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881082.646,
+   "trace t=1792881082.646 gap=0.500 {\"MemFree\": 27249, \"Cached\": 3798, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504406, \"pgmajfault\": 3842, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881092.647,
+   "trace t=1792881092.648 gap=0.500 {\"MemFree\": 27254, \"Cached\": 3795, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504407, \"pgmajfault\": 3842, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881102.649,
+   "trace t=1792881102.649 gap=0.500 {\"MemFree\": 27259, \"Cached\": 3793, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504412, \"pgmajfault\": 3843, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881112.651,
+   "trace t=1792881112.651 gap=0.500 {\"MemFree\": 27259, \"Cached\": 3791, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504439, \"pgmajfault\": 3843, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881122.653,
+   "trace t=1792881122.653 gap=0.500 {\"MemFree\": 27259, \"Cached\": 3791, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504448, \"pgmajfault\": 3844, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881130.235,
+   "hook suspend load=loaded t_in=1792881130.235 port=49630 conn_age=186.9 req_on_conn=5 {\"MemFree\": 27289, \"Cached\": 3759, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 504484, \"pgmajfault\": 3860, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881130.331,
+   "hook-reply suspend ok t=1792881130.332"
+  ],
+  [
+   1792881151.856,
+   "trace t=1792881151.856 gap=21.702 {\"MemFree\": 30940, \"Cached\": 109, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 937, \"pgfault\": 516671, \"pgmajfault\": 4098, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881151.857,
+   "hook resume load=loaded t_in=1792881151.857 port=49630 conn_age=208.6 req_on_conn=6 {\"MemFree\": 30940, \"Cached\": 109, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 935, \"pgfault\": 516673, \"pgmajfault\": 4098, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881151.857,
+   "hook-reply resume ok t=1792881151.857"
+  ],
+  [
+   1792881154.293,
+   "[2026-10-24T22:32:34Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881162.139,
+   "trace t=1792881162.139 gap=0.500 {\"MemFree\": 29149, \"Cached\": 1909, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 934, \"pgfault\": 516910, \"pgmajfault\": 4182, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881165.946,
+   "[2026-10-24T22:32:45Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881166.443,
+   "[2026-10-24T22:32:46Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881166.954,
+   "[2026-10-24T22:32:46Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881167.454,
+   "[2026-10-24T22:32:47Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881167.963,
+   "[2026-10-24T22:32:47Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881172.14,
+   "trace t=1792881172.140 gap=0.500 {\"MemFree\": 27249, \"Cached\": 3781, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522190, \"pgmajfault\": 4194, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881182.142,
+   "trace t=1792881182.142 gap=0.500 {\"MemFree\": 27249, \"Cached\": 3781, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522197, \"pgmajfault\": 4196, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881192.144,
+   "trace t=1792881192.144 gap=0.500 {\"MemFree\": 27248, \"Cached\": 3781, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522203, \"pgmajfault\": 4198, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881202.146,
+   "trace t=1792881202.146 gap=0.500 {\"MemFree\": 27256, \"Cached\": 3771, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522226, \"pgmajfault\": 4199, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881212.147,
+   "trace t=1792881212.147 gap=0.500 {\"MemFree\": 27261, \"Cached\": 3768, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522227, \"pgmajfault\": 4199, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881222.149,
+   "trace t=1792881222.149 gap=0.500 {\"MemFree\": 27261, \"Cached\": 3765, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522235, \"pgmajfault\": 4201, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881232.15,
+   "trace t=1792881232.151 gap=0.500 {\"MemFree\": 27283, \"Cached\": 3743, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522277, \"pgmajfault\": 4201, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881232.272,
+   "hook suspend load=loaded t_in=1792881232.272 port=49630 conn_age=289.0 req_on_conn=7 {\"MemFree\": 27283, \"Cached\": 3743, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 954, \"pgfault\": 522277, \"pgmajfault\": 4201, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881232.272,
+   "hook-reply suspend ok t=1792881232.273"
+  ],
+  [
+   1792881253.511,
+   "trace t=1792881253.511 gap=21.360 {\"MemFree\": 30934, \"Cached\": 99, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 957, \"pgfault\": 534401, \"pgmajfault\": 4394, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881253.512,
+   "hook resume load=loaded t_in=1792881253.512 port=49630 conn_age=310.2 req_on_conn=8 {\"MemFree\": 30934, \"Cached\": 99, \"Dirty\": 0, \"Writeback\": 0, \"AnonPages\": 956, \"pgfault\": 534403, \"pgmajfault\": 4394, \"pgsteal_kswapd\": 0, \"pgsteal_direct\": 0, \"pgscan_kswapd\": 0, \"pgscan_direct\": 0, \"steal_s\": 0.1}"
+  ],
+  [
+   1792881253.512,
+   "hook-reply resume ok t=1792881253.512"
+  ],
+  [
+   1792881253.741,
+   "[2026-10-24T22:34:13Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ]
+ ]
+}

@@ -1,0 +1,26 @@
+=== 2026-10-26T15:02:16Z BUILD
+{"image": "thesis-lancedb-mvm-deep10m-v4today", "state": "CREATED", "build_s": 843.6}
+=== 2026-10-26T15:16:21Z BUILD EXIT=0
+=== 2026-10-26T15:16:21Z RUN
+startup {"t": 1793027789.2237978, "wall_s": 124.639, "status": 502, "body": ""}
+cycle 0: SUSPENDED after 65.2 s (settled 66.2 s)
+  resume query {"t": 1793028070.230608, "wall_s": 1.778, "status": 200, "body": {"server_ms": 1225.4674370000203, "runs": 1, "resumes": 2, "cpu_part": ["0xd40"]}}
+cycle 1: SUSPENDED after 70.2 s (settled 71.3 s)
+  resume query {"t": 1793028165.8992052, "wall_s": 6.082, "status": 200, "body": {"server_ms": 4749.019104000013, "runs": 1, "resumes": 3, "cpu_part": ["0xd40"]}}
+cycle 2: SUSPENDED after 68.3 s (settled 69.3 s)
+  resume query {"t": 1793028263.9100773, "wall_s": 2.388, "status": 200, "body": {"server_ms": 1787.4816659999624, "runs": 1, "resumes": 4, "cpu_part": ["0xd40"]}}
+cycle 3: SUSPENDED after 69.0 s (settled 70.0 s)
+  resume query {"t": 1793028358.9432993, "wall_s": 6.032, "status": 200, "body": {"server_ms": 5437.323775999971, "runs": 1, "resumes": 5, "cpu_part": ["0xd40"]}}
+cycle 4: SUSPENDED after 71.3 s (settled 72.4 s)
+  resume query {"t": 1793028459.950543, "wall_s": 6.238, "status": 200, "body": {"server_ms": 5631.04961800002, "runs": 1, "resumes": 6, "cpu_part": ["0xd40"]}}
+cycle 5: SUSPENDED after 65.9 s (settled 66.9 s)
+  resume query {"t": 1793028555.710596, "wall_s": 2.628, "status": 200, "body": {"server_ms": 1994.7865210000373, "runs": 1, "resumes": 7, "cpu_part": ["0xd40"]}}
+cycle 6: SUSPENDED after 62.8 s (settled 63.8 s)
+  resume query {"t": 1793028644.7214622, "wall_s": 1.316, "status": 200, "body": {"server_ms": 739.2649989999427, "runs": 1, "resumes": 8, "cpu_part": ["0xd40"]}}
+cycle 7: SUSPENDED after 63.8 s (settled 63.8 s)
+  resume query {"t": 1793028732.5305555, "wall_s": 65.847, "status": 502, "body": "Bad Gateway"}
+-> /home/ec2-user/thesis/scripts/microvm/results/hook_probe_deep_10m_v4today_20261026T153351Z.json
+=== 2026-10-26T15:33:51Z RUN EXIT=0
+
+aws: [ERROR]: The user-provided path scripts/microvm/results/hook_probe does not exist.
+V4CTL_DONE

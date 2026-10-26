@@ -1,0 +1,11 @@
+{
+ "image": "thesis-lancedb-mvm-deep10m-trace",
+ "dataset": "deep_10m",
+ "tag": "plainc",
+ "ballast_mb": 0,
+ "dropcaches": false,
+ "idle_s": 60,
+ "cycles": [],
+ "started_utc": "2026-10-24T22:12:08Z",
+ "error": "ServiceQuotaExceededException: An error occurred (ServiceQuotaExceededException) when calling the RunMicrovm operation: The base maximum allocated memory limit has been reached for this account."
+}

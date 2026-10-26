@@ -71,7 +71,8 @@ def build_client(adapter, acct, *, put_batch=500, insert_batch=2000):
             insert_batch_size=insert_batch)
     if adapter == "lancedb_microvm":  # F39: table baked into the MicroVM image, no ingest
         from harness.adapters.lancedb_microvm import build_for_dataset
-        return build_for_dataset("deep_1m", VECTORS_CSV, acct)
+        # MVM_IMAGE: run another image of this dataset (E1 re-run on server v6, finding 33)
+        return build_for_dataset("deep_1m", VECTORS_CSV, acct, image_name=os.environ.get("MVM_IMAGE") or None)
     raise SystemExit(f"unknown adapter {adapter}")
 
 

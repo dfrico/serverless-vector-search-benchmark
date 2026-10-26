@@ -1,0 +1,446 @@
+{
+ "summary": {
+  "launches": 48,
+  "launches_terminated_before_running": 5,
+  "launches_internal_error": 4,
+  "launches_reason_unrecorded": 1,
+  "resumes": 58,
+  "resumes_internal_error": 3,
+  "suspend_hook_timeouts_21oct_build": 4,
+  "note": "resumes = idle suspends followed by a resume hook (census) + 2 explicit gate suspends; the lost resume's hook was answered, so it is counted among the resumes"
+ },
+ "launches": [
+  {
+   "date": "2026-10-21",
+   "run": "gate",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": null,
+   "source": "scripts/microvm/results/gate_deep_10m_20261021T092329Z.json"
+  },
+  {
+   "date": "2026-10-21",
+   "run": "gate",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": null,
+   "source": "scripts/microvm/results/gate_deep_10m_20261021T092813Z.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E1 c1",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-11fd46be-95e9-3456-be20-d919bd1638c5",
+   "source": "experiments/experiment_c3/results_2026-10-mvm/sweep_lancedb_microvm_c1.lifecycle.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E1 c16",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-66d90693-1704-3f0b-9966-d92c5785b206",
+   "source": "experiments/experiment_c3/results_2026-10-mvm/sweep_lancedb_microvm_c16.lifecycle.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E1 c32",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-55129d74-170f-3da9-b30d-44fb7b9ab20b",
+   "source": "experiments/experiment_c3/results_2026-10-mvm/sweep_lancedb_microvm_c32.lifecycle.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E1 c4",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-eb71632e-0e33-392b-81f0-ac574d41dedd",
+   "source": "experiments/experiment_c3/results_2026-10-mvm/sweep_lancedb_microvm_c4.lifecycle.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E1 c8",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-691bc250-bdc2-39bc-a0c9-7ba9cab50384",
+   "source": "experiments/experiment_c3/results_2026-10-mvm/sweep_lancedb_microvm_c8.lifecycle.json"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E1 c1",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-b0117e0b-7194-3461-9e22-bdf074206495",
+   "source": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c1.lifecycle.json"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E1 c16",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-57f090c6-0821-3311-8986-9ce879d2b64c",
+   "source": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c16.lifecycle.json"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E1 c32",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-99075eb1-8792-3558-93e8-eafbab8e2610",
+   "source": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c32.lifecycle.json"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E1 c4",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-91793b0b-4c04-3d8f-b2a8-e01d507d4312",
+   "source": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c4.lifecycle.json"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E1 c8",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-1e718083-9475-3507-9582-b1d5c6ee1b23",
+   "source": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c8.lifecycle.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 attempt 1",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": null,
+   "source": "experiments/experiment_c2/results_2026-10-mvm/failed_attempt1/phase3_attempt1.log"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 attempt 1",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": null,
+   "source": "experiments/experiment_c2/results_2026-10-mvm/failed_attempt1/phase3_attempt1.log"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 attempt 1",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": null,
+   "source": "experiments/experiment_c2/results_2026-10-mvm/failed_attempt1/phase3_attempt1.log"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 attempt 1",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": false,
+   "reason": "not recorded (aged out of the API)",
+   "microvm_id": "microvm-b100a9af-6db1-3dde-8994-d63fef5e5df0",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/failed_attempt1/phase3_attempt1.log"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-7f5a1a16-a212-32a8-9ab2-5457d2ffa8c1",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-8aa8bb21-a900-32b3-8985-cb0be8247790",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-67260519-84a6-36b4-8ce4-ccbfc98821cd",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-cc3cfd53-cf80-3c08-8baf-e7dddf574f2b",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-31c5b1d9-2f48-3bad-868a-4f6ce66969c0",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-87751f94-d333-36cc-8f52-7628ff81b7c1",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-f6cad480-1cf7-3770-ad91-04847498af5a",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-1a05a2c4-b24d-38bd-84e0-2d150e583b7e",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-a09810a9-9fa9-358f-96c4-68e0ea4dec3d",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": false,
+   "reason": "Internal service error.",
+   "microvm_id": "microvm-129dfc62-bc8c-3f7f-ad05-6228f5ea30fa",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": false,
+   "reason": "Internal service error.",
+   "microvm_id": "microvm-9782b390-eac7-3c2e-bf57-8b717a7e9524",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-22",
+   "run": "E2 resume run",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-8d6faeef-97bb-3d95-9e1f-eccb4fba5266",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "E2 resume run",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-8824e2ea-8bd8-37e8-836f-0fad2ec0e51c",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m_resume.manifest.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "E2 resume run",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-ad7be41a-872a-3021-9139-5d02c008de3a",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m_resume2.manifest.json"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E2 resume run",
+   "image": "thesis-lancedb-mvm-deep10m-fresh",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-aa77da15-5df3-371e-838a-3f943589da32",
+   "source": "experiments/experiment_c2/results_2026-10-mvm/e2_lancedb_microvm_deep_10m_resume_fresh.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-62f5719c-3b45-35aa-9761-2c556c2f764f",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-d7e83fa8-7528-3dbb-acdb-3ef87ec2ff0e",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-57585518-363a-352b-89be-d20b70d9e0af",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-a28d8c8c-bf3d-3689-8038-36b3c363aa59",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-a4ccba07-9b99-3596-9d3e-2dd27a7ad7c6",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-16701dc1-024b-3875-83ef-bb57c7467c13",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-4f60ecff-97ab-3e07-b209-245d2d18e4cb",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-12dd53f6-b82a-3319-9467-d207b977e1bc",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 launch",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-303b5bb6-3d0b-367b-915b-a5a6ae00dfb8",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m.manifest.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "E2 resume run",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-af0336e8-601f-3a8e-9a43-429d6b31e3fb",
+   "source": "experiments/experiment_c2/results_2026-10-mvm6/e2_lancedb_microvm_deep_10m_resume.manifest.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "hook probe fresh",
+   "image": "thesis-lancedb-mvm-deep10m-fresh",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-c6645e37-6d78-33f0-823f-08ba504ce1db",
+   "source": "scripts/microvm/results/hook_probe/hook_probe_deep_10m_fresh_20261024T230714Z.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "hook probe plain",
+   "image": "thesis-lancedb-mvm-deep10m-trace",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-c7dbc36d-a40d-3cf2-86c2-b4f388845f52",
+   "source": "scripts/microvm/results/hook_probe/hook_probe_deep_10m_plain_20261024T221209Z.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "hook probe pland",
+   "image": "thesis-lancedb-mvm-deep10m-trace",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-85beb9bf-4a22-3ab8-947d-a5053d57294b",
+   "source": "scripts/microvm/results/hook_probe/hook_probe_deep_10m_pland_20261024T223449Z.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "hook probe v4ctl",
+   "image": "thesis-lancedb-mvm-deep10m",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-7409bb5a-1948-303f-a5a3-a5459a77c68c",
+   "source": "scripts/microvm/results/hook_probe/hook_probe_deep_10m_v4ctl_20261024T224202Z.json"
+  },
+  {
+   "date": "2026-10-26",
+   "run": "hook probe v4today",
+   "image": "thesis-lancedb-mvm-deep10m-v4today",
+   "ok": true,
+   "reason": null,
+   "microvm_id": "microvm-862c5bb5-c272-3701-9b91-5c62f5409732",
+   "source": "scripts/microvm/results/hook_probe/hook_probe_deep_10m_v4today_20261026T153351Z.json"
+  },
+  {
+   "date": "2026-10-24",
+   "run": "hook probe plainb",
+   "image": "thesis-lancedb-mvm-deep10m-trace",
+   "ok": false,
+   "reason": "Internal service error.",
+   "microvm_id": null,
+   "source": "finding 32 (session readout 24 Oct; driver had no record)"
+  },
+  {
+   "date": "2026-10-25",
+   "run": "E1 v6 c32, attempt 1",
+   "image": "thesis-lancedb-mvm-deep10m-v6",
+   "ok": false,
+   "reason": "Internal service error.",
+   "microvm_id": "microvm-6b48c685-40e4-3fd8-bdf4-3e357c3a313d",
+   "source": "get_microvm readout 26 Oct (sweep retried; not in the cell's lifecycle file)"
+  }
+ ]
+}

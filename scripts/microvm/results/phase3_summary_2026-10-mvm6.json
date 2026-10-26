@@ -1,0 +1,253 @@
+{
+ "tag": "2026-10-mvm6",
+ "e1": {
+  "1m_c1": {
+   "n": 822,
+   "p50": 0.07287857649998841,
+   "p50_ci": [
+    0.07280716650001295,
+    0.07295733300009033
+   ],
+   "p95": 0.07436645684991276,
+   "p95_ci": [
+    0.07423539349995281,
+    0.074533249550052
+   ],
+   "p99": 0.07544526952996419,
+   "max": 0.08047198600002048,
+   "ops_s": 13.69459473889169,
+   "server_p50": 0.0677755300000058,
+   "overhead_p50": 0.004592396228630946,
+   "errors": {},
+   "cpu_part": {
+    "0xd4f": 822
+   },
+   "n_first_after_launch": 0
+  },
+  "1m_c4": {
+   "n": 809,
+   "p50": 0.22217829100009112,
+   "p50_ci": [
+    0.22176899900000535,
+    0.22274042200001531
+   ],
+   "p95": 0.2296779000000015,
+   "p95_ci": [
+    0.22894252727000095,
+    0.23045088500000474
+   ],
+   "p99": 0.23385383360000558,
+   "max": 0.316268746999981,
+   "ops_s": 17.971185601453044,
+   "server_p50": 0.21612529699999072,
+   "overhead_p50": 0.00529398983911733,
+   "errors": {},
+   "cpu_part": {
+    "0xd40": 809
+   },
+   "n_first_after_launch": 0
+  },
+  "1m_c8": {
+   "n": 807,
+   "p50": 0.44640596300007473,
+   "p50_ci": [
+    0.4445843780000587,
+    0.4479615269999613
+   ],
+   "p95": 0.4772353309999857,
+   "p95_ci": [
+    0.4752715629999784,
+    0.4798518249999915
+   ],
+   "p99": 0.4911550431199383,
+   "max": 0.5500729560000082,
+   "ops_s": 17.87552370495772,
+   "server_p50": 0.43966430100002185,
+   "overhead_p50": 0.005943796353150788,
+   "errors": {},
+   "cpu_part": {
+    "0xd40": 807
+   },
+   "n_first_after_launch": 0
+  },
+  "10m_c1": {
+   "n": 417,
+   "p50": 0.35329293099994175,
+   "p50_ci": [
+    0.3530858949998219,
+    0.35355882800013205
+   ],
+   "p95": 0.3681084389999795,
+   "p95_ci": [
+    0.3601545836000241,
+    0.4098766625999813
+   ],
+   "p99": 0.5218279733198592,
+   "max": 1.1808606259999124,
+   "ops_s": 2.774931156463433,
+   "server_p50": 0.34667351600000984,
+   "overhead_p50": 0.0060667614893645805,
+   "errors": {},
+   "cpu_part": {
+    "0xd4f": 417
+   },
+   "n_first_after_launch": 0
+  },
+  "10m_c16": {
+   "n": 386,
+   "p50": 2.483982258499964,
+   "p50_ci": [
+    2.4725183680002374,
+    2.493828176000079
+   ],
+   "p95": 2.667326504999778,
+   "p95_ci": [
+    2.626730167000005,
+    3.2761855619996822
+   ],
+   "p99": 4.030626516749839,
+   "max": 4.162444046000019,
+   "ops_s": 6.318832262575289,
+   "server_p50": 2.476571697499992,
+   "overhead_p50": 0.005876618847594273,
+   "errors": {
+    "RuntimeError: MicroVM POST /query return": 1
+   },
+   "cpu_part": {
+    "0xd40": 386
+   },
+   "n_first_after_launch": 0
+  },
+  "10m_c32": {
+   "n": 379,
+   "p50": 5.0758925129998715,
+   "p50_ci": [
+    5.009156978999727,
+    5.128581096999824
+   ],
+   "p95": 7.490808592799966,
+   "p95_ci": [
+    5.901749547999633,
+    8.272740644100212
+   ],
+   "p99": 8.55577298946,
+   "max": 9.169623000999763,
+   "ops_s": 5.983349488880576,
+   "server_p50": 5.068065363000016,
+   "overhead_p50": 0.006610278886626908,
+   "errors": {
+    "RuntimeError: MicroVM POST /query return": 18
+   },
+   "cpu_part": {
+    "0xd40": 379
+   },
+   "n_first_after_launch": 0
+  },
+  "10m_c4": {
+   "n": 316,
+   "p50": 0.6408657295000921,
+   "p50_ci": [
+    0.6401939589998165,
+    0.6415895650002312
+   ],
+   "p95": 0.6569456224998476,
+   "p95_ci": [
+    0.6522077299998728,
+    0.7214350640001612
+   ],
+   "p99": 8.195626239650082,
+   "max": 9.343440654000005,
+   "ops_s": 5.216743850622278,
+   "server_p50": 0.6343256069999939,
+   "overhead_p50": 0.006039662272257829,
+   "errors": {},
+   "cpu_part": {
+    "0xd40": 316
+   },
+   "n_first_after_launch": 0
+  },
+  "10m_c8": {
+   "n": 400,
+   "p50": 1.207708450499922,
+   "p50_ci": [
+    1.2055765195373396,
+    1.2106782244998158
+   ],
+   "p95": 1.2432333901501351,
+   "p95_ci": [
+    1.2387352988797808,
+    1.2515672609997637
+   ],
+   "p99": 1.285765945940252,
+   "max": 1.4381574699996236,
+   "ops_s": 6.600779158876282,
+   "server_p50": 1.2008180355000206,
+   "overhead_p50": 0.006144531103700501,
+   "errors": {},
+   "cpu_part": {
+    "0xd40": 400
+   },
+   "n_first_after_launch": 0
+  }
+ },
+ "e2": {},
+ "e3_trace": null,
+ "lifecycles": [
+  {
+   "src": "experiments/experiment_b/results_2026-10-mvm6/sweep_lancedb_microvm_c1.lifecycle.json",
+   "microvm_id": "microvm-a54c438a-465f-305e-beda-8c069c7cb5a4",
+   "span_s": 132.7460000514984,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_b/results_2026-10-mvm6/sweep_lancedb_microvm_c4.lifecycle.json",
+   "microvm_id": "microvm-e0401b6e-92dc-3ceb-b4fa-e76167632255",
+   "span_s": 111.67899990081787,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_b/results_2026-10-mvm6/sweep_lancedb_microvm_c8.lifecycle.json",
+   "microvm_id": "microvm-661c7b50-c279-3eb4-b04f-d851dfbcbe17",
+   "span_s": 111.77999997138977,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c1.lifecycle.json",
+   "microvm_id": "microvm-b0117e0b-7194-3461-9e22-bdf074206495",
+   "span_s": 414.8619999885559,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c16.lifecycle.json",
+   "microvm_id": "microvm-57f090c6-0821-3311-8986-9ce879d2b64c",
+   "span_s": 344.0629999637604,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c32.lifecycle.json",
+   "microvm_id": "microvm-99075eb1-8792-3558-93e8-eafbab8e2610",
+   "span_s": 340.7190001010895,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c4.lifecycle.json",
+   "microvm_id": "microvm-91793b0b-4c04-3d8f-b2a8-e01d507d4312",
+   "span_s": 350.31500005722046,
+   "n_suspend": 0,
+   "n_resume": 0
+  },
+  {
+   "src": "experiments/experiment_c3/results_2026-10-mvm6/sweep_lancedb_microvm_c8.lifecycle.json",
+   "microvm_id": "microvm-1e718083-9475-3507-9582-b1d5c6ee1b23",
+   "span_s": 346.08700013160706,
+   "n_suspend": 0,
+   "n_resume": 0
+  }
+ ]
+}

@@ -1,0 +1,1077 @@
+{
+ "image": "thesis-lancedb-mvm-deep10m-v4today",
+ "dataset": "deep_10m",
+ "tag": "v4today",
+ "ballast_mb": 0,
+ "dropcaches": false,
+ "idle_s": 60,
+ "cycles": [
+  {
+   "cycle": 0,
+   "queries": [
+    {
+     "t": 1793027913.863669,
+     "wall_s": 67.752,
+     "status": 200,
+     "body": {
+      "server_ms": 66606.06052099999,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793027981.616338,
+     "wall_s": 0.834,
+     "status": 200,
+     "body": {
+      "server_ms": 619.414144000018,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793027982.4507003,
+     "wall_s": 0.471,
+     "status": 200,
+     "body": {
+      "server_ms": 464.4060340000351,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793027982.9220166,
+     "wall_s": 0.532,
+     "status": 200,
+     "body": {
+      "server_ms": 470.00415899998416,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793027983.4546304,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 468.6781760000258,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793027983.9742348,
+   "left_running_s": 65.2,
+   "state": "SUSPENDED",
+   "settled_s": 66.2,
+   "resume_query": {
+    "t": 1793028070.230608,
+    "wall_s": 1.778,
+    "status": 200,
+    "body": {
+     "server_ms": 1225.4674370000203,
+     "runs": 1,
+     "resumes": 2,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 1,
+   "queries": [
+    {
+     "t": 1793028072.0093036,
+     "wall_s": 0.514,
+     "status": 200,
+     "body": {
+      "server_ms": 461.76861199995756,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028072.5239327,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 462.91617999997925,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028073.0338476,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 464.16421200001423,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028073.5541694,
+     "wall_s": 0.53,
+     "status": 200,
+     "body": {
+      "server_ms": 466.87363699999196,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028074.083982,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 461.06071899998824,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028074.5938513,
+   "left_running_s": 70.2,
+   "state": "SUSPENDED",
+   "settled_s": 71.3,
+   "resume_query": {
+    "t": 1793028165.8992052,
+    "wall_s": 6.082,
+    "status": 200,
+    "body": {
+     "server_ms": 4749.019104000013,
+     "runs": 1,
+     "resumes": 3,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 2,
+   "queries": [
+    {
+     "t": 1793028171.9816616,
+     "wall_s": 0.514,
+     "status": 200,
+     "body": {
+      "server_ms": 461.02000299998735,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028172.4957762,
+     "wall_s": 0.509,
+     "status": 200,
+     "body": {
+      "server_ms": 462.7266900000109,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028173.0054598,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 459.6715850000237,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028173.5156472,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 474.08567200000107,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028174.0357525,
+     "wall_s": 0.53,
+     "status": 200,
+     "body": {
+      "server_ms": 465.6699639999715,
+      "runs": 1,
+      "resumes": 3,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028174.5655253,
+   "left_running_s": 68.3,
+   "state": "SUSPENDED",
+   "settled_s": 69.3,
+   "resume_query": {
+    "t": 1793028263.9100773,
+    "wall_s": 2.388,
+    "status": 200,
+    "body": {
+     "server_ms": 1787.4816659999624,
+     "runs": 1,
+     "resumes": 4,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 3,
+   "queries": [
+    {
+     "t": 1793028266.298567,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 462.0718249999527,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028266.80862,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 459.71867100001873,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028267.3184736,
+     "wall_s": 0.53,
+     "status": 200,
+     "body": {
+      "server_ms": 464.99199200002295,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028267.848521,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 457.88186699996913,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028268.3685474,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 463.47826099997746,
+      "runs": 1,
+      "resumes": 4,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028268.8787007,
+   "left_running_s": 69.0,
+   "state": "SUSPENDED",
+   "settled_s": 70.0,
+   "resume_query": {
+    "t": 1793028358.9432993,
+    "wall_s": 6.032,
+    "status": 200,
+    "body": {
+     "server_ms": 5437.323775999971,
+     "runs": 1,
+     "resumes": 5,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 4,
+   "queries": [
+    {
+     "t": 1793028364.9759007,
+     "wall_s": 0.513,
+     "status": 200,
+     "body": {
+      "server_ms": 461.98734000006425,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028365.4894361,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 459.97133899993514,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028365.9994552,
+     "wall_s": 0.519,
+     "status": 200,
+     "body": {
+      "server_ms": 464.3448189999617,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028366.5190206,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 457.89412799990714,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028367.0395112,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 463.22341099994446,
+      "runs": 1,
+      "resumes": 5,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028367.5493367,
+   "left_running_s": 71.3,
+   "state": "SUSPENDED",
+   "settled_s": 72.4,
+   "resume_query": {
+    "t": 1793028459.950543,
+    "wall_s": 6.238,
+    "status": 200,
+    "body": {
+     "server_ms": 5631.04961800002,
+     "runs": 1,
+     "resumes": 6,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 5,
+   "queries": [
+    {
+     "t": 1793028466.1883771,
+     "wall_s": 0.513,
+     "status": 200,
+     "body": {
+      "server_ms": 458.912392000002,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028466.7013001,
+     "wall_s": 0.52,
+     "status": 200,
+     "body": {
+      "server_ms": 473.3871910000289,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028467.2215385,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 462.9202459999533,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028467.7315116,
+     "wall_s": 0.509,
+     "status": 200,
+     "body": {
+      "server_ms": 463.6343729999908,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028468.241021,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 461.8956170000956,
+      "runs": 1,
+      "resumes": 6,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028468.751046,
+   "left_running_s": 65.9,
+   "state": "SUSPENDED",
+   "settled_s": 66.9,
+   "resume_query": {
+    "t": 1793028555.710596,
+    "wall_s": 2.628,
+    "status": 200,
+    "body": {
+     "server_ms": 1994.7865210000373,
+     "runs": 1,
+     "resumes": 7,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 6,
+   "queries": [
+    {
+     "t": 1793028558.3388648,
+     "wall_s": 0.513,
+     "status": 200,
+     "body": {
+      "server_ms": 464.547365000044,
+      "runs": 1,
+      "resumes": 7,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028558.8516662,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 458.82760200004213,
+      "runs": 1,
+      "resumes": 7,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028559.3614285,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 455.8588359999476,
+      "runs": 1,
+      "resumes": 7,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028559.8719094,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 457.81284999998206,
+      "runs": 1,
+      "resumes": 7,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028560.381634,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 461.4016799999945,
+      "runs": 1,
+      "resumes": 7,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028560.891262,
+   "left_running_s": 62.8,
+   "state": "SUSPENDED",
+   "settled_s": 63.8,
+   "resume_query": {
+    "t": 1793028644.7214622,
+    "wall_s": 1.316,
+    "status": 200,
+    "body": {
+     "server_ms": 739.2649989999427,
+     "runs": 1,
+     "resumes": 8,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 7,
+   "queries": [
+    {
+     "t": 1793028646.0375493,
+     "wall_s": 0.615,
+     "status": 200,
+     "body": {
+      "server_ms": 566.1674730000641,
+      "runs": 1,
+      "resumes": 8,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028646.653044,
+     "wall_s": 0.511,
+     "status": 200,
+     "body": {
+      "server_ms": 458.987617000048,
+      "runs": 1,
+      "resumes": 8,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028647.1638024,
+     "wall_s": 0.509,
+     "status": 200,
+     "body": {
+      "server_ms": 460.3734859999804,
+      "runs": 1,
+      "resumes": 8,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028647.6729307,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 460.2287579999711,
+      "runs": 1,
+      "resumes": 8,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1793028648.183049,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 459.2224030000125,
+      "runs": 1,
+      "resumes": 8,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1793028648.6930995,
+   "left_running_s": 63.8,
+   "state": "SUSPENDED",
+   "settled_s": 63.8,
+   "resume_query": {
+    "t": 1793028732.5305555,
+    "wall_s": 65.847,
+    "status": 502,
+    "body": "Bad Gateway"
+   }
+  }
+ ],
+ "started_utc": "2026-10-26T15:16:21Z",
+ "microvm_id": "microvm-862c5bb5-c272-3701-9b91-5c62f5409732",
+ "running_at": 1793027789.1759074,
+ "startup_query": {
+  "t": 1793027789.2237978,
+  "wall_s": 124.639,
+  "status": 502,
+  "body": ""
+ },
+ "final_get": {
+  "state": "TERMINATED",
+  "stateReason": "Internal service error.",
+  "startedAt": "2026-10-26 15:16:21.468000+00:00",
+  "terminatedAt": "2026-10-26 15:33:06.733000+00:00"
+ },
+ "final_state": "TERMINATED",
+ "log": [
+  [
+   1793027788.807,
+   "hook run load=loaded"
+  ],
+  [
+   1793027789.482,
+   "[2026-10-26T15:16:29Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793027854.493,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793027914.178,
+   "hook resume load=loaded"
+  ],
+  [
+   1793027915.006,
+   "[2026-10-26T15:18:35Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793027981.611,
+   "----------------------------------------"
+  ],
+  [
+   1793027981.611,
+   "Exception occurred during processing of request from ('127.0.0.1', 60880)"
+  ],
+  [
+   1793027981.692,
+   "[2026-10-26T15:19:41Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793027982.446,
+   "Traceback (most recent call last):"
+  ],
+  [
+   1793027982.446,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 691, in process_request_thread"
+  ],
+  [
+   1793027982.446,
+   "    self.finish_request(request, client_address)"
+  ],
+  [
+   1793027982.446,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 361, in finish_request"
+  ],
+  [
+   1793027982.446,
+   "    self.RequestHandlerClass(request, client_address, self)"
+  ],
+  [
+   1793027982.446,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 755, in __init__"
+  ],
+  [
+   1793027982.446,
+   "    self.handle()"
+  ],
+  [
+   1793027982.446,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 442, in handle"
+  ],
+  [
+   1793027982.446,
+   "    self.handle_one_request()"
+  ],
+  [
+   1793027982.446,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 428, in handle_one_request"
+  ],
+  [
+   1793027982.446,
+   "    method()"
+  ],
+  [
+   1793027982.446,
+   "  File \"/app/server.py\", line 178, in do_POST"
+  ],
+  [
+   1793027982.446,
+   "    return self._send(200, {\"ok\": True, \"results\": res, \"server_ms\": server_ms,"
+  ],
+  [
+   1793027982.446,
+   "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+  ],
+  [
+   1793027982.446,
+   "  File \"/app/server.py\", line 126, in _send"
+  ],
+  [
+   1793027982.446,
+   "    self.wfile.write(b)"
+  ],
+  [
+   1793027982.446,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 834, in write"
+  ],
+  [
+   1793027982.446,
+   "    self._sock.sendall(b)"
+  ],
+  [
+   1793027982.446,
+   "BrokenPipeError: [Errno 32] Broken pipe"
+  ],
+  [
+   1793027982.446,
+   "----------------------------------------"
+  ],
+  [
+   1793027982.453,
+   "[2026-10-26T15:19:42Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793027982.923,
+   "[2026-10-26T15:19:42Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793027983.456,
+   "[2026-10-26T15:19:43Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028048.362,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028070.51,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028070.782,
+   "[2026-10-26T15:21:10Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028072.013,
+   "[2026-10-26T15:21:12Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028072.528,
+   "[2026-10-26T15:21:12Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028073.038,
+   "[2026-10-26T15:21:13Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028073.558,
+   "[2026-10-26T15:21:13Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028074.088,
+   "[2026-10-26T15:21:14Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028144.28,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028167.398,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028169.336,
+   "[2026-10-26T15:22:49Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028171.985,
+   "[2026-10-26T15:22:51Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028172.499,
+   "[2026-10-26T15:22:52Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028173.009,
+   "[2026-10-26T15:22:53Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028173.519,
+   "[2026-10-26T15:22:53Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028174.039,
+   "[2026-10-26T15:22:54Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028242.087,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028264.344,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028265.367,
+   "[2026-10-26T15:24:25Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028266.304,
+   "[2026-10-26T15:24:26Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028266.812,
+   "[2026-10-26T15:24:26Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028267.322,
+   "[2026-10-26T15:24:27Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028267.852,
+   "[2026-10-26T15:24:27Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028268.372,
+   "[2026-10-26T15:24:28Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028337.528,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028359.292,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028362.788,
+   "[2026-10-26T15:26:02Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028364.98,
+   "[2026-10-26T15:26:04Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028365.493,
+   "[2026-10-26T15:26:05Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028366.003,
+   "[2026-10-26T15:26:06Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028366.523,
+   "[2026-10-26T15:26:06Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028367.043,
+   "[2026-10-26T15:26:07Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028438.767,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028460.321,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028464.038,
+   "[2026-10-26T15:27:44Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028466.192,
+   "[2026-10-26T15:27:46Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028466.705,
+   "[2026-10-26T15:27:46Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028467.225,
+   "[2026-10-26T15:27:47Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028467.735,
+   "[2026-10-26T15:27:47Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028468.245,
+   "[2026-10-26T15:27:48Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028534.357,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028556.178,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028557.147,
+   "[2026-10-26T15:29:17Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028558.342,
+   "[2026-10-26T15:29:18Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028558.855,
+   "[2026-10-26T15:29:18Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028559.365,
+   "[2026-10-26T15:29:19Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028559.876,
+   "[2026-10-26T15:29:19Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028560.385,
+   "[2026-10-26T15:29:20Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028623.417,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028645.077,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028645.417,
+   "[2026-10-26T15:30:45Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028646.147,
+   "[2026-10-26T15:30:46Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028646.657,
+   "[2026-10-26T15:30:46Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028647.168,
+   "[2026-10-26T15:30:47Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028647.677,
+   "[2026-10-26T15:30:47Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028648.187,
+   "[2026-10-26T15:30:48Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1793028711.704,
+   "hook suspend load=loaded"
+  ],
+  [
+   1793028732.874,
+   "hook resume load=loaded"
+  ],
+  [
+   1793028733.223,
+   "[2026-10-26T15:32:13Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ]
+ ]
+}

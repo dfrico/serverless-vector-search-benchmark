@@ -481,10 +481,11 @@ class LanceDBMicroVMClient(BenchmarkVectorClient):
 
 
 def build_for_dataset(dataset: str, source_csv_path: str, account_id: str, *, settle_s: float = 60.0,
-                      **kw) -> LanceDBMicroVMClient:
+                      image_name: Optional[str] = None, **kw) -> LanceDBMicroVMClient:
     """The experiments' constructor: image thesis-lancedb-mvm-<dataset without '_'>, the MicroVM execution
     role, and the table provenance written by scripts/microvm/make_table.py. settle_s defaults to the E1 rule
-    (60 s after RUNNING, methodology-decisions.md); E2 passes 0."""
+    (60 s after RUNNING, methodology-decisions.md); E2 passes 0. image_name overrides the image (the 10M E2
+    resume part runs on thesis-lancedb-mvm-deep10m-fresh, finding 32)."""
     import json
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     rec = os.path.join(root, "scripts", "microvm", "results", f"make_table_{dataset}.json")
@@ -493,7 +494,7 @@ def build_for_dataset(dataset: str, source_csv_path: str, account_id: str, *, se
     if not os.path.exists(rec):
         raise FileNotFoundError(f"{rec} missing: copy the make_table/copy_table record to this client first")
     return LanceDBMicroVMClient(
-        f"thesis-lancedb-mvm-{dataset.replace('_', '')}", account_id=account_id,
+        image_name or f"thesis-lancedb-mvm-{dataset.replace('_', '')}", account_id=account_id,
         execution_role_arn=f"arn:aws:iam::{account_id}:role/thesis-microvm-exec",
         source_csv_path=source_csv_path, settle_s=settle_s,
         table_record=json.load(open(rec)), **kw)

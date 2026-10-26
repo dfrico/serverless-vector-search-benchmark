@@ -1,0 +1,14 @@
+startup {"t": 1792880526.5031044, "wall_s": 121.64, "status": 502, "body": ""}
+cycle 0: SUSPENDED after 61.6 s (settled 61.6 s)
+  resume query {"t": 1792880762.725113, "wall_s": 1.305, "status": 200, "body": {"server_ms": 744.52291099999, "runs": 1, "resumes": 2, "cpu_part": ["0xd40"]}}
+cycle 1: SUSPENDED after 62.6 s (settled 63.7 s)
+  resume query {"t": 1792880850.2552466, "wall_s": 19.886, "status": 200, "body": {"server_ms": 19121.458047000033, "runs": 1, "resumes": 3, "cpu_part": ["0xd40"]}}
+cycle 2: SUSPENDED after 71.0 s (settled 72.0 s)
+  resume query {"t": 1792880964.6834548, "wall_s": 1.31, "status": 200, "body": {"server_ms": 747.3995610000657, "runs": 1, "resumes": 4, "cpu_part": ["0xd40"]}}
+cycle 3: SUSPENDED after 62.7 s (settled 63.7 s)
+  resume query {"t": 1792881052.2734256, "wall_s": 5.496, "status": 200, "body": {"server_ms": 4923.595226999964, "runs": 1, "resumes": 5, "cpu_part": ["0xd40"]}}
+cycle 4: SUSPENDED after 70.1 s (settled 71.1 s)
+  resume query {"t": 1792881151.4851258, "wall_s": 14.457, "status": 200, "body": {"server_ms": 13826.446583999996, "runs": 1, "resumes": 6, "cpu_part": ["0xd40"]}}
+cycle 5: SUSPENDED after 64.7 s (settled 64.7 s)
+  resume query {"t": 1792881253.1774216, "wall_s": 1.246, "status": 200, "body": {"server_ms": 681.25330700002, "runs": 1, "resumes": 7, "cpu_part": ["0xd40"]}}
+-> /home/ec2-user/thesis/scripts/microvm/results/hook_probe_deep_10m_pland_20261024T223449Z.json

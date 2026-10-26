@@ -215,6 +215,60 @@ for exp, cell, key in (("b", "blocks_c1", "b"), ("c3", "blocks_c1", "c3"), ("c1"
 _, g = per_inv_s(cost[("c3", "blocks_c1")], MAP_FN)
 put("task.c3.mapinit", integer(g["n_init"]), COST_SRC)
 
+# D14 replicates: stage B + C3 Blocks c1 / S3 Vectors c1, c4 on three later days, same experiment code.
+# Medians are compared with the reported run; LanceDB 10M was not replicated, so the 10M ratios divide each
+# day's Blocks cost by the reported LanceDB cost.
+REPS = ("2026-10-rep1", "2026-10-rep2", "2026-10-rep3")
+REP_SRC = "experiments/experiment_{b,c3}/results_2026-10-rep{1,2,3}/ and scripts/analysis/results_2026-10-rep{1,2,3}/"
+rcost = {t: {(c["exp"], c["cell"]): c for c in load("scripts", "analysis", f"results_{t}", "cost_levels_b_c3.json")["cells"]}
+         for t in REPS}
+assert all(c["s3_logs_complete"] for t in REPS for c in rcost[t].values()), "replicate Level 2 needs synced S3 logs"
+
+
+def rep_dev(exp, cell):
+    """Per-replicate % change of the median against the reported run."""
+    out = []
+    for t in REPS:
+        recs = [json.loads(l) for l in open(os.path.join(ROOT, "experiments", f"experiment_{exp}", f"results_{t}",
+                                                          f"sweep_{cell}.jsonl"))]
+        v = [r["latency_s"] for r in recs if r.get("op") == "query" and r.get("ok")]
+        out.append(100 * (statistics.median(v) / lat[f"{exp}/{cell}"]["p50"] - 1))
+    return out
+
+
+for t in REPS:
+    for f, gate in (("experiment_b", "recall_{}.json"), ("experiment_c3", "phase2_{}.json")):
+        for s in ("blocks", "lancedb", "s3vectors"):
+            p = os.path.join(ROOT, "experiments", f, f"results_{t}", gate.format(s))
+            if os.path.exists(p):
+                assert json.load(open(p))["passed"], p
+put("rep.n", "three", REP_SRC)
+stable = [d for exp, cells in (("b", [f"{s}_c{k}" for s in ("blocks", "lancedb") for k in (1, 4, 10)]),)
+          for c in cells for d in rep_dev(exp, c)]
+put("rep.stable.maxpct", fix(max(abs(d) for d in stable), 1), REP_SRC)
+s3v_b = [d for k in (4, 10) for d in rep_dev("b", f"s3vectors_c{k}")]
+put("rep.s3v.b.c410.maxpct", fix(max(abs(d) for d in s3v_b), 1), REP_SRC)
+for exp, cell, key in (("b", "s3vectors_c1", "b.s3v.c1"), ("c3", "blocks_c1", "c3.blocks"),
+                       ("c3", "s3vectors_c1", "c3.s3v.c1"), ("c3", "s3vectors_c4", "c3.s3v.c4")):
+    d = rep_dev(exp, cell)
+    assert max(d) == max(abs(x) for x in d), "text says these cells were slower, not faster"
+    put(f"rep.{key}.hi", integer(max(d)), REP_SRC)
+s3v_max = max(statistics.median([json.loads(l)["latency_s"] for l in open(os.path.join(
+    ROOT, "experiments", f"experiment_{e}", f"results_{t}", f"sweep_{c}.jsonl")) if '"ok": true' in l and '"op": "query"' in l])
+    for t in REPS for e, c in (("b", "s3vectors_c1"), ("c3", "s3vectors_c1"), ("c3", "s3vectors_c4")))
+put("rep.s3v.maxp50", sig(s3v_max), REP_SRC)
+for exp, key in (("b", "b"), ("c3", "c3")):
+    m = [per_inv_s(cost[(exp, "blocks_c1")], MAP_FN)[0]] + [per_inv_s(rcost[t][(exp, "blocks_c1")], MAP_FN)[0] for t in REPS]
+    assert m[0] == min(m), "text says the reported run had the lowest per-task duration"
+    put(f"rep.task.{key}.map.hi", fix(max(m), 2), REP_SRC)
+    put(f"rep.task.{key}.map.pct", integer(100 * (max(m) / m[0] - 1)), REP_SRC)
+r_l1 = [c3_l1["blocks"] / c3_l1["lancedb"]] + [rcost[t][("c3", "blocks_c1")]["l1_usd_q"] / c3_l1["lancedb"] for t in REPS]
+put("rep.ratio.c3.l1.blocks_lancedb.lo", ratio(min(r_l1)), REP_SRC)
+put("rep.ratio.c3.l1.blocks_lancedb.hi", ratio(max(r_l1)), REP_SRC)
+r_l2 = [x / c3_l2["blocks"] for x in c3_lan_l2] + [x / rcost[t][("c3", "blocks_c1")]["l2_usd_q"] for t in REPS for x in c3_lan_l2]
+put("rep.ratio.c3.l2.lancedb_blocks.lo", ratio(min(r_l2)), REP_SRC)
+put("rep.ratio.c3.l2.lancedb_blocks.hi", ratio(max(r_l2)), REP_SRC)
+
 # Inside a Blocks map task (blocks-db-wip querying.py map_function timers): total, query fetch, per-block
 # download (sequential), per-block faiss.read_index, per-block search. Medians over tasks; search per query.
 def map_timers(records):
@@ -470,6 +524,213 @@ for k in (1, 4, 10):
     put(f"s3v.b.c{k}.p50q1", sig(statistics.median(ordered[:q])), src)
     put(f"s3v.b.c{k}.p50q4", sig(statistics.median(ordered[-q:])), src)
 put("ratio.s3v.b.c1_c4", fix(lat["b/s3vectors_c1"]["p50"] / lat["b/s3vectors_c4"]["p50"], 1), LAT_SRC)
+
+# ----- LanceDB on Lambda MicroVMs (F39, tag 2026-10-mvm; findings 28-31) ---------------------------------
+MVM = "scripts/microvm/results"
+E2D = os.path.join("experiments", "experiment_c2", "results_2026-10-mvm")    # E3 trace and old E2 runs
+E2V6 = os.path.join("experiments", "experiment_c2", "results_2026-10-mvm6")  # E2 reported: server v6, 26 Oct
+# Published us-east-1 arm64 prices (Lambda pricing page, accessed 2026-09-25, finding 28)
+P_VCPU, P_GBS, P_SNAP_W, P_SNAP_R = 0.0000276944, 0.0000036667, 0.0038, 0.00155
+for k_, v_ in (("vcpu", P_VCPU), ("gbs", P_GBS)):
+    put(f"price.mvm.{k_}", f"{v_:.10f}".rstrip("0"), "Lambda pricing page, accessed 2026-09-25 (finding 28)")
+put("price.mvm.w", f"{P_SNAP_W}", "Lambda pricing page, accessed 2026-09-25 (finding 28)")
+put("price.mvm.r", f"{P_SNAP_R}", "Lambda pricing page, accessed 2026-09-25 (finding 28)")
+put("mvm.novalidate.s", sig(load(MVM, "msnap_deep_1m_20261018T130340Z.json")["first_query"]["wall_s"]),
+    f"{MVM}/msnap_deep_1m_20261018T130340Z.json")
+for ds, f in (("1m", "gate_deep_1m_20261018T141124Z.json"), ("10m", "gate_deep_10m_20261021T092813Z.json")):
+    g = load(MVM, f)
+    assert g["passed"] and g["recall"]["recall_at_10_pct"] == 100.0
+    assert g["vs_lambda"]["identical_ranked"] == g["vs_lambda"]["n"]
+    put(f"mvm.gate.{ds}.n", thou(str(g["recall"]["n"])), f"{MVM}/{f}")
+# E1 as reported: the re-run on server v6 (one-write replies, tag 2026-10-mvm6, finding 33). The first E1 run (v4,
+# tag 2026-10-mvm) only supplies the old overhead, which E2 and E3 also carry on back-to-back requests.
+e1v4 = load(MVM, "phase3_summary_2026-10-mvm.json")["e1"]
+put("mvm.e1v4.overhead", fix(statistics.median(c["overhead_p50"] for c in e1v4.values()), 2),
+    f"{MVM}/phase3_summary_2026-10-mvm.json")
+e1 = load(MVM, "phase3_summary_2026-10-mvm6.json")["e1"]
+E1_SRC = f"{MVM}/phase3_summary_2026-10-mvm6.json"
+for cell, c in e1.items():
+    k = cell.replace("_", ".")
+    put(f"mvm.e1.{k}.n", thou(str(c["n"])), E1_SRC)
+    put(f"mvm.e1.{k}.p50", sig(c["p50"]), E1_SRC)
+    put(f"mvm.e1.{k}.p95", sig(c["p95"]), E1_SRC)
+    put(f"mvm.e1.{k}.ops", sig(c["ops_s"]), E1_SRC)
+    put(f"mvm.e1.{k}.server", sig(c["server_p50"]), E1_SRC)
+put("mvm.e1.overhead.ms.min", integer(1e3 * min(c["overhead_p50"] for c in e1.values())), E1_SRC)
+put("mvm.e1.overhead.ms.max", integer(1e3 * max(c["overhead_p50"] for c in e1.values())), E1_SRC)
+# Transport test (finding 33): one 1M MicroVM per image, keep-alive blocks of back-to-back requests
+TRD = f"{MVM}/transport"
+trv4 = load(TRD, "transport_deep_1m_thesis-lancedb-mvm-deep1m_20261025T141511Z.json")["summary"]
+trv6 = load(TRD, "transport_deep_1m_thesis-lancedb-mvm-deep1m-v6_20261025T141819Z.json")
+TR6 = f"{TRD}/transport_deep_1m_thesis-lancedb-mvm-deep1m-v6_20261025T141819Z.json"
+put("mvm.tr.v4", fix(trv4["query_split"]["overhead_p50_ms"], 1), f"{TRD}/transport_deep_1m_thesis-lancedb-mvm-deep1m_20261025T141511Z.json")
+put("mvm.tr.v4.spaced", fix(trv4["query_split_spaced2s"]["overhead_p50_ms"], 1), f"{TRD}/transport_deep_1m_thesis-lancedb-mvm-deep1m_20261025T141511Z.json")
+for k_, arm in (("split", "query_split"), ("single", "query_single"), ("nodelay", "query_split_nodelay")):
+    put(f"mvm.tr.{k_}", fix(trv6["summary"][arm]["overhead_p50_ms"], 1), TR6)
+put("mvm.tr.ping.split", fix(1e3 * trv6["summary"]["ping_split"]["wall_p50_s"], 1), TR6)
+put("mvm.tr.ping.single", fix(1e3 * trv6["summary"]["ping_single"]["wall_p50_s"], 1), TR6)
+assert all(r["cpu_part"] == ["0xd40"] for r in trv6["records"] if r["cpu_part"]), "text: the v6 transport MicroVM was Graviton 3"
+put("mvm.tr.g3.wall", sig(trv6["summary"]["query_single"]["wall_p50_s"]), TR6)
+put("mvm.tr.g3.server", sig(statistics.median(r["server_ms"] for r in trv6["records"] if r["arm"] == "query_single" and r["server_ms"]) / 1e3), TR6)
+put("mvm.e1.10m.c32.err", integer(sum(e1["10m_c32"]["errors"].values())), E1_SRC)
+put("mvm.e1.10m.c32.tot", integer(e1["10m_c32"]["n"] + sum(e1["10m_c32"]["errors"].values())), E1_SRC)
+assert [c for c, v in e1.items() if "0xd4f" in v["cpu_part"]] == ["1m_c1", "10m_c1"], "text: only the c1 cells ran on Graviton 4"
+assert all(len(v["cpu_part"]) == 1 for v in e1.values()), "text: one processor per cell"
+assert [c for c, v in e1.items() if v["errors"]] == ["10m_c16", "10m_c32"], "caption: errors only at c16 and c32"
+put("mvm.e1.10m.c16.err", integer(sum(e1["10m_c16"]["errors"].values())), E1_SRC)
+# The v4 run's single-client cells ran on Graviton 3; v6 changed only how replies are written, not the search
+assert all(v["cpu_part"] == {"0xd40": v["n"]} for c, v in e1v4.items() if c.endswith("_c1"))
+put("mvm.e1v4.1m.c1.server", sig(e1v4["1m_c1"]["server_p50"]), f"{MVM}/phase3_summary_2026-10-mvm.json")
+put("mvm.e1v4.10m.c1.server", sig(e1v4["10m_c1"]["server_p50"]), f"{MVM}/phase3_summary_2026-10-mvm.json")
+put("ratio.mvm.lancedb.1m", ratio(lat["b/lancedb_c1"]["p50"] / e1["1m_c1"]["p50"]), E1_SRC + " and " + LAT_SRC)
+put("ratio.mvm.lancedb.10m", ratio(lat["c3/lancedb_c1"]["p50"] / e1["10m_c1"]["p50"]), E1_SRC + " and " + LAT_SRC)
+
+
+def jl(path):
+    return [json.loads(l) for l in open(os.path.join(ROOT, path))]
+
+
+# E2 is reported from the 26 Oct re-run on the v6 images (one-send server, finding 33); the 22-25 Oct runs on the
+# first server stay in E2D as records (the 1M resume drift and the 2.84-s d30 launch of that run did not recur).
+for ds in ("1m", "10m"):
+    recs = jl(os.path.join(E2V6, f"e2_lancedb_microvm_deep_{ds}.jsonl"))
+    src = f"{E2V6}/e2_lancedb_microvm_deep_{ds}.jsonl"
+    first = [r for r in recs if r["config"].startswith("launch_d") and not r["config"].endswith("_next")]
+    run = [r["run_to_running_s"] for r in first if r.get("run_to_running_s")]
+    put(f"mvm.e2.{ds}.running.lo", sig(min(run)), src)
+    put(f"mvm.e2.{ds}.running.hi", sig(max(run)), src)
+    put(f"mvm.e2.{ds}.running", sig(statistics.median(run)), src)
+    for d in (0, 30, 60):
+        w = [r["wall_clock_s"] for r in first if r["config"] == f"launch_d{d}"]
+        put(f"mvm.e2.{ds}.d{d}.lo", sig(min(w)), src)
+        put(f"mvm.e2.{ds}.d{d}.hi", sig(max(w)), src)
+    put(f"mvm.e2.{ds}.first.lo", sig(min(r["wall_clock_s"] for r in first)), src)
+    put(f"mvm.e2.{ds}.first.hi", sig(max(r["wall_clock_s"] for r in first)), src)
+    put(f"mvm.e2.{ds}.next", sig(statistics.median(r["wall_clock_s"] for r in recs if r["config"].startswith("launch_d")
+                                                  and r["config"].endswith("_next"))), src)
+    put(f"mvm.e2.{ds}.nlaunch", integer(len(first)), src)
+    man = load(E2V6, f"e2_lancedb_microvm_deep_{ds}.manifest.json")
+    assert not man["failed_launches"], "text: no E2 launch of the v6 run ended before running"
+    assert all(f"deep{ds}-v6" in L["backend_version"]["image_arn"] for L in man["launches"])
+r1 = jl(os.path.join(E2V6, "e2_lancedb_microvm_deep_1m.jsonl"))
+res = [r["wall_clock_s"] for r in r1 if r["config"] == "resume"]
+SRC1 = f"{E2V6}/e2_lancedb_microvm_deep_1m.jsonl"
+put("mvm.e2.1m.resume.n", integer(len(res)), SRC1)
+put("mvm.e2.1m.resume.p50", sig(statistics.median(res)), SRC1)
+put("mvm.e2.1m.resume.lo", sig(min(res)), SRC1)
+put("mvm.e2.1m.resume.hi", sig(max(res)), SRC1)
+put("mvm.e2.1m.resume.next", sig(statistics.median(r["wall_clock_s"] for r in r1 if r["config"] == "resume_next")), SRC1)
+# 10M resume part (v6 image). The runs on the 21 Oct image ended in suspend-hook timeouts and the 25 Oct run on the
+# 24 Oct image is kept as a record; all are counted in the suspend census (finding 32).
+SRCR = f"{E2V6}/e2_lancedb_microvm_deep_10m_resume.jsonl"
+rrec = jl(SRCR)
+mr = load(E2V6, "e2_lancedb_microvm_deep_10m_resume.manifest.json")
+assert "deep10m-v6" in json.dumps(mr["resume"])
+fc = mr["failed_cycles"]
+assert [c["cycle"] for c in fc] == [7] and fc[0]["state_reason"] == "Internal service error.", \
+    "text: the eighth resume cycle ended with AWS terminating the MicroVM (internal service error)"
+res10 = [r["wall_clock_s"] for r in rrec if r["config"] == "resume"]
+put("mvm.e2.10m.resume.n", integer(len(res10)), SRCR)
+put("mvm.e2.10m.resume.lo", sig(min(res10)), SRCR)
+put("mvm.e2.10m.resume.hi", sig(max(res10)), SRCR)
+put("mvm.e2.10m.resume.p50", sig(statistics.median(res10)), SRCR)
+put("mvm.e2.10m.resume.next", sig(statistics.median(r["wall_clock_s"] for r in rrec if r["config"] == "resume_next")), SRCR)
+old10 = [json.loads(l) for f in ("e2_lancedb_microvm_deep_10m_resume.jsonl", "e2_lancedb_microvm_deep_10m_resume2.jsonl",
+                                 "e2_lancedb_microvm_deep_10m_resume_fresh.jsonl")
+         for l in open(os.path.join(ROOT, E2D, f))]
+put("mvm.e2.10m.warmup.max", sig(max(r["wall_clock_s"] for r in old10 + rrec if r["config"] == "resume_warm_before")),
+    f"{E2D}/e2_lancedb_microvm_deep_10m_resume*.jsonl and {SRCR}")
+# Suspend census (finding 32): every 10M MicroVM that met an idle suspend, by image build date
+cen = load(MVM, "suspend_census_10m.json")["by_build_date"]
+CEN_SRC = f"{MVM}/suspend_census_10m.json"
+old_, new_ = cen["2026-10-21"], cen["2026-10-24"]
+assert new_["failed"] == 0 and old_["failed_inferred"] == 1 and old_["internal_error"] == 0
+assert new_["internal_error"] == 1, "text: one MicroVM of the rebuilt image ended with an internal service error"
+put("mvm.susp.old.vms", integer(old_["microvms"]), CEN_SRC)
+put("mvm.susp.old.ok", integer(old_["ok"]), CEN_SRC)
+put("mvm.susp.old.fail", integer(old_["failed"]), CEN_SRC)
+put("mvm.susp.old.att", integer(old_["attempts"]), CEN_SRC)
+put("mvm.susp.new.vms", integer(new_["microvms"]), CEN_SRC)
+put("mvm.susp.new.ok", integer(new_["ok"]), CEN_SRC)
+# 26 Oct control: the 21 Oct image's artifact (server v4) and settings, built again (finding 32)
+v4b_ = cen["2026-10-26"]
+assert v4b_["images"] == ["thesis-lancedb-mvm-deep10m-v4today"] and v4b_["failed"] == 0 and v4b_["microvms"] == 1
+put("mvm.susp.v4b.ok", integer(v4b_["ok"]), CEN_SRC)
+put("mvm.susp.v4b.p", sig((old_["ok"] / old_["attempts"]) ** v4b_["ok"] * 100, 2), CEN_SRC + " (old image's rate, percent)")
+# Every 10M launch and resume 21-25 Oct and the ones AWS ended on its own (scripts/microvm/platform_failures_10m.py)
+pf = load(MVM, "platform_failures_10m.json")["summary"]
+PF_SRC = f"{MVM}/platform_failures_10m.json"
+assert pf["launches_reason_unrecorded"] == 1, "text: a fifth launch ended without a recorded reason"
+put("mvm.pf.launches", integer(pf["launches"]), PF_SRC)
+put("mvm.pf.launch.ise", integer(pf["launches_internal_error"]), PF_SRC)
+put("mvm.pf.resumes", integer(pf["resumes"]), PF_SRC)
+put("mvm.pf.resume.ise", integer(pf["resumes_internal_error"]), PF_SRC)
+# E3: one day of MicroVM usage rebuilt from our records against Cost Explorer, and the 2-h trace
+rc = load(MVM, "e3_reconcile_2026-10-22.json")
+RC_SRC = f"{MVM}/e3_reconcile_2026-10-22.json"
+ce_ = rc["cost_explorer"]
+put("mvm.e3.nvm", integer(len(rc["microvms"])), RC_SRC)
+put("mvm.e3.mem.model", thou(f"{rc['model']['memory_gb_s']:.0f}"), RC_SRC)
+put("mvm.e3.mem.ce", thou(f"{ce_['Lambda-MicroVM-Memory-GB-Second-ARM']:.0f}"), RC_SRC)
+put("mvm.e3.mem.pct", fix(100 * (ce_["Lambda-MicroVM-Memory-GB-Second-ARM"] / rc["model"]["memory_gb_s"] - 1), 1), RC_SRC)
+put("mvm.e3.burst", thou(f"{rc['compare']['vcpu_burst_billed_s']:.0f}"), RC_SRC)
+put("mvm.e3.guest.n", integer(rc["compare"]["guest_measured_microvms"]), RC_SRC)
+put("mvm.e3.guest.busy", thou(f"{rc['compare']['guest_busy_cpu_s_sum']:.0f}"), RC_SRC)
+put("mvm.e3.guest.base", thou(f"{rc['compare']['guest_baseline_vcpu_s_running']:.0f}"), RC_SRC)
+put("mvm.e3.burst.pct", integer(100 * rc["compare"]["vcpu_burst_share_of_baseline"]), RC_SRC)
+n1 = rc["counts"]["thesis-lancedb-mvm-deep1m"]
+w_susp = ce_["Lambda-MicroVM-Snapshot-Write-GB"] / n1["suspend"]
+assert rc["counts"]["thesis-lancedb-mvm-deep10m"]["suspend"] == 0, "text: all snapshot writes that day were 1M suspends"
+put("mvm.e3.wsusp", fix(w_susp, 2), RC_SRC)
+put("mvm.e3.r10launch", fix(rc["compare"]["snapshot_read_remainder_per_10m_launch_gb"], 0), RC_SRC)
+tr = jl(os.path.join(E2D, "e3_trace_lancedb_microvm_deep_1m.jsonl"))
+TR_SRC = f"{E2D}/e3_trace_lancedb_microvm_deep_1m.jsonl and {RC_SRC}"
+v = next(x for x in rc["microvms"] if x["microvm_id"] == tr[0]["microvm_id"])
+assert not any(r.get("error") for r in tr)
+put("mvm.e3.tr.n", integer(len(tr)), TR_SRC)
+put("mvm.e3.tr.nres", integer(sum(1 for r in tr if r.get("resumed"))), TR_SRC)
+put("mvm.e3.tr.res.p50", sig(statistics.median(r["wall_clock_s"] for r in tr if r.get("resumed"))), TR_SRC)
+put("mvm.e3.tr.res.max", sig(max(r["wall_clock_s"] for r in tr if r.get("resumed"))), TR_SRC)
+put("mvm.e3.tr.run.p50", sig(statistics.median(r["wall_clock_s"] for r in tr if not r.get("resumed"))), TR_SRC)
+put("mvm.e3.tr.cycles", integer(v["suspend"]), TR_SRC)
+put("mvm.e3.tr.suspct", integer(100 * v["suspended_s"] / v["lifetime_s"]), TR_SRC)
+put("mvm.e3.tr.suspmean", integer(v["suspended_s"] / v["suspend"]), TR_SRC)
+r_res = (load(MVM, "ce_2026-10-20.json"), None)[0]
+R_RESUME = (next(r["quantity"] for r in r_res["rows"] if r["usage_type"] == "Lambda-MicroVM-Snapshot-Read-GB") - 2.96) / 5
+run_cost_s = 2 * P_GBS + 1 * P_VCPU                      # 1M MicroVM: 2 GB, 1 vCPU baseline
+cycle = w_susp * P_SNAP_W + R_RESUME * P_SNAP_R
+base_ = v["running_s"] * run_cost_s
+snap_ = v["suspend"] * w_susp * P_SNAP_W + v["resume"] * R_RESUME * P_SNAP_R + 2.96 * P_SNAP_R
+burst_ = rc["compare"]["vcpu_burst_billed_s"] / rc["model"]["vcpu_baseline_s"] * v["running_s"] * P_VCPU
+put("mvm.e3.tr.snap", fix(snap_, 2), TR_SRC)
+put("mvm.e3.tr.cost.lo", fix(base_ + snap_, 2), TR_SRC)
+put("mvm.e3.tr.cost.hi", fix(base_ + snap_ + burst_, 2), TR_SRC)
+put("mvm.e3.tr.q.lo", sig((base_ + snap_) / len(tr)), TR_SRC)
+put("mvm.e3.tr.q.hi", sig((base_ + snap_ + burst_) / len(tr)), TR_SRC)
+put("mvm.e3.tr.on", fix(v["lifetime_s"] * run_cost_s, 2), TR_SRC)
+put("mvm.e3.tr.on.q", sig(v["lifetime_s"] * run_cost_s / len(tr)), TR_SRC)
+put("mvm.e3.cycle", fix(cycle, 3), TR_SRC)
+put("mvm.e3.breakeven_s", integer(round(cycle / run_cost_s, -1)), TR_SRC)
+put("mvm.hour.1m", fix(3600 * run_cost_s, 3), "finding 28 prices")
+put("mvm.hour.10m", fix(3600 * (8 * P_GBS + 4 * P_VCPU), 2), "finding 28 prices")
+put("mvm.breakeven.qh.1m", thou(f"{round(3600 * run_cost_s / cost[('b', 'lancedb_c1')]['l1_usd_q'], -1):.0f}"),
+    "finding 28 prices and " + COST_SRC)
+put("mvm.breakeven.qh.10m", thou(f"{round(3600 * (8 * P_GBS + 4 * P_VCPU) / c3_l1['lancedb'], -1):.0f}"),
+    "finding 28 prices and " + COST_SRC)
+
+put("mvm.breakeven.qh.1m.l2", thou(f"{round(3600 * run_cost_s / b_l2['lancedb'], -1):.0f}"),
+    "finding 28 prices and " + COST_SRC)
+put("mvm.breakeven.qh.10m.l2", thou(f"{round(3600 * (8 * P_GBS + 4 * P_VCPU) / c3_l2['lancedb'], -1):.0f}"),
+    "finding 28 prices and " + COST_SRC)
+# Cost per query of one MicroVM kept busy at its E1 c8 throughput: baseline only, or with all vCPUs the guest
+# sees (4x the baseline) billed as burst for the whole time.
+for ds, gb, vc in (("1m", 2, 1), ("10m", 8, 4)):
+    qps = e1[f"{ds}_c8"]["ops_s"]
+    lo_ = (gb * P_GBS + vc * P_VCPU) / qps
+    hi_ = (gb * P_GBS + 4 * vc * P_VCPU) / qps
+    put(f"mvm.sat.{ds}.lo", sig(lo_), E1_SRC + " and finding 28 prices")
+    put(f"mvm.sat.{ds}.hi", sig(hi_), E1_SRC + " and finding 28 prices")
+put("ratio.mvm.trace.lancedb", ratio(((base_ + snap_) / len(tr)) / cost[("b", "lancedb_c1")]["l1_usd_q"]), TR_SRC)
 
 # ----- figure coordinates (log10 scale, 1 unit = 1 decade, origin at 0.03 s) -----------------------------
 

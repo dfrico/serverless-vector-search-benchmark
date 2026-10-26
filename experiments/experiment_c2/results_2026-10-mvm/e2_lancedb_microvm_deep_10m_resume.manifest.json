@@ -1,0 +1,37 @@
+{
+ "started_utc": "2026-10-24T19:31:36Z",
+ "dataset": "deep_10m",
+ "protocol": {
+  "dataset": "deep_10m",
+  "delays": "0,30,60",
+  "per_delay": 3,
+  "cycles": 10,
+  "idle_suspend": 60,
+  "suspended": 30,
+  "parts": "resume",
+  "gap": 30.0,
+  "i_have_approval": true,
+  "resume_settle": 0.0,
+  "out_suffix": "_resume"
+ },
+ "launches": [],
+ "resume": null,
+ "failed_launches": [],
+ "failed_cycles": [],
+ "launch_transitions": [],
+ "resume_transitions": {
+  "stats_error": "RuntimeError: MicroVM GET /stats returned HTTP 502: ",
+  "microvm_id": "microvm-8824e2ea-8bd8-37e8-836f-0fad2ec0e51c",
+  "state": "TERMINATED",
+  "started_at": "2026-10-24 19:32:06.968000+00:00",
+  "terminated_at": "2026-10-24 19:41:23.688000+00:00",
+  "lifecycle": {
+   "mode": "launch",
+   "run_to_running_s": 6.236223220825195,
+   "polled_running_s": 6.072562217712402,
+   "rows": 10000000,
+   "setup_s": 6.301292896270752
+  }
+ },
+ "ended_utc": "2026-10-24T19:51:17Z"
+}

@@ -1,0 +1,15 @@
+startup {"t": 1792878583.5766172, "wall_s": 0.177, "status": 200, "body": {"server_ms": 150.98692600000163, "runs": 1, "resumes": 0, "cpu_part": ["0xd40"]}}
+ballast {"t": 1792878583.7537634, "wall_s": 5.544, "status": 200, "body": {"ballast_MB": 5120, "alloc_s": 5.491827055000002, "vm": {"MemFree": 1971, "Cached": 586, "Dirty": 376, "Writeback": 0, "AnonPages": 5362, "pgfault": 184946, "pgmajfault": 2220, "pgsteal_kswapd": 0, "pgsteal_direct": 0, "pgscan_kswapd": 0, "pgscan_direct": 0, "steal_s": 0.0}}}
+cycle 0: SUSPENDED after 64.7 s (settled 64.7 s)
+  resume query {"t": 1792878674.808087, "wall_s": 1.076, "status": 200, "body": {"server_ms": 517.2112779999907, "runs": 1, "resumes": 1, "cpu_part": ["0xd40"]}}
+cycle 1: SUSPENDED after 65.8 s (settled 66.8 s)
+  resume query {"t": 1792878763.493119, "wall_s": 1.192, "status": 200, "body": {"server_ms": 643.6428239999827, "runs": 1, "resumes": 2, "cpu_part": ["0xd40"]}}
+cycle 2: SUSPENDED after 61.6 s (settled 61.6 s)
+  resume query {"t": 1792878847.0656638, "wall_s": 0.672, "status": 200, "body": {"server_ms": 117.35064599997713, "runs": 1, "resumes": 3, "cpu_part": ["0xd40"]}}
+cycle 3: SUSPENDED after 71.2 s (settled 72.3 s)
+  resume query {"t": 1792878940.7752051, "wall_s": 0.7, "status": 200, "body": {"server_ms": 135.27373699997725, "runs": 1, "resumes": 4, "cpu_part": ["0xd40"]}}
+cycle 4: SUSPENDED after 70.1 s (settled 71.2 s)
+  resume query {"t": 1792879033.3951404, "wall_s": 0.983, "status": 200, "body": {"server_ms": 429.0246520000096, "runs": 1, "resumes": 5, "cpu_part": ["0xd40"]}}
+cycle 5: SUSPENDED after 62.6 s (settled 62.6 s)
+  resume query {"t": 1792879117.7356849, "wall_s": 0.663, "status": 200, "body": {"server_ms": 116.67488899990985, "runs": 1, "resumes": 6, "cpu_part": ["0xd40"]}}
+-> /home/ec2-user/thesis/scripts/microvm/results/hook_probe_deep_1m_ballast5g_20261024T215912Z.json

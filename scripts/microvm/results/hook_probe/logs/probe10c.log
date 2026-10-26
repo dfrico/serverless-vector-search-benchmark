@@ -1,0 +1,2 @@
+ERROR ServiceQuotaExceededException: An error occurred (ServiceQuotaExceededException) when calling the RunMicrovm operation: The base maximum allocated memory limit has been reached for this account.
+-> /home/ec2-user/thesis/scripts/microvm/results/hook_probe_deep_10m_plainc_20261024T221208Z.json

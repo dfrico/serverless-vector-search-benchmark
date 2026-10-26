@@ -14,10 +14,24 @@ snapshot holds the loaded table. Queries use the same LanceDB call as the Lambda
   GET  /stats                -> load report, memory, page faults, chipset
   POST /query                -> {"queries": [[...]], "top_k": 10, "metric": "l2"} like the Lambda op
   GET  /creds, /s3, /lance   -> Phase 0 checks
+
+TRACE=1 (v5, hook-timeout probe, finding 32) adds a heartbeat thread that prints a "trace" line with the guest's
+own clock whenever this process went more than 1 s without running, and every 10 s otherwise (memory, reclaim and
+fault counters, CPU steal); hook lines then carry the guest time the request reached the handler and whether the
+reply could be written. It also enables POST /debug/dropcaches and POST /debug/alloc?mb=N (resident ballast).
+Without TRACE the server behaves as v4.
+
+v6 (transport test, finding 33): v4/v5 wrote each response as two writes (headers, then body) on a socket with Nagle on.
+After the first exchanges on a keep-alive connection the peer's ACK is delayed, so the body waits for it. v6 writes
+headers and body in one send. The request header X-Write-Mode picks the behaviour per request, so one MicroVM can
+measure all three: "split" (v4/v5), "split_nodelay" (two writes, TCP_NODELAY) and "single" (the default, WRITE_MODE).
+Responses to /query and /ping also report the request's position on its connection (req_on_conn, conn_age_s), which
+shows whether the endpoint reuses its connection to the guest.
 """
 import concurrent.futures as cf
 import json
 import os
+import socket
 import threading
 import time
 import urllib.parse
@@ -30,6 +44,9 @@ LOCK = threading.Lock()
 HOOK = "/aws/lambda-microvms/runtime/v1/"
 LOCAL = os.environ.get("LOCAL_DIR", "/data")
 TABLE = None
+TRACE = os.environ.get("TRACE") == "1"
+BALLAST = []
+WRITE_MODE = os.environ.get("WRITE_MODE", "single")
 
 
 def _proc():
@@ -51,6 +68,53 @@ def _proc():
             "host_busy_cpu_s": (cpu[0] + cpu[1] + cpu[2] + cpu[5] + cpu[6] + cpu[7]) / tck,
             "uptime_s": float(open("/proc/uptime").read().split()[0]), "t": time.time(),
             "cpu_part": parts, "ncpu": os.cpu_count()}  # 0xd40 = Neoverse V1 (Graviton3), 0xd4f = V2 (Graviton4)
+
+
+def _vm():
+    """Trace counters: memory in MB, reclaim and fault counts, total CPU steal seconds."""
+    m = {}
+    for line in open("/proc/meminfo"):
+        k, v = line.split(":")
+        if k in ("MemFree", "Cached", "Dirty", "Writeback", "AnonPages"):
+            m[k] = int(v.split()[0]) // 1024
+    for line in open("/proc/vmstat"):
+        k, v = line.split()
+        if k in ("pgmajfault", "pgfault", "pgscan_kswapd", "pgscan_direct", "pgsteal_kswapd", "pgsteal_direct"):
+            m[k] = int(v)
+    m["steal_s"] = int(open("/proc/stat").readline().split()[8]) / os.sysconf("SC_CLK_TCK")
+    return m
+
+
+def _heartbeat():
+    last = last_line = time.time()
+    while True:
+        time.sleep(0.5)
+        now = time.time()
+        gap, last = now - last, now
+        if gap > 1.0 or now - last_line >= 10:
+            print(f"trace t={now:.3f} gap={gap:.3f} {json.dumps(_vm())}", flush=True)
+            last_line = now
+
+
+def _debug(path):
+    if path == "/debug/dropcaches":
+        before = _vm()
+        os.sync()
+        try:
+            with open("/proc/sys/vm/drop_caches", "w") as f:
+                f.write("3")
+            err = None
+        except OSError as e:
+            err = f"{type(e).__name__}: {e}"
+        return {"before": before, "after": _vm(), "error": err}
+    if path.startswith("/debug/alloc"):
+        import numpy as np
+        mb = int(urllib.parse.parse_qs(urllib.parse.urlparse(path).query)["mb"][0])
+        t0 = time.perf_counter()
+        for _ in range(mb // 256):  # random bytes, so the pages are neither zero nor alike
+            BALLAST.append(np.random.default_rng().integers(0, 256, size=256 << 20, dtype=np.uint8))
+        return {"ballast_MB": 256 * len(BALLAST), "alloc_s": time.perf_counter() - t0, "vm": _vm()}
+    return None
 
 
 def _load(uri):
@@ -118,14 +182,28 @@ class H(BaseHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
 
     def _send(self, code, obj):
+        mode = (self.headers.get("X-Write-Mode") if self.headers else None) or WRITE_MODE
+        if isinstance(obj, dict) and code == 200 and self.path.split("?")[0] in ("/query", "/ping"):
+            obj = {**obj, "write_mode": mode, "req_on_conn": self.n_req, "conn_age_s": time.time() - self.t_conn}
         b = json.dumps(obj).encode()
+        self.connection.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, int(mode == "split_nodelay"))
         self.send_response(code)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(b)))
-        self.end_headers()
-        self.wfile.write(b)
+        if mode in ("split", "split_nodelay"):  # v4/v5: headers and body in two writes
+            self.end_headers()
+            self.wfile.write(b)
+        else:  # one write: the stdlib header buffer plus the body
+            self._headers_buffer.append(b"\r\n" + b)
+            self.flush_headers()
+
+    def setup(self):
+        super().setup()
+        self.t_conn, self.n_req = time.time(), 0
 
     def do_POST(self):
+        t_in = time.time()
+        self.n_req += 1
         n = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(n) if n else b""
         if self.path.startswith(HOOK):
@@ -135,7 +213,19 @@ class H(BaseHTTPRequestHandler):
                     STATE["ready_hooks"] += 1
                 elif name in ("run", "resume", "suspend"):
                     STATE[f"{name}_hooks"].append(time.time())
-            print(f"hook {name} load={LOAD.get('status')}", flush=True)
+            if TRACE:
+                print(f"hook {name} load={LOAD.get('status')} t_in={t_in:.3f} port={self.client_address[1]} "
+                      f"conn_age={t_in - self.t_conn:.1f} req_on_conn={self.n_req} {json.dumps(_vm())}", flush=True)
+                if name in ("run", "resume", "suspend"):
+                    try:
+                        self._send(200, {"ok": True})
+                        print(f"hook-reply {name} ok t={time.time():.3f}", flush=True)
+                    except OSError as e:
+                        print(f"hook-reply {name} FAILED t={time.time():.3f} {type(e).__name__}", flush=True)
+                        self.close_connection = True
+                    return
+            else:
+                print(f"hook {name} load={LOAD.get('status')}", flush=True)
             if name == "ready" and LOAD["status"] == "loading":
                 return self._send(503, {"ok": False, "load": "loading"})  # answer at once; Lambda retries
             if name == "validate" and TABLE is not None:
@@ -164,6 +254,10 @@ class H(BaseHTTPRequestHandler):
                 LOAD["validate_s"] = time.perf_counter() - t0
                 print(f"validate {LOAD['validate_s']:.2f}s read={nread}", flush=True)
             return self._send(200, {"ok": True})
+        if TRACE and self.path.startswith("/debug/"):
+            out = _debug(self.path)
+            if out is not None:
+                return self._send(200, out)
         if self.path == "/query":
             if TABLE is None:
                 return self._send(503, {"ok": False, "error": f"table {LOAD.get('status')}"})
@@ -182,6 +276,7 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         u = urllib.parse.urlparse(self.path)
         q = urllib.parse.parse_qs(u.query)
+        self.n_req += 1
         with LOCK:
             STATE["requests"] += 1
         try:
@@ -238,5 +333,7 @@ if __name__ == "__main__":
     if os.environ.get("TABLE_URI"):
         LOAD["status"] = "loading"
         threading.Thread(target=_loader, daemon=True).start()
+    if TRACE:
+        threading.Thread(target=_heartbeat, daemon=True).start()
     print("listening on 8080", flush=True)
     ThreadingHTTPServer(("0.0.0.0", 8080), H).serve_forever()

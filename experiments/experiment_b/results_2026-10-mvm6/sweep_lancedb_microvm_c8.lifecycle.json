@@ -1,0 +1,34 @@
+{
+ "run_hooks": [
+  1792938255.9989297
+ ],
+ "resume_hooks": [],
+ "suspend_hooks": [],
+ "stats_at_teardown": {
+  "MemTotal_MB": 8016,
+  "MemAvailable_MB": 7187,
+  "Cached_MB": 591,
+  "rss_MB": 561,
+  "minflt": 6115691,
+  "majflt": 1505,
+  "proc_cpu_s": 181.32,
+  "host_busy_cpu_s": 189.24,
+  "uptime_s": 154.23,
+  "t": 1792938365.4647276,
+  "cpu_part": [
+   "0xd40"
+  ],
+  "ncpu": 4
+ },
+ "microvm_id": "microvm-661c7b50-c279-3eb4-b04f-d851dfbcbe17",
+ "state": "TERMINATED",
+ "started_at": "2026-10-25 14:24:14.284000+00:00",
+ "terminated_at": "2026-10-25 14:26:06.064000+00:00",
+ "lifecycle": {
+  "mode": "launch",
+  "run_to_running_s": 2.3902981281280518,
+  "polled_running_s": 2.231687307357788,
+  "rows": 1000000,
+  "setup_s": 62.50014615058899
+ }
+}

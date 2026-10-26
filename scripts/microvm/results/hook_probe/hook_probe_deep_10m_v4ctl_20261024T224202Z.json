@@ -1,0 +1,438 @@
+{
+ "image": "thesis-lancedb-mvm-deep10m",
+ "dataset": "deep_10m",
+ "tag": "v4ctl",
+ "ballast_mb": 0,
+ "dropcaches": false,
+ "idle_s": 60,
+ "cycles": [
+  {
+   "cycle": 0,
+   "queries": [
+    {
+     "t": 1792881468.3243475,
+     "wall_s": 52.765,
+     "status": 200,
+     "body": {
+      "server_ms": 51100.71185599997,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881521.0894268,
+     "wall_s": 0.756,
+     "status": 200,
+     "body": {
+      "server_ms": 574.1496389999838,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881521.8454363,
+     "wall_s": 0.503,
+     "status": 200,
+     "body": {
+      "server_ms": 452.34163200001376,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881522.3490431,
+     "wall_s": 0.5,
+     "status": 200,
+     "body": {
+      "server_ms": 450.3019629999585,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881522.8488727,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 454.8036979999779,
+      "runs": 1,
+      "resumes": 1,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792881523.3588498,
+   "left_running_s": 66.2,
+   "state": "SUSPENDED",
+   "settled_s": 66.2,
+   "resume_query": {
+    "t": 1792881609.5390506,
+    "wall_s": 3.848,
+    "status": 200,
+    "body": {
+     "server_ms": 3282.4780160000273,
+     "runs": 1,
+     "resumes": 2,
+     "cpu_part": [
+      "0xd40"
+     ]
+    }
+   }
+  },
+  {
+   "cycle": 1,
+   "queries": [
+    {
+     "t": 1792881613.3869727,
+     "wall_s": 0.507,
+     "status": 200,
+     "body": {
+      "server_ms": 448.922959000015,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881613.8943348,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 451.94254699998737,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881614.4046836,
+     "wall_s": 0.51,
+     "status": 200,
+     "body": {
+      "server_ms": 451.2676510000233,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881614.9143593,
+     "wall_s": 0.5,
+     "status": 200,
+     "body": {
+      "server_ms": 450.0101259999951,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    },
+    {
+     "t": 1792881615.4148781,
+     "wall_s": 0.499,
+     "status": 200,
+     "body": {
+      "server_ms": 452.3460890000024,
+      "runs": 1,
+      "resumes": 2,
+      "cpu_part": [
+       "0xd40"
+      ]
+     }
+    }
+   ],
+   "idle_from": 1792881615.9142673,
+   "left_running_s": 70.0,
+   "state": "TERMINATED",
+   "settled_s": 73.1,
+   "state_reason": "Suspend lifecycle hook timed out. Please check your hook endpoint and application logs for more details."
+  }
+ ],
+ "started_utc": "2026-10-24T22:35:33Z",
+ "microvm_id": "microvm-7409bb5a-1948-303f-a5a3-a5459a77c68c",
+ "running_at": 1792881342.9215083,
+ "startup_query": {
+  "t": 1792881342.9696822,
+  "wall_s": 125.354,
+  "status": 502,
+  "body": ""
+ },
+ "final_get": {
+  "state": "TERMINATED",
+  "stateReason": "Suspend lifecycle hook timed out. Please check your hook endpoint and application logs for more details.",
+  "startedAt": "2026-10-24 22:35:33.550000+00:00",
+  "terminatedAt": "2026-10-24 22:41:27.720000+00:00"
+ },
+ "final_state": "TERMINATED",
+ "log": [
+  [
+   1792881342.773,
+   "hook run load=loaded"
+  ],
+  [
+   1792881342.992,
+   "[2026-10-24T22:35:42Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881416.079,
+   "hook suspend load=loaded"
+  ],
+  [
+   1792881468.647,
+   "hook resume load=loaded"
+  ],
+  [
+   1792881469.983,
+   "[2026-10-24T22:37:49Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881521.083,
+   "----------------------------------------"
+  ],
+  [
+   1792881521.083,
+   "Exception occurred during processing of request from ('127.0.0.1', 60880)"
+  ],
+  [
+   1792881521.266,
+   "[2026-10-24T22:38:41Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881521.837,
+   "Traceback (most recent call last):"
+  ],
+  [
+   1792881521.837,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 691, in process_request_thread"
+  ],
+  [
+   1792881521.837,
+   "    self.finish_request(request, client_address)"
+  ],
+  [
+   1792881521.838,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 361, in finish_request"
+  ],
+  [
+   1792881521.838,
+   "    self.RequestHandlerClass(request, client_address, self)"
+  ],
+  [
+   1792881521.838,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 755, in __init__"
+  ],
+  [
+   1792881521.838,
+   "    self.handle()"
+  ],
+  [
+   1792881521.838,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 442, in handle"
+  ],
+  [
+   1792881521.838,
+   "    self.handle_one_request()"
+  ],
+  [
+   1792881521.838,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 428, in handle_one_request"
+  ],
+  [
+   1792881521.838,
+   "    method()"
+  ],
+  [
+   1792881521.838,
+   "  File \"/app/server.py\", line 178, in do_POST"
+  ],
+  [
+   1792881521.838,
+   "    return self._send(200, {\"ok\": True, \"results\": res, \"server_ms\": server_ms,"
+  ],
+  [
+   1792881521.838,
+   "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+  ],
+  [
+   1792881521.838,
+   "  File \"/app/server.py\", line 126, in _send"
+  ],
+  [
+   1792881521.838,
+   "    self.wfile.write(b)"
+  ],
+  [
+   1792881521.838,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 834, in write"
+  ],
+  [
+   1792881521.838,
+   "    self._sock.sendall(b)"
+  ],
+  [
+   1792881521.838,
+   "BrokenPipeError: [Errno 32] Broken pipe"
+  ],
+  [
+   1792881521.838,
+   "----------------------------------------"
+  ],
+  [
+   1792881521.846,
+   "[2026-10-24T22:38:41Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881522.351,
+   "[2026-10-24T22:38:42Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881522.849,
+   "[2026-10-24T22:38:42Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881588.411,
+   "hook suspend load=loaded"
+  ],
+  [
+   1792881609.796,
+   "hook resume load=loaded"
+  ],
+  [
+   1792881612.142,
+   "[2026-10-24T22:40:12Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881613.39,
+   "[2026-10-24T22:40:13Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881613.898,
+   "[2026-10-24T22:40:13Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881614.409,
+   "[2026-10-24T22:40:14Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881614.918,
+   "[2026-10-24T22:40:14Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881615.418,
+   "[2026-10-24T22:40:15Z WARN  lance::dataset::scanner] Deprecation warning, this behavior will change in the future. This search specified output columns but did not include `_distance`.  Currently the `_distance` column will be included.  In the future it will not.  Call `disable_scoring_autoprojection` to adopt the future behavior and avoid this warning"
+  ],
+  [
+   1792881686.958,
+   "----------------------------------------"
+  ],
+  [
+   1792881686.958,
+   "Exception occurred during processing of request from ('127.0.0.1', 60750)"
+  ],
+  [
+   1792881686.958,
+   "Traceback (most recent call last):"
+  ],
+  [
+   1792881686.958,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 691, in process_request_thread"
+  ],
+  [
+   1792881686.958,
+   "    self.finish_request(request, client_address)"
+  ],
+  [
+   1792881686.958,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 361, in finish_request"
+  ],
+  [
+   1792881686.958,
+   "    self.RequestHandlerClass(request, client_address, self)"
+  ],
+  [
+   1792881686.958,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 755, in __init__"
+  ],
+  [
+   1792881686.958,
+   "    self.handle()"
+  ],
+  [
+   1792881686.958,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 442, in handle"
+  ],
+  [
+   1792881686.958,
+   "    self.handle_one_request()"
+  ],
+  [
+   1792881686.958,
+   "  File \"/var/lang/lib/python3.11/http/server.py\", line 428, in handle_one_request"
+  ],
+  [
+   1792881686.958,
+   "    method()"
+  ],
+  [
+   1792881686.958,
+   "  File \"/app/server.py\", line 166, in do_POST"
+  ],
+  [
+   1792881686.958,
+   "    return self._send(200, {\"ok\": True})"
+  ],
+  [
+   1792881686.958,
+   "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+  ],
+  [
+   1792881686.958,
+   "  File \"/app/server.py\", line 126, in _send"
+  ],
+  [
+   1792881686.958,
+   "    self.wfile.write(b)"
+  ],
+  [
+   1792881686.958,
+   "  File \"/var/lang/lib/python3.11/socketserver.py\", line 834, in write"
+  ],
+  [
+   1792881686.958,
+   "    self._sock.sendall(b)"
+  ],
+  [
+   1792881686.958,
+   "BrokenPipeError: [Errno 32] Broken pipe"
+  ],
+  [
+   1792881686.958,
+   "----------------------------------------"
+  ],
+  [
+   1792881686.958,
+   "hook suspend load=loaded"
+  ]
+ ]
+}
