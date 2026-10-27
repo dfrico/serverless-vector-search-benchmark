@@ -74,6 +74,12 @@ Each experiment writes to `results_<tag>/`. The tags are:
 - `2026-10-rep1`, `2026-10-rep2`, ...: replicates of experiments B and C3 on later
   days, with the same code, to show the between-day spread.
 - `2026-10-20-poll`: a check of the Lithops status-polling interval on Blocks latency.
+- `2026-10-mvm`: the LanceDB-on-MicroVM experiments (22–24 October 2026). The thesis reports
+  their cost trace (`experiment_c2/results_2026-10-mvm/e3_trace_*`).
+- `2026-10-mvm6`: the MicroVM warm-latency sweeps (under `experiment_b` and `experiment_c3`)
+  and launch/resume runs (under `experiment_c2`) repeated on the final server, which writes
+  each reply in one send (25–26 October 2026). The thesis reports these. The MicroVM spikes,
+  image builds and billing readouts are under `scripts/microvm/results/`.
 
 An earlier run (August 2026, from a laptop client) was superseded and is not part of
 the thesis; its results were removed from this repository. Account ids, local paths
@@ -83,8 +89,8 @@ and the client hostname in the records were replaced with the placeholders
 ## Reproducibility
 
 Each run writes a manifest with a corpus fingerprint (`content_sha256`), the git
-commit, and the workload configuration. The manifest is how a run proves that all
-three systems searched the same corpus bytes.
+commit, and the workload configuration. The manifest is how a run shows that all
+four systems searched the same corpus file.
 
 ## License
 
