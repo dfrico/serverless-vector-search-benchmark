@@ -1,5 +1,7 @@
 # Serverless vector-search benchmark
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23763450.svg)](https://doi.org/10.5281/zenodo.23763450)
+
 This repository holds the benchmark harness and experiment code from my master's
 thesis. The thesis compares serverless vector-search systems on the same corpus,
 through one client interface, and with the same fairness checks:
@@ -91,6 +93,12 @@ and the client hostname in the records were replaced with the placeholders
 Each run writes a manifest with a corpus fingerprint (`content_sha256`), the git
 commit, and the workload configuration. The manifest is how a run shows that all
 four systems searched the same corpus file.
+
+## Citation
+
+The version the thesis reports is release `v1.0`, archived on Zenodo:
+https://doi.org/10.5281/zenodo.23763451. The DOI 10.5281/zenodo.23763450 always
+resolves to the latest version.
 
 ## License
 
