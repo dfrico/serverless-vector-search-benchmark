@@ -1,0 +1,23 @@
+{
+  "title": "Serverless vector-search benchmark: harness, experiment scripts and results",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Fernández Rico, Daniel",
+      "affiliation": "Universitat Rovira i Virgili"
+    }
+  ],
+  "description": "<p>Benchmark harness, experiment scripts and recorded results for a master's thesis on serverless vector search (MECMAT, Universitat Rovira i Virgili, 2026). It compares Blocks DB with Lithops, AWS S3 Vectors, LanceDB on AWS Lambda and LanceDB on AWS Lambda MicroVMs on Deep1B samples of 1M and 10M vectors, measuring latency, cost and scaling on real AWS.</p><p>Dataset bytes, the Blocks reference implementation and AWS credentials are not included; see the README.</p>",
+  "license": "MIT",
+  "keywords": [
+    "serverless",
+    "vector search",
+    "approximate nearest neighbor",
+    "AWS Lambda",
+    "S3 Vectors",
+    "LanceDB",
+    "Lithops",
+    "benchmark"
+  ],
+  "language": "eng"
+}
